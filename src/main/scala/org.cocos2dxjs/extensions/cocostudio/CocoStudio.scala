@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccsClass extends js.Object {
@@ -58,4 +59,6 @@ class ccsComponent extends t_ccsComponent {
 @JSGlobal("ccs.Component")
 object ccsComponent extends js.Object {
 }
+
+
 

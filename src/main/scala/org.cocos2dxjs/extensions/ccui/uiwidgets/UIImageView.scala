@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
@@ -25,10 +26,14 @@ trait t_ccuiImageView extends t_ccuiWidget {
 @js.native
 @JSGlobal("ccui.ImageView")
 class ccuiImageView(imageFileName:String, texType:Float) extends t_ccuiImageView {
+  var onFocusChanged: js.Any = js.native
+  var onNextFocusedWidget: js.Any = js.native
 }
 
 @js.native
 @JSGlobal("ccui.ImageView")
 object ccuiImageView extends js.Object {
 }
+
+
 

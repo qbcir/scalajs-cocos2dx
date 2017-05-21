@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.menus
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
@@ -169,4 +170,6 @@ class ccMenuItemToggle extends t_ccMenuItemToggle {
 @JSGlobal("cc.MenuItemToggle")
 object ccMenuItemToggle extends js.Object {
 }
+
+
 

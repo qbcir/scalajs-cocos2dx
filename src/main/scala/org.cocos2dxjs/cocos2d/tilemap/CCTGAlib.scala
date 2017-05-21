@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.tilemap
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccImageTGA extends js.Object {
@@ -30,4 +31,6 @@ class ccBinaryStreamReader extends t_ccBinaryStreamReader {
 @JSGlobal("cc.BinaryStreamReader")
 object ccBinaryStreamReader extends js.Object {
 }
+
+
 

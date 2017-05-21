@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 
 @js.native
@@ -658,4 +659,6 @@ class ccEaseCubicActionInOut extends t_ccEaseCubicActionInOut {
 @JSGlobal("cc.EaseCubicActionInOut")
 object ccEaseCubicActionInOut extends js.Object {
 }
+
+
 

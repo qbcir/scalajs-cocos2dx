@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.display
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsDisplayData
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsBoneData
@@ -36,4 +37,6 @@ object ccsDisplayManager extends js.Object {
   def setVisible(visible:Boolean):Unit = js.native
   def isVisible:Boolean = js.native
 }
+
+
 

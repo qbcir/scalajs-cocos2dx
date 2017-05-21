@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.gui.scrollview
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
@@ -80,4 +81,6 @@ class ccTableView(dataSource:js.Any, size:js.Any, container:js.Any) extends t_cc
 @JSGlobal("cc.TableView")
 object ccTableView extends js.Object {
 }
+
+
 

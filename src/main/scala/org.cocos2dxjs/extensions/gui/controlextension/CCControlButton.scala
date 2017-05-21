@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
@@ -34,10 +35,13 @@ trait t_ccControlButton extends t_ccControl {
 @js.native
 @JSGlobal("cc.ControlButton")
 class ccControlButton extends t_ccControlButton {
+  var _state: js.Any = js.native
 }
 
 @js.native
 @JSGlobal("cc.ControlButton")
 object ccControlButton extends js.Object {
 }
+
+
 

@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
@@ -28,10 +29,14 @@ trait t_ccuiLoadingBar extends t_ccuiWidget {
 @js.native
 @JSGlobal("ccui.LoadingBar")
 class ccuiLoadingBar(textureName:String, percentage:Float) extends t_ccuiLoadingBar {
+  var onFocusChanged: js.Any = js.native
+  var onNextFocusedWidget: js.Any = js.native
 }
 
 @js.native
 @JSGlobal("ccui.LoadingBar")
 object ccuiLoadingBar extends js.Object {
 }
+
+
 

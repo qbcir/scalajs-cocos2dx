@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.ccui.system
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccuiClass extends js.Object {
@@ -44,4 +45,6 @@ class ccuiProtectedNode extends t_ccuiProtectedNode {
 @JSGlobal("ccui.ProtectedNode")
 object ccuiProtectedNode extends js.Object {
 }
+
+
 

@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.clippingnodes
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
@@ -28,4 +29,6 @@ class ccClippingNode(stencil:ccNode) extends t_ccClippingNode {
 @JSGlobal("cc.ClippingNode")
 object ccClippingNode extends js.Object {
 }
+
+
 

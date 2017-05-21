@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.kazmath
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccmathMatrix3 extends js.Object {
@@ -18,4 +19,6 @@ object ccmathMatrix3 extends js.Object {
   def fill(mat3:ccmathMatrix3):ccmathMatrix3 = js.native
   def identity(pOut:ccmathMatrix3):ccmathMatrix3 = js.native
 }
+
+
 

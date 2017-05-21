@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.core.eventmanager
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccEventAcceleration extends t_ccEvent {
@@ -30,4 +31,6 @@ class ccEventKeyboard extends t_ccEventKeyboard {
 @JSGlobal("cc.EventKeyboard")
 object ccEventKeyboard extends js.Object {
 }
+
+
 

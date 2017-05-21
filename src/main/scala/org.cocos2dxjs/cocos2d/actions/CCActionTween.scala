@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
@@ -37,4 +38,6 @@ class ccActionTween(duration:Float, key:String, from:Float, to:Float) extends t_
 @JSGlobal("cc.ActionTween")
 object ccActionTween extends js.Object {
 }
+
+
 

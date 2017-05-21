@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.gui.scrollview
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.layers.ccLayer
@@ -41,4 +42,6 @@ class ccScrollView(size:js.Any, container:js.Any) extends t_ccScrollView {
 @JSGlobal("cc.ScrollView")
 object ccScrollView extends js.Object {
 }
+
+
 

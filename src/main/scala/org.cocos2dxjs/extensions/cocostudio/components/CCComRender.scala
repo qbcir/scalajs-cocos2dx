@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.components
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.extensions.cocostudio.t_ccsComponent
 
@@ -22,4 +23,6 @@ class ccsComRender(node:ccNode, comName:String) extends t_ccsComRender {
 @JSGlobal("ccs.ComRender")
 object ccsComRender extends js.Object {
 }
+
+
 

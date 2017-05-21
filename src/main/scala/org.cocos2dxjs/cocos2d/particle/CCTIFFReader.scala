@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.particle
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_cctiffReader extends js.Object {
@@ -17,4 +18,6 @@ class cctiffReader extends t_cctiffReader {
 object cctiffReader extends js.Object {
   def parseTIFF(tiffData:js.Array[js.Any], canvas:js.Any):js.Any = js.native
 }
+
+
 

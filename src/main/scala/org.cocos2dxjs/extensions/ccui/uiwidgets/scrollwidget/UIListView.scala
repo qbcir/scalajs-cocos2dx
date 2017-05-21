@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -51,10 +52,14 @@ trait t_ccuiListView extends t_ccuiScrollView {
 @js.native
 @JSGlobal("ccui.ListView")
 class ccuiListView extends t_ccuiListView {
+  var onFocusChanged: js.Any = js.native
+  var onNextFocusedWidget: js.Any = js.native
 }
 
 @js.native
 @JSGlobal("ccui.ListView")
 object ccuiListView extends js.Object {
 }
+
+
 

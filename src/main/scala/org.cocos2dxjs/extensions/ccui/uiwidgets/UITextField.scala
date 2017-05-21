@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
@@ -58,10 +59,14 @@ trait t_ccuiTextField extends t_ccuiWidget {
 @js.native
 @JSGlobal("ccui.TextField")
 class ccuiTextField(placeholder:String, fontName:String, fontSize:Float) extends t_ccuiTextField {
+  var onFocusChanged: js.Any = js.native
+  var onNextFocusedWidget: js.Any = js.native
 }
 
 @js.native
 @JSGlobal("ccui.TextField")
 object ccuiTextField extends js.Object {
 }
+
+
 

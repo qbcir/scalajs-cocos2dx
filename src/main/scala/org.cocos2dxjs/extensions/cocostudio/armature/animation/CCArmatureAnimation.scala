@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.animation
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.extensions.cocostudio.armature.ccsArmature
 import org.cocos2dxjs.extensions.cocostudio.armature.ccsBone
@@ -88,4 +89,6 @@ class ccsArmatureAnimation extends t_ccsArmatureAnimation {
 @JSGlobal("ccs.ArmatureAnimation")
 object ccsArmatureAnimation extends js.Object {
 }
+
+
 

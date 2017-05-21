@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 
 @js.native
@@ -160,4 +161,6 @@ class ccCallFunc(selector:js.Function, selectorTarget:js.Object, data:js.Any) ex
 @JSGlobal("cc.CallFunc")
 object ccCallFunc extends js.Object {
 }
+
+
 

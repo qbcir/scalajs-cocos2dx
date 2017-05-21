@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.particle
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.sprites.ccSpriteBatchNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
@@ -24,6 +25,7 @@ class ccParticle extends t_ccParticle {
 @js.native
 @JSGlobal("cc.Particle")
 object ccParticle extends js.Object {
+  var TemporaryPoints: js.Any = js.native
 }
 
 @js.native
@@ -192,6 +194,14 @@ trait t_ccParticleSystemModeA extends js.Object {
 @js.native
 @JSGlobal("cc.ParticleSystem.ModeA")
 class ccParticleSystemModeA extends t_ccParticleSystemModeA {
+  var gravity: js.Any = js.native
+  var speed: js.Any = js.native
+  var speedVar: js.Any = js.native
+  var tangentialAccel: js.Any = js.native
+  var tangentialAccelVar: js.Any = js.native
+  var radialAccel: js.Any = js.native
+  var radialAccelVar: js.Any = js.native
+  var rotationIsDir: js.Any = js.native
 }
 
 @js.native
@@ -206,10 +216,18 @@ trait t_ccParticleSystemModeB extends js.Object {
 @js.native
 @JSGlobal("cc.ParticleSystem.ModeB")
 class ccParticleSystemModeB extends t_ccParticleSystemModeB {
+  var startRadius: js.Any = js.native
+  var startRadiusVar: js.Any = js.native
+  var endRadius: js.Any = js.native
+  var endRadiusVar: js.Any = js.native
+  var rotatePerSecond: js.Any = js.native
+  var rotatePerSecondVar: js.Any = js.native
 }
 
 @js.native
 @JSGlobal("cc.ParticleSystem.ModeB")
 object ccParticleSystemModeB extends js.Object {
 }
+
+
 

@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.spine
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_spSkeletonAnimation extends t_spSkeleton {
@@ -30,4 +31,6 @@ class spSkeletonAnimation extends t_spSkeletonAnimation {
 @JSGlobal("sp.SkeletonAnimation")
 object spSkeletonAnimation extends js.Object {
 }
+
+
 

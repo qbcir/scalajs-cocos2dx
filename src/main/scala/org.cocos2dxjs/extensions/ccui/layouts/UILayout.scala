@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.ccui.layouts
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
@@ -77,10 +78,14 @@ trait t_ccuiLayout extends t_ccuiWidget {
 @js.native
 @JSGlobal("ccui.Layout")
 class ccuiLayout extends t_ccuiLayout {
+  var onFocusChanged: js.Any = js.native
+  var onNextFocusedWidget: js.Any = js.native
 }
 
 @js.native
 @JSGlobal("ccui.Layout")
 object ccuiLayout extends js.Object {
 }
+
+
 

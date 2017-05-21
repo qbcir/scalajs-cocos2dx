@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.display
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.extensions.cocostudio.armature.physics.ccsColliderDetector
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsDisplayData
@@ -27,4 +28,6 @@ class ccsDecorativeDisplay extends t_ccsDecorativeDisplay {
 @JSGlobal("ccs.DecorativeDisplay")
 object ccsDecorativeDisplay extends js.Object {
 }
+
+
 

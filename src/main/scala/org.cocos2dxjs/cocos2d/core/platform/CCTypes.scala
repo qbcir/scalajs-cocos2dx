@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.core.platform
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccColor extends js.Object {
@@ -71,6 +72,7 @@ class ccTex2F extends t_ccTex2F {
 @js.native
 @JSGlobal("cc.Tex2F")
 object ccTex2F extends js.Object {
+  var BYTES_PER_ELEMENT: Float = js.native
 }
 
 @js.native
@@ -169,6 +171,10 @@ class ccBlendFunc extends t_ccBlendFunc {
 @js.native
 @JSGlobal("cc.BlendFunc")
 object ccBlendFunc extends js.Object {
+  var DISABLE: js.Any = js.native
+  var ALPHA_PREMULTIPLIED: js.Any = js.native
+  var ALPHA_NON_PREMULTIPLIED: js.Any = js.native
+  var ADDITIVE: js.Any = js.native
 }
 
 @js.native
@@ -185,4 +191,6 @@ class ccFontDefinition extends t_ccFontDefinition {
 @JSGlobal("cc.FontDefinition")
 object ccFontDefinition extends js.Object {
 }
+
+
 

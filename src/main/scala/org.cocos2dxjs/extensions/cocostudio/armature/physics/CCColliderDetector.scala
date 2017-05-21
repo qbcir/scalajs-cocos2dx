@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.physics
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsContourData
 
@@ -59,4 +60,6 @@ class ccsColliderDetector extends t_ccsColliderDetector {
 @JSGlobal("ccs.ColliderDetector")
 object ccsColliderDetector extends js.Object {
 }
+
+
 

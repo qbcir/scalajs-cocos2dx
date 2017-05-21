@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.menus
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.layers.t_ccLayer
 
@@ -34,4 +35,6 @@ class ccMenu(menuItems:ccMenuItem) extends t_ccMenu {
 @JSGlobal("cc.Menu")
 object ccMenu extends js.Object {
 }
+
+
 

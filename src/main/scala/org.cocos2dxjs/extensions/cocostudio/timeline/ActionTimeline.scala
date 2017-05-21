@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.timeline
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccsActionTimelineData extends js.Object {
@@ -30,4 +31,6 @@ class ccsActionTimeline extends t_ccsActionTimeline {
 @JSGlobal("ccs.ActionTimeline")
 object ccsActionTimeline extends js.Object {
 }
+
+
 

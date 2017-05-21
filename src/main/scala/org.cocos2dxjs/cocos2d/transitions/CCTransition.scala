@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.transitions
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.scenes.ccScene
 import org.cocos2dxjs.cocos2d.core.scenes.t_ccScene
 import org.cocos2dxjs.cocos2d.actions.ccActionInterval
@@ -25,6 +26,7 @@ trait t_ccTransitionScene extends t_ccScene {
 @js.native
 @JSGlobal("cc.TransitionScene")
 class ccTransitionScene(t:Float, scene:ccScene) extends t_ccTransitionScene {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -40,6 +42,7 @@ trait t_ccTransitionSceneOriented extends t_ccTransitionScene {
 @js.native
 @JSGlobal("cc.TransitionSceneOriented")
 class ccTransitionSceneOriented(t:Float, scene:ccScene, orientation:Float) extends t_ccTransitionSceneOriented {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -55,6 +58,7 @@ trait t_ccTransitionRotoZoom extends t_ccTransitionScene {
 @js.native
 @JSGlobal("cc.TransitionRotoZoom")
 class ccTransitionRotoZoom(t:Float, scene:ccScene) extends t_ccTransitionRotoZoom {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -70,6 +74,7 @@ trait t_ccTransitionJumpZoom extends t_ccTransitionScene {
 @js.native
 @JSGlobal("cc.TransitionJumpZoom")
 class ccTransitionJumpZoom(t:Float, scene:ccScene) extends t_ccTransitionJumpZoom {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -88,6 +93,7 @@ trait t_ccTransitionMoveInL extends t_ccTransitionScene {
 @js.native
 @JSGlobal("cc.TransitionMoveInL")
 class ccTransitionMoveInL(t:Float, scene:ccScene) extends t_ccTransitionMoveInL {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -103,6 +109,7 @@ trait t_ccTransitionMoveInR extends t_ccTransitionMoveInL {
 @js.native
 @JSGlobal("cc.TransitionMoveInR")
 class ccTransitionMoveInR(t:Float, scene:ccScene) extends t_ccTransitionMoveInR {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -118,6 +125,7 @@ trait t_ccTransitionMoveInT extends t_ccTransitionMoveInL {
 @js.native
 @JSGlobal("cc.TransitionMoveInT")
 class ccTransitionMoveInT(t:Float, scene:ccScene) extends t_ccTransitionMoveInT {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -133,6 +141,7 @@ trait t_ccTransitionMoveInB extends t_ccTransitionMoveInL {
 @js.native
 @JSGlobal("cc.TransitionMoveInB")
 class ccTransitionMoveInB(t:Float, scene:ccScene) extends t_ccTransitionMoveInB {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -151,6 +160,7 @@ trait t_ccTransitionSlideInL extends t_ccTransitionScene {
 @js.native
 @JSGlobal("cc.TransitionSlideInL")
 class ccTransitionSlideInL(t:Float, scene:ccScene) extends t_ccTransitionSlideInL {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -167,6 +177,7 @@ trait t_ccTransitionSlideInR extends t_ccTransitionSlideInL {
 @js.native
 @JSGlobal("cc.TransitionSlideInR")
 class ccTransitionSlideInR(t:Float, scene:ccScene) extends t_ccTransitionSlideInR {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -183,6 +194,7 @@ trait t_ccTransitionSlideInB extends t_ccTransitionSlideInL {
 @js.native
 @JSGlobal("cc.TransitionSlideInB")
 class ccTransitionSlideInB(t:Float, scene:ccScene) extends t_ccTransitionSlideInB {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -199,6 +211,7 @@ trait t_ccTransitionSlideInT extends t_ccTransitionSlideInL {
 @js.native
 @JSGlobal("cc.TransitionSlideInT")
 class ccTransitionSlideInT(t:Float, scene:ccScene) extends t_ccTransitionSlideInT {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -215,6 +228,7 @@ trait t_ccTransitionShrinkGrow extends t_ccTransitionScene {
 @js.native
 @JSGlobal("cc.TransitionShrinkGrow")
 class ccTransitionShrinkGrow(t:Float, scene:ccScene) extends t_ccTransitionShrinkGrow {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -232,6 +246,7 @@ trait t_ccTransitionFade extends t_ccTransitionScene {
 @js.native
 @JSGlobal("cc.TransitionFade")
 class ccTransitionFade(t:Float, scene:ccScene, o:Float) extends t_ccTransitionFade {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -248,6 +263,7 @@ trait t_ccTransitionCrossFade extends t_ccTransitionScene {
 @js.native
 @JSGlobal("cc.TransitionCrossFade")
 class ccTransitionCrossFade(t:Float, scene:ccScene) extends t_ccTransitionCrossFade {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -264,6 +280,7 @@ trait t_ccTransitionTurnOffTiles extends t_ccTransitionScene {
 @js.native
 @JSGlobal("cc.TransitionTurnOffTiles")
 class ccTransitionTurnOffTiles(t:Float, scene:ccScene) extends t_ccTransitionTurnOffTiles {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -281,6 +298,7 @@ trait t_ccTransitionSplitCols extends t_ccTransitionScene {
 @js.native
 @JSGlobal("cc.TransitionSplitCols")
 class ccTransitionSplitCols(t:Float, scene:ccScene) extends t_ccTransitionSplitCols {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -296,6 +314,7 @@ trait t_ccTransitionSplitRows extends t_ccTransitionSplitCols {
 @js.native
 @JSGlobal("cc.TransitionSplitRows")
 class ccTransitionSplitRows(t:Float, scene:ccScene) extends t_ccTransitionSplitRows {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -313,6 +332,7 @@ trait t_ccTransitionFadeTR extends t_ccTransitionScene {
 @js.native
 @JSGlobal("cc.TransitionFadeTR")
 class ccTransitionFadeTR(t:Float, scene:ccScene) extends t_ccTransitionFadeTR {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -328,6 +348,7 @@ trait t_ccTransitionFadeBL extends t_ccTransitionFadeTR {
 @js.native
 @JSGlobal("cc.TransitionFadeBL")
 class ccTransitionFadeBL(t:Float, scene:ccScene) extends t_ccTransitionFadeBL {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -343,6 +364,7 @@ trait t_ccTransitionFadeUp extends t_ccTransitionFadeTR {
 @js.native
 @JSGlobal("cc.TransitionFadeUp")
 class ccTransitionFadeUp(t:Float, scene:ccScene) extends t_ccTransitionFadeUp {
+  var _className: js.Any = js.native
 }
 
 @js.native
@@ -358,10 +380,13 @@ trait t_ccTransitionFadeDown extends t_ccTransitionFadeTR {
 @js.native
 @JSGlobal("cc.TransitionFadeDown")
 class ccTransitionFadeDown(t:Float, scene:ccScene) extends t_ccTransitionFadeDown {
+  var _className: js.Any = js.native
 }
 
 @js.native
 @JSGlobal("cc.TransitionFadeDown")
 object ccTransitionFadeDown extends js.Object {
 }
+
+
 

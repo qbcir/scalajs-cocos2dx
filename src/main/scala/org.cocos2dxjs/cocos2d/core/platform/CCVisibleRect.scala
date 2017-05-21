@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.core.platform
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 
@@ -19,4 +20,6 @@ class ccvisibleRect extends t_ccvisibleRect {
 object ccvisibleRect extends js.Object {
   def init(visibleRect:ccRect):Unit = js.native
 }
+
+
 

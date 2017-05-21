@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.core
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.actions.ccAction
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
@@ -46,4 +47,6 @@ class ccActionManager extends t_ccActionManager {
 @JSGlobal("cc.ActionManager")
 object ccActionManager extends js.Object {
 }
+
+
 

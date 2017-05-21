@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.effects
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
@@ -74,4 +75,6 @@ class ccTiledGrid3D(gridSize:ccSize, texture:ccTexture2D, flipped:Boolean) exten
 @JSGlobal("cc.TiledGrid3D")
 object ccTiledGrid3D extends js.Object {
 }
+
+
 

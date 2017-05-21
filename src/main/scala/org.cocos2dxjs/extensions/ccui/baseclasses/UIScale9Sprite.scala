@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.ccui.baseclasses
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
@@ -35,5 +36,8 @@ class ccuiScale9Sprite(file:String, rectOrCapInsets:ccRect, capInsets:ccRect) ex
 @js.native
 @JSGlobal("ccui.Scale9Sprite")
 object ccuiScale9Sprite extends js.Object {
+  var POSITIONS_CENTRE: js.Any = js.native
 }
+
+
 

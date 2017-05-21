@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.action
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.actions.ccCallFunc
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 
@@ -36,4 +37,6 @@ class ccsActionObject extends t_ccsActionObject {
 @JSGlobal("ccs.ActionObject")
 object ccsActionObject extends js.Object {
 }
+
+
 

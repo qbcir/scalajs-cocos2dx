@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.ccui.baseclasses
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccTouch
@@ -98,6 +99,8 @@ trait t_ccuiWidget extends t_ccuiProtectedNode {
 @js.native
 @JSGlobal("ccui.Widget")
 class ccuiWidget extends t_ccuiWidget {
+  var onFocusChanged: js.Any = js.native
+  var onNextFocusedWidget: js.Any = js.native
 }
 
 @js.native
@@ -106,4 +109,6 @@ object ccuiWidget extends js.Object {
   def enableDpadNavigation(enable:Boolean):Unit = js.native
   def getCurrentFocusedWidget():Unit = js.native
 }
+
+
 

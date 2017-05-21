@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.core.sprites
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.textures.ccTextureAtlas
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
@@ -31,4 +32,6 @@ class ccSpriteBatchNode extends t_ccSpriteBatchNode {
 @JSGlobal("cc.SpriteBatchNode")
 object ccSpriteBatchNode extends js.Object {
 }
+
+
 

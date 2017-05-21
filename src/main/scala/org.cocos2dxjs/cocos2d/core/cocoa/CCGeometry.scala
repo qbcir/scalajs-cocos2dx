@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.core.cocoa
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccPoint extends js.Object {
@@ -44,4 +45,6 @@ class ccRect extends t_ccRect {
 @JSGlobal("cc.Rect")
 object ccRect extends js.Object {
 }
+
+
 

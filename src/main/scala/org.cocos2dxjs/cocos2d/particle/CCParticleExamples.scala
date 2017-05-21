@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.particle
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccParticleFire extends t_ccParticleSystem {
@@ -167,4 +168,6 @@ class ccParticleRain extends t_ccParticleRain {
 @JSGlobal("cc.ParticleRain")
 object ccParticleRain extends js.Object {
 }
+
+
 

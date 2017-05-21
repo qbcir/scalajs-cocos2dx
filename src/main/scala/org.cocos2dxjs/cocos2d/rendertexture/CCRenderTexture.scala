@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.rendertexture
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -48,4 +49,6 @@ class ccRenderTexture(width:Float, height:Float, format:Float, depthStencilForma
 @JSGlobal("cc.RenderTexture")
 object ccRenderTexture extends js.Object {
 }
+
+
 

@@ -2,12 +2,12 @@ package org.cocos2dxjs.cocos2d.core
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.scenes.ccScene
-import org.cocos2dxjs.cocos2d.core.platform.ccColor
-import org.cocos2dxjs.cocos2d.core.platform.ccview
+import org.cocos2dxjs.cocos2d.core.platform.{ccColor, ccEGLView}
 
 @js.native
 trait t_ccDirector extends js.Object {
@@ -39,10 +39,10 @@ trait t_ccDirector extends js.Object {
   def setNotificationNode(node:ccNode):Unit = js.native
   def getDelegate:ccDirectorDelegate = js.native
   def setDelegate:ccDirectorDelegate = js.native
-  def setOpenGLView(openGLView:ccview):Unit = js.native
+  def setOpenGLView(openGLView:ccEGLView):Unit = js.native
   def setProjection(projection:Float):Unit = js.native
   def setViewport():Unit = js.native
-  def getOpenGLView:ccview = js.native
+  def getOpenGLView:ccEGLView = js.native
   def getProjection:Float = js.native
   def setAlphaBlending(on:Boolean):Unit = js.native
   def isSendCleanupToScene:Boolean = js.native
@@ -76,4 +76,6 @@ class ccDirector extends t_ccDirector {
 @JSGlobal("cc.Director")
 object ccDirector extends js.Object {
 }
+
+
 

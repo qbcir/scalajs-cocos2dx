@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.trigger
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 
 @js.native
@@ -61,4 +62,6 @@ class ccsTriggerObj extends t_ccsTriggerObj {
 @JSGlobal("ccs.TriggerObj")
 object ccsTriggerObj extends js.Object {
 }
+
+
 

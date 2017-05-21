@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.textinput
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
@@ -82,4 +83,6 @@ class ccIMEDispatcherImpl extends t_ccIMEDispatcherImpl {
 @JSGlobal("cc.IMEDispatcher.Impl")
 object ccIMEDispatcherImpl extends js.Object {
 }
+
+
 

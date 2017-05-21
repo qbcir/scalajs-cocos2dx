@@ -2,8 +2,10 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiClass
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
+import org.cocos2dxjs.cocos2d.core.platform.ccFontDefinition
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
@@ -30,6 +32,7 @@ trait t_ccuiRichElementText extends t_ccuiRichElement {
 @js.native
 @JSGlobal("ccui.RichElementText")
 class ccuiRichElementText(tag:Float, colorOrFontDef:ccColor, opacity:Float, text:String, fontName:String, fontSize:Float) extends t_ccuiRichElementText {
+  var _fontDefinition: ccFontDefinition = js.native
 }
 
 @js.native
@@ -88,10 +91,14 @@ trait t_ccuiRichText extends t_ccuiWidget {
 @js.native
 @JSGlobal("ccui.RichText")
 class ccuiRichText extends t_ccuiRichText {
+  var onFocusChanged: js.Any = js.native
+  var onNextFocusedWidget: js.Any = js.native
 }
 
 @js.native
 @JSGlobal("ccui.RichText")
 object ccuiRichText extends js.Object {
 }
+
+
 

@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.shaders
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccshaderCache extends js.Object {
@@ -21,4 +22,6 @@ object ccshaderCache extends js.Object {
   def getProgram(shaderName:String):ccGLProgram = js.native
   def addProgram(program:ccGLProgram, key:String):Unit = js.native
 }
+
+
 

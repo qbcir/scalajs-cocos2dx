@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.core.textures
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.shaders.ccGLProgram
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -57,5 +58,8 @@ class ccTexture2D extends t_ccTexture2D {
 @js.native
 @JSGlobal("cc.Texture2D")
 object ccTexture2D extends js.Object {
+  var PIXEL_FORMAT_PVRTC2: Float = js.native
 }
+
+
 

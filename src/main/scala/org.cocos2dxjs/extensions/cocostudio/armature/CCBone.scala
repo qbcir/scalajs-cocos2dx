@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsBoneData
 import org.cocos2dxjs.extensions.cocostudio.armature.animation.ccsTween
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsFrameData
@@ -66,4 +67,6 @@ class ccsBone extends t_ccsBone {
 @JSGlobal("ccs.Bone")
 object ccsBone extends js.Object {
 }
+
+
 

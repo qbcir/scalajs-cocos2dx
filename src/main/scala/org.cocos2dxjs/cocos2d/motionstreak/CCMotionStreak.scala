@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.motionstreak
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
@@ -38,10 +39,13 @@ trait t_ccMotionStreak extends t_ccNode {
 @js.native
 @JSGlobal("cc.MotionStreak")
 class ccMotionStreak(fade:Float, minSeg:Float, stroke:Float, color:Float, texture:String) extends t_ccMotionStreak {
+  var _pointVertexes: js.Any = js.native
 }
 
 @js.native
 @JSGlobal("cc.MotionStreak")
 object ccMotionStreak extends js.Object {
 }
+
+
 

@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiProtectedNode
 
@@ -30,5 +31,8 @@ class ccuiPageViewIndicator extends t_ccuiPageViewIndicator {
 @js.native
 @JSGlobal("ccui.PageViewIndicator")
 object ccuiPageViewIndicator extends js.Object {
+  var SPACE_BETWEEN_INDEX_NODES_DEFAULT: js.Any = js.native
 }
+
+
 

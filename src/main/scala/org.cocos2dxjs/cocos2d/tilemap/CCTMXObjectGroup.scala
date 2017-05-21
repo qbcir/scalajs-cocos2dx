@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.tilemap
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
@@ -28,4 +29,6 @@ class ccTMXObjectGroup extends t_ccTMXObjectGroup {
 @JSGlobal("cc.TMXObjectGroup")
 object ccTMXObjectGroup extends js.Object {
 }
+
+
 

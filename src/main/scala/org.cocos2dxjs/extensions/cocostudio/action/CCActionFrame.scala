@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.action
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.actions.ccMoveTo
@@ -113,4 +114,6 @@ class ccsActionTintFrame extends t_ccsActionTintFrame {
 @JSGlobal("ccs.ActionTintFrame")
 object ccsActionTintFrame extends js.Object {
 }
+
+
 

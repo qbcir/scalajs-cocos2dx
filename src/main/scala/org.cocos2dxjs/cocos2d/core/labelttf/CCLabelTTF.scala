@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.core.labelttf
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.platform.ccFontDefinition
@@ -50,4 +51,6 @@ class ccLabelTTF extends t_ccLabelTTF {
 object ccLabelTTF extends js.Object {
   def __getFontHeightByDiv(fontName:String, fontSize:Float):Float = js.native
 }
+
+
 

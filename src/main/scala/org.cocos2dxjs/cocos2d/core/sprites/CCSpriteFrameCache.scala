@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.core.sprites
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccspriteFrameCache extends js.Object {
@@ -23,4 +24,6 @@ object ccspriteFrameCache extends js.Object {
   def removeSpriteFramesFromTexture(texture:js.Any):Unit = js.native
   def getSpriteFrame(name:String):ccSpriteFrame = js.native
 }
+
+
 

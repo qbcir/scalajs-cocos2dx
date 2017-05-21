@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.display
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.armature.ccsBone
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsBaseData
@@ -30,4 +31,6 @@ class ccsSkin extends t_ccsSkin {
 @JSGlobal("ccs.Skin")
 object ccsSkin extends js.Object {
 }
+
+
 

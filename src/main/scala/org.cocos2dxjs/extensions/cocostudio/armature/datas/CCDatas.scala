@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.datas
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccAffineTransform
@@ -160,6 +161,9 @@ trait t_ccsMovementData extends js.Object {
 @js.native
 @JSGlobal("ccs.MovementData")
 class ccsMovementData extends t_ccsMovementData {
+  var durationTo: js.Any = js.native
+  var durationTween: js.Any = js.native
+  var tweenEasing: js.Any = js.native
 }
 
 @js.native
@@ -228,4 +232,6 @@ class ccsTextureData extends t_ccsTextureData {
 @JSGlobal("ccs.TextureData")
 object ccsTextureData extends js.Object {
 }
+
+
 

@@ -2,6 +2,7 @@ package org.cocos2dxjs.cocos2d.textinput
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
@@ -64,4 +65,6 @@ class ccTextFieldTTF(placeholder:String, dimensions:ccSize, alignment:Float, fon
 @JSGlobal("cc.TextFieldTTF")
 object ccTextFieldTTF extends js.Object {
 }
+
+
 

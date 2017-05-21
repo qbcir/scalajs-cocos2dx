@@ -2,6 +2,7 @@ package org.cocos2dxjs.extensions.ccui.layouts
 
 import scalajs.js
 import scala.scalajs.js.annotation._
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccuilinearVerticalLayoutManager extends js.Object {
@@ -44,4 +45,6 @@ class ccuirelativeLayoutManager extends t_ccuirelativeLayoutManager {
 @JSGlobal("ccui.relativeLayoutManager")
 object ccuirelativeLayoutManager extends js.Object {
 }
+
+
 
