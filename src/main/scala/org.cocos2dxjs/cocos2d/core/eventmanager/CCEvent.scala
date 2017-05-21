@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.eventmanager
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -24,6 +24,12 @@ class ccEvent extends t_ccEvent {
 @js.native
 @JSGlobal("cc.Event")
 object ccEvent extends js.Object {
+  val TOUCH: Float = js.native
+  val KEYBOARD: Float = js.native
+  val ACCELERATION: Float = js.native
+  val MOUSE: Float = js.native
+  val FOCUS: Float = js.native
+  val CUSTOM: Float = js.native
 }
 
 @js.native
@@ -68,6 +74,19 @@ class ccEventMouse extends t_ccEventMouse {
 @js.native
 @JSGlobal("cc.EventMouse")
 object ccEventMouse extends js.Object {
+  val NONE: Float = js.native
+  val DOWN: Float = js.native
+  val UP: Float = js.native
+  val MOVE: Float = js.native
+  val SCROLL: Float = js.native
+  val BUTTON_LEFT: Float = js.native
+  val BUTTON_RIGHT: Float = js.native
+  val BUTTON_MIDDLE: Float = js.native
+  val BUTTON_4: Float = js.native
+  val BUTTON_5: Float = js.native
+  val BUTTON_6: Float = js.native
+  val BUTTON_7: Float = js.native
+  val BUTTON_8: Float = js.native
 }
 
 @js.native
@@ -84,6 +103,7 @@ class ccEventTouch(widgetLoseFocus:ccuiWidget, widgetGetFocus:ccuiWidget) extend
 @js.native
 @JSGlobal("cc.EventTouch")
 object ccEventTouch extends js.Object {
+  val MAX_TOUCHES: Float = js.native
 }
 
 @js.native
@@ -99,6 +119,5 @@ class ccEventFocus extends t_ccEventFocus {
 @JSGlobal("cc.EventFocus")
 object ccEventFocus extends js.Object {
 }
-
 
 

@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiClass
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.platform.ccFontDefinition
@@ -23,6 +23,9 @@ class ccuiRichElement extends t_ccuiRichElement {
 @js.native
 @JSGlobal("ccui.RichElement")
 object ccuiRichElement extends js.Object {
+  val TEXT: Float = js.native
+  val IMAGE: Float = js.native
+  val CUSTOM: Float = js.native
 }
 
 @js.native
@@ -99,6 +102,5 @@ class ccuiRichText extends t_ccuiRichText {
 @JSGlobal("ccui.RichText")
 object ccuiRichText extends js.Object {
 }
-
 
 

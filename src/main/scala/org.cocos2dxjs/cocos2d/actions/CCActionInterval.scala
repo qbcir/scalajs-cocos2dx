@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.sprites.ccAnimation
@@ -530,6 +530,5 @@ class ccTargetedAction(target:ccNode, action:ccFiniteTimeAction) extends t_ccTar
 @JSGlobal("cc.TargetedAction")
 object ccTargetedAction extends js.Object {
 }
-
 
 

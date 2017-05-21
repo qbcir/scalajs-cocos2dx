@@ -2,12 +2,16 @@ package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccTouch
 import org.cocos2dxjs.cocos2d.core.layers.t_ccLayer
 
 @js.native
 trait t_ccControl extends t_ccLayer {
+  val state: Float = js.native
+  var enabled: Boolean = js.native
+  var selected: Boolean = js.native
+  var highlighted: Boolean = js.native
   def setEnabled(enabled:Boolean):Unit = js.native
   def setSelected(selected:Boolean):Unit = js.native
   def setHighlighted(highlighted:Boolean):Unit = js.native
@@ -33,6 +37,5 @@ class ccControl extends t_ccControl {
 @JSGlobal("cc.Control")
 object ccControl extends js.Object {
 }
-
 
 

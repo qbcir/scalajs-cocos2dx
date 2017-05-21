@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.gui.scrollview
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.layers.ccLayer
@@ -11,6 +11,14 @@ import org.cocos2dxjs.cocos2d.core.layers.t_ccLayer
 
 @js.native
 trait t_ccScrollView extends t_ccLayer {
+  val minOffset: ccPoint = js.native
+  val maxOffset: ccPoint = js.native
+  var bounceable: Boolean = js.native
+  var viewSize: ccSize = js.native
+  var container: ccLayer = js.native
+  var direction: Float = js.native
+  var delegate: js.Any/*ccScrollViewDelegate*/ = js.native
+  var clippingToBounds: Boolean = js.native
   def initWithViewSize(size:ccSize, container:ccNode):Boolean = js.native
   def setContentOffset(offset:ccPoint, animated:Float):Unit = js.native
   def setContentOffsetInDuration(offset:ccPoint, dt:Float):Unit = js.native
@@ -42,6 +50,5 @@ class ccScrollView(size:js.Any, container:js.Any) extends t_ccScrollView {
 @JSGlobal("cc.ScrollView")
 object ccScrollView extends js.Object {
 }
-
 
 

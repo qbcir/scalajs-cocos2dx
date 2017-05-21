@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.extensions.ccui.layouts.ccuiLayout
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -50,7 +50,11 @@ class ccuiPageView extends t_ccuiPageView {
 @js.native
 @JSGlobal("ccui.PageView")
 object ccuiPageView extends js.Object {
+  val EVENT_TURNING: Float = js.native
+  val TOUCH_DIR_LEFT: Float = js.native
+  val TOUCH_DIR_RIGHT: Float = js.native
+  val DIRECTION_LEFT: Float = js.native
+  val DIRECTION_RIGHT: Float = js.native
 }
-
 
 

@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.baseclasses
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccTouch
@@ -12,6 +12,20 @@ import org.cocos2dxjs.extensions.ccui.system.t_ccuiProtectedNode
 
 @js.native
 trait t_ccuiWidget extends t_ccuiProtectedNode {
+  var xPercent: Float = js.native
+  var yPercent: Float = js.native
+  var widthPercent: Float = js.native
+  var heightPercent: Float = js.native
+  val widgetParent: ccuiWidget = js.native
+  var enabled: Boolean = js.native
+  var focused: Boolean = js.native
+  var sizeType: Float = js.native
+  val widgetType: Float = js.native
+  var touchEnabled: Boolean = js.native
+  var updateEnabled: Boolean = js.native
+  var bright: Boolean = js.native
+  var name: String = js.native
+  var actionTag: Float = js.native
   def init:Boolean = js.native
   def onEnter():Unit = js.native
   def onExit():Unit = js.native
@@ -106,9 +120,27 @@ class ccuiWidget extends t_ccuiWidget {
 @js.native
 @JSGlobal("ccui.Widget")
 object ccuiWidget extends js.Object {
+  val BRIGHT_STYLE_NONE: Float = js.native
+  val BRIGHT_STYLE_NORMAL: Float = js.native
+  val BRIGHT_STYLE_HIGH_LIGHT: Float = js.native
+  val TYPE_WIDGET: Float = js.native
+  val TYPE_CONTAINER: Float = js.native
+  val LEFT: Float = js.native
+  val RIGHT: Float = js.native
+  val UP: Float = js.native
+  val DOWN: Float = js.native
+  val LOCAL_TEXTURE: Float = js.native
+  val PLIST_TEXTURE: Float = js.native
+  val TOUCH_BEGAN: Float = js.native
+  val TOUCH_MOVED: Float = js.native
+  val TOUCH_ENDED: Float = js.native
+  val TOUCH_CANCELED: Float = js.native
+  val SIZE_ABSOLUTE: Float = js.native
+  val SIZE_PERCENT: Float = js.native
+  val POSITION_ABSOLUTE: Float = js.native
+  val POSITION_PERCENT: Float = js.native
   def enableDpadNavigation(enable:Boolean):Unit = js.native
   def getCurrentFocusedWidget():Unit = js.native
 }
-
 
 

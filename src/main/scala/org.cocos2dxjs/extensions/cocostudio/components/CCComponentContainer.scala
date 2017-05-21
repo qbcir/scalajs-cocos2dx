@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.components
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
@@ -24,6 +24,5 @@ class ccComponentContainer(node:js.Any) extends t_ccComponentContainer {
 @JSGlobal("cc.ComponentContainer")
 object ccComponentContainer extends js.Object {
 }
-
 
 

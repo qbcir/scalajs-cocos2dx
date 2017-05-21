@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.sprites
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.textures.ccTextureAtlas
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
@@ -10,6 +10,8 @@ import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
 @js.native
 trait t_ccSpriteBatchNode extends t_ccNode {
+  var textureAtlas: ccTextureAtlas = js.native
+  val descendants: js.Array[js.Any] = js.native
   def initWithFile(fileImage:String, capacity:Float):Boolean = js.native
   def init(fileImage:String, capacity:Float):Boolean = js.native
   def removeChildAtIndex(index:Float, doCleanup:Boolean):Unit = js.native
@@ -25,13 +27,12 @@ trait t_ccSpriteBatchNode extends t_ccNode {
 
 @js.native
 @JSGlobal("cc.SpriteBatchNode")
-class ccSpriteBatchNode extends t_ccSpriteBatchNode {
+class ccSpriteBatchNode(fileImage:String) extends t_ccSpriteBatchNode {
 }
 
 @js.native
 @JSGlobal("cc.SpriteBatchNode")
 object ccSpriteBatchNode extends js.Object {
 }
-
 
 

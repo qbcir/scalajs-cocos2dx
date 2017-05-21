@@ -2,13 +2,16 @@ package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 
 @js.native
 trait t_ccAction extends t_ccClass {
+  var target: ccNode = js.native
+  var originalTarget: ccNode = js.native
+  var tag: Float = js.native
   override def clone:ccAction = js.native
   def isDone:Boolean = js.native
   def startWithTarget(target:ccNode):Unit = js.native
@@ -80,6 +83,10 @@ object ccSpeed extends js.Object {
 
 @js.native
 trait t_ccFollow extends t_ccAction {
+  var leftBoundary: Float = js.native
+  var rightBoundary: Float = js.native
+  var topBoundary: Float = js.native
+  var bottomBoundary: Float = js.native
   override def clone:ccAction = js.native
   def isBoundarySet:Boolean = js.native
   def setBoudarySet(value:Boolean):Unit = js.native
@@ -98,6 +105,5 @@ class ccFollow(followedNode:ccNode, rect:ccRect) extends t_ccFollow {
 @JSGlobal("cc.Follow")
 object ccFollow extends js.Object {
 }
-
 
 

@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.tilemap
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
@@ -10,6 +10,15 @@ import org.cocos2dxjs.cocos2d.core.sprites.t_ccSpriteBatchNode
 
 @js.native
 trait t_ccTMXLayer extends t_ccSpriteBatchNode {
+  var tiles: js.Array[js.Any] = js.native
+  var tileset: ccTMXTilesetInfo = js.native
+  var layerOrientation: Float = js.native
+  var properties: js.Array[js.Any] = js.native
+  var layerName: String = js.native
+  var layerWidth: Float = js.native
+  var layerHeight: Float = js.native
+  var tileWidth: Float = js.native
+  var tileHeight: Float = js.native
   def initWithTilesetInfo(tilesetInfo:ccTMXTilesetInfo, layerInfo:ccTMXLayerInfo, mapInfo:ccTMXMapInfo):Boolean = js.native
   def getLayerSize:ccSize = js.native
   def setLayerSize(Var:ccSize):Unit = js.native
@@ -44,6 +53,5 @@ class ccTMXLayer(tilesetInfo:ccTMXTilesetInfo, layerInfo:ccTMXLayerInfo, mapInfo
 @JSGlobal("cc.TMXLayer")
 object ccTMXLayer extends js.Object {
 }
-
 
 

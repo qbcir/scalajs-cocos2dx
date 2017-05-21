@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.utils
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsArmatureData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsBoneData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsDisplayData
@@ -67,6 +67,5 @@ object ccsdataReaderHelper extends js.Object {
   def addDataFromXML(xml:js.Any, dataInfo:ccsDataInfo):Unit = js.native
   def addDataFromJson(filePath:String, dataInfo:ccsDataInfo):Unit = js.native
 }
-
 
 

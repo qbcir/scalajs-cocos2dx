@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.layouts
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
@@ -13,6 +13,9 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
 trait t_ccuiLayout extends t_ccuiWidget {
+  var clippingEnabled: Boolean = js.native
+  var clippingType: Float = js.native
+  var layoutType: Float = js.native
   override def onEnter():Unit = js.native
   override def onExit():Unit = js.native
   def visit(parent:ccNode):Unit = js.native
@@ -85,7 +88,17 @@ class ccuiLayout extends t_ccuiLayout {
 @js.native
 @JSGlobal("ccui.Layout")
 object ccuiLayout extends js.Object {
+  val BG_COLOR_NONE: Float = js.native
+  val BG_COLOR_SOLID: Float = js.native
+  val BG_COLOR_GRADIENT: Float = js.native
+  val ABSOLUTE: Float = js.native
+  val LINEAR_VERTICAL: Float = js.native
+  val LINEAR_HORIZONTAL: Float = js.native
+  val RELATIVE: Float = js.native
+  val CLIPPING_STENCIL: Float = js.native
+  val CLIPPING_SCISSOR: Float = js.native
+  val BACKGROUND_IMAGE_ZORDER: Float = js.native
+  val BACKGROUND_RENDERER_ZORDER: Float = js.native
 }
-
 
 

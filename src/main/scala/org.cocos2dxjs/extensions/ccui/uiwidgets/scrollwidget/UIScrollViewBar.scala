@@ -2,12 +2,15 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiProtectedNode
 
 @js.native
 trait t_ccuiScrollViewBar extends t_ccuiProtectedNode {
+  var opacity: Float = js.native
+  var autoHideEnabled: Boolean = js.native
+  var autoHideTime: Float = js.native
   def init:Boolean = js.native
   def setPositionFromCorner(positionFromCorner:ccPoint):Unit = js.native
   def getPositionFromCorner:ccPoint = js.native
@@ -32,6 +35,5 @@ class ccuiScrollViewBar(parent:ccuiScrollView, direction:Float) extends t_ccuiSc
 object ccuiScrollViewBar extends js.Object {
   var DEFAULT_COLOR: js.Any = js.native
 }
-
 
 

@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.kazmath
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 
 @js.native
 trait t_ccmathMatrix4 extends js.Object {
@@ -10,7 +10,7 @@ trait t_ccmathMatrix4 extends js.Object {
 
 @js.native
 @JSGlobal("cc.math.Matrix4")
-class ccmathMatrix4 extends t_ccmathMatrix4 {
+class ccmathMatrix4(mat4:ccmathMatrix4) extends t_ccmathMatrix4 {
 }
 
 @js.native
@@ -28,6 +28,5 @@ object ccmathMatrix4 extends js.Object {
   def createOrthographicProjection(left:Float, right:Float, bottom:Float, top:Float, nearVal:Float, farVal:Float):ccmathMatrix4 = js.native
   def createByAxisAndAngle(axis:ccmathVec3, radians:Float, matrix:ccmathMatrix4):ccmathMatrix4 = js.native
 }
-
 
 

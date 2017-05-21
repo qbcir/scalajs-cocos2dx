@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.utils
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsArmatureData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsAnimationData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsTextureData
@@ -54,6 +54,5 @@ object ccsarmatureDataManager extends js.Object {
   def getRelativeData(configFilePath:String):ccsRelativeData = js.native
   def clear():Unit = js.native
 }
-
 
 

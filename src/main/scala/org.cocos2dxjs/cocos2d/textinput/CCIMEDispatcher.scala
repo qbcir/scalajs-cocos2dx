@@ -2,7 +2,8 @@ package org.cocos2dxjs.cocos2d.textinput
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
+import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
@@ -11,7 +12,7 @@ trait t_ccIMEKeyboardNotificationInfo extends js.Object {
 
 @js.native
 @JSGlobal("cc.IMEKeyboardNotificationInfo")
-class ccIMEKeyboardNotificationInfo extends t_ccIMEKeyboardNotificationInfo {
+class ccIMEKeyboardNotificationInfo(begin:ccRect, end:ccRect, duration:Float) extends t_ccIMEKeyboardNotificationInfo {
 }
 
 @js.native
@@ -83,6 +84,5 @@ class ccIMEDispatcherImpl extends t_ccIMEDispatcherImpl {
 @JSGlobal("cc.IMEDispatcher.Impl")
 object ccIMEDispatcherImpl extends js.Object {
 }
-
 
 

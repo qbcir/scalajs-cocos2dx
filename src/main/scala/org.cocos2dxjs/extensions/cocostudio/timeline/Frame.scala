@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.timeline
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 
 @js.native
 trait t_ccsFrame extends js.Object {
@@ -201,4 +201,9 @@ object ccsZOrderFrame extends js.Object {
 }
 
 
+@js.native
+@JSGlobal("ccs.InnerActionType")
+object ccsInnerActionType extends js.Object {
+
+}
 

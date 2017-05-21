@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
@@ -10,6 +10,8 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
 trait t_ccuiLoadingBar extends t_ccuiWidget {
+  var direction: Float = js.native
+  var percent: Float = js.native
   def setDirection(dir:Float):Unit = js.native
   def getDirection:Float = js.native
   def loadTexture(texture:String, texType:Float):Unit = js.native
@@ -36,7 +38,9 @@ class ccuiLoadingBar(textureName:String, percentage:Float) extends t_ccuiLoading
 @js.native
 @JSGlobal("ccui.LoadingBar")
 object ccuiLoadingBar extends js.Object {
+  val TYPE_LEFT: Float = js.native
+  val TYPE_RIGHT: Float = js.native
+  val RENDERER_ZORDER: Float = js.native
 }
-
 
 

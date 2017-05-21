@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.platform
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 
 @js.native
 trait t_ccscreen extends js.Object {
@@ -22,6 +22,5 @@ object ccscreen extends js.Object {
   def exitFullScreen:Boolean = js.native
   def autoFullScreen(element:js.Any, onFullScreenChange:js.Function):Unit = js.native
 }
-
 
 

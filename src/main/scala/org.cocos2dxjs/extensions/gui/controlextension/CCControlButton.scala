@@ -2,13 +2,17 @@ package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 
 @js.native
 trait t_ccControlButton extends t_ccControl {
+  var adjustBackgroundImage: Boolean = js.native
+  var zoomOnTouchDown: Boolean = js.native
+  var preferredSize: ccSize = js.native
+  var labelAnchor: Boolean = js.native
   def doesAdjustBackgroundImage:Boolean = js.native
   def getZoomOnTouchDown():Unit = js.native
   def getPreferredSize():Unit = js.native
@@ -42,6 +46,5 @@ class ccControlButton extends t_ccControlButton {
 @JSGlobal("cc.ControlButton")
 object ccControlButton extends js.Object {
 }
-
 
 

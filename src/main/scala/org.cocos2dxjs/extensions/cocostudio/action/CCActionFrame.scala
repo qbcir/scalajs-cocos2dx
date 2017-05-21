@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.action
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.actions.ccMoveTo
@@ -13,6 +13,10 @@ import org.cocos2dxjs.cocos2d.actions.ccTintTo
 
 @js.native
 trait t_ccsActionFrame extends t_ccsClass {
+  var frameType: Float = js.native
+  var easingType: Float = js.native
+  var frameIndex: Float = js.native
+  var time: Float = js.native
   def getAction(duration:Float, srcFrame:ccsActionFrame):js.Any = js.native
   def setEasingParameter(parameter:js.Array[js.Any]):Unit = js.native
   def setEasingType(easingType:Float):Unit = js.native
@@ -114,6 +118,5 @@ class ccsActionTintFrame extends t_ccsActionTintFrame {
 @JSGlobal("ccs.ActionTintFrame")
 object ccsActionTintFrame extends js.Object {
 }
-
 
 

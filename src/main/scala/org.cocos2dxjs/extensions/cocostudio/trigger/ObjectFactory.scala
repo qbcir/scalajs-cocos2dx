@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.trigger
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 
 @js.native
@@ -35,6 +35,5 @@ class ccsTInfo extends t_ccsTInfo {
 @JSGlobal("ccs.TInfo")
 object ccsTInfo extends js.Object {
 }
-
 
 

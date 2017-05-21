@@ -2,9 +2,10 @@ package org.cocos2dxjs.extensions.cocostudio.armature.physics
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsContourData
+import org.cocos2dxjs.extensions.cocostudio.armature.ccsBone
 
 @js.native
 trait t_ccsColliderFilter extends t_ccsClass {
@@ -22,6 +23,9 @@ object ccsColliderFilter extends js.Object {
 
 @js.native
 trait t_ccsColliderBody extends t_ccsClass {
+  var contourData: ccsContourData = js.native
+  var shape: js.Any/*ccsShape*/ = js.native
+  var colliderFilter: ccsColliderFilter = js.native
   def getContourData:ccsContourData = js.native
   def setColliderFilter(colliderFilter:ccsColliderFilter):Unit = js.native
   def getCalculatedVertexList:js.Array[js.Any] = js.native
@@ -43,6 +47,9 @@ object ccsColliderBody extends js.Object {
 
 @js.native
 trait t_ccsColliderDetector extends t_ccsClass {
+  var colliderFilter: ccsColliderFilter = js.native
+  var active: Boolean = js.native
+  var body: js.Object = js.native
   def addContourData(contourData:ccsContourData):Unit = js.native
   def addContourDataList(contourDataList:js.Array[js.Any]):Unit = js.native
   def removeContourData(contourData:js.Any):Unit = js.native
@@ -53,13 +60,12 @@ trait t_ccsColliderDetector extends t_ccsClass {
 
 @js.native
 @JSGlobal("ccs.ColliderDetector")
-class ccsColliderDetector extends t_ccsColliderDetector {
+class ccsColliderDetector(bone:ccsBone) extends t_ccsColliderDetector {
 }
 
 @js.native
 @JSGlobal("ccs.ColliderDetector")
 object ccsColliderDetector extends js.Object {
 }
-
 
 

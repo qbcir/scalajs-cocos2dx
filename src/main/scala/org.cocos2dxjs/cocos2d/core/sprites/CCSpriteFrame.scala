@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.sprites
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
@@ -36,13 +36,12 @@ trait t_ccSpriteFrame extends t_ccClass {
 
 @js.native
 @JSGlobal("cc.SpriteFrame")
-class ccSpriteFrame extends t_ccSpriteFrame {
+class ccSpriteFrame(filename:String, rect:ccRect, rotated:Boolean, offset:ccPoint, originalSize:ccSize) extends t_ccSpriteFrame {
 }
 
 @js.native
 @JSGlobal("cc.SpriteFrame")
 object ccSpriteFrame extends js.Object {
 }
-
 
 

@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.datas
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccAffineTransform
@@ -10,6 +10,19 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 
 @js.native
 trait t_ccsBaseData extends t_ccsClass {
+  var x: Float = js.native
+  var y: Float = js.native
+  var zOrder: Float = js.native
+  var skewX: Float = js.native
+  var skewY: Float = js.native
+  var scaleX: Float = js.native
+  var scaleY: Float = js.native
+  var tweenRotate: Float = js.native
+  var isUseColorInfo: Float = js.native
+  var r: Float = js.native
+  var g: Float = js.native
+  var b: Float = js.native
+  var a: Float = js.native
   def copy(node:ccsBaseData):Unit = js.native
   def setColor(color:ccColor):Unit = js.native
   def getColor:ccColor = js.native
@@ -28,6 +41,8 @@ object ccsBaseData extends js.Object {
 
 @js.native
 trait t_ccsDisplayData extends t_ccsClass {
+  var displayType: Float = js.native
+  var displayName: String = js.native
   def changeDisplayToTexture(displayName:String):String = js.native
   def copy(displayData:ccsDisplayData):Unit = js.native
 }
@@ -44,6 +59,7 @@ object ccsDisplayData extends js.Object {
 
 @js.native
 trait t_ccsSpriteDisplayData extends t_ccsDisplayData {
+  var skinData: ccsBaseData = js.native
   def copy(displayData:ccsSpriteDisplayData):Unit = js.native
 }
 
@@ -87,6 +103,10 @@ object ccsParticleDisplayData extends js.Object {
 
 @js.native
 trait t_ccsBoneData extends t_ccsBaseData {
+  var displayDataList: js.Array[js.Any] = js.native
+  var name: String = js.native
+  var parentName: String = js.native
+  var boneDataTransform: ccAffineTransform = js.native
   def init:Boolean = js.native
   def addDisplayData(displayData:ccsDisplayData):Unit = js.native
   def getDisplayData(index:Float):ccsDisplayData = js.native
@@ -104,6 +124,9 @@ object ccsBoneData extends js.Object {
 
 @js.native
 trait t_ccsArmatureData extends t_ccsClass {
+  var boneDataDic: js.Object = js.native
+  var name: String = js.native
+  var dataVersion: Float = js.native
   def init:Boolean = js.native
   def addBoneData(boneData:ccsBoneData):Unit = js.native
   def getBoneDataDic:js.Object = js.native
@@ -122,6 +145,18 @@ object ccsArmatureData extends js.Object {
 
 @js.native
 trait t_ccsFrameData extends t_ccsBaseData {
+  var duration: Float = js.native
+  var tweenEasing: Float = js.native
+  var easingParamNumber: Float = js.native
+  var easingParams: js.Object = js.native
+  var displayIndex: Float = js.native
+  var movement: String = js.native
+  var event: String = js.native
+  var sound: String = js.native
+  var soundEffect: String = js.native
+  var blendFunc: js.Object = js.native
+  var frameID: Float = js.native
+  var isTween: Boolean = js.native
   def copy(frameData:js.Any):Unit = js.native
 }
 
@@ -137,6 +172,11 @@ object ccsFrameData extends js.Object {
 
 @js.native
 trait t_ccsMovementBoneData extends t_ccsClass {
+  var delay: Float = js.native
+  var scale: Float = js.native
+  var duration: Float = js.native
+  var frameList: js.Array[js.Any] = js.native
+  var name: String = js.native
   def init:Boolean = js.native
   def addFrameData(frameData:ccsFrameData):Unit = js.native
   def getFrameData(index:Float):ccsFrameData = js.native
@@ -194,7 +234,7 @@ trait t_ccsContourVertex2 extends js.Object {
 
 @js.native
 @JSGlobal("ccs.ContourVertex2")
-class ccsContourVertex2 extends t_ccsContourVertex2 {
+class ccsContourVertex2(x:Float, y:Float) extends t_ccsContourVertex2 {
 }
 
 @js.native
@@ -232,6 +272,5 @@ class ccsTextureData extends t_ccsTextureData {
 @JSGlobal("ccs.TextureData")
 object ccsTextureData extends js.Object {
 }
-
 
 

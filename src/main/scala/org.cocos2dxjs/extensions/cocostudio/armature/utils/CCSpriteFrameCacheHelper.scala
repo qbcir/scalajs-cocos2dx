@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.utils
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 
 @js.native
 trait t_ccsspriteFrameCacheHelper extends js.Object {
@@ -20,6 +20,5 @@ object ccsspriteFrameCacheHelper extends js.Object {
   def getTextureAtlasWithTexture(texture:js.Any):js.Any = js.native
   def clear():Unit = js.native
 }
-
 
 

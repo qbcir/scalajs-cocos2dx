@@ -2,11 +2,21 @@ package org.cocos2dxjs.extensions.cocostudio.armature.animation
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 
 @js.native
 trait t_ccsProcessBase extends t_ccsClass {
+  val currentFrameIndex: Float = js.native
+  val paused: Boolean = js.native
+  val completed: Boolean = js.native
+  val currentPercent: Float = js.native
+  val rawDuration: Float = js.native
+  val loop: Float = js.native
+  val tweenEasing: Float = js.native
+  var animationInterval: Float = js.native
+  var processScale: Float = js.native
+  val playing: Boolean = js.native
   def pause():Unit = js.native
   def resume():Unit = js.native
   def stop():Unit = js.native
@@ -37,6 +47,5 @@ class ccsProcessBase extends t_ccsProcessBase {
 @JSGlobal("ccs.ProcessBase")
 object ccsProcessBase extends js.Object {
 }
-
 
 

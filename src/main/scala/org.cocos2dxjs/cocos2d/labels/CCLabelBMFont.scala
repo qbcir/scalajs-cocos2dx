@@ -2,12 +2,15 @@ package org.cocos2dxjs.cocos2d.labels
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.sprites.t_ccSpriteBatchNode
 
 @js.native
 trait t_ccLabelBMFont extends t_ccSpriteBatchNode {
+  var string: String = js.native
+  var textAlign: Float = js.native
+  var boundingWidth: Float = js.native
   def initWithString(strText:String, charMapFile:String, itemWidth:Float, itemHeight:Float, startCharMap:Float):Boolean = js.native
   def textureLoaded:Boolean = js.native
   override def isOpacityModifyRGB:Boolean = js.native
@@ -39,6 +42,5 @@ class ccLabelBMFont(strText:String, charMapFile:String, itemWidth:Float, itemHei
 @JSGlobal("cc.LabelBMFont")
 object ccLabelBMFont extends js.Object {
 }
-
 
 

@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.gui.scrollview
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
@@ -47,6 +47,5 @@ class ccArrayForObjectSorting extends t_ccArrayForObjectSorting {
 @JSGlobal("cc.ArrayForObjectSorting")
 object ccArrayForObjectSorting extends js.Object {
 }
-
 
 

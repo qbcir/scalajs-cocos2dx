@@ -2,12 +2,19 @@ package org.cocos2dxjs.cocos2d.tilemap
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
 @js.native
 trait t_ccTMXTiledMap extends t_ccNode {
+  var properties: js.Array[js.Any] = js.native
+  var mapOrientation: Float = js.native
+  var objectGroups: js.Array[js.Any] = js.native
+  var mapWidth: Float = js.native
+  var mapHeight: Float = js.native
+  var tileWidth: Float = js.native
+  var tileHeight: Float = js.native
   def getMapSize:ccSize = js.native
   def setMapSize(Var:ccSize):Unit = js.native
   def getTileSize:ccSize = js.native
@@ -36,6 +43,5 @@ class ccTMXTiledMap(tmxFile:String, resourcePath:String) extends t_ccTMXTiledMap
 @JSGlobal("cc.TMXTiledMap")
 object ccTMXTiledMap extends js.Object {
 }
-
 
 

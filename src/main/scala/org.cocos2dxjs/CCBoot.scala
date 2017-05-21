@@ -94,8 +94,8 @@ import org.cocos2dxjs.cocos2d.core.platform.ccEGLView
 import org.cocos2dxjs.cocos2d.core.ccDirector
 import org.cocos2dxjs.cocos2d.core.platform.ccPlistParser
 import org.cocos2dxjs.cocos2d.kazmath.ccmathMatrix4
-import org.cocos2dxjs.cocos2d.core.ccDrawingPrimitiveWebGL
 import org.cocos2dxjs.cocos2d.core.ccDrawingPrimitiveCanvas
+import org.cocos2dxjs.cocos2d.core.ccDrawingPrimitiveWebGL
 
 @js.native
 trait t_ccAsyncPool extends js.Object {
@@ -103,7 +103,7 @@ trait t_ccAsyncPool extends js.Object {
 
 @js.native
 @JSGlobal("cc.AsyncPool")
-class ccAsyncPool extends t_ccAsyncPool {
+class ccAsyncPool(srcObj:js.Object, limit:Float, iterator:js.Function, onEnd:js.Function, target:js.Object) extends t_ccAsyncPool {
 }
 
 @js.native
@@ -195,6 +195,21 @@ class ccgame extends t_ccgame {
 @js.native
 @JSGlobal("cc.game")
 object ccgame extends js.Object {
+  val DEBUG_MODE_NONE: Float = js.native
+  val DEBUG_MODE_INFO: Float = js.native
+  val DEBUG_MODE_WARN: Float = js.native
+  val DEBUG_MODE_ERROR: Float = js.native
+  val DEBUG_MODE_INFO_FOR_WEB_PAGE: Float = js.native
+  val DEBUG_MODE_WARN_FOR_WEB_PAGE: Float = js.native
+  val DEBUG_MODE_ERROR_FOR_WEB_PAGE: Float = js.native
+  val EVENT_HIDE: String = js.native
+  val EVENT_SHOW: String = js.native
+  val EVENT_RESIZE: String = js.native
+  val EVENT_RENDERER_INITED: String = js.native
+  val RENDER_TYPE_CANVAS: Float = js.native
+  val RENDER_TYPE_WEBGL: Float = js.native
+  val RENDER_TYPE_OPENGL: Float = js.native
+  val CONFIG_KEY: js.Object = js.native
   var frame: js.Object = js.native
   var container: js.Object = js.native
   var canvas: js.Object = js.native
@@ -219,6 +234,199 @@ object cc extends js.Object {
   type cckmMat4 = ccmathMatrix4
   type ccDrawingPrimitive = ccDrawingPrimitiveCanvas | ccDrawingPrimitiveWebGL
 
+  val ACTION_TAG_INVALID: Float = js.native
+  val PI2: Float = js.native
+  val NODE_TAG_INVALID: Float = js.native
+  val KEY: js.Object = js.native
+  val FMT_JPG: Float = js.native
+  val FMT_PNG: Float = js.native
+  val FMT_TIFF: Float = js.native
+  val FMT_RAWDATA: Float = js.native
+  val FMT_WEBP: Float = js.native
+  val FMT_UNKNOWN: Float = js.native
+  val FIX_ARTIFACTS_BY_STRECHING_TEXEL: Float = js.native
+  val DIRECTOR_STATS_POSITION: ccPoint = js.native
+  val DIRECTOR_FPS_INTERVAL: Float = js.native
+  val COCOSNODE_RENDER_SUBPIXEL: Float = js.native
+  val SPRITEBATCHNODE_RENDER_SUBPIXEL: Float = js.native
+  val OPTIMIZE_BLEND_FUNC_FOR_PREMULTIPLIED_ALPHA: Float = js.native
+  val TEXTURE_ATLAS_USE_TRIANGLE_STRIP: Float = js.native
+  val TEXTURE_ATLAS_USE_VAO: Float = js.native
+  val TEXTURE_NPOT_SUPPORT: Float = js.native
+  val RETINA_DISPLAY_FILENAME_SUFFIX: String = js.native
+  val USE_LA88_LABELS: Float = js.native
+  val SPRITE_DEBUG_DRAW: Float = js.native
+  val SPRITEBATCHNODE_DEBUG_DRAW: Float = js.native
+  val LABELBMFONT_DEBUG_DRAW: Float = js.native
+  val LABELATLAS_DEBUG_DRAW: Float = js.native
+  val DEFAULT_ENGINE: String = js.native
+  val ENABLE_STACKABLE_ACTIONS: Float = js.native
+  val ENABLE_GL_STATE_CACHE: Float = js.native
+  val UIInterfaceOrientationLandscapeLeft: Float = js.native
+  val UIInterfaceOrientationLandscapeRight: Float = js.native
+  val UIInterfaceOrientationPortraitUpsideDown: Float = js.native
+  val UIInterfaceOrientationPortrait: Float = js.native
+  val INVALID_INDEX: Float = js.native
+  val PI: Float = js.native
+  val FLT_MAX: Float = js.native
+  val FLT_MIN: Float = js.native
+  val RAD: Float = js.native
+  val DEG: Float = js.native
+  val UINT_MAX: Float = js.native
+  val REPEAT_FOREVER: Float = js.native
+  val FLT_EPSILON: Float = js.native
+  val ONE: Float = js.native
+  val ZERO: Float = js.native
+  val SRC_ALPHA: Float = js.native
+  val SRC_ALPHA_SATURATE: Float = js.native
+  val SRC_COLOR: Float = js.native
+  val DST_ALPHA: Float = js.native
+  val DST_COLOR: Float = js.native
+  val ONE_MINUS_SRC_ALPHA: Float = js.native
+  val ONE_MINUS_SRC_COLOR: Float = js.native
+  val ONE_MINUS_DST_ALPHA: Float = js.native
+  val ONE_MINUS_DST_COLOR: Float = js.native
+  val ONE_MINUS_CONSTANT_ALPHA: Float = js.native
+  val ONE_MINUS_CONSTANT_COLOR: Float = js.native
+  val LINEAR: Float = js.native
+  val REPEAT: Float = js.native
+  val CLAMP_TO_EDGE: Float = js.native
+  val MIRRORED_REPEAT: Float = js.native
+  val BLEND_SRC: Float = js.native
+  val BLEND_DST: Float = js.native
+  val ORIENTATION_PORTRAIT: Float = js.native
+  val ORIENTATION_LANDSCAPE: Float = js.native
+  val ORIENTATION_AUTO: Float = js.native
+  val CONCURRENCY_HTTP_REQUEST_COUNT: Float = js.native
+  val VERTEX_ATTRIB_FLAG_NONE: Float = js.native
+  val VERTEX_ATTRIB_FLAG_POSITION: Float = js.native
+  val VERTEX_ATTRIB_FLAG_COLOR: Float = js.native
+  val VERTEX_ATTRIB_FLAG_TEX_COORDS: Float = js.native
+  val VERTEX_ATTRIB_FLAG_POS_COLOR_TEX: Float = js.native
+  val GL_ALL: Float = js.native
+  val VERTEX_ATTRIB_POSITION: Float = js.native
+  val VERTEX_ATTRIB_COLOR: Float = js.native
+  val VERTEX_ATTRIB_TEX_COORDS: Float = js.native
+  val VERTEX_ATTRIB_MAX: Float = js.native
+  val UNIFORM_PMATRIX: Float = js.native
+  val UNIFORM_MVMATRIX: Float = js.native
+  val UNIFORM_MVPMATRIX: Float = js.native
+  val UNIFORM_TIME: Float = js.native
+  val UNIFORM_SINTIME: Float = js.native
+  val UNIFORM_COSTIME: Float = js.native
+  val UNIFORM_RANDOM01: Float = js.native
+  val UNIFORM_SAMPLER: Float = js.native
+  val UNIFORM_MAX: Float = js.native
+  val SHADER_POSITION_TEXTURECOLOR: String = js.native
+  val SHADER_SPRITE_POSITION_TEXTURECOLOR: String = js.native
+  val SHADER_SPRITE_POSITION_TEXTURECOLOR_GRAY: String = js.native
+  val SHADER_POSITION_TEXTURECOLORALPHATEST: String = js.native
+  val SHADER_SPRITE_POSITION_TEXTURECOLORALPHATEST: String = js.native
+  val SHADER_POSITION_COLOR: String = js.native
+  val SHADER_SPRITE_POSITION_COLOR: String = js.native
+  val SHADER_POSITION_TEXTURE: String = js.native
+  val SHADER_POSITION_TEXTURE_UCOLOR: String = js.native
+  val SHADER_POSITION_TEXTUREA8COLOR: String = js.native
+  val SHADER_POSITION_UCOLOR: String = js.native
+  val SHADER_POSITION_LENGTHTEXTURECOLOR: String = js.native
+  val UNIFORM_PMATRIX_S: String = js.native
+  val UNIFORM_MVMATRIX_S: String = js.native
+  val UNIFORM_MVPMATRIX_S: String = js.native
+  val UNIFORM_TIME_S: String = js.native
+  val UNIFORM_SINTIME_S: String = js.native
+  val UNIFORM_COSTIME_S: String = js.native
+  val UNIFORM_RANDOM01_S: String = js.native
+  val UNIFORM_SAMPLER_S: String = js.native
+  val UNIFORM_ALPHA_TEST_VALUE_S: String = js.native
+  val ATTRIBUTE_NAME_COLOR: String = js.native
+  val ATTRIBUTE_NAME_POSITION: String = js.native
+  val ATTRIBUTE_NAME_TEX_COORD: String = js.native
+  val ATTRIBUTE_NAME_MVMAT: String = js.native
+  val ITEM_SIZE: Float = js.native
+  val CURRENT_ITEM: Float = js.native
+  val ZOOM_ACTION_TAG: Float = js.native
+  val NORMAL_TAG: Float = js.native
+  val SELECTED_TAG: Float = js.native
+  val DISABLE_TAG: Float = js.native
+  val TEXT_ALIGNMENT_LEFT: Float = js.native
+  val TEXT_ALIGNMENT_CENTER: Float = js.native
+  val TEXT_ALIGNMENT_RIGHT: Float = js.native
+  val VERTICAL_TEXT_ALIGNMENT_TOP: Float = js.native
+  val VERTICAL_TEXT_ALIGNMENT_CENTER: Float = js.native
+  val VERTICAL_TEXT_ALIGNMENT_BOTTOM: Float = js.native
+  val POINT_EPSILON: Float = js.native
+  val MENU_STATE_WAITING: Float = js.native
+  val MENU_STATE_TRACKING_TOUCH: Float = js.native
+  val MENU_HANDLER_PRIORITY: Float = js.native
+  val DEFAULT_PADDING: Float = js.native
+  val PARTICLE_DEFAULT_CAPACITY: Float = js.native
+  val CONSTRAINT_COLOR: ccColor = js.native
+  val IMAGE_FORMAT_JPEG: Float = js.native
+  val IMAGE_FORMAT_PNG: Float = js.native
+  val IMAGE_FORMAT_RAWDATA: Float = js.native
+  val SHADER_POSITION_UCOLOR_FRAG: String = js.native
+  val SHADER_POSITION_UCOLOR_VERT: String = js.native
+  val SHADER_POSITION_COLOR_FRAG: String = js.native
+  val SHADER_POSITION_COLOR_VERT: String = js.native
+  val SHADER_POSITION_COLOR_LENGTH_TEXTURE_FRAG: String = js.native
+  val SHADER_POSITION_COLOR_LENGTH_TEXTURE_VERT: String = js.native
+  val SHADER_POSITION_TEXTURE_FRAG: String = js.native
+  val SHADER_POSITION_TEXTURE_VERT: String = js.native
+  val SHADER_POSITION_TEXTURE_UCOLOR_FRAG: String = js.native
+  val SHADER_POSITION_TEXTURE_UCOLOR_VERT: String = js.native
+  val SHADER_POSITION_TEXTURE_A8COLOR_FRAG: String = js.native
+  val SHADER_POSITION_TEXTURE_A8COLOR_VERT: String = js.native
+  val SHADER_POSITION_TEXTURE_COLOR_FRAG: String = js.native
+  val SHADER_POSITION_TEXTURE_COLOR_VERT: String = js.native
+  val SHADER_SPRITE_POSITION_TEXTURE_COLOR_VERT: String = js.native
+  val SHADER_POSITION_TEXTURE_COLOR_ALPHATEST_FRAG: String = js.native
+  val SHADEREX_SWITCHMASK_FRAG: String = js.native
+  val TGA_OK: Float = js.native
+  val TGA_ERROR_FILE_OPEN: Float = js.native
+  val TGA_ERROR_READING_FILE: Float = js.native
+  val TGA_ERROR_INDEXED_COLOR: Float = js.native
+  val TGA_ERROR_MEMORY: Float = js.native
+  val TGA_ERROR_COMPRESSED_FILE: Float = js.native
+  val TMX_ORIENTATION_ORTHO: Float = js.native
+  val TMX_ORIENTATION_HEX: Float = js.native
+  val TMX_ORIENTATION_ISO: Float = js.native
+  val TMX_PROPERTY_NONE: Float = js.native
+  val TMX_PROPERTY_MAP: Float = js.native
+  val TMX_PROPERTY_LAYER: Float = js.native
+  val TMX_PROPERTY_OBJECTGROUP: Float = js.native
+  val TMX_PROPERTY_OBJECT: Float = js.native
+  val TMX_PROPERTY_TILE: Float = js.native
+  val TMX_TILE_HORIZONTAL_FLAG: Float = js.native
+  val TMX_TILE_VERTICAL_FLAG: Float = js.native
+  val TMX_TILE_DIAGONAL_FLAG: Float = js.native
+  val TMX_TILE_FLIPPED_ALL: Float = js.native
+  val TMX_TILE_FLIPPED_MASK: Float = js.native
+  val SCENE_FADE: Float = js.native
+  val TRANSITION_ORIENTATION_LEFT_OVER: Float = js.native
+  val TRANSITION_ORIENTATION_RIGHT_OVER: Float = js.native
+  val TRANSITION_ORIENTATION_UP_OVER: Float = js.native
+  val TRANSITION_ORIENTATION_DOWN_OVER: Float = js.native
+  val ADJUST_FACTOR: Float = js.native
+  val SCENE_RADIAL: Float = js.native
+  val KEYBOARD_RETURNTYPE_DEFAULT: Float = js.native
+  val KEYBOARD_RETURNTYPE_DONE: Float = js.native
+  val KEYBOARD_RETURNTYPE_SEND: Float = js.native
+  val KEYBOARD_RETURNTYPE_SEARCH: Float = js.native
+  val KEYBOARD_RETURNTYPE_GO: Float = js.native
+  val EDITBOX_INPUT_MODE_ANY: Float = js.native
+  val EDITBOX_INPUT_MODE_EMAILADDR: Float = js.native
+  val EDITBOX_INPUT_MODE_NUMERIC: Float = js.native
+  val EDITBOX_INPUT_MODE_PHONENUMBER: Float = js.native
+  val EDITBOX_INPUT_MODE_URL: Float = js.native
+  val EDITBOX_INPUT_MODE_DECIMAL: Float = js.native
+  val EDITBOX_INPUT_MODE_SINGLELINE: Float = js.native
+  val EDITBOX_INPUT_FLAG_PASSWORD: Float = js.native
+  val EDITBOX_INPUT_FLAG_SENSITIVE: Float = js.native
+  val EDITBOX_INPUT_FLAG_INITIAL_CAPS_WORD: Float = js.native
+  val EDITBOX_INPUT_FLAG_INITIAL_CAPS_SENTENCE: Float = js.native
+  val EDITBOX_INPUT_FLAG_INITIAL_CAPS_ALL_CHARACTERS: Float = js.native
+  val TABLEVIEW_FILL_TOPDOWN: Float = js.native
+  val TABLEVIEW_FILL_BOTTOMUP: Float = js.native
   var _drawingUtil: ccDrawingPrimitive = js.native
   var _renderContext: js.Any = js.native
   var _canvas: js.Any = js.native
@@ -407,7 +615,7 @@ object cc extends js.Object {
   def rectUnion(rectA:ccRect, rectB:ccRect):ccRect = js.native
   def rectIntersection(rectA:ccRect, rectB:ccRect):ccRect = js.native
   def defineGetterSetter(proto:js.Object, prop:String, getter:js.Function, setter:js.Function, getterName:String, setterName:String):Unit = js.native
-  def clone(obj:js.Object):Unit = js.native
+  def clone(obj:js.Object):js.Array[js.Any] = js.native
   def associateWithNative(jsObj:js.Object, superclass:js.Object):Unit = js.native
   def getImageFormatByData(imgData:js.Array[js.Any]):Float = js.native
   def lerp(a:Float, b:Float, r:Float):Unit = js.native
@@ -526,5 +734,72 @@ object cc extends js.Object {
   def tgaDestroy(psInfo:ccImageTGA):Unit = js.native
   def tgaLoadRLEImageData(buffer:js.Any, bufSize:js.Any, psInfo:js.Any):Boolean = js.native
   def tgaFlipImage(psInfo:ccImageTGA):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.sys")
+object ccsys extends js.Object {
+
+  val LANGUAGE_ENGLISH: Float = js.native
+  val LANGUAGE_CHINESE: Float = js.native
+  val LANGUAGE_FRENCH: Float = js.native
+  val LANGUAGE_ITALIAN: Float = js.native
+  val LANGUAGE_GERMAN: Float = js.native
+  val LANGUAGE_SPANISH: Float = js.native
+  val LANGUAGE_DUTCH: Float = js.native
+  val LANGUAGE_RUSSIAN: Float = js.native
+  val LANGUAGE_KOREAN: Float = js.native
+  val LANGUAGE_JAPANESE: Float = js.native
+  val LANGUAGE_HUNGARIAN: Float = js.native
+  val LANGUAGE_PORTUGUESE: Float = js.native
+  val LANGUAGE_ARABIC: Float = js.native
+  val LANGUAGE_NORWEGIAN: Float = js.native
+  val LANGUAGE_POLISH: Float = js.native
+  val LANGUAGE_UNKNOWN: Float = js.native
+  val OS_IOS: String = js.native
+  val OS_ANDROID: String = js.native
+  val OS_WINDOWS: String = js.native
+  val OS_MARMALADE: String = js.native
+  val OS_LINUX: String = js.native
+  val OS_BADA: String = js.native
+  val OS_BLACKBERRY: String = js.native
+  val OS_OSX: String = js.native
+  val OS_WP8: String = js.native
+  val OS_WINRT: String = js.native
+  val OS_UNKNOWN: String = js.native
+  val UNKNOWN: Float = js.native
+  val WIN32: Float = js.native
+  val LINUX: Float = js.native
+  val MACOS: Float = js.native
+  val ANDROID: Float = js.native
+  val IOS: Float = js.native
+  val BLACKBERRY: Float = js.native
+  val NACL: Float = js.native
+  val EMSCRIPTEN: Float = js.native
+  val TIZEN: Float = js.native
+  val WINRT: Float = js.native
+  val WP8: Float = js.native
+  val MOBILE_BROWSER: Float = js.native
+  val DESKTOP_BROWSER: Float = js.native
+  var isNative: Boolean = js.native
+  var isMobile: Boolean = js.native
+  var platform: Float = js.native
+  var language: String = js.native
+  var os: String = js.native
+  var osVersion: String = js.native
+  var osMainVersion: Float = js.native
+  var browserType: String = js.native
+  var browserVersion: String = js.native
+  var windowPixelResolution: js.Any = js.native
+  var localStorage: js.Object = js.native
+  var capabilities: js.Object = js.native
+  var openURL: js.Any = js.native
+  var now: js.Any = js.native
+  def garbageCollect():Unit = js.native
+  def dumpRoot():Unit = js.native
+  def restartVM():Unit = js.native
+  def cleanScript(jsfile:String):Unit = js.native
+  def isObjectValid(obj:js.Object):Boolean = js.native
+  def dump():Unit = js.native
 }
 

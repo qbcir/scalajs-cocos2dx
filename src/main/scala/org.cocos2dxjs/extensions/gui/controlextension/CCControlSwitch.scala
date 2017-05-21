@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
@@ -29,6 +29,19 @@ object ccControlSwitch extends js.Object {
 
 @js.native
 trait t_ccControlSwitchSprite extends t_ccSprite {
+  var sliderX: Float = js.native
+  var onPos: ccPoint = js.native
+  var offPos: ccPoint = js.native
+  var maskTexture: ccTexture2D = js.native
+  var texturePos: ccPoint = js.native
+  var maskPos: ccPoint = js.native
+  var onSprite: ccSprite = js.native
+  var offSprite: ccSprite = js.native
+  var thumbSprite: ccSprite = js.native
+  var onLabel: ccLabelTTF = js.native
+  var offLabel: ccLabelTTF = js.native
+  val onSideWidth: Float = js.native
+  val offSideWidth: Float = js.native
 }
 
 @js.native
@@ -40,6 +53,5 @@ class ccControlSwitchSprite extends t_ccControlSwitchSprite {
 @JSGlobal("cc.ControlSwitchSprite")
 object ccControlSwitchSprite extends js.Object {
 }
-
 
 

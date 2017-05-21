@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccpool
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 
 @js.native
 trait t_ccpool extends js.Object {
@@ -22,6 +22,5 @@ object ccpool extends js.Object {
   def getFromPool(args:js.Any):js.Any = js.native
   def drainAllPools():Unit = js.native
 }
-
 
 

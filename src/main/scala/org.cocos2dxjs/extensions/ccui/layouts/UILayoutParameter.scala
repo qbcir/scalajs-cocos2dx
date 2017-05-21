@@ -2,11 +2,15 @@ package org.cocos2dxjs.extensions.ccui.layouts
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiClass
 
 @js.native
 trait t_ccuiMargin extends t_ccuiClass {
+  var left: Float = js.native
+  var top: Float = js.native
+  var right: Float = js.native
+  var bottom: Float = js.native
   def setMargin(l:Float, t:Float, r:Float, b:Float):Unit = js.native
   def equals(target:ccuiMargin):Boolean = js.native
 }
@@ -39,6 +43,9 @@ class ccuiLayoutParameter extends t_ccuiLayoutParameter {
 @js.native
 @JSGlobal("ccui.LayoutParameter")
 object ccuiLayoutParameter extends js.Object {
+  val NONE: Float = js.native
+  val LINEAR: Float = js.native
+  val RELATIVE: Float = js.native
   def create():Unit = js.native
 }
 
@@ -56,6 +63,13 @@ class ccuiLinearLayoutParameter extends t_ccuiLinearLayoutParameter {
 @js.native
 @JSGlobal("ccui.LinearLayoutParameter")
 object ccuiLinearLayoutParameter extends js.Object {
+  val NONE: Float = js.native
+  val LEFT: Float = js.native
+  val TOP: Float = js.native
+  val RIGHT: Float = js.native
+  val BOTTOM: Float = js.native
+  val CENTER_VERTICAL: Float = js.native
+  val CENTER_HORIZONTAL: Float = js.native
 }
 
 @js.native
@@ -76,7 +90,28 @@ class ccuiRelativeLayoutParameter extends t_ccuiRelativeLayoutParameter {
 @js.native
 @JSGlobal("ccui.RelativeLayoutParameter")
 object ccuiRelativeLayoutParameter extends js.Object {
+  val NONE: Float = js.native
+  val PARENT_TOP_LEFT: Float = js.native
+  val PARENT_TOP_CENTER_HORIZONTAL: Float = js.native
+  val PARENT_TOP_RIGHT: Float = js.native
+  val PARENT_LEFT_CENTER_VERTICAL: Float = js.native
+  val CENTER_IN_PARENT: Float = js.native
+  val PARENT_RIGHT_CENTER_VERTICAL: Float = js.native
+  val PARENT_LEFT_BOTTOM: Float = js.native
+  val PARENT_BOTTOM_CENTER_HORIZONTAL: Float = js.native
+  val PARENT_RIGHT_BOTTOM: Float = js.native
+  val LOCATION_ABOVE_LEFTALIGN: Float = js.native
+  val LOCATION_ABOVE_CENTER: Float = js.native
+  val LOCATION_ABOVE_RIGHTALIGN: Float = js.native
+  val LOCATION_LEFT_OF_TOPALIGN: Float = js.native
+  val LOCATION_LEFT_OF_CENTER: Float = js.native
+  val LOCATION_LEFT_OF_BOTTOMALIGN: Float = js.native
+  val LOCATION_RIGHT_OF_TOPALIGN: Float = js.native
+  val LOCATION_RIGHT_OF_CENTER: Float = js.native
+  val LOCATION_RIGHT_OF_BOTTOMALIGN: Float = js.native
+  val LOCATION_BELOW_LEFTALIGN: Float = js.native
+  val LOCATION_BELOW_CENTER: Float = js.native
+  val LOCATION_BELOW_RIGHTALIGN: Float = js.native
 }
-
 
 

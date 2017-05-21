@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.components
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.cocostudio.t_ccsComponent
 
 @js.native
@@ -32,6 +32,5 @@ class ccsComAttribute extends t_ccsComAttribute {
 @JSGlobal("ccs.ComAttribute")
 object ccsComAttribute extends js.Object {
 }
-
 
 

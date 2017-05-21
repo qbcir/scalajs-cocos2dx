@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.actions3d
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 
@@ -178,6 +178,5 @@ class ccTwirl(duration:Float, gridSize:ccSize, position:ccPoint, twirls:Float, a
 @JSGlobal("cc.Twirl")
 object ccTwirl extends js.Object {
 }
-
 
 

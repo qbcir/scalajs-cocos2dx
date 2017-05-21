@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.textinput
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
@@ -30,6 +30,10 @@ object ccTextFieldDelegate extends js.Object {
 
 @js.native
 trait t_ccTextFieldTTF extends t_ccLabelTTF {
+  var delegate: ccNode = js.native
+  val charCount: Float = js.native
+  var placeHolder: String = js.native
+  var colorSpaceHolder: ccColor = js.native
   def getDelegate:ccNode = js.native
   def setDelegate(value:ccNode):Unit = js.native
   def getCharCount:Float = js.native
@@ -65,6 +69,5 @@ class ccTextFieldTTF(placeholder:String, dimensions:ccSize, alignment:Float, fon
 @JSGlobal("cc.TextFieldTTF")
 object ccTextFieldTTF extends js.Object {
 }
-
 
 

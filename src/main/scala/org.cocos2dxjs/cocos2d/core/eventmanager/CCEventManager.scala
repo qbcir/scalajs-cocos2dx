@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.eventmanager
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 
 @js.native
@@ -31,6 +31,5 @@ object cceventManager extends js.Object {
   def dispatchEvent(event:ccEvent):Unit = js.native
   def dispatchCustomEvent(eventName:String, optionalUserData:js.Any):Unit = js.native
 }
-
 
 

@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.textures
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.shaders.ccGLProgram
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -12,6 +12,15 @@ import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
 trait t_ccTexture2D extends t_ccClass {
+  val name: js.Any = js.native
+  val pixelFormat: Float = js.native
+  val pixelsWidth: Float = js.native
+  val pixelsHeight: Float = js.native
+  var width: Float = js.native
+  var height: Float = js.native
+  var shaderProgram: ccGLProgram = js.native
+  var maxS: Float = js.native
+  var maxT: Float = js.native
   def releaseTexture():Unit = js.native
   def getPixelFormat:Float = js.native
   def getPixelsWide:Float = js.native
@@ -58,8 +67,18 @@ class ccTexture2D extends t_ccTexture2D {
 @js.native
 @JSGlobal("cc.Texture2D")
 object ccTexture2D extends js.Object {
-  var PIXEL_FORMAT_PVRTC2: Float = js.native
+  val PIXEL_FORMAT_RGBA8888: Float = js.native
+  val PIXEL_FORMAT_RGB888: Float = js.native
+  val PIXEL_FORMAT_RGB565: Float = js.native
+  val PIXEL_FORMAT_A8: Float = js.native
+  val PIXEL_FORMAT_I8: Float = js.native
+  val PIXEL_FORMAT_AI88: Float = js.native
+  val PIXEL_FORMAT_RGBA4444: Float = js.native
+  val PIXEL_FORMAT_RGB5A1: Float = js.native
+  val PIXEL_FORMAT_PVRTC4: Float = js.native
+  val PIXEL_FORMAT_PVRTC2: Float = js.native
+  val PIXEL_FORMAT_DEFAULT: Float = js.native
+  var defaultPixelFormat: Float = js.native
 }
-
 
 

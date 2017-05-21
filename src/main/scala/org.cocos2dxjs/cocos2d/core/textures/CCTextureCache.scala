@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.textures
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 
 @js.native
 trait t_cctextureCache extends js.Object {
@@ -30,6 +30,5 @@ object cctextureCache extends js.Object {
   def addUIImage(image:js.Any, key:String):ccTexture2D = js.native
   def dumpCachedTextureInfo():Unit = js.native
 }
-
 
 

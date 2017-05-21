@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.layers
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
@@ -45,6 +45,12 @@ object ccLayerColor extends js.Object {
 
 @js.native
 trait t_ccLayerGradient extends t_ccLayerColor {
+  var startColor: ccColor = js.native
+  var endColor: ccColor = js.native
+  var startOpacity: Float = js.native
+  var endOpacity: Float = js.native
+  var vector: Float = js.native
+  var compressedInterpolation: Float = js.native
   def init(start:ccColor, end:ccColor, v:ccPoint, stops:js.Array[js.Any]):Boolean = js.native
   override def setContentSize(size:ccSize, height:Float):Unit = js.native
   def getStartColor:ccColor = js.native
@@ -90,6 +96,5 @@ class ccLayerMultiplex(layers:js.Array[js.Any]) extends t_ccLayerMultiplex {
 @JSGlobal("cc.LayerMultiplex")
 object ccLayerMultiplex extends js.Object {
 }
-
 
 

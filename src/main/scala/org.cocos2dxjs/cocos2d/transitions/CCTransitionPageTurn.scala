@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.transitions
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.scenes.ccScene
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.actions.ccReverseTime
@@ -25,6 +25,5 @@ class ccTransitionPageTurn(t:Float, scene:ccScene, backwards:Boolean) extends t_
 @JSGlobal("cc.TransitionPageTurn")
 object ccTransitionPageTurn extends js.Object {
 }
-
 
 

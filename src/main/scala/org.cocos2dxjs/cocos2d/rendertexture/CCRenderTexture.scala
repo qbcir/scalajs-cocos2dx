@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.rendertexture
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -12,6 +12,12 @@ import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
 @js.native
 trait t_ccRenderTexture extends t_ccNode {
+  var sprite: ccSprite = js.native
+  var clearFlags: ccSprite = js.native
+  var clearDepthVal: Float = js.native
+  var autoDraw: Boolean = js.native
+  var clearStencilVal: Float = js.native
+  var clearColorVal: ccColor = js.native
   override def cleanup():Unit = js.native
   def getSprite:ccSprite = js.native
   def setSprite(sprite:ccSprite):Unit = js.native
@@ -49,6 +55,5 @@ class ccRenderTexture(width:Float, height:Float, format:Float, depthStencilForma
 @JSGlobal("cc.RenderTexture")
 object ccRenderTexture extends js.Object {
 }
-
 
 

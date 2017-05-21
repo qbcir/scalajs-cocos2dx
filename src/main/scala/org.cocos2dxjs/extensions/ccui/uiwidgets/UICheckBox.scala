@@ -2,13 +2,14 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
 trait t_ccuiCheckBox extends t_ccuiWidget {
+  var selected: Boolean = js.native
   def loadTextures(backGround:String, backGroundSelected:String, cross:String, backGroundDisabled:String, frontCrossDisabled:String, texType:Float):Unit = js.native
   def loadTextureBackGround(backGround:String, texType:Float):Unit = js.native
   def loadTextureBackGroundSelected(backGroundSelected:String, texType:Float):Unit = js.native
@@ -33,7 +34,13 @@ class ccuiCheckBox(backGround:String, backGroundSelected:String, cross:String, b
 @js.native
 @JSGlobal("ccui.CheckBox")
 object ccuiCheckBox extends js.Object {
+  val EVENT_SELECTED: Float = js.native
+  val EVENT_UNSELECTED: Float = js.native
+  val BOX_RENDERER_ZORDER: Float = js.native
+  val BOX_SELECTED_RENDERER_ZORDER: Float = js.native
+  val BOX_DISABLED_RENDERER_ZORDER: Float = js.native
+  val FRONT_CROSS_RENDERER_ZORDER: Float = js.native
+  val FRONT_CROSS_DISABLED_RENDERER_ZORDER: Float = js.native
 }
-
 
 

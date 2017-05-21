@@ -2,12 +2,13 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiProtectedNode
 
 @js.native
 trait t_ccuiPageViewIndicator extends t_ccuiProtectedNode {
+  var spaceBetweenIndexNodes: Float = js.native
   def setDirection(direction:Float):Unit = js.native
   def reset(numberOfTotalPages:Float):Unit = js.native
   def indicate(index:Float):Unit = js.native
@@ -33,6 +34,5 @@ class ccuiPageViewIndicator extends t_ccuiPageViewIndicator {
 object ccuiPageViewIndicator extends js.Object {
   var SPACE_BETWEEN_INDEX_NODES_DEFAULT: js.Any = js.native
 }
-
 
 

@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.platform
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 
 @js.native
 trait t_ccSAXParser extends t_ccClass {
@@ -33,6 +33,5 @@ class ccPlistParser extends t_ccPlistParser {
 @JSGlobal("cc.PlistParser")
 object ccPlistParser extends js.Object {
 }
-
 
 

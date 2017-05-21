@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 
 @js.native
 trait t_ccconfiguration extends js.Object {
@@ -34,6 +34,5 @@ object ccconfiguration extends js.Object {
   def gatherGPUInfo():Unit = js.native
   def loadConfigFile(url:String):Unit = js.native
 }
-
 
 

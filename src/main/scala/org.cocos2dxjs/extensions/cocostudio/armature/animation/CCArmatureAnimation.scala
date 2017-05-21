@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.animation
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.extensions.cocostudio.armature.ccsArmature
 import org.cocos2dxjs.extensions.cocostudio.armature.ccsBone
@@ -24,6 +24,9 @@ object ccsAnimationEvent extends js.Object {
 
 @js.native
 trait t_ccsMovementEvent extends js.Object {
+  var armature: ccsArmature = js.native
+  var movementType: Float = js.native
+  var movementID: String = js.native
 }
 
 @js.native
@@ -38,6 +41,10 @@ object ccsMovementEvent extends js.Object {
 
 @js.native
 trait t_ccsFrameEvent extends js.Object {
+  var bone: ccsBone = js.native
+  var frameEventName: String = js.native
+  var originFrameIndex: Float = js.native
+  var currentFrameIndex: Float = js.native
 }
 
 @js.native
@@ -52,6 +59,11 @@ object ccsFrameEvent extends js.Object {
 
 @js.native
 trait t_ccsArmatureAnimation extends t_ccsProcessBase {
+  var animationData: ccsAnimationData = js.native
+  var userObject: js.Object = js.native
+  var ignoreFrameEvent: Boolean = js.native
+  var speedScale: Float = js.native
+  var animationScale: Float = js.native
   def init(armature:ccsArmature):Boolean = js.native
   override def pause():Unit = js.native
   override def resume():Unit = js.native
@@ -82,13 +94,12 @@ trait t_ccsArmatureAnimation extends t_ccsProcessBase {
 
 @js.native
 @JSGlobal("ccs.ArmatureAnimation")
-class ccsArmatureAnimation extends t_ccsArmatureAnimation {
+class ccsArmatureAnimation(armature:ccsArmature) extends t_ccsArmatureAnimation {
 }
 
 @js.native
 @JSGlobal("ccs.ArmatureAnimation")
 object ccsArmatureAnimation extends js.Object {
 }
-
 
 

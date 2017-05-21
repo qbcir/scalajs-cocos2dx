@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
@@ -19,6 +19,5 @@ class ccDirectorDelegate extends t_ccDirectorDelegate {
 @JSGlobal("cc.DirectorDelegate")
 object ccDirectorDelegate extends js.Object {
 }
-
 
 

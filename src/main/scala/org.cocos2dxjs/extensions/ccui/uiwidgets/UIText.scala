@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
@@ -10,6 +10,16 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
 trait t_ccuiText extends t_ccuiWidget {
+  var boundingWidth: Float = js.native
+  var boundingHeight: Float = js.native
+  var string: String = js.native
+  val stringLength: Float = js.native
+  var font: String = js.native
+  var fontName: String = js.native
+  var fontSize: Float = js.native
+  var textAlign: Float = js.native
+  var verticalAlign: Float = js.native
+  var touchScaleEnabled: Boolean = js.native
   def setString(text:String):Unit = js.native
   def getString:String = js.native
   def getStringLength:Float = js.native
@@ -45,8 +55,8 @@ class ccuiText(textContent:String, fontName:String, fontSize:Float) extends t_cc
 @js.native
 @JSGlobal("ccui.Text")
 object ccuiText extends js.Object {
+  val RENDERER_ZORDER: Float = js.native
   var Type: js.Any = js.native
 }
-
 
 

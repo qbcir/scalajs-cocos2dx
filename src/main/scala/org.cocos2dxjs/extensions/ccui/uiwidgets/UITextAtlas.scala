@@ -2,13 +2,14 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
 trait t_ccuiTextAtlas extends t_ccuiWidget {
+  var string: String = js.native
   def setProperty(stringValue:String, charMapFile:String, itemWidth:Float, itemHeight:Float, startCharMap:String):Unit = js.native
   def setString(value:String):Unit = js.native
   def getString:String = js.native
@@ -30,6 +31,5 @@ class ccuiTextAtlas(stringValue:String, charMapFile:String, itemWidth:Float, ite
 object ccuiTextAtlas extends js.Object {
   var RENDERER_ZORDER: Float = js.native
 }
-
 
 

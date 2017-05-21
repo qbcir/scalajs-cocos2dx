@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.system
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
@@ -27,6 +27,5 @@ object ccuihelper extends js.Object {
   def doLayout(rootNode:ccNode):Unit = js.native
   def restrictCapInsetRect(capInsets:ccRect, textureSize:ccSize):Unit = js.native
 }
-
 
 

@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.labels
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 
 @js.native
 trait t_ccLabelAtlas extends t_ccLabelBMFont {
@@ -10,13 +10,12 @@ trait t_ccLabelAtlas extends t_ccLabelBMFont {
 
 @js.native
 @JSGlobal("cc.LabelAtlas")
-class ccLabelAtlas extends t_ccLabelAtlas {
+class ccLabelAtlas(strText:String, charMapFile:String, itemWidth:Float, itemHeight:Float, startCharMap:Float) extends t_ccLabelAtlas {
 }
 
 @js.native
 @JSGlobal("cc.LabelAtlas")
 object ccLabelAtlas extends js.Object {
 }
-
 
 

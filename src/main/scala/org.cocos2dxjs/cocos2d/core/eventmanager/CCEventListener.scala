@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.eventmanager
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
@@ -34,8 +34,15 @@ class ccEventListener(_type:Float, listenerID:String, callback:js.Function) exte
 @js.native
 @JSGlobal("cc.EventListener")
 object ccEventListener extends js.Object {
+  val UNKNOWN: Float = js.native
+  val TOUCH_ONE_BY_ONE: Float = js.native
+  val TOUCH_ALL_AT_ONCE: Float = js.native
+  val KEYBOARD: Float = js.native
+  val MOUSE: Float = js.native
+  val ACCELERATION: Float = js.native
+  val FOCUS: Float = js.native
+  val CUSTOM: Float = js.native
   def create(argObj:js.Object):ccEventListener = js.native
 }
-
 
 

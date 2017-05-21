@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.layers.t_ccLayer
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 
@@ -44,6 +44,5 @@ object ccMenuPassive extends js.Object {
   def create():Unit = js.native
   def createWithItem():Unit = js.native
 }
-
 
 

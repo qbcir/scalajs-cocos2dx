@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.eventmanager
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
@@ -23,13 +23,12 @@ trait t_ccTouch extends t_ccClass {
 
 @js.native
 @JSGlobal("cc.Touch")
-class ccTouch extends t_ccTouch {
+class ccTouch(x:Float, y:Float, id:Float) extends t_ccTouch {
 }
 
 @js.native
 @JSGlobal("cc.Touch")
 object ccTouch extends js.Object {
 }
-
 
 

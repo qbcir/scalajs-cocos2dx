@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -59,7 +59,22 @@ class ccuiListView extends t_ccuiListView {
 @js.native
 @JSGlobal("ccui.ListView")
 object ccuiListView extends js.Object {
+  val EVENT_SELECTED_ITEM: Float = js.native
+  val ON_SELECTED_ITEM_START: Float = js.native
+  val ON_SELECTED_ITEM_END: Float = js.native
+  val GRAVITY_LEFT: Float = js.native
+  val GRAVITY_RIGHT: Float = js.native
+  val GRAVITY_CENTER_HORIZONTAL: Float = js.native
+  val GRAVITY_TOP: Float = js.native
+  val GRAVITY_BOTTOM: Float = js.native
+  val GRAVITY_CENTER_VERTICAL: Float = js.native
+  val MAGNETIC_NONE: Float = js.native
+  val MAGNETIC_CENTER: Float = js.native
+  val MAGNETIC_BOTH_END: Float = js.native
+  val MAGNETIC_LEFT: Float = js.native
+  val MAGNETIC_RIGHT: Float = js.native
+  val MAGNETIC_TOP: Float = js.native
+  val MAGNETIC_BOTTOM: Float = js.native
 }
-
 
 

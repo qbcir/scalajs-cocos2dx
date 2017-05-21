@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.parallax
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
@@ -31,6 +31,7 @@ object ccPointObject extends js.Object {
 
 @js.native
 trait t_ccParallaxNode extends t_ccNode {
+  var parallaxArray: js.Array[js.Any] = js.native
   def getParallaxArray:js.Array[js.Any] = js.native
   def setParallaxArray(value:js.Array[js.Any]):Unit = js.native
   def addChild(child:ccNode, z:Float, ratio:ccPoint, offset:ccPoint):Unit = js.native
@@ -47,6 +48,5 @@ class ccParallaxNode extends t_ccParallaxNode {
 @JSGlobal("cc.ParallaxNode")
 object ccParallaxNode extends js.Object {
 }
-
 
 

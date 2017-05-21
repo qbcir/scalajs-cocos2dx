@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.utils
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsBaseData
 import org.cocos2dxjs.cocos2d.core.cocoa.ccAffineTransform
 
@@ -24,6 +24,5 @@ object ccsTransformHelp extends js.Object {
   def nodeConcat(target:ccsBaseData, source:ccsBaseData):Unit = js.native
   def nodeSub(target:ccsBaseData, source:ccsBaseData):Unit = js.native
 }
-
 
 

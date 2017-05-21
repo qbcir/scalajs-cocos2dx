@@ -2,13 +2,19 @@ package org.cocos2dxjs.extensions.ccui.baseclasses
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
 @js.native
 trait t_ccuiScale9Sprite extends t_ccNode {
+  var preferredSize: ccSize = js.native
+  var capInsets: ccRect = js.native
+  var insetLeft: Float = js.native
+  var insetTop: Float = js.native
+  var insetRight: Float = js.native
+  var insetBottom: Float = js.native
   def initWithSpriteFrame(spriteFrameOrSFName:js.Any):Unit = js.native
   def setTexture(textureOrTextureFile:js.Any):Unit = js.native
   def setSpriteFrame(spriteFrameOrSFFileName:js.Any):Unit = js.native
@@ -38,6 +44,5 @@ class ccuiScale9Sprite(file:String, rectOrCapInsets:ccRect, capInsets:ccRect) ex
 object ccuiScale9Sprite extends js.Object {
   var POSITIONS_CENTRE: js.Any = js.native
 }
-
 
 

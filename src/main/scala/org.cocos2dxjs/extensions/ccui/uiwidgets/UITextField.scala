@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
@@ -11,6 +11,14 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
 trait t_ccuiTextField extends t_ccuiWidget {
+  var string: String = js.native
+  var placeHolder: String = js.native
+  var font: String = js.native
+  var fontName: String = js.native
+  var fontSize: Float = js.native
+  var maxLengthEnabled: Boolean = js.native
+  var maxLength: Float = js.native
+  var passwordEnabled: Boolean = js.native
   override def onEnter():Unit = js.native
   def setTouchSize(size:ccSize):Unit = js.native
   def setTouchAreaEnabled(enable:js.Any):Unit = js.native
@@ -66,7 +74,11 @@ class ccuiTextField(placeholder:String, fontName:String, fontSize:Float) extends
 @js.native
 @JSGlobal("ccui.TextField")
 object ccuiTextField extends js.Object {
+  val EVENT_ATTACH_WITH_IME: Float = js.native
+  val EVENT_DETACH_WITH_IME: Float = js.native
+  val EVENT_INSERT_TEXT: Float = js.native
+  val EVENT_DELETE_BACKWARD: Float = js.native
+  val RENDERER_ZORDER: Float = js.native
 }
-
 
 

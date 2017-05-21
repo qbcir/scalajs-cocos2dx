@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature.display
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
 @js.native
@@ -18,6 +18,5 @@ class ccsBatchNode extends t_ccsBatchNode {
 @JSGlobal("ccs.BatchNode")
 object ccsBatchNode extends js.Object {
 }
-
 
 

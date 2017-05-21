@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.action
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.actions.ccCallFunc
 
 @js.native
@@ -24,6 +24,5 @@ object ccsactionManager extends js.Object {
   def releaseActions():Unit = js.native
   def clear():Unit = js.native
 }
-
 
 

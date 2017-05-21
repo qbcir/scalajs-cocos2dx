@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.actions3d
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
@@ -45,7 +45,7 @@ trait t_ccTile extends js.Object {
 
 @js.native
 @JSGlobal("cc.Tile")
-class ccTile extends t_ccTile {
+class ccTile(position:ccPoint, startPosition:ccPoint, delta:ccSize) extends t_ccTile {
 }
 
 @js.native
@@ -230,6 +230,5 @@ class ccSplitCols(duration:Float, cols:Float) extends t_ccSplitCols {
 @JSGlobal("cc.SplitCols")
 object ccSplitCols extends js.Object {
 }
-
 
 

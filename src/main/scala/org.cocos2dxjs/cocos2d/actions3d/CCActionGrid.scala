@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.actions3d
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.actions.ccAction
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
@@ -104,6 +104,5 @@ class ccReuseGrid(times:Float) extends t_ccReuseGrid {
 @JSGlobal("cc.ReuseGrid")
 object ccReuseGrid extends js.Object {
 }
-
 
 

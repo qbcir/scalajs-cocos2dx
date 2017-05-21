@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.menus
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
@@ -37,6 +37,9 @@ object ccMenuItem extends js.Object {
 
 @js.native
 trait t_ccMenuItemLabel extends t_ccMenuItem {
+  var string: String = js.native
+  var label: ccNode = js.native
+  var disabledColor: ccColor = js.native
   def getDisabledColor:ccColor = js.native
   def setDisabledColor(color:ccColor):Unit = js.native
   def getLabel:ccNode = js.native
@@ -100,6 +103,9 @@ object ccMenuItemFont extends js.Object {
 
 @js.native
 trait t_ccMenuItemSprite extends t_ccMenuItem {
+  var normalImage: ccSprite = js.native
+  var selectedImage: ccSprite = js.native
+  var disabledImage: ccSprite = js.native
   def getNormalImage:ccSprite = js.native
   def setNormalImage(normalImage:ccSprite):Unit = js.native
   def getSelectedImage:ccSprite = js.native
@@ -142,6 +148,8 @@ object ccMenuItemImage extends js.Object {
 
 @js.native
 trait t_ccMenuItemToggle extends t_ccMenuItem {
+  var subItems: js.Array[js.Any] = js.native
+  var selectedIndex: Float = js.native
   override def getOpacity:Float = js.native
   override def setOpacity(opacity:Float):Unit = js.native
   override def getColor:ccColor = js.native
@@ -170,6 +178,5 @@ class ccMenuItemToggle extends t_ccMenuItemToggle {
 @JSGlobal("cc.MenuItemToggle")
 object ccMenuItemToggle extends js.Object {
 }
-
 
 

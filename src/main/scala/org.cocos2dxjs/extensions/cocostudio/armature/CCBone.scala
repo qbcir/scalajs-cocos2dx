@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.armature
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsBoneData
 import org.cocos2dxjs.extensions.cocostudio.armature.animation.ccsTween
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsFrameData
@@ -17,6 +17,18 @@ import org.cocos2dxjs.extensions.cocostudio.t_ccsNode
 
 @js.native
 trait t_ccsBone extends t_ccsNode {
+  var boneData: ccsBoneData = js.native
+  var armature: ccsArmature = js.native
+  var parentBone: ccsBone = js.native
+  var childArmature: ccsArmature = js.native
+  val childrenBone: js.Array[js.Any] = js.native
+  val tween: ccsTween = js.native
+  val tweenData: ccsFrameData = js.native
+  var colliderFilter: ccsColliderFilter = js.native
+  var displayManager: ccsDisplayManager = js.native
+  var ignoreMovementBoneData: Boolean = js.native
+  var name: String = js.native
+  var blendDirty: Boolean = js.native
   def init(name:String):Boolean = js.native
   def setBoneData(boneData:ccsBoneData):Unit = js.native
   def getBoneData:ccsBoneData = js.native
@@ -60,13 +72,12 @@ trait t_ccsBone extends t_ccsNode {
 
 @js.native
 @JSGlobal("ccs.Bone")
-class ccsBone extends t_ccsBone {
+class ccsBone(name:String) extends t_ccsBone {
 }
 
 @js.native
 @JSGlobal("ccs.Bone")
 object ccsBone extends js.Object {
 }
-
 
 

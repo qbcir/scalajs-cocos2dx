@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 
@@ -71,7 +71,7 @@ trait t_ccCatmullRomBy extends t_ccCardinalSplineBy {
 
 @js.native
 @JSGlobal("cc.CatmullRomBy")
-class ccCatmullRomBy extends t_ccCatmullRomBy {
+class ccCatmullRomBy(dt:Float, points:js.Array[js.Any]) extends t_ccCatmullRomBy {
   var _points: js.Any = js.native
 }
 
@@ -79,6 +79,5 @@ class ccCatmullRomBy extends t_ccCatmullRomBy {
 @JSGlobal("cc.CatmullRomBy")
 object ccCatmullRomBy extends js.Object {
 }
-
 
 

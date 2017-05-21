@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio.trigger
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.cocostudio.armature.ccsArmature
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 
@@ -49,6 +49,5 @@ class ccsArmatureMovementDispatcher extends t_ccsArmatureMovementDispatcher {
 @JSGlobal("ccs.ArmatureMovementDispatcher")
 object ccsArmatureMovementDispatcher extends js.Object {
 }
-
 
 

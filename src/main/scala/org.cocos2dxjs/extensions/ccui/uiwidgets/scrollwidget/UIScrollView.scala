@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -15,6 +15,12 @@ import org.cocos2dxjs.extensions.ccui.layouts.t_ccuiLayout
 
 @js.native
 trait t_ccuiScrollView extends t_ccuiLayout {
+  var innerWidth: Float = js.native
+  var innerHeight: Float = js.native
+  var direction: Float = js.native
+  var bounceEnabled: Boolean = js.native
+  var inertiaScrollEnabled: Boolean = js.native
+  var touchTotalTimeThreshold: Float = js.native
   override def onEnter():Unit = js.native
   override def findNextFocusedWidget(_direction:Float, current:ccuiWidget):ccuiWidget = js.native
   def setInnerContainerSize(size:ccSize):Unit = js.native
@@ -100,8 +106,22 @@ class ccuiScrollView extends t_ccuiScrollView {
 @js.native
 @JSGlobal("ccui.ScrollView")
 object ccuiScrollView extends js.Object {
+  val DIR_NONE: Float = js.native
+  val DIR_VERTICAL: Float = js.native
+  val DIR_HORIZONTAL: Float = js.native
+  val DIR_BOTH: Float = js.native
+  val EVENT_SCROLL_TO_TOP: Float = js.native
+  val EVENT_SCROLL_TO_BOTTOM: Float = js.native
+  val EVENT_SCROLL_TO_LEFT: Float = js.native
+  val EVENT_SCROLL_TO_RIGHT: Float = js.native
+  val EVENT_SCROLLING: Float = js.native
+  val EVENT_BOUNCE_TOP: Float = js.native
+  val EVENT_BOUNCE_BOTTOM: Float = js.native
+  val EVENT_BOUNCE_LEFT: Float = js.native
+  val EVENT_BOUNCE_RIGHT: Float = js.native
+  val EVENT_CONTAINER_MOVED: Float = js.native
+  val EVENT_AUTOSCROLL_ENDED: Float = js.native
   var MOVEDIR_TOP: js.Any = js.native
 }
-
 
 

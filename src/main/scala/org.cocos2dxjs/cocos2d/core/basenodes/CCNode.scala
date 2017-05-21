@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.basenodes
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.ccActionManager
 import org.cocos2dxjs.cocos2d.core.ccScheduler
@@ -19,6 +19,42 @@ import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
 trait t_ccNode extends t_ccClass {
+  var x: Float = js.native
+  var y: Float = js.native
+  var width: Float = js.native
+  var height: Float = js.native
+  var anchorX: Float = js.native
+  var anchorY: Float = js.native
+  var ignoreAnchor: Boolean = js.native
+  var skewX: Float = js.native
+  var skewY: Float = js.native
+  var zIndex: Float = js.native
+  var vertexZ: Float = js.native
+  var rotation: Float = js.native
+  var rotationX: Float = js.native
+  var rotationY: Float = js.native
+  var scale: Float = js.native
+  var scaleX: Float = js.native
+  var scaleY: Float = js.native
+  var visible: Boolean = js.native
+  var color: ccColor = js.native
+  var cascadeColor: Boolean = js.native
+  var opacity: Float = js.native
+  var opacityModifyRGB: Boolean = js.native
+  var cascadeOpacity: Boolean = js.native
+  val children: js.Array[js.Any] = js.native
+  val childrenCount: Float = js.native
+  var parent: ccNode = js.native
+  val running: Boolean = js.native
+  var tag: Float = js.native
+  var userData: js.Object = js.native
+  var userObject: js.Object = js.native
+  var arrivalOrder: Float = js.native
+  var actionManager: ccActionManager = js.native
+  var scheduler: ccScheduler = js.native
+  var grid: ccGridBase = js.native
+  var shaderProgram: ccGLProgram = js.native
+  var glServerState: Float = js.native
   def init:Boolean = js.native
   def attr(attrs:js.Object):Unit = js.native
   def getSkewX:Float = js.native
@@ -161,6 +197,5 @@ class ccNode extends t_ccNode {
 @JSGlobal("cc.Node")
 object ccNode extends js.Object {
 }
-
 
 

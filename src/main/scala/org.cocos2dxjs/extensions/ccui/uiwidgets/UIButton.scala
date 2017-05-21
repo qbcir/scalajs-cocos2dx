@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
@@ -12,6 +12,12 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
 trait t_ccuiButton extends t_ccuiWidget {
+  var titleText: String = js.native
+  var titleFont: String = js.native
+  var titleFontSize: Float = js.native
+  var titleFontName: String = js.native
+  var titleFontColor: ccColor = js.native
+  var pressedActionEnabled: Boolean = js.native
   def setScale9Enabled(able:Boolean):Unit = js.native
   def isScale9Enabled:Boolean = js.native
   override def ignoreContentAdaptWithSize(ignore:Boolean):Unit = js.native
@@ -54,8 +60,12 @@ class ccuiButton(normalImage:String, selectedImage:String, disableImage:String, 
 @js.native
 @JSGlobal("ccui.Button")
 object ccuiButton extends js.Object {
+  val NORMAL_RENDERER_ZORDER: Float = js.native
+  val PRESSED_RENDERER_ZORDER: Float = js.native
+  val DISABLED_RENDERER_ZORDER: Float = js.native
+  val TITLE_RENDERER_ZORDER: Float = js.native
+  val ZOOM_ACTION_TIME_STEP: Float = js.native
   var SYSTEM: js.Any = js.native
 }
-
 
 

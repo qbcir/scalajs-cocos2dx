@@ -2,13 +2,14 @@ package org.cocos2dxjs.extensions.gui.scrollview
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 
 @js.native
 trait t_ccTableViewCell extends t_ccNode {
+  var objectId: Float = js.native
   def getIdx():Unit = js.native
   def reset():Unit = js.native
 }
@@ -61,6 +62,8 @@ object ccTableViewDataSource extends js.Object {
 
 @js.native
 trait t_ccTableView extends t_ccScrollView {
+  var dataSource: ccTableViewDataSource = js.native
+  var verticalFillOrder: Float = js.native
   def getDataSource():Unit = js.native
   def getDelegate():Unit = js.native
   def setVerticalFillOrder():Unit = js.native
@@ -81,6 +84,5 @@ class ccTableView(dataSource:js.Any, size:js.Any, container:js.Any) extends t_cc
 @JSGlobal("cc.TableView")
 object ccTableView extends js.Object {
 }
-
 
 

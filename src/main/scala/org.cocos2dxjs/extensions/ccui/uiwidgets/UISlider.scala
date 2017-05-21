@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
@@ -11,6 +11,7 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
 trait t_ccuiSlider extends t_ccuiWidget {
+  var percent: Float = js.native
   def loadBarTexture(fileName:String, texType:Float):Unit = js.native
   def loadProgressBarTexture(fileName:String, texType:Float):Unit = js.native
   def setScale9Enabled(able:Boolean):Unit = js.native
@@ -45,7 +46,10 @@ class ccuiSlider extends t_ccuiSlider {
 @js.native
 @JSGlobal("ccui.Slider")
 object ccuiSlider extends js.Object {
+  val EVENT_PERCENT_CHANGED: Float = js.native
+  val BASEBAR_RENDERER_ZORDER: Float = js.native
+  val PROGRESSBAR_RENDERER_ZORDER: Float = js.native
+  val BALL_RENDERER_ZORDER: Float = js.native
 }
-
 
 

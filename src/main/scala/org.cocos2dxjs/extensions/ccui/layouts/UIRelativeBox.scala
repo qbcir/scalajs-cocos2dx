@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.ccui.layouts
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 
 @js.native
@@ -20,6 +20,5 @@ class ccuiRelativeBox(size:ccSize) extends t_ccuiRelativeBox {
 @JSGlobal("ccui.RelativeBox")
 object ccuiRelativeBox extends js.Object {
 }
-
 
 

@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.sprites
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
@@ -23,7 +23,7 @@ trait t_ccAnimationFrame extends t_ccClass {
 
 @js.native
 @JSGlobal("cc.AnimationFrame")
-class ccAnimationFrame extends t_ccAnimationFrame {
+class ccAnimationFrame(spriteFrame:js.Any, delayUnits:js.Any, userInfo:js.Any) extends t_ccAnimationFrame {
 }
 
 @js.native
@@ -57,13 +57,12 @@ trait t_ccAnimation extends t_ccClass {
 
 @js.native
 @JSGlobal("cc.Animation")
-class ccAnimation extends t_ccAnimation {
+class ccAnimation(frames:js.Array[js.Any], delay:Float, loops:Float) extends t_ccAnimation {
 }
 
 @js.native
 @JSGlobal("cc.Animation")
 object ccAnimation extends js.Object {
 }
-
 
 

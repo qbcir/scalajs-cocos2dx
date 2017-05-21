@@ -2,7 +2,7 @@ package org.cocos2dxjs.cocos2d.core.platform
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccTouch
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccEventMouse
@@ -34,6 +34,5 @@ object ccinputManager extends js.Object {
   def registerSystemEvent(element:js.Any):Unit = js.native
   def update(dt:Float):Unit = js.native
 }
-
 
 

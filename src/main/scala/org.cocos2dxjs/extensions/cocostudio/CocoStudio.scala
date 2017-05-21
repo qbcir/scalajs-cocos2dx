@@ -2,7 +2,7 @@ package org.cocos2dxjs.extensions.cocostudio
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import scala.scalajs.js.|
+
 
 @js.native
 trait t_ccsClass extends js.Object {
@@ -61,4 +61,52 @@ object ccsComponent extends js.Object {
 }
 
 
+@js.native
+@JSGlobal("ccs")
+object ccs extends js.Object {
+
+  val cocostudioVersion: String = js.native
+  val FRAME_TYPE_MOVE: Float = js.native
+  val FRAME_TYPE_SCALE: Float = js.native
+  val FRAME_TYPE_ROTATE: Float = js.native
+  val FRAME_TYPE_TINT: Float = js.native
+  val FRAME_TYPE_FADE: Float = js.native
+  val FRAME_TYPE_MAX: Float = js.native
+  val FrameEaseType: js.Object = js.native
+  val MovementEventType: js.Object = js.native
+  val ANIMATION_TYPE_SINGLE_FRAME: Float = js.native
+  val ANIMATION_TYPE_NO_LOOP: Float = js.native
+  val ANIMATION_TYPE_TO_LOOP_FRONT: Float = js.native
+  val ANIMATION_TYPE_TO_LOOP_BACK: Float = js.native
+  val ANIMATION_TYPE_LOOP_FRONT: Float = js.native
+  val ANIMATION_TYPE_LOOP_BACK: Float = js.native
+  val ANIMATION_TYPE_MAX: Float = js.native
+  val BLEND_TYPE_NORMAL: Float = js.native
+  val BLEND_TYPE_LAYER: Float = js.native
+  val BLEND_TYPE_DARKEN: Float = js.native
+  val BLEND_TYPE_MULTIPLY: Float = js.native
+  val BLEND_TYPE_LIGHTEN: Float = js.native
+  val BLEND_TYPE_SCREEN: Float = js.native
+  val BLEND_TYPE_OVERLAY: Float = js.native
+  val BLEND_TYPE_HIGHLIGHT: Float = js.native
+  val BLEND_TYPE_ADD: Float = js.native
+  val BLEND_TYPE_SUBTRACT: Float = js.native
+  val BLEND_TYPE_DIFFERENCE: Float = js.native
+  val BLEND_TYPE_INVERT: Float = js.native
+  val BLEND_TYPE_ALPHA: Float = js.native
+  val BLEND_TYPE_ERASE: Float = js.native
+  val DISPLAY_TYPE_SPRITE: Float = js.native
+  val DISPLAY_TYPE_ARMATURE: Float = js.native
+  val DISPLAY_TYPE_PARTICLE: Float = js.native
+  var displayFactory: js.Any = js.native
+  var PT_RATIO: js.Any = js.native
+  var VERSION_COMBINED: js.Any = js.native
+  var CONST_VERSION: js.Any = js.native
+  var TweenType: js.Object = js.native
+  def armatureVersion:String = js.native
+  def load(file:String, path:String):js.Object = js.native
+  def loadWithVisibleSize(file:String, path:String):js.Object = js.native
+  def sendEvent(event:Float):Unit = js.native
+  def registerTriggerClass(className:String, func:js.Function):Unit = js.native
+}
 
