@@ -10,26 +10,52 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 import org.cocos2dxjs.cocos2d.core.sprites.ccSpriteFrame
 import org.cocos2dxjs.cocos2d.core.platform.ccClass
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
+
+@js.native
+trait t_ccParticle extends js.Object {
+}
 
 @js.native
 @JSGlobal("cc.Particle")
-class ccParticle extends js.Object {
+class ccParticle extends t_ccParticle {
+}
+
+@js.native
+@JSGlobal("cc.Particle")
+object ccParticle extends js.Object {
+}
+
+@js.native
+trait t_ccParticleModeA extends js.Object {
 }
 
 @js.native
 @JSGlobal("cc.Particle.ModeA")
-class ccParticleModeA extends js.Object {
+class ccParticleModeA extends t_ccParticleModeA {
+}
+
+@js.native
+@JSGlobal("cc.Particle.ModeA")
+object ccParticleModeA extends js.Object {
+}
+
+@js.native
+trait t_ccParticleModeB extends js.Object {
 }
 
 @js.native
 @JSGlobal("cc.Particle.ModeB")
-class ccParticleModeB extends js.Object {
+class ccParticleModeB extends t_ccParticleModeB {
 }
 
 @js.native
-@JSGlobal("cc.ParticleSystem")
-class ccParticleSystem extends ccNode {
+@JSGlobal("cc.Particle.ModeB")
+object ccParticleModeB extends js.Object {
+}
+
+@js.native
+trait t_ccParticleSystem extends t_ccNode {
   def ignoreColor(ignore:Boolean):Unit = js.native
   def initTexCoordsWithRect(pointRect:ccRect):Unit = js.native
   def getBatchNode:ccParticleBatchNode = js.native
@@ -146,16 +172,44 @@ class ccParticleSystem extends ccNode {
   def setDisplayFrame(spriteFrame:ccSpriteFrame):Unit = js.native
   def setTextureWithRect(texture:ccTexture2D, rect:ccRect):Unit = js.native
   def listenBackToForeground(obj:ccClass):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.ParticleSystem")
+class ccParticleSystem(plistFile:String) extends t_ccParticleSystem {
+}
+
+@js.native
+@JSGlobal("cc.ParticleSystem")
+object ccParticleSystem extends js.Object {
   def WebGLRenderCmd():Unit = js.native
 }
 
 @js.native
+trait t_ccParticleSystemModeA extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.ParticleSystem.ModeA")
-class ccParticleSystemModeA extends js.Object {
+class ccParticleSystemModeA extends t_ccParticleSystemModeA {
+}
+
+@js.native
+@JSGlobal("cc.ParticleSystem.ModeA")
+object ccParticleSystemModeA extends js.Object {
+}
+
+@js.native
+trait t_ccParticleSystemModeB extends js.Object {
 }
 
 @js.native
 @JSGlobal("cc.ParticleSystem.ModeB")
-class ccParticleSystemModeB extends js.Object {
+class ccParticleSystemModeB extends t_ccParticleSystemModeB {
+}
+
+@js.native
+@JSGlobal("cc.ParticleSystem.ModeB")
+object ccParticleSystemModeB extends js.Object {
 }
 

@@ -7,8 +7,7 @@ import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsMovementBoneData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsFrameData
 
 @js.native
-@JSGlobal("ccs.Tween")
-class ccsTween extends ccsProcessBase {
+trait t_ccsTween extends t_ccsProcessBase {
   def init(bone:ccsBone):Boolean = js.native
   def play(movementBoneData:ccsMovementBoneData, durationTo:Float, durationTween:Float, loop:Boolean, tweenEasing:js.Any/*ccsTweenType*/):Unit = js.native
   def gotoAndPlay(frameIndex:Float):Unit = js.native
@@ -22,5 +21,15 @@ class ccsTween extends ccsProcessBase {
   def setAnimation(animation:ccsArmatureAnimation):Unit = js.native
   def getAnimation:ccsArmatureAnimation = js.native
   def setMovementBoneData(data:js.Any):Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccs.Tween")
+class ccsTween extends t_ccsTween {
+}
+
+@js.native
+@JSGlobal("ccs.Tween")
+object ccsTween extends js.Object {
 }
 

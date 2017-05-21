@@ -6,11 +6,10 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
-@JSGlobal("cc.SpriteFrame")
-class ccSpriteFrame extends ccClass {
+trait t_ccSpriteFrame extends t_ccClass {
   def textureLoaded:Boolean = js.native
   def getRectInPixels:ccRect = js.native
   def setRectInPixels(rectInPixels:ccRect):Unit = js.native
@@ -32,5 +31,15 @@ class ccSpriteFrame extends ccClass {
   def copyWithZone:ccSpriteFrame = js.native
   def copy:ccSpriteFrame = js.native
   def initWithTexture(texture:String, rect:ccRect, rotated:Boolean, offset:ccPoint, originalSize:ccSize):Boolean = js.native
+}
+
+@js.native
+@JSGlobal("cc.SpriteFrame")
+class ccSpriteFrame extends t_ccSpriteFrame {
+}
+
+@js.native
+@JSGlobal("cc.SpriteFrame")
+object ccSpriteFrame extends js.Object {
 }
 

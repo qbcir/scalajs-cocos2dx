@@ -4,7 +4,16 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_ccsTimeline extends js.Object {
+}
+
+@js.native
 @JSGlobal("ccs.Timeline")
-class ccsTimeline extends js.Object {
+class ccsTimeline extends t_ccsTimeline {
+}
+
+@js.native
+@JSGlobal("ccs.Timeline")
+object ccsTimeline extends js.Object {
 }
 

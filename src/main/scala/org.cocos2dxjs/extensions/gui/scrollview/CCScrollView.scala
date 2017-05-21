@@ -6,10 +6,10 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.layers.ccLayer
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.layers.t_ccLayer
 
 @js.native
-@JSGlobal("cc.ScrollView")
-class ccScrollView extends ccLayer {
+trait t_ccScrollView extends t_ccLayer {
   def initWithViewSize(size:ccSize, container:ccNode):Boolean = js.native
   def setContentOffset(offset:ccPoint, animated:Float):Unit = js.native
   def setContentOffsetInDuration(offset:ccPoint, dt:Float):Unit = js.native
@@ -30,5 +30,15 @@ class ccScrollView extends ccLayer {
   def _performedAnimatedScroll():Unit = js.native
   def _stoppedAnimatedScroll():Unit = js.native
   def _handleZoom():Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.ScrollView")
+class ccScrollView(size:js.Any, container:js.Any) extends t_ccScrollView {
+}
+
+@js.native
+@JSGlobal("cc.ScrollView")
+object ccScrollView extends js.Object {
 }
 

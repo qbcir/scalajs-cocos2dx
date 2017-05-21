@@ -6,10 +6,10 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
-@JSGlobal("ccui.TextField")
-class ccuiTextField extends ccuiWidget {
+trait t_ccuiTextField extends t_ccuiWidget {
   override def onEnter():Unit = js.native
   def setTouchSize(size:ccSize):Unit = js.native
   def setTouchAreaEnabled(enable:js.Any):Unit = js.native
@@ -53,5 +53,15 @@ class ccuiTextField extends ccuiWidget {
   def setTextAreaSize(size:ccSize):Unit = js.native
   def setTextHorizontalAlignment(alignment:js.Any):Unit = js.native
   def setTextVerticalAlignment(alignment:js.Any):Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccui.TextField")
+class ccuiTextField(placeholder:String, fontName:String, fontSize:Float) extends t_ccuiTextField {
+}
+
+@js.native
+@JSGlobal("ccui.TextField")
+object ccuiTextField extends js.Object {
 }
 

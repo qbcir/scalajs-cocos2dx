@@ -7,11 +7,10 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
-@JSGlobal("cc.Texture2D")
-class ccTexture2D extends ccClass {
+trait t_ccTexture2D extends t_ccClass {
   def releaseTexture():Unit = js.native
   def getPixelFormat:Float = js.native
   def getPixelsWide:Float = js.native
@@ -48,5 +47,15 @@ class ccTexture2D extends ccClass {
   def stringForFormat:String = js.native
   def bitsPerPixelForFormat:Float = js.native
   def removeLoadedEventListener(target:ccNode):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.Texture2D")
+class ccTexture2D extends t_ccTexture2D {
+}
+
+@js.native
+@JSGlobal("cc.Texture2D")
+object ccTexture2D extends js.Object {
 }
 

@@ -2,27 +2,44 @@ package org.cocos2dxjs.cocos2d.tilemap
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
-import org.cocos2dxjs.cocos2d.core.platform.ccSAXParser
+import org.cocos2dxjs.cocos2d.core.platform.t_ccSAXParser
 
 @js.native
-@JSGlobal("cc.TMXLayerInfo")
-class ccTMXLayerInfo extends ccClass {
+trait t_ccTMXLayerInfo extends t_ccClass {
   def getProperties:js.Array[js.Any] = js.native
   def setProperties(value:js.Object):Unit = js.native
 }
 
 @js.native
-@JSGlobal("cc.TMXTilesetInfo")
-class ccTMXTilesetInfo extends ccClass {
+@JSGlobal("cc.TMXLayerInfo")
+class ccTMXLayerInfo extends t_ccTMXLayerInfo {
+}
+
+@js.native
+@JSGlobal("cc.TMXLayerInfo")
+object ccTMXLayerInfo extends js.Object {
+}
+
+@js.native
+trait t_ccTMXTilesetInfo extends t_ccClass {
   def rectForGID(gid:Float):ccRect = js.native
 }
 
 @js.native
-@JSGlobal("cc.TMXMapInfo")
-class ccTMXMapInfo extends ccSAXParser {
+@JSGlobal("cc.TMXTilesetInfo")
+class ccTMXTilesetInfo extends t_ccTMXTilesetInfo {
+}
+
+@js.native
+@JSGlobal("cc.TMXTilesetInfo")
+object ccTMXTilesetInfo extends js.Object {
+}
+
+@js.native
+trait t_ccTMXMapInfo extends t_ccSAXParser {
   def getOrientation:Float = js.native
   def setOrientation(value:Float):Unit = js.native
   def getMapSize:ccSize = js.native
@@ -55,5 +72,15 @@ class ccTMXMapInfo extends ccSAXParser {
   def setCurrentString(currentString:String):Unit = js.native
   def getTMXFileName:String = js.native
   def setTMXFileName(fileName:String):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.TMXMapInfo")
+class ccTMXMapInfo(tmxFile:String, resourcePath:String) extends t_ccTMXMapInfo {
+}
+
+@js.native
+@JSGlobal("cc.TMXMapInfo")
+object ccTMXMapInfo extends js.Object {
 }
 

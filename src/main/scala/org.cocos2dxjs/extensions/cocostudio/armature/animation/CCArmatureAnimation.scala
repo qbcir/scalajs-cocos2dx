@@ -2,29 +2,55 @@ package org.cocos2dxjs.extensions.cocostudio.armature.animation
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import org.cocos2dxjs.extensions.cocostudio.ccsClass
+import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.extensions.cocostudio.armature.ccsArmature
 import org.cocos2dxjs.extensions.cocostudio.armature.ccsBone
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsAnimationData
 
 @js.native
+trait t_ccsAnimationEvent extends t_ccsClass {
+}
+
+@js.native
 @JSGlobal("ccs.AnimationEvent")
-class ccsAnimationEvent extends ccsClass {
+class ccsAnimationEvent(callFunc:js.Function, target:js.Object, data:js.Object) extends t_ccsAnimationEvent {
+}
+
+@js.native
+@JSGlobal("ccs.AnimationEvent")
+object ccsAnimationEvent extends js.Object {
+}
+
+@js.native
+trait t_ccsMovementEvent extends js.Object {
 }
 
 @js.native
 @JSGlobal("ccs.MovementEvent")
-class ccsMovementEvent extends js.Object {
+class ccsMovementEvent extends t_ccsMovementEvent {
+}
+
+@js.native
+@JSGlobal("ccs.MovementEvent")
+object ccsMovementEvent extends js.Object {
+}
+
+@js.native
+trait t_ccsFrameEvent extends js.Object {
 }
 
 @js.native
 @JSGlobal("ccs.FrameEvent")
-class ccsFrameEvent extends js.Object {
+class ccsFrameEvent extends t_ccsFrameEvent {
 }
 
 @js.native
-@JSGlobal("ccs.ArmatureAnimation")
-class ccsArmatureAnimation extends ccsProcessBase {
+@JSGlobal("ccs.FrameEvent")
+object ccsFrameEvent extends js.Object {
+}
+
+@js.native
+trait t_ccsArmatureAnimation extends t_ccsProcessBase {
   def init(armature:ccsArmature):Boolean = js.native
   override def pause():Unit = js.native
   override def resume():Unit = js.native
@@ -51,5 +77,15 @@ class ccsArmatureAnimation extends ccsProcessBase {
   def getAnimationData:ccsAnimationData = js.native
   def getUserObject:js.Object = js.native
   def isIgnoreFrameEvent:Boolean = js.native
+}
+
+@js.native
+@JSGlobal("ccs.ArmatureAnimation")
+class ccsArmatureAnimation extends t_ccsArmatureAnimation {
+}
+
+@js.native
+@JSGlobal("ccs.ArmatureAnimation")
+object ccsArmatureAnimation extends js.Object {
 }
 

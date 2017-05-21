@@ -4,8 +4,7 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
-@JSGlobal("sp.SkeletonAnimation")
-class spSkeletonAnimation extends spSkeleton {
+trait t_spSkeletonAnimation extends t_spSkeleton {
   override def init:Boolean = js.native
   def setAnimationStateData(stateData:js.Any):Unit = js.native
   def setMix(fromAnimation:String, toAnimation:String, duration:Float):Unit = js.native
@@ -20,5 +19,15 @@ class spSkeletonAnimation extends spSkeleton {
   def setInterruptListener(listener:js.Function):Unit = js.native
   def setEndListener(listener:js.Function):Unit = js.native
   def setDisposeListener(listener:js.Function):Unit = js.native
+}
+
+@js.native
+@JSGlobal("sp.SkeletonAnimation")
+class spSkeletonAnimation extends t_spSkeletonAnimation {
+}
+
+@js.native
+@JSGlobal("sp.SkeletonAnimation")
+object spSkeletonAnimation extends js.Object {
 }
 

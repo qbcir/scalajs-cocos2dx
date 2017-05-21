@@ -2,11 +2,10 @@ package org.cocos2dxjs.extensions.cocostudio.components
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import org.cocos2dxjs.extensions.cocostudio.ccsComponent
+import org.cocos2dxjs.extensions.cocostudio.t_ccsComponent
 
 @js.native
-@JSGlobal("ccs.ComAttribute")
-class ccsComAttribute extends ccsComponent {
+trait t_ccsComAttribute extends t_ccsComponent {
   def init:Boolean = js.native
   def setInt(key:String, value:Float):Unit = js.native
   def setDouble(key:String, value:Float):Unit = js.native
@@ -21,5 +20,15 @@ class ccsComAttribute extends ccsComponent {
   def getString(key:String):String = js.native
   def getObject(key:String):js.Object = js.native
   def parse(filename:js.Any):Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccs.ComAttribute")
+class ccsComAttribute extends t_ccsComAttribute {
+}
+
+@js.native
+@JSGlobal("ccs.ComAttribute")
+object ccsComAttribute extends js.Object {
 }
 

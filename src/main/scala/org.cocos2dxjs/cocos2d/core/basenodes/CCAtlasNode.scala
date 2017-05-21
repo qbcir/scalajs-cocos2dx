@@ -8,8 +8,7 @@ import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 
 @js.native
-@JSGlobal("cc.AtlasNode")
-class ccAtlasNode extends ccNode {
+trait t_ccAtlasNode extends t_ccNode {
   def updateAtlasValues():Unit = js.native
   override def getColor:ccColor = js.native
   override def setOpacityModifyRGB(value:Boolean):Unit = js.native
@@ -26,5 +25,15 @@ class ccAtlasNode extends ccNode {
   override def setOpacity(opacity:Float):Unit = js.native
   def getTexture:ccTexture2D = js.native
   def setTexture(texture:ccTexture2D):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.AtlasNode")
+class ccAtlasNode(tile:String, tileWidth:Float, tileHeight:Float, itemsToRender:Float) extends t_ccAtlasNode {
+}
+
+@js.native
+@JSGlobal("cc.AtlasNode")
+object ccAtlasNode extends js.Object {
 }
 

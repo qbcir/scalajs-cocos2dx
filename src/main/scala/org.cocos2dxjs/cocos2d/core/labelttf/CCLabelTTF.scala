@@ -5,11 +5,10 @@ import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.platform.ccFontDefinition
-import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
+import org.cocos2dxjs.cocos2d.core.sprites.t_ccSprite
 
 @js.native
-@JSGlobal("cc.LabelTTF")
-class ccLabelTTF extends ccSprite {
+trait t_ccLabelTTF extends t_ccSprite {
   def initWithString(label:String, fontName:String, fontSize:Float, dimensions:ccSize, hAlignment:Float, vAlignment:Float):Boolean = js.native
   def getString:String = js.native
   def getHorizontalAlignment:Float = js.native
@@ -39,6 +38,16 @@ class ccLabelTTF extends ccSprite {
   def setFontName(fontName:String):Unit = js.native
   override def getContentSize:ccSize = js.native
   def setDrawMode(boolean:js.Any):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.LabelTTF")
+class ccLabelTTF extends t_ccLabelTTF {
+}
+
+@js.native
+@JSGlobal("cc.LabelTTF")
+object ccLabelTTF extends js.Object {
   def __getFontHeightByDiv(fontName:String, fontSize:Float):Float = js.native
 }
 

@@ -7,11 +7,10 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccTouch
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccEvent
 import org.cocos2dxjs.extensions.ccui.layouts.ccuiLayoutParameter
-import org.cocos2dxjs.extensions.ccui.system.ccuiProtectedNode
+import org.cocos2dxjs.extensions.ccui.system.t_ccuiProtectedNode
 
 @js.native
-@JSGlobal("ccui.Widget")
-class ccuiWidget extends ccuiProtectedNode {
+trait t_ccuiWidget extends t_ccuiProtectedNode {
   def init:Boolean = js.native
   def onEnter():Unit = js.native
   def onExit():Unit = js.native
@@ -94,6 +93,17 @@ class ccuiWidget extends ccuiProtectedNode {
   def getCallbackType:String = js.native
   def setLayoutComponentEnabled(enable:Boolean):Unit = js.native
   def isLayoutComponentEnabled:Boolean = js.native
+}
+
+@js.native
+@JSGlobal("ccui.Widget")
+class ccuiWidget extends t_ccuiWidget {
+}
+
+@js.native
+@JSGlobal("ccui.Widget")
+object ccuiWidget extends js.Object {
   def enableDpadNavigation(enable:Boolean):Unit = js.native
+  def getCurrentFocusedWidget():Unit = js.native
 }
 

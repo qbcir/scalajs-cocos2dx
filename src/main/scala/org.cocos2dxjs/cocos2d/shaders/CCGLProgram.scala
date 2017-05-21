@@ -2,11 +2,10 @@ package org.cocos2dxjs.cocos2d.shaders
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
-@JSGlobal("cc.GLProgram")
-class ccGLProgram extends ccClass {
+trait t_ccGLProgram extends t_ccClass {
   def destroyProgram():Unit = js.native
   def initWithVertexShaderByteArray(vertShaderStr:String, fragShaderStr:String):Boolean = js.native
   def initWithString(vertShaderStr:String, fragShaderStr:String):Boolean = js.native
@@ -47,5 +46,15 @@ class ccGLProgram extends ccClass {
   def reset():Unit = js.native
   def getProgram:js.Any = js.native
   def retain():Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.GLProgram")
+class ccGLProgram(vShaderFileName:String, fShaderFileName:String) extends t_ccGLProgram {
+}
+
+@js.native
+@JSGlobal("cc.GLProgram")
+object ccGLProgram extends js.Object {
 }
 

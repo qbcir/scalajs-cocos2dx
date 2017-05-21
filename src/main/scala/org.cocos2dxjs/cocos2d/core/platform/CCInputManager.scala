@@ -7,8 +7,17 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccEventMouse
 
 @js.native
+trait t_ccinputManager extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.inputManager")
-class ccinputManager extends js.Object {
+class ccinputManager extends t_ccinputManager {
+}
+
+@js.native
+@JSGlobal("cc.inputManager")
+object ccinputManager extends js.Object {
   def handleTouchesBegin(touches:js.Array[js.Any]):Unit = js.native
   def handleTouchesMove(touches:js.Array[js.Any]):Unit = js.native
   def handleTouchesEnd(touches:js.Array[js.Any]):Unit = js.native

@@ -2,13 +2,12 @@ package org.cocos2dxjs.cocos2d.core.sprites
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 
 @js.native
-@JSGlobal("cc.AnimationFrame")
-class ccAnimationFrame extends ccClass {
+trait t_ccAnimationFrame extends t_ccClass {
   override def clone:js.Any = js.native
   def copyWithZone:js.Any = js.native
   def copy:js.Any = js.native
@@ -22,8 +21,17 @@ class ccAnimationFrame extends ccClass {
 }
 
 @js.native
-@JSGlobal("cc.Animation")
-class ccAnimation extends ccClass {
+@JSGlobal("cc.AnimationFrame")
+class ccAnimationFrame extends t_ccAnimationFrame {
+}
+
+@js.native
+@JSGlobal("cc.AnimationFrame")
+object ccAnimationFrame extends js.Object {
+}
+
+@js.native
+trait t_ccAnimation extends t_ccClass {
   def getFrames:js.Array[js.Any] = js.native
   def setFrames(frames:js.Array[js.Any]):Unit = js.native
   def addSpriteFrame(frame:ccSpriteFrame):Unit = js.native
@@ -44,5 +52,15 @@ class ccAnimation extends ccClass {
   def initWithSpriteFrames(frames:js.Array[js.Any], delay:Float, loops:Float):Unit = js.native
   def retain():Unit = js.native
   def release():Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.Animation")
+class ccAnimation extends t_ccAnimation {
+}
+
+@js.native
+@JSGlobal("cc.Animation")
+object ccAnimation extends js.Object {
 }
 

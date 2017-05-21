@@ -4,8 +4,17 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_ccpool extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.pool")
-class ccpool extends js.Object {
+class ccpool extends t_ccpool {
+}
+
+@js.native
+@JSGlobal("cc.pool")
+object ccpool extends js.Object {
   def putInPool(obj:js.Any):Unit = js.native
   def hasObject(objClass:js.Any):Boolean = js.native
   def removeObject(obj:js.Any):Unit = js.native

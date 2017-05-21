@@ -10,8 +10,7 @@ import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.platform.ccview
 
 @js.native
-@JSGlobal("cc.Director")
-class ccDirector extends js.Object {
+trait t_ccDirector extends js.Object {
   def calculateDeltaTime():Unit = js.native
   def convertToGL(uiPoint:ccPoint):ccPoint = js.native
   def convertToUI(glPoint:ccPoint):ccPoint = js.native
@@ -66,5 +65,15 @@ class ccDirector extends js.Object {
   def mainLoop():Unit = js.native
   def stopAnimation():Unit = js.native
   def setAnimationInterval(value:Float):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.Director")
+class ccDirector extends t_ccDirector {
+}
+
+@js.native
+@JSGlobal("cc.Director")
+object ccDirector extends js.Object {
 }
 

@@ -7,8 +7,7 @@ import org.cocos2dxjs.cocos2d.core.textures.ccTextureAtlas
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 
 @js.native
-@JSGlobal("cc.ParticleBatchNode")
-class ccParticleBatchNode extends ccParticleSystem {
+trait t_ccParticleBatchNode extends t_ccParticleSystem {
   def initWithTexture(texture:ccTexture2D, capacity:Float):Boolean = js.native
   def initWithFile(fileImage:String, capacity:Float):Boolean = js.native
   def init(fileImage:String, capacity:Float):Boolean = js.native
@@ -25,7 +24,17 @@ class ccParticleBatchNode extends ccParticleSystem {
   override def getBlendFunc:ccBlendFunc = js.native
   def getTextureAtlas:ccTextureAtlas = js.native
   def setTextureAtlas(textureAtlas:ccTextureAtlas):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.ParticleBatchNode")
+class ccParticleBatchNode(fileImage:String, capacity:Float) extends t_ccParticleBatchNode {
+}
+
+@js.native
+@JSGlobal("cc.ParticleBatchNode")
+object ccParticleBatchNode extends js.Object {
   def CanvasRenderCmd():Unit = js.native
-  override def WebGLRenderCmd():Unit = js.native
+  def WebGLRenderCmd():Unit = js.native
 }
 

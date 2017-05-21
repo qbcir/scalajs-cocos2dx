@@ -2,15 +2,14 @@ package org.cocos2dxjs.cocos2d.textinput
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.labelttf.ccLabelTTF
+import org.cocos2dxjs.cocos2d.core.labelttf.t_ccLabelTTF
 
 @js.native
-@JSGlobal("cc.TextFieldDelegate")
-class ccTextFieldDelegate extends ccClass {
+trait t_ccTextFieldDelegate extends t_ccClass {
   def onTextFieldAttachWithIME(sender:ccTextFieldTTF):Boolean = js.native
   def onTextFieldDetachWithIME(sender:ccTextFieldTTF):Boolean = js.native
   def onTextFieldInsertText(sender:ccTextFieldTTF, text:String, len:Float):Boolean = js.native
@@ -19,8 +18,17 @@ class ccTextFieldDelegate extends ccClass {
 }
 
 @js.native
-@JSGlobal("cc.TextFieldTTF")
-class ccTextFieldTTF extends ccLabelTTF {
+@JSGlobal("cc.TextFieldDelegate")
+class ccTextFieldDelegate extends t_ccTextFieldDelegate {
+}
+
+@js.native
+@JSGlobal("cc.TextFieldDelegate")
+object ccTextFieldDelegate extends js.Object {
+}
+
+@js.native
+trait t_ccTextFieldTTF extends t_ccLabelTTF {
   def getDelegate:ccNode = js.native
   def setDelegate(value:ccNode):Unit = js.native
   def getCharCount:Float = js.native
@@ -45,5 +53,15 @@ class ccTextFieldTTF extends ccLabelTTF {
   def getTipMessage:String = js.native
   def insertText(text:String, len:Float):Unit = js.native
   def getContentText:String = js.native
+}
+
+@js.native
+@JSGlobal("cc.TextFieldTTF")
+class ccTextFieldTTF(placeholder:String, dimensions:ccSize, alignment:Float, fontName:String, fontSize:Float) extends t_ccTextFieldTTF {
+}
+
+@js.native
+@JSGlobal("cc.TextFieldTTF")
+object ccTextFieldTTF extends js.Object {
 }
 

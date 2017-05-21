@@ -2,11 +2,10 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
-@JSGlobal("ccui.VideoPlayer")
-class ccuiVideoPlayer extends ccuiWidget {
+trait t_ccuiVideoPlayer extends t_ccuiWidget {
   def setURL(address:String):Unit = js.native
   def getURL:String = js.native
   def play():Unit = js.native
@@ -21,5 +20,15 @@ class ccuiVideoPlayer extends ccuiWidget {
   def setEventListener(event:js.Any/*ccuiVideoPlayerEventType*/, callback:js.Function):Unit = js.native
   def removeEventListener(event:js.Any/*ccuiVideoPlayerEventType*/):Unit = js.native
   def onPlayEvent():Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccui.VideoPlayer")
+class ccuiVideoPlayer extends t_ccuiVideoPlayer {
+}
+
+@js.native
+@JSGlobal("ccui.VideoPlayer")
+object ccuiVideoPlayer extends js.Object {
 }
 

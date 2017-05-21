@@ -2,11 +2,10 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
-@JSGlobal("ccui.WebView")
-class ccuiWebView extends ccuiWidget {
+trait t_ccuiWebView extends t_ccuiWidget {
   def loadURL(url:String):Unit = js.native
   def stopLoading():Unit = js.native
   def reload():Unit = js.native
@@ -20,5 +19,15 @@ class ccuiWebView extends ccuiWidget {
   def removeEventListener(event:js.Any/*ccuiWebViewEventType*/):Unit = js.native
   def setContentSize(w:Float, h:Float):Unit = js.native
   def cleanup():Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccui.WebView")
+class ccuiWebView extends t_ccuiWebView {
+}
+
+@js.native
+@JSGlobal("ccui.WebView")
+object ccuiWebView extends js.Object {
 }
 

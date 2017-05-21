@@ -10,10 +10,10 @@ import org.cocos2dxjs.cocos2d.core.eventmanager.ccTouch
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccEvent
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.extensions.ccui.layouts.ccuiLayout
+import org.cocos2dxjs.extensions.ccui.layouts.t_ccuiLayout
 
 @js.native
-@JSGlobal("ccui.ScrollView")
-class ccuiScrollView extends ccuiLayout {
+trait t_ccuiScrollView extends t_ccuiLayout {
   override def onEnter():Unit = js.native
   override def findNextFocusedWidget(_direction:Float, current:ccuiWidget):ccuiWidget = js.native
   def setInnerContainerSize(size:ccSize):Unit = js.native
@@ -87,5 +87,15 @@ class ccuiScrollView extends ccuiLayout {
   override def setLayoutType(_type:Float):Unit = js.native
   override def getLayoutType:js.Any = js.native
   override def getDescription:String = js.native
+}
+
+@js.native
+@JSGlobal("ccui.ScrollView")
+class ccuiScrollView extends t_ccuiScrollView {
+}
+
+@js.native
+@JSGlobal("ccui.ScrollView")
+object ccuiScrollView extends js.Object {
 }
 

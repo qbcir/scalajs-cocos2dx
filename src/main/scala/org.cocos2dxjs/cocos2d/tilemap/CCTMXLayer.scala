@@ -5,11 +5,10 @@ import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
-import org.cocos2dxjs.cocos2d.core.sprites.ccSpriteBatchNode
+import org.cocos2dxjs.cocos2d.core.sprites.t_ccSpriteBatchNode
 
 @js.native
-@JSGlobal("cc.TMXLayer")
-class ccTMXLayer extends ccSpriteBatchNode {
+trait t_ccTMXLayer extends t_ccSpriteBatchNode {
   def initWithTilesetInfo(tilesetInfo:ccTMXTilesetInfo, layerInfo:ccTMXLayerInfo, mapInfo:ccTMXMapInfo):Boolean = js.native
   def getLayerSize:ccSize = js.native
   def setLayerSize(Var:ccSize):Unit = js.native
@@ -33,5 +32,15 @@ class ccTMXLayer extends ccSpriteBatchNode {
   def getTileFlagsAt(pos:ccPoint, y:Float):Float = js.native
   def removeTileAt(pos:ccPoint, y:Float):Unit = js.native
   def getPositionAt(pos:ccPoint, y:Float):ccPoint = js.native
+}
+
+@js.native
+@JSGlobal("cc.TMXLayer")
+class ccTMXLayer(tilesetInfo:ccTMXTilesetInfo, layerInfo:ccTMXLayerInfo, mapInfo:ccTMXMapInfo) extends t_ccTMXLayer {
+}
+
+@js.native
+@JSGlobal("cc.TMXLayer")
+object ccTMXLayer extends js.Object {
 }
 

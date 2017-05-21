@@ -4,13 +4,31 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_ccAsyncPool extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.AsyncPool")
-class ccAsyncPool extends js.Object {
+class ccAsyncPool extends t_ccAsyncPool {
+}
+
+@js.native
+@JSGlobal("cc.AsyncPool")
+object ccAsyncPool extends js.Object {
+}
+
+@js.native
+trait t_ccasync extends js.Object {
 }
 
 @js.native
 @JSGlobal("cc.async")
-class ccasync extends js.Object {
+class ccasync extends t_ccasync {
+}
+
+@js.native
+@JSGlobal("cc.async")
+object ccasync extends js.Object {
   def series(tasks:js.Array[js.Any], cb:js.Function, target:js.Object):ccAsyncPool = js.native
   def parallel(tasks:js.Array[js.Any], cb:js.Function, target:js.Object):ccAsyncPool = js.native
   def waterfall(tasks:js.Array[js.Any], cb:js.Function, target:js.Object):ccAsyncPool = js.native
@@ -19,8 +37,17 @@ class ccasync extends js.Object {
 }
 
 @js.native
+trait t_ccpath extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.path")
-class ccpath extends js.Object {
+class ccpath extends t_ccpath {
+}
+
+@js.native
+@JSGlobal("cc.path")
+object ccpath extends js.Object {
   def join:String = js.native
   def extname(pathStr:String):js.Any = js.native
   def mainFileName(fileName:String):String = js.native
@@ -31,8 +58,7 @@ class ccpath extends js.Object {
 }
 
 @js.native
-@JSGlobal("cc.Loader")
-class ccLoader extends js.Object {
+trait t_ccLoader extends js.Object {
   def getXMLHttpRequest:js.Any = js.native
   def loadJs(baseDir:String, jsList:js.Any, cb:js.Function):js.Any = js.native
   def loadJsWithImg(baseDir:String, jsList:js.Any, cb:js.Function):Unit = js.native
@@ -51,8 +77,27 @@ class ccLoader extends js.Object {
 }
 
 @js.native
+@JSGlobal("cc.Loader")
+class ccLoader extends t_ccLoader {
+}
+
+@js.native
+@JSGlobal("cc.Loader")
+object ccLoader extends js.Object {
+}
+
+@js.native
+trait t_ccgame extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.game")
-class ccgame extends js.Object {
+class ccgame extends t_ccgame {
+}
+
+@js.native
+@JSGlobal("cc.game")
+object ccgame extends js.Object {
   def setFrameRate(frameRate:js.Any):Unit = js.native
   def step():Unit = js.native
   def pause():Unit = js.native

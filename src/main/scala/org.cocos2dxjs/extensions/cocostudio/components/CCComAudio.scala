@@ -2,11 +2,10 @@ package org.cocos2dxjs.extensions.cocostudio.components
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import org.cocos2dxjs.extensions.cocostudio.ccsComponent
+import org.cocos2dxjs.extensions.cocostudio.t_ccsComponent
 
 @js.native
-@JSGlobal("ccs.ComAudio")
-class ccsComAudio extends ccsComponent {
+trait t_ccsComAudio extends t_ccsComponent {
   def init:Boolean = js.native
   def onExit():Unit = js.native
   def end():Unit = js.native
@@ -35,5 +34,15 @@ class ccsComAudio extends ccsComponent {
   def setLoop(loop:Boolean):Unit = js.native
   def getFile:String = js.native
   def isLoop:Boolean = js.native
+}
+
+@js.native
+@JSGlobal("ccs.ComAudio")
+class ccsComAudio extends t_ccsComAudio {
+}
+
+@js.native
+@JSGlobal("ccs.ComAudio")
+object ccsComAudio extends js.Object {
 }
 

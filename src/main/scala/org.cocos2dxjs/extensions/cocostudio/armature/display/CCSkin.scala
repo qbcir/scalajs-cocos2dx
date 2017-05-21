@@ -6,11 +6,10 @@ import org.cocos2dxjs.extensions.cocostudio.armature.ccsBone
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsBaseData
 import org.cocos2dxjs.cocos2d.core.cocoa.ccAffineTransform
-import org.cocos2dxjs.extensions.cocostudio.ccsSprite
+import org.cocos2dxjs.extensions.cocostudio.t_ccsSprite
 
 @js.native
-@JSGlobal("ccs.Skin")
-class ccsSkin extends ccsSprite {
+trait t_ccsSkin extends t_ccsSprite {
   def initWithSpriteFrameName(spriteFrameName:String):Boolean = js.native
   def initWithFile(fileName:String, rect:ccRect):Boolean = js.native
   def setSkinData(skinData:ccsBaseData):Unit = js.native
@@ -20,5 +19,15 @@ class ccsSkin extends ccsSprite {
   def setBone(bone:js.Any):Unit = js.native
   def getBone:js.Any = js.native
   def getDisplayName:String = js.native
+}
+
+@js.native
+@JSGlobal("ccs.Skin")
+class ccsSkin extends t_ccsSkin {
+}
+
+@js.native
+@JSGlobal("ccs.Skin")
+object ccsSkin extends js.Object {
 }
 

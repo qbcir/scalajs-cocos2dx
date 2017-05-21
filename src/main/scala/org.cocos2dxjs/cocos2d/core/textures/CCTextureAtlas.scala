@@ -3,11 +3,10 @@ package org.cocos2dxjs.cocos2d.core.textures
 import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.platform.ccV3F_C4B_T2F_Quad
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
-@JSGlobal("cc.TextureAtlas")
-class ccTextureAtlas extends ccClass {
+trait t_ccTextureAtlas extends t_ccClass {
   def getTotalQuads:Float = js.native
   def getCapacity:Float = js.native
   def getTexture:js.Any = js.native
@@ -31,5 +30,15 @@ class ccTextureAtlas extends ccClass {
   def moveQuadsFromIndex(oldIndex:Float, amount:Float, newIndex:Float):Unit = js.native
   def fillWithEmptyQuadsFromIndex(index:Float, amount:Float):Unit = js.native
   def drawQuads():Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.TextureAtlas")
+class ccTextureAtlas(fileName:String, capacity:Float) extends t_ccTextureAtlas {
+}
+
+@js.native
+@JSGlobal("cc.TextureAtlas")
+object ccTextureAtlas extends js.Object {
 }
 

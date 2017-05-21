@@ -5,10 +5,10 @@ import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
+import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
 @js.native
-@JSGlobal("sp.Skeleton")
-class spSkeleton extends ccNode {
+trait t_spSkeleton extends t_ccNode {
   override def init:Boolean = js.native
   def setDebugSolots(enable:Boolean):Unit = js.native
   def setDebugBones(enable:Boolean):Unit = js.native
@@ -35,5 +35,15 @@ class spSkeleton extends ccNode {
   def getBlendFunc:ccBlendFunc = js.native
   def setBlendFunc(src:ccBlendFunc, dst:Float):Unit = js.native
   override def update(dt:Float):Unit = js.native
+}
+
+@js.native
+@JSGlobal("sp.Skeleton")
+class spSkeleton extends t_spSkeleton {
+}
+
+@js.native
+@JSGlobal("sp.Skeleton")
+object spSkeleton extends js.Object {
 }
 

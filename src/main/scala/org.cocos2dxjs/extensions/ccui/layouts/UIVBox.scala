@@ -5,9 +5,18 @@ import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 
 @js.native
-@JSGlobal("ccui.VBox")
-class ccuiVBox extends ccuiLayout {
+trait t_ccuiVBox extends t_ccuiLayout {
   def initWithSize(size:ccSize):Boolean = js.native
+}
+
+@js.native
+@JSGlobal("ccui.VBox")
+class ccuiVBox(size:ccSize) extends t_ccuiVBox {
+}
+
+@js.native
+@JSGlobal("ccui.VBox")
+object ccuiVBox extends js.Object {
   def create(size:ccSize):ccuiVBox = js.native
 }
 

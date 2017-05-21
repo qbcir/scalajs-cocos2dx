@@ -6,10 +6,10 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
-@JSGlobal("ccui.Slider")
-class ccuiSlider extends ccuiWidget {
+trait t_ccuiSlider extends t_ccuiWidget {
   def loadBarTexture(fileName:String, texType:Float):Unit = js.native
   def loadProgressBarTexture(fileName:String, texType:Float):Unit = js.native
   def setScale9Enabled(able:Boolean):Unit = js.native
@@ -32,5 +32,15 @@ class ccuiSlider extends ccuiWidget {
   override def getVirtualRendererSize:ccSize = js.native
   override def getVirtualRenderer:ccuiWidget = js.native
   override def getDescription:String = js.native
+}
+
+@js.native
+@JSGlobal("ccui.Slider")
+class ccuiSlider extends t_ccuiSlider {
+}
+
+@js.native
+@JSGlobal("ccui.Slider")
+object ccuiSlider extends js.Object {
 }
 

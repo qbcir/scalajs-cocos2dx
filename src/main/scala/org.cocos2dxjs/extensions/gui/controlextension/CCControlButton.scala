@@ -7,8 +7,7 @@ import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 
 @js.native
-@JSGlobal("cc.ControlButton")
-class ccControlButton extends ccControl {
+trait t_ccControlButton extends t_ccControl {
   def doesAdjustBackgroundImage:Boolean = js.native
   def getZoomOnTouchDown():Unit = js.native
   def getPreferredSize():Unit = js.native
@@ -30,5 +29,15 @@ class ccControlButton extends ccControl {
   def getBackgroundSpriteForState(state:Float):Unit = js.native
   def setBackgroundSpriteForState(sprite:js.Any, state:Float):Unit = js.native
   def setBackgroundSpriteFrameForState(spriteFrame:js.Any, state:Float):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.ControlButton")
+class ccControlButton extends t_ccControlButton {
+}
+
+@js.native
+@JSGlobal("cc.ControlButton")
+object ccControlButton extends js.Object {
 }
 

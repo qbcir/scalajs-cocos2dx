@@ -4,12 +4,30 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_ccImageTGA extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.ImageTGA")
-class ccImageTGA extends js.Object {
+class ccImageTGA extends t_ccImageTGA {
+}
+
+@js.native
+@JSGlobal("cc.ImageTGA")
+object ccImageTGA extends js.Object {
+}
+
+@js.native
+trait t_ccBinaryStreamReader extends js.Object {
 }
 
 @js.native
 @JSGlobal("cc.BinaryStreamReader")
-class ccBinaryStreamReader extends js.Object {
+class ccBinaryStreamReader extends t_ccBinaryStreamReader {
+}
+
+@js.native
+@JSGlobal("cc.BinaryStreamReader")
+object ccBinaryStreamReader extends js.Object {
 }
 

@@ -4,7 +4,16 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_ccLabelAtlas extends t_ccLabelBMFont {
+}
+
+@js.native
 @JSGlobal("cc.LabelAtlas")
-class ccLabelAtlas extends ccLabelBMFont {
+class ccLabelAtlas extends t_ccLabelAtlas {
+}
+
+@js.native
+@JSGlobal("cc.LabelAtlas")
+object ccLabelAtlas extends js.Object {
 }
 

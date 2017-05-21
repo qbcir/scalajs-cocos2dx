@@ -2,20 +2,28 @@ package org.cocos2dxjs.extensions.gui.scrollview
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 
 @js.native
-@JSGlobal("cc.TableViewCell")
-class ccTableViewCell extends ccNode {
+trait t_ccTableViewCell extends t_ccNode {
   def getIdx():Unit = js.native
   def reset():Unit = js.native
 }
 
 @js.native
-@JSGlobal("cc.TableViewDelegate")
-class ccTableViewDelegate extends ccClass {
+@JSGlobal("cc.TableViewCell")
+class ccTableViewCell extends t_ccTableViewCell {
+}
+
+@js.native
+@JSGlobal("cc.TableViewCell")
+object ccTableViewCell extends js.Object {
+}
+
+@js.native
+trait t_ccTableViewDelegate extends t_ccClass {
   def tableCellTouched(table:ccTableView, cell:ccTableViewCell):Unit = js.native
   def tableCellHighlight(table:ccTableView, cell:ccTableViewCell):Unit = js.native
   def tableCellUnhighlight(table:ccTableView, cell:ccTableViewCell):Unit = js.native
@@ -23,8 +31,17 @@ class ccTableViewDelegate extends ccClass {
 }
 
 @js.native
-@JSGlobal("cc.TableViewDataSource")
-class ccTableViewDataSource extends ccClass {
+@JSGlobal("cc.TableViewDelegate")
+class ccTableViewDelegate extends t_ccTableViewDelegate {
+}
+
+@js.native
+@JSGlobal("cc.TableViewDelegate")
+object ccTableViewDelegate extends js.Object {
+}
+
+@js.native
+trait t_ccTableViewDataSource extends t_ccClass {
   def tableCellSizeForIndex(table:ccTableView, idx:Float):ccSize = js.native
   def cellSizeForTable(table:ccTableView):ccSize = js.native
   def tableCellAtIndex(table:ccTableView, idx:js.Any):ccTableView = js.native
@@ -32,8 +49,17 @@ class ccTableViewDataSource extends ccClass {
 }
 
 @js.native
-@JSGlobal("cc.TableView")
-class ccTableView extends ccScrollView {
+@JSGlobal("cc.TableViewDataSource")
+class ccTableViewDataSource extends t_ccTableViewDataSource {
+}
+
+@js.native
+@JSGlobal("cc.TableViewDataSource")
+object ccTableViewDataSource extends js.Object {
+}
+
+@js.native
+trait t_ccTableView extends t_ccScrollView {
   def getDataSource():Unit = js.native
   def getDelegate():Unit = js.native
   def setVerticalFillOrder():Unit = js.native
@@ -43,5 +69,15 @@ class ccTableView extends ccScrollView {
   def reloadData():Unit = js.native
   def dequeueCell:js.Any = js.native
   def cellAtIndex(idx:js.Any):ccTableViewCell = js.native
+}
+
+@js.native
+@JSGlobal("cc.TableView")
+class ccTableView(dataSource:js.Any, size:js.Any, container:js.Any) extends t_ccTableView {
+}
+
+@js.native
+@JSGlobal("cc.TableView")
+object ccTableView extends js.Object {
 }
 

@@ -3,11 +3,10 @@ package org.cocos2dxjs.extensions.cocostudio.action
 import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.actions.ccCallFunc
-import org.cocos2dxjs.extensions.cocostudio.ccsClass
+import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 
 @js.native
-@JSGlobal("ccs.ActionObject")
-class ccsActionObject extends ccsClass {
+trait t_ccsActionObject extends t_ccsClass {
   def setName(name:String):Unit = js.native
   def getName:String = js.native
   def setLoop(loop:Boolean):Unit = js.native
@@ -26,5 +25,15 @@ class ccsActionObject extends ccsClass {
   def stop():Unit = js.native
   def updateToFrameByTime():Unit = js.native
   def simulationActionUpdate(dt:Float):Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccs.ActionObject")
+class ccsActionObject extends t_ccsActionObject {
+}
+
+@js.native
+@JSGlobal("ccs.ActionObject")
+object ccsActionObject extends js.Object {
 }
 

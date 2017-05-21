@@ -4,8 +4,17 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_cctextureCache extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.textureCache")
-class cctextureCache extends js.Object {
+class cctextureCache extends t_cctextureCache {
+}
+
+@js.native
+@JSGlobal("cc.textureCache")
+object cctextureCache extends js.Object {
   def addPVRTCImage(filename:String):ccTexture2D = js.native
   def addETCImage(filename:String):ccTexture2D = js.native
   def description:String = js.native

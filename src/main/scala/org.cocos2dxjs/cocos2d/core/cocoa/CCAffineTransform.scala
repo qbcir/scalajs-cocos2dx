@@ -4,7 +4,16 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_ccAffineTransform extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.AffineTransform")
-class ccAffineTransform extends js.Object {
+class ccAffineTransform extends t_ccAffineTransform {
+}
+
+@js.native
+@JSGlobal("cc.AffineTransform")
+object ccAffineTransform extends js.Object {
 }
 

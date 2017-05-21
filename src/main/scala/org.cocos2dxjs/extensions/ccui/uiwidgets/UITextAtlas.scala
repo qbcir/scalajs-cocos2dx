@@ -4,10 +4,10 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
-@JSGlobal("ccui.TextAtlas")
-class ccuiTextAtlas extends ccuiWidget {
+trait t_ccuiTextAtlas extends t_ccuiWidget {
   def setProperty(stringValue:String, charMapFile:String, itemWidth:Float, itemHeight:Float, startCharMap:String):Unit = js.native
   def setString(value:String):Unit = js.native
   def getString:String = js.native
@@ -15,5 +15,15 @@ class ccuiTextAtlas extends ccuiWidget {
   override def getVirtualRendererSize:ccSize = js.native
   override def getVirtualRenderer:ccuiWidget = js.native
   override def getDescription:String = js.native
+}
+
+@js.native
+@JSGlobal("ccui.TextAtlas")
+class ccuiTextAtlas(stringValue:String, charMapFile:String, itemWidth:Float, itemHeight:Float, startCharMap:String) extends t_ccuiTextAtlas {
+}
+
+@js.native
+@JSGlobal("ccui.TextAtlas")
+object ccuiTextAtlas extends js.Object {
 }
 

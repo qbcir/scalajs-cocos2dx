@@ -7,13 +7,31 @@ import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsAnimationData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsTextureData
 
 @js.native
+trait t_ccsRelativeData extends js.Object {
+}
+
+@js.native
 @JSGlobal("ccs.RelativeData")
-class ccsRelativeData extends js.Object {
+class ccsRelativeData extends t_ccsRelativeData {
+}
+
+@js.native
+@JSGlobal("ccs.RelativeData")
+object ccsRelativeData extends js.Object {
+}
+
+@js.native
+trait t_ccsarmatureDataManager extends js.Object {
 }
 
 @js.native
 @JSGlobal("ccs.armatureDataManager")
-class ccsarmatureDataManager extends js.Object {
+class ccsarmatureDataManager extends t_ccsarmatureDataManager {
+}
+
+@js.native
+@JSGlobal("ccs.armatureDataManager")
+object ccsarmatureDataManager extends js.Object {
   def removeArmatureFileInfo(configFilePath:String):Unit = js.native
   def addArmatureData(id:String, armatureData:ccsArmatureData):Unit = js.native
   def getArmatureData(id:String):ccsArmatureData = js.native

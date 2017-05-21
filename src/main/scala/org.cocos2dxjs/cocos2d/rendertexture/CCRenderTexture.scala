@@ -7,11 +7,10 @@ import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.platform.ccClass
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
 @js.native
-@JSGlobal("cc.RenderTexture")
-class ccRenderTexture extends ccNode {
+trait t_ccRenderTexture extends t_ccNode {
   override def cleanup():Unit = js.native
   def getSprite:ccSprite = js.native
   def setSprite(sprite:ccSprite):Unit = js.native
@@ -38,5 +37,15 @@ class ccRenderTexture extends ccNode {
   def newCCImage:js.Any = js.native
   def listenToBackground(obj:ccClass):Unit = js.native
   def listenToForeground(obj:ccClass):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.RenderTexture")
+class ccRenderTexture(width:Float, height:Float, format:Float, depthStencilFormat:Float) extends t_ccRenderTexture {
+}
+
+@js.native
+@JSGlobal("cc.RenderTexture")
+object ccRenderTexture extends js.Object {
 }
 

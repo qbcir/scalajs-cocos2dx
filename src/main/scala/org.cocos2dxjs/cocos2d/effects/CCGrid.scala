@@ -3,16 +3,15 @@ package org.cocos2dxjs.cocos2d.effects
 import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
+import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ccVertex3F
 import org.cocos2dxjs.cocos2d.core.platform.ccQuad3
 
 @js.native
-@JSGlobal("cc.GridBase")
-class ccGridBase extends ccClass {
+trait t_ccGridBase extends t_ccClass {
   def isActive:Boolean = js.native
   def setActive(active:Float):Unit = js.native
   def getReuseGrid:Float = js.native
@@ -29,8 +28,17 @@ class ccGridBase extends ccClass {
 }
 
 @js.native
-@JSGlobal("cc.Grid3D")
-class ccGrid3D extends ccGridBase {
+@JSGlobal("cc.GridBase")
+class ccGridBase(gridSize:ccSize, texture:ccTexture2D, flipped:Boolean, rect:ccRect) extends t_ccGridBase {
+}
+
+@js.native
+@JSGlobal("cc.GridBase")
+object ccGridBase extends js.Object {
+}
+
+@js.native
+trait t_ccGrid3D extends t_ccGridBase {
   def vertex(pos:ccPoint):ccVertex3F = js.native
   def getVertex(pos:ccPoint):ccVertex3F = js.native
   def originalVertex(pos:ccPoint):ccVertex3F = js.native
@@ -39,12 +47,31 @@ class ccGrid3D extends ccGridBase {
 }
 
 @js.native
-@JSGlobal("cc.TiledGrid3D")
-class ccTiledGrid3D extends ccGridBase {
+@JSGlobal("cc.Grid3D")
+class ccGrid3D(gridSize:ccSize, texture:ccTexture2D, flipped:Boolean, rect:ccRect) extends t_ccGrid3D {
+}
+
+@js.native
+@JSGlobal("cc.Grid3D")
+object ccGrid3D extends js.Object {
+}
+
+@js.native
+trait t_ccTiledGrid3D extends t_ccGridBase {
   def tile(pos:ccPoint):ccQuad3 = js.native
   def getTile(pos:ccPoint):ccQuad3 = js.native
   def getOriginalTile(pos:ccPoint):ccQuad3 = js.native
   def originalTile(pos:ccPoint):ccQuad3 = js.native
   def setTile(pos:ccPoint, coords:ccQuad3):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.TiledGrid3D")
+class ccTiledGrid3D(gridSize:ccSize, texture:ccTexture2D, flipped:Boolean) extends t_ccTiledGrid3D {
+}
+
+@js.native
+@JSGlobal("cc.TiledGrid3D")
+object ccTiledGrid3D extends js.Object {
 }
 

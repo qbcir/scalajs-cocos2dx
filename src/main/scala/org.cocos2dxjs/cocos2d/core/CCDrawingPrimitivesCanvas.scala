@@ -5,11 +5,10 @@ import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
-@JSGlobal("cc.DrawingPrimitiveCanvas")
-class ccDrawingPrimitiveCanvas extends ccClass {
+trait t_ccDrawingPrimitiveCanvas extends t_ccClass {
   def drawPoint(point:ccPoint, size:Float):Unit = js.native
   def drawPoints(points:js.Array[js.Any], numberOfPoints:Float, size:Float):Unit = js.native
   def drawLine(origin:ccPoint, destination:ccPoint):Unit = js.native
@@ -29,5 +28,15 @@ class ccDrawingPrimitiveCanvas extends ccClass {
   def setDrawColor(r:Float, g:Float, b:Float, a:Float):Unit = js.native
   def setPointSize(pointSize:Float):Unit = js.native
   def setLineWidth(width:Float):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.DrawingPrimitiveCanvas")
+class ccDrawingPrimitiveCanvas(renderContext:js.Any/*ccCanvasContextWrapper*/) extends t_ccDrawingPrimitiveCanvas {
+}
+
+@js.native
+@JSGlobal("cc.DrawingPrimitiveCanvas")
+object ccDrawingPrimitiveCanvas extends js.Object {
 }
 

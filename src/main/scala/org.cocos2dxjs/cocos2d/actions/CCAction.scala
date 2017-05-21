@@ -3,12 +3,11 @@ package org.cocos2dxjs.cocos2d.actions
 import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 
 @js.native
-@JSGlobal("cc.Action")
-class ccAction extends ccClass {
+trait t_ccAction extends t_ccClass {
   override def clone:ccAction = js.native
   def isDone:Boolean = js.native
   def startWithTarget(target:ccNode):Unit = js.native
@@ -26,8 +25,17 @@ class ccAction extends ccClass {
 }
 
 @js.native
-@JSGlobal("cc.FiniteTimeAction")
-class ccFiniteTimeAction extends ccAction {
+@JSGlobal("cc.Action")
+class ccAction extends t_ccAction {
+}
+
+@js.native
+@JSGlobal("cc.Action")
+object ccAction extends js.Object {
+}
+
+@js.native
+trait t_ccFiniteTimeAction extends t_ccAction {
   def getDuration:Float = js.native
   def setDuration(duration:Float):Unit = js.native
   def reverse:ccAction = js.native
@@ -35,8 +43,17 @@ class ccFiniteTimeAction extends ccAction {
 }
 
 @js.native
-@JSGlobal("cc.Speed")
-class ccSpeed extends ccAction {
+@JSGlobal("cc.FiniteTimeAction")
+class ccFiniteTimeAction extends t_ccFiniteTimeAction {
+}
+
+@js.native
+@JSGlobal("cc.FiniteTimeAction")
+object ccFiniteTimeAction extends js.Object {
+}
+
+@js.native
+trait t_ccSpeed extends t_ccAction {
   def getSpeed:Float = js.native
   def setSpeed(speed:Float):Unit = js.native
   def initWithAction(action:ccActionInterval, speed:Float):Boolean = js.native
@@ -51,8 +68,17 @@ class ccSpeed extends ccAction {
 }
 
 @js.native
-@JSGlobal("cc.Follow")
-class ccFollow extends ccAction {
+@JSGlobal("cc.Speed")
+class ccSpeed(action:ccActionInterval, speed:Float) extends t_ccSpeed {
+}
+
+@js.native
+@JSGlobal("cc.Speed")
+object ccSpeed extends js.Object {
+}
+
+@js.native
+trait t_ccFollow extends t_ccAction {
   override def clone:ccAction = js.native
   def isBoundarySet:Boolean = js.native
   def setBoudarySet(value:Boolean):Unit = js.native
@@ -60,5 +86,15 @@ class ccFollow extends ccAction {
   override def step(dt:Float):Unit = js.native
   override def isDone:Boolean = js.native
   override def stop():Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.Follow")
+class ccFollow(followedNode:ccNode, rect:ccRect) extends t_ccFollow {
+}
+
+@js.native
+@JSGlobal("cc.Follow")
+object ccFollow extends js.Object {
 }
 

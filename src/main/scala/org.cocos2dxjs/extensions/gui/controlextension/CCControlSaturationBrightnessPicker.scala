@@ -7,8 +7,17 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 
 @js.native
+trait t_ccControlSaturationBrightnessPicker extends t_ccControl {
+}
+
+@js.native
 @JSGlobal("cc.ControlSaturationBrightnessPicker")
-class ccControlSaturationBrightnessPicker extends ccControl {
+class ccControlSaturationBrightnessPicker(target:ccNode, pos:ccPoint) extends t_ccControlSaturationBrightnessPicker {
+}
+
+@js.native
+@JSGlobal("cc.ControlSaturationBrightnessPicker")
+object ccControlSaturationBrightnessPicker extends js.Object {
   def create(target:ccNode, pos:ccPoint):js.Any = js.native
 }
 

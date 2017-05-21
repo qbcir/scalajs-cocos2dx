@@ -8,11 +8,10 @@ import org.cocos2dxjs.cocos2d.core.sprites.ccSpriteBatchNode
 import org.cocos2dxjs.extensions.cocostudio.armature.physics.ccsColliderFilter
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
-import org.cocos2dxjs.extensions.cocostudio.ccsNode
+import org.cocos2dxjs.extensions.cocostudio.t_ccsNode
 
 @js.native
-@JSGlobal("ccs.Armature")
-class ccsArmature extends ccsNode {
+trait t_ccsArmature extends t_ccsNode {
   def init(name:String, parentBone:ccsBone):Boolean = js.native
   def createBone(boneName:String):ccsBone = js.native
   def addBone(bone:ccsBone, parentName:String):Unit = js.native
@@ -39,5 +38,15 @@ class ccsArmature extends ccsNode {
   def setArmatureData(armatureData:ccsArmatureData):Unit = js.native
   def getVersion:Float = js.native
   def setVersion(version:Float):Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccs.Armature")
+class ccsArmature(name:String, parentBone:ccsBone) extends t_ccsArmature {
+}
+
+@js.native
+@JSGlobal("ccs.Armature")
+object ccsArmature extends js.Object {
 }
 

@@ -8,8 +8,17 @@ import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsBoneData
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 
 @js.native
+trait t_ccsDisplayManager extends js.Object {
+}
+
+@js.native
 @JSGlobal("ccs.DisplayManager")
-class ccsDisplayManager extends js.Object {
+class ccsDisplayManager extends t_ccsDisplayManager {
+}
+
+@js.native
+@JSGlobal("ccs.DisplayManager")
+object ccsDisplayManager extends js.Object {
   def init(bone:js.Any):Boolean = js.native
   def addDisplay(display:ccsDisplayData, index:Float):Unit = js.native
   def removeDisplay(index:Float):Unit = js.native

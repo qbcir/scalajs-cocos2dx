@@ -9,11 +9,10 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
 @js.native
-@JSGlobal("cc.Sprite")
-class ccSprite extends ccNode {
+trait t_ccSprite extends t_ccNode {
   def textureLoaded:Boolean = js.native
   def isDirty:Boolean = js.native
   def setDirty(bDirty:Boolean):Unit = js.native
@@ -50,5 +49,15 @@ class ccSprite extends ccNode {
   def getSpriteFrame:ccSpriteFrame = js.native
   def setBatchNode(spriteBatchNode:ccSpriteBatchNode):Unit = js.native
   def setTexture(texture:ccTexture2D):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.Sprite")
+class ccSprite extends t_ccSprite {
+}
+
+@js.native
+@JSGlobal("cc.Sprite")
+object ccSprite extends js.Object {
 }
 

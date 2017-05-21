@@ -4,8 +4,17 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_ccClass extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.Class")
-class ccClass extends js.Object {
+class ccClass extends t_ccClass {
+}
+
+@js.native
+@JSGlobal("cc.Class")
+object ccClass extends js.Object {
   def extend(props:js.Object):js.Function = js.native
 }
 

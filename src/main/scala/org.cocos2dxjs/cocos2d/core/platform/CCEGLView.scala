@@ -7,8 +7,7 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 
 @js.native
-@JSGlobal("cc.view")
-class ccview extends js.Object {
+trait t_ccview extends js.Object {
   def setTargetDensityDPI(densityDPI:String):Unit = js.native
   def getTargetDensityDPI:String = js.native
   def resizeWithBrowserSize(enabled:Boolean):Unit = js.native
@@ -51,28 +50,65 @@ class ccview extends js.Object {
 }
 
 @js.native
-@JSGlobal("cc.ContainerStrategy")
-class ccContainerStrategy extends ccClass {
+@JSGlobal("cc.view")
+class ccview extends t_ccview {
+}
+
+@js.native
+@JSGlobal("cc.view")
+object ccview extends js.Object {
+}
+
+@js.native
+trait t_ccContainerStrategy extends t_ccClass {
   def preApply(The:ccview):Unit = js.native
   def apply(view:ccview, designedResolution:ccSize):Unit = js.native
   def postApply(view:ccview):Unit = js.native
 }
 
 @js.native
-@JSGlobal("cc.ContentStrategy")
-class ccContentStrategy extends ccClass {
+@JSGlobal("cc.ContainerStrategy")
+class ccContainerStrategy extends t_ccContainerStrategy {
+}
+
+@js.native
+@JSGlobal("cc.ContainerStrategy")
+object ccContainerStrategy extends js.Object {
+}
+
+@js.native
+trait t_ccContentStrategy extends t_ccClass {
   def preApply(view:ccview):Unit = js.native
   def apply(view:ccview, designedResolution:ccSize):js.Object = js.native
   def postApply(view:ccview):Unit = js.native
 }
 
 @js.native
-@JSGlobal("cc.ResolutionPolicy")
-class ccResolutionPolicy extends ccClass {
+@JSGlobal("cc.ContentStrategy")
+class ccContentStrategy extends t_ccContentStrategy {
+}
+
+@js.native
+@JSGlobal("cc.ContentStrategy")
+object ccContentStrategy extends js.Object {
+}
+
+@js.native
+trait t_ccResolutionPolicy extends t_ccClass {
   def preApply(view:ccview):Unit = js.native
   def apply(view:ccview, designedResolution:ccSize):js.Object = js.native
   def postApply(view:ccview):Unit = js.native
   def setContainerStrategy(containerStg:ccContainerStrategy):Unit = js.native
   def setContentStrategy(contentStg:ccContentStrategy):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.ResolutionPolicy")
+class ccResolutionPolicy(containerStg:ccContainerStrategy, contentStg:ccContentStrategy) extends t_ccResolutionPolicy {
+}
+
+@js.native
+@JSGlobal("cc.ResolutionPolicy")
+object ccResolutionPolicy extends js.Object {
 }
 

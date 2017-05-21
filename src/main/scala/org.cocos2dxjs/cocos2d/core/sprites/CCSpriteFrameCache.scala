@@ -4,8 +4,17 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_ccspriteFrameCache extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.spriteFrameCache")
-class ccspriteFrameCache extends js.Object {
+class ccspriteFrameCache extends t_ccspriteFrameCache {
+}
+
+@js.native
+@JSGlobal("cc.spriteFrameCache")
+object ccspriteFrameCache extends js.Object {
   def addSpriteFrames(url:String, texture:js.Any):Unit = js.native
   def addSpriteFrame(frame:ccSpriteFrame, frameName:String):Unit = js.native
   def removeSpriteFrames():Unit = js.native

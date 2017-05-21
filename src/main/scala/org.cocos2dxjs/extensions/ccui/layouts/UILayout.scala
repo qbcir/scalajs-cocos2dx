@@ -8,10 +8,10 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
+import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
-@JSGlobal("ccui.Layout")
-class ccuiLayout extends ccuiWidget {
+trait t_ccuiLayout extends t_ccuiWidget {
   override def onEnter():Unit = js.native
   override def onExit():Unit = js.native
   def visit(parent:ccNode):Unit = js.native
@@ -72,5 +72,15 @@ class ccuiLayout extends ccuiWidget {
   def _checkFocusEnabledChild:Boolean = js.native
   override def getDescription:String = js.native
   def forceDoLayout():Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccui.Layout")
+class ccuiLayout extends t_ccuiLayout {
+}
+
+@js.native
+@JSGlobal("ccui.Layout")
+object ccuiLayout extends js.Object {
 }
 

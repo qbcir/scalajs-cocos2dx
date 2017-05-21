@@ -4,11 +4,10 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
 @js.native
-@JSGlobal("cc.DrawNode")
-class ccDrawNode extends ccNode {
+trait t_ccDrawNode extends t_ccNode {
   def getBlendFunc:js.Object = js.native
   def setBlendFunc(blendFunc:js.Any, dst:js.Any):Unit = js.native
   def setLineWidth(width:Float):Unit = js.native
@@ -27,5 +26,15 @@ class ccDrawNode extends ccNode {
   def drawPoly_(verts:js.Array[js.Any], fillColor:ccColor, lineWidth:Float, color:ccColor):Unit = js.native
   def drawPoly(verts:js.Array[js.Any], fillColor:ccColor, lineWidth:Float, lineColor:ccColor):Unit = js.native
   def clear():Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.DrawNode")
+class ccDrawNode extends t_ccDrawNode {
+}
+
+@js.native
+@JSGlobal("cc.DrawNode")
+object ccDrawNode extends js.Object {
 }
 

@@ -2,11 +2,10 @@ package org.cocos2dxjs.extensions.cocostudio.armature.animation
 
 import scalajs.js
 import scala.scalajs.js.annotation._
-import org.cocos2dxjs.extensions.cocostudio.ccsClass
+import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 
 @js.native
-@JSGlobal("ccs.ProcessBase")
-class ccsProcessBase extends ccsClass {
+trait t_ccsProcessBase extends t_ccsClass {
   def pause():Unit = js.native
   def resume():Unit = js.native
   def stop():Unit = js.native
@@ -26,5 +25,15 @@ class ccsProcessBase extends ccsClass {
   def getProcessScale:Float = js.native
   def setProcessScale(processScale:js.Any):Unit = js.native
   def isPlaying:Boolean = js.native
+}
+
+@js.native
+@JSGlobal("ccs.ProcessBase")
+class ccsProcessBase extends t_ccsProcessBase {
+}
+
+@js.native
+@JSGlobal("ccs.ProcessBase")
+object ccsProcessBase extends js.Object {
 }
 

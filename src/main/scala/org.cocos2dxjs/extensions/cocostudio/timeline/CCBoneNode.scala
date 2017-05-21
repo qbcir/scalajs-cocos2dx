@@ -4,7 +4,16 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_ccsBoneNode extends js.Object {
+}
+
+@js.native
 @JSGlobal("ccs.BoneNode")
-class ccsBoneNode extends js.Object {
+class ccsBoneNode extends t_ccsBoneNode {
+}
+
+@js.native
+@JSGlobal("ccs.BoneNode")
+object ccsBoneNode extends js.Object {
 }
 

@@ -3,11 +3,10 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
-import org.cocos2dxjs.extensions.ccui.system.ccuiProtectedNode
+import org.cocos2dxjs.extensions.ccui.system.t_ccuiProtectedNode
 
 @js.native
-@JSGlobal("ccui.PageViewIndicator")
-class ccuiPageViewIndicator extends ccuiProtectedNode {
+trait t_ccuiPageViewIndicator extends t_ccuiProtectedNode {
   def setDirection(direction:Float):Unit = js.native
   def reset(numberOfTotalPages:Float):Unit = js.native
   def indicate(index:Float):Unit = js.native
@@ -21,5 +20,15 @@ class ccuiPageViewIndicator extends ccuiProtectedNode {
   def getIndexNodesScale:Float = js.native
   def setIndexNodesTexture(texName:String, texType:Float):Unit = js.native
   def clear():Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccui.PageViewIndicator")
+class ccuiPageViewIndicator extends t_ccuiPageViewIndicator {
+}
+
+@js.native
+@JSGlobal("ccui.PageViewIndicator")
+object ccuiPageViewIndicator extends js.Object {
 }
 

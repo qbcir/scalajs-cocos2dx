@@ -13,13 +13,31 @@ import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsTextureData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsContourData
 
 @js.native
+trait t_ccsDataInfo extends js.Object {
+}
+
+@js.native
 @JSGlobal("ccs.DataInfo")
-class ccsDataInfo extends js.Object {
+class ccsDataInfo extends t_ccsDataInfo {
+}
+
+@js.native
+@JSGlobal("ccs.DataInfo")
+object ccsDataInfo extends js.Object {
+}
+
+@js.native
+trait t_ccsdataReaderHelper extends js.Object {
 }
 
 @js.native
 @JSGlobal("ccs.dataReaderHelper")
-class ccsdataReaderHelper extends js.Object {
+class ccsdataReaderHelper extends t_ccsdataReaderHelper {
+}
+
+@js.native
+@JSGlobal("ccs.dataReaderHelper")
+object ccsdataReaderHelper extends js.Object {
   def addDataFromFile(filePath:String):Unit = js.native
   def addDataFromFileAsync(imagePath:String, plistPath:String, filePath:String, selector:js.Function, target:js.Object):Unit = js.native
   def removeConfigFile(configFile:String):Unit = js.native

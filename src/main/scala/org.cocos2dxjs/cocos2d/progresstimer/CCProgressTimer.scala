@@ -5,11 +5,10 @@ import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
 @js.native
-@JSGlobal("cc.ProgressTimer")
-class ccProgressTimer extends ccNode {
+trait t_ccProgressTimer extends t_ccNode {
   def getMidpoint:ccPoint = js.native
   def setMidpoint(mpoint:ccPoint):Unit = js.native
   def getBarChangeRate:ccPoint = js.native
@@ -30,5 +29,15 @@ class ccProgressTimer extends ccNode {
   def setType(_type:Float):Unit = js.native
   def setReverseDirection(reverse:Boolean):Unit = js.native
   def initWithSprite(sprite:ccSprite):Boolean = js.native
+}
+
+@js.native
+@JSGlobal("cc.ProgressTimer")
+class ccProgressTimer(sprite:ccSprite) extends t_ccProgressTimer {
+}
+
+@js.native
+@JSGlobal("cc.ProgressTimer")
+object ccProgressTimer extends js.Object {
 }
 

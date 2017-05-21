@@ -6,11 +6,10 @@ import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 
 @js.native
-@JSGlobal("cc.MotionStreak")
-class ccMotionStreak extends ccNode {
+trait t_ccMotionStreak extends t_ccNode {
   def getTexture:ccTexture2D = js.native
   def setTexture(texture:ccTexture2D):Unit = js.native
   def getBlendFunc:ccBlendFunc = js.native
@@ -34,5 +33,15 @@ class ccMotionStreak extends ccNode {
   override def getPositionY:Float = js.native
   override def setPositionY(y:Float):Unit = js.native
   override def update(delta:Float):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.MotionStreak")
+class ccMotionStreak(fade:Float, minSeg:Float, stroke:Float, color:Float, texture:String) extends t_ccMotionStreak {
+}
+
+@js.native
+@JSGlobal("cc.MotionStreak")
+object ccMotionStreak extends js.Object {
 }
 

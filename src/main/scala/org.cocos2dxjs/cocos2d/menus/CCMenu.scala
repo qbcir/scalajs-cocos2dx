@@ -3,11 +3,10 @@ package org.cocos2dxjs.cocos2d.menus
 import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
-import org.cocos2dxjs.cocos2d.core.layers.ccLayer
+import org.cocos2dxjs.cocos2d.core.layers.t_ccLayer
 
 @js.native
-@JSGlobal("cc.Menu")
-class ccMenu extends ccLayer {
+trait t_ccMenu extends t_ccLayer {
   override def onEnter():Unit = js.native
   def isEnabled:Boolean = js.native
   def setEnabled(enabled:Boolean):Unit = js.native
@@ -24,5 +23,15 @@ class ccMenu extends ccLayer {
   override def onExit():Unit = js.native
   def setOpacityModifyRGB(value:js.Any):Unit = js.native
   override def isOpacityModifyRGB:Boolean = js.native
+}
+
+@js.native
+@JSGlobal("cc.Menu")
+class ccMenu(menuItems:ccMenuItem) extends t_ccMenu {
+}
+
+@js.native
+@JSGlobal("cc.Menu")
+object ccMenu extends js.Object {
 }
 

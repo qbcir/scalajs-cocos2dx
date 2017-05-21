@@ -4,8 +4,17 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_ccconfiguration extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.configuration")
-class ccconfiguration extends js.Object {
+class ccconfiguration extends t_ccconfiguration {
+}
+
+@js.native
+@JSGlobal("cc.configuration")
+object ccconfiguration extends js.Object {
   def getMaxTextureSize:Float = js.native
   def getMaxModelviewStackDepth:Float = js.native
   def getMaxTextureUnits:Float = js.native

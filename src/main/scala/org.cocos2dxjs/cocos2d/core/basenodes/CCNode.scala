@@ -14,11 +14,10 @@ import org.cocos2dxjs.cocos2d.actions.ccAction
 import org.cocos2dxjs.cocos2d.core.cocoa.ccAffineTransform
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccTouch
 import org.cocos2dxjs.extensions.cocostudio.components.ccComponent
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
-@JSGlobal("cc.Node")
-class ccNode extends ccClass {
+trait t_ccNode extends t_ccClass {
   def init:Boolean = js.native
   def attr(attrs:js.Object):Unit = js.native
   def getSkewX:Float = js.native
@@ -150,5 +149,15 @@ class ccNode extends ccClass {
   def setOpacityModifyRGB(opacityValue:Boolean):Unit = js.native
   def isOpacityModifyRGB:Boolean = js.native
   def enumerateChildren(name:js.Any, callback:js.Any):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.Node")
+class ccNode extends t_ccNode {
+}
+
+@js.native
+@JSGlobal("cc.Node")
+object ccNode extends js.Object {
 }
 

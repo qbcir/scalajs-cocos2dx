@@ -12,11 +12,10 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccAffineTransform
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsDisplayData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsBaseData
-import org.cocos2dxjs.extensions.cocostudio.ccsNode
+import org.cocos2dxjs.extensions.cocostudio.t_ccsNode
 
 @js.native
-@JSGlobal("ccs.Bone")
-class ccsBone extends ccsNode {
+trait t_ccsBone extends t_ccsNode {
   def init(name:String):Boolean = js.native
   def setBoneData(boneData:ccsBoneData):Unit = js.native
   def getBoneData:ccsBoneData = js.native
@@ -56,5 +55,15 @@ class ccsBone extends ccsNode {
   def isBlendDirty:Boolean = js.native
   def getTweenData:ccsFrameData = js.native
   def getWorldInfo:ccsBaseData = js.native
+}
+
+@js.native
+@JSGlobal("ccs.Bone")
+class ccsBone extends t_ccsBone {
+}
+
+@js.native
+@JSGlobal("ccs.Bone")
+object ccsBone extends js.Object {
 }
 

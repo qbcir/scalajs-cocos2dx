@@ -4,8 +4,17 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 
 @js.native
+trait t_ccmathMatrix4 extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.math.Matrix4")
-class ccmathMatrix4 extends js.Object {
+class ccmathMatrix4 extends t_ccmathMatrix4 {
+}
+
+@js.native
+@JSGlobal("cc.math.Matrix4")
+object ccmathMatrix4 extends js.Object {
   def createByRotationX(radians:Float, matrix:ccmathMatrix4):ccmathMatrix4 = js.native
   def createByRotationY(radians:Float, matrix:ccmathMatrix4):js.Any = js.native
   def createByRotationZ(radians:Float, matrix:ccmathMatrix4):ccmathMatrix4 = js.native

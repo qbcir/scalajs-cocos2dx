@@ -8,8 +8,7 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccTouch
 
 @js.native
-@JSGlobal("ccui.ListView")
-class ccuiListView extends ccuiScrollView {
+trait t_ccuiListView extends t_ccuiScrollView {
   def setItemModel(model:ccuiWidget):Unit = js.native
   def pushBackDefaultItem():Unit = js.native
   def insertDefaultItem(index:Float):Unit = js.native
@@ -47,5 +46,15 @@ class ccuiListView extends ccuiScrollView {
   override def interceptTouchEvent(eventType:Float, sender:ccuiWidget, touch:ccTouch):Unit = js.native
   def getCurSelectedIndex:Float = js.native
   override def getDescription:String = js.native
+}
+
+@js.native
+@JSGlobal("ccui.ListView")
+class ccuiListView extends t_ccuiListView {
+}
+
+@js.native
+@JSGlobal("ccui.ListView")
+object ccuiListView extends js.Object {
 }
 

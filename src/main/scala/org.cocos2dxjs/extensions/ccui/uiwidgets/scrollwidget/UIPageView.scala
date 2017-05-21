@@ -8,8 +8,7 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 
 @js.native
-@JSGlobal("ccui.PageView")
-class ccuiPageView extends ccuiListView {
+trait t_ccuiPageView extends t_ccuiListView {
   def addPage(page:ccuiWidget):Unit = js.native
   def insertPage(page:ccuiWidget, idx:Float):Unit = js.native
   def removePage(page:ccuiWidget):Unit = js.native
@@ -38,5 +37,15 @@ class ccuiPageView extends ccuiListView {
   def setIndicatorIndexNodesScale(scale:Float):Unit = js.native
   def getIndicatorIndexNodesScale:Float = js.native
   def setIndicatorIndexNodesTexture(texName:String, texType:Float):Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccui.PageView")
+class ccuiPageView extends t_ccuiPageView {
+}
+
+@js.native
+@JSGlobal("ccui.PageView")
+object ccuiPageView extends js.Object {
 }
 

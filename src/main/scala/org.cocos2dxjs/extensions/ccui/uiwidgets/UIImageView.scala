@@ -5,10 +5,10 @@ import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
-@JSGlobal("ccui.ImageView")
-class ccuiImageView extends ccuiWidget {
+trait t_ccuiImageView extends t_ccuiWidget {
   def loadTexture(fileName:String, texType:Float):Unit = js.native
   def setTextureRect(rect:ccRect):Unit = js.native
   def setScale9Enabled(able:Boolean):Unit = js.native
@@ -20,5 +20,15 @@ class ccuiImageView extends ccuiWidget {
   override def getVirtualRenderer:ccuiWidget = js.native
   override def getDescription:String = js.native
   override def setContentSize(contentSize:ccSize, height:Float):Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccui.ImageView")
+class ccuiImageView(imageFileName:String, texType:Float) extends t_ccuiImageView {
+}
+
+@js.native
+@JSGlobal("ccui.ImageView")
+object ccuiImageView extends js.Object {
 }
 

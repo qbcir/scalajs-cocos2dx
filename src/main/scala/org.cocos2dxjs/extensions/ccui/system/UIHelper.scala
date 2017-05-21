@@ -8,8 +8,17 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 
 @js.native
+trait t_ccuihelper extends js.Object {
+}
+
+@js.native
 @JSGlobal("ccui.helper")
-class ccuihelper extends js.Object {
+class ccuihelper extends t_ccuihelper {
+}
+
+@js.native
+@JSGlobal("ccui.helper")
+object ccuihelper extends js.Object {
   def seekWidgetByTag(root:ccuiWidget, tag:Float):ccuiWidget = js.native
   def seekWidgetByName(root:ccuiWidget, name:String):ccuiWidget = js.native
   def seekWidgetByRelativeName(root:ccuiWidget, name:String):ccuiWidget = js.native

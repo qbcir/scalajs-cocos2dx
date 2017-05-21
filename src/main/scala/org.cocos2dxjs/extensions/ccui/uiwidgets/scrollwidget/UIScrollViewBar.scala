@@ -3,11 +3,10 @@ package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.extensions.ccui.system.ccuiProtectedNode
+import org.cocos2dxjs.extensions.ccui.system.t_ccuiProtectedNode
 
 @js.native
-@JSGlobal("ccui.ScrollViewBar")
-class ccuiScrollViewBar extends ccuiProtectedNode {
+trait t_ccuiScrollViewBar extends t_ccuiProtectedNode {
   def init:Boolean = js.native
   def setPositionFromCorner(positionFromCorner:ccPoint):Unit = js.native
   def getPositionFromCorner:ccPoint = js.native
@@ -20,5 +19,15 @@ class ccuiScrollViewBar extends ccuiProtectedNode {
   def onTouchBegan():Unit = js.native
   def onTouchEnded():Unit = js.native
   def onScrolled(outOfBoundary:ccPoint):Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccui.ScrollViewBar")
+class ccuiScrollViewBar(parent:ccuiScrollView, direction:Float) extends t_ccuiScrollViewBar {
+}
+
+@js.native
+@JSGlobal("ccui.ScrollViewBar")
+object ccuiScrollViewBar extends js.Object {
 }
 

@@ -3,11 +3,10 @@ package org.cocos2dxjs.cocos2d.tilemap
 import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
-@JSGlobal("cc.TMXObjectGroup")
-class ccTMXObjectGroup extends ccClass {
+trait t_ccTMXObjectGroup extends t_ccClass {
   def getPositionOffset:ccPoint = js.native
   def setPositionOffset(offset:ccPoint):Unit = js.native
   def getProperties:js.Array[js.Any] = js.native
@@ -18,5 +17,15 @@ class ccTMXObjectGroup extends ccClass {
   def getObject(objectName:String):js.Object = js.native
   def getObjects:js.Array[js.Any] = js.native
   def setObjects(objects:js.Object):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.TMXObjectGroup")
+class ccTMXObjectGroup extends t_ccTMXObjectGroup {
+}
+
+@js.native
+@JSGlobal("cc.TMXObjectGroup")
+object ccTMXObjectGroup extends js.Object {
 }
 

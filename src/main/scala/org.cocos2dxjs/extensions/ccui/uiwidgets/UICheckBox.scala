@@ -4,10 +4,10 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 
 @js.native
-@JSGlobal("ccui.CheckBox")
-class ccuiCheckBox extends ccuiWidget {
+trait t_ccuiCheckBox extends t_ccuiWidget {
   def loadTextures(backGround:String, backGroundSelected:String, cross:String, backGroundDisabled:String, frontCrossDisabled:String, texType:Float):Unit = js.native
   def loadTextureBackGround(backGround:String, texType:Float):Unit = js.native
   def loadTextureBackGroundSelected(backGroundSelected:String, texType:Float):Unit = js.native
@@ -20,5 +20,15 @@ class ccuiCheckBox extends ccuiWidget {
   override def getVirtualRendererSize:ccSize = js.native
   override def getVirtualRenderer:ccuiWidget = js.native
   override def getDescription:String = js.native
+}
+
+@js.native
+@JSGlobal("ccui.CheckBox")
+class ccuiCheckBox(backGround:String, backGroundSelected:String, cross:String, backGroundDisabled:String, frontCrossDisabled:String, texType:Float) extends t_ccuiCheckBox {
+}
+
+@js.native
+@JSGlobal("ccui.CheckBox")
+object ccuiCheckBox extends js.Object {
 }
 

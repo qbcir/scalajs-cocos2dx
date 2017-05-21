@@ -4,11 +4,10 @@ import scalajs.js
 import scala.scalajs.js.annotation._
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 
 @js.native
-@JSGlobal("cc.DrawingPrimitiveWebGL")
-class ccDrawingPrimitiveWebGL extends ccClass {
+trait t_ccDrawingPrimitiveWebGL extends t_ccClass {
   def drawInit():Unit = js.native
   def drawPoint(point:ccPoint):Unit = js.native
   def drawPoints(points:js.Array[js.Any], numberOfPoints:Float):Unit = js.native
@@ -25,5 +24,15 @@ class ccDrawingPrimitiveWebGL extends ccClass {
   def setDrawColor(r:Float, g:Float, b:Float, a:Float):Unit = js.native
   def setPointSize(pointSize:Float):Unit = js.native
   def setLineWidth(width:Float):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.DrawingPrimitiveWebGL")
+class ccDrawingPrimitiveWebGL(ctx:js.Any) extends t_ccDrawingPrimitiveWebGL {
+}
+
+@js.native
+@JSGlobal("cc.DrawingPrimitiveWebGL")
+object ccDrawingPrimitiveWebGL extends js.Object {
 }
 

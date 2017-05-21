@@ -6,8 +6,7 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 
 @js.native
-@JSGlobal("cc.Waves3D")
-class ccWaves3D extends ccGrid3DAction {
+trait t_ccWaves3D extends t_ccGrid3DAction {
   def getAmplitude:Float = js.native
   def setAmplitude(amplitude:Float):Unit = js.native
   override def getAmplitudeRate:Float = js.native
@@ -17,22 +16,49 @@ class ccWaves3D extends ccGrid3DAction {
 }
 
 @js.native
-@JSGlobal("cc.FlipX3D")
-class ccFlipX3D extends ccGrid3DAction {
+@JSGlobal("cc.Waves3D")
+class ccWaves3D(duration:Float, gridSize:ccSize, waves:Float, amplitude:Float) extends t_ccWaves3D {
+}
+
+@js.native
+@JSGlobal("cc.Waves3D")
+object ccWaves3D extends js.Object {
+}
+
+@js.native
+trait t_ccFlipX3D extends t_ccGrid3DAction {
   override def initWithDuration(duration:Float):Boolean = js.native
   def initWithSize(gridSize:ccSize, duration:Float):Boolean = js.native
   override def update(dt:Float):Unit = js.native
 }
 
 @js.native
-@JSGlobal("cc.FlipY3D")
-class ccFlipY3D extends ccFlipX3D {
+@JSGlobal("cc.FlipX3D")
+class ccFlipX3D(duration:Float) extends t_ccFlipX3D {
+}
+
+@js.native
+@JSGlobal("cc.FlipX3D")
+object ccFlipX3D extends js.Object {
+}
+
+@js.native
+trait t_ccFlipY3D extends t_ccFlipX3D {
   override def update(dt:Float):Unit = js.native
 }
 
 @js.native
-@JSGlobal("cc.Lens3D")
-class ccLens3D extends ccGrid3DAction {
+@JSGlobal("cc.FlipY3D")
+class ccFlipY3D(duration:Float) extends t_ccFlipY3D {
+}
+
+@js.native
+@JSGlobal("cc.FlipY3D")
+object ccFlipY3D extends js.Object {
+}
+
+@js.native
+trait t_ccLens3D extends t_ccGrid3DAction {
   def getLensEffect:Float = js.native
   def setLensEffect(lensEffect:Float):Unit = js.native
   def setConcave(concave:Boolean):Unit = js.native
@@ -43,8 +69,17 @@ class ccLens3D extends ccGrid3DAction {
 }
 
 @js.native
-@JSGlobal("cc.Ripple3D")
-class ccRipple3D extends ccGrid3DAction {
+@JSGlobal("cc.Lens3D")
+class ccLens3D(duration:Float, gridSize:ccSize, position:ccPoint, radius:Float) extends t_ccLens3D {
+}
+
+@js.native
+@JSGlobal("cc.Lens3D")
+object ccLens3D extends js.Object {
+}
+
+@js.native
+trait t_ccRipple3D extends t_ccGrid3DAction {
   def getPosition:ccPoint = js.native
   def setPosition(position:ccPoint):Unit = js.native
   def getAmplitude:Float = js.native
@@ -56,15 +91,33 @@ class ccRipple3D extends ccGrid3DAction {
 }
 
 @js.native
-@JSGlobal("cc.Shaky3D")
-class ccShaky3D extends ccGrid3DAction {
+@JSGlobal("cc.Ripple3D")
+class ccRipple3D(duration:Float, gridSize:ccSize, position:ccPoint, radius:Float, waves:Float, amplitude:Float) extends t_ccRipple3D {
+}
+
+@js.native
+@JSGlobal("cc.Ripple3D")
+object ccRipple3D extends js.Object {
+}
+
+@js.native
+trait t_ccShaky3D extends t_ccGrid3DAction {
   def initWithDuration(duration:Float, gridSize:ccSize, range:Float, shakeZ:Boolean):Boolean = js.native
   override def update(dt:Float):Unit = js.native
 }
 
 @js.native
-@JSGlobal("cc.Liquid")
-class ccLiquid extends ccGrid3DAction {
+@JSGlobal("cc.Shaky3D")
+class ccShaky3D(duration:Float, gridSize:ccSize, range:Float, shakeZ:Boolean) extends t_ccShaky3D {
+}
+
+@js.native
+@JSGlobal("cc.Shaky3D")
+object ccShaky3D extends js.Object {
+}
+
+@js.native
+trait t_ccLiquid extends t_ccGrid3DAction {
   def getAmplitude:Float = js.native
   def setAmplitude(amplitude:Float):Unit = js.native
   override def getAmplitudeRate:Float = js.native
@@ -74,8 +127,17 @@ class ccLiquid extends ccGrid3DAction {
 }
 
 @js.native
-@JSGlobal("cc.Waves")
-class ccWaves extends ccGrid3DAction {
+@JSGlobal("cc.Liquid")
+class ccLiquid(duration:Float, gridSize:ccSize, waves:Float, amplitude:Float) extends t_ccLiquid {
+}
+
+@js.native
+@JSGlobal("cc.Liquid")
+object ccLiquid extends js.Object {
+}
+
+@js.native
+trait t_ccWaves extends t_ccGrid3DAction {
   def getAmplitude:Float = js.native
   def setAmplitude(amplitude:Float):Unit = js.native
   override def getAmplitudeRate:Float = js.native
@@ -85,8 +147,17 @@ class ccWaves extends ccGrid3DAction {
 }
 
 @js.native
-@JSGlobal("cc.Twirl")
-class ccTwirl extends ccGrid3DAction {
+@JSGlobal("cc.Waves")
+class ccWaves(duration:Float, gridSize:ccSize, waves:Float, amplitude:Float, horizontal:Boolean, vertical:Boolean) extends t_ccWaves {
+}
+
+@js.native
+@JSGlobal("cc.Waves")
+object ccWaves extends js.Object {
+}
+
+@js.native
+trait t_ccTwirl extends t_ccGrid3DAction {
   def getPosition:ccPoint = js.native
   def setPosition(position:ccPoint):Unit = js.native
   def getAmplitude:Float = js.native
@@ -95,5 +166,15 @@ class ccTwirl extends ccGrid3DAction {
   override def setAmplitudeRate(amplitudeRate:Float):Unit = js.native
   def initWithDuration():Unit = js.native
   override def update(dt:Float):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.Twirl")
+class ccTwirl(duration:Float, gridSize:ccSize, position:ccPoint, twirls:Float, amplitude:Float) extends t_ccTwirl {
+}
+
+@js.native
+@JSGlobal("cc.Twirl")
+object ccTwirl extends js.Object {
 }
 
