@@ -1,17 +1,20 @@
 package org.cocos2dxjs.cocos2d.labels
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
+import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.sprites.t_ccSpriteBatchNode
+import org.cocos2dxjs.cocos2d.core.sprites.ts_ccSpriteBatchNode
 
 @js.native
 trait t_ccLabelBMFont extends t_ccSpriteBatchNode {
   var string: String = js.native
   var textAlign: Float = js.native
   var boundingWidth: Float = js.native
-  def initWithString(strText:String, charMapFile:String, itemWidth:Float, itemHeight:Float, startCharMap:Float):Boolean = js.native
+  def initWithString(strText:String, charMapFile:String | ccTexture2D, itemWidth:Float, itemHeight:Float, startCharMap:Float):Boolean = js.native
   def textureLoaded:Boolean = js.native
   override def isOpacityModifyRGB:Boolean = js.native
   override def setOpacityModifyRGB(opacityModifyRGB:Boolean):Unit = js.native
@@ -20,7 +23,7 @@ trait t_ccLabelBMFont extends t_ccSpriteBatchNode {
   def createFontChars():Unit = js.native
   def updateString(fromUpdate:Boolean):Unit = js.native
   def getString:String = js.native
-  def setString(newString:String, needUpdateLabel:Boolean):Unit = js.native
+  def setString(newString:String, needUpdateLabel:Boolean | js.Dynamic):Unit = js.native
   def updateLabel():Unit = js.native
   def setAlignment(alignment:Float):Unit = js.native
   def setBoundingWidth(width:Float):Unit = js.native
@@ -30,7 +33,11 @@ trait t_ccLabelBMFont extends t_ccSpriteBatchNode {
   override def setScaleY(scaleY:Float):Unit = js.native
   def setFntFile(fntFile:String):Unit = js.native
   def getFntFile:String = js.native
-  override def setAnchorPoint(point:ccPoint, y:Float):Unit = js.native
+  override def setAnchorPoint(point:ccPoint | Float, y:Float):Unit = js.native
+}
+
+@js.native
+trait ts_ccLabelBMFont extends ts_ccSpriteBatchNode {
 }
 
 @js.native
@@ -40,7 +47,7 @@ class ccLabelBMFont(strText:String, charMapFile:String, itemWidth:Float, itemHei
 
 @js.native
 @JSGlobal("cc.LabelBMFont")
-object ccLabelBMFont extends js.Object {
+object ccLabelBMFont extends ts_ccLabelBMFont {
 }
 
 

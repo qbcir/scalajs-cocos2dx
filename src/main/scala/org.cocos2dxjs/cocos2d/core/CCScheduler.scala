@@ -1,10 +1,12 @@
 package org.cocos2dxjs.cocos2d.core
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.ccClass
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
+import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
 @js.native
 trait t_ccScheduler extends t_ccClass {
@@ -20,13 +22,17 @@ trait t_ccScheduler extends t_ccClass {
 }
 
 @js.native
+trait ts_ccScheduler extends ts_ccClass {
+}
+
+@js.native
 @JSGlobal("cc.Scheduler")
 class ccScheduler extends t_ccScheduler {
 }
 
 @js.native
 @JSGlobal("cc.Scheduler")
-object ccScheduler extends js.Object {
+object ccScheduler extends ts_ccScheduler {
   val PRIORITY_SYSTEM: Float = js.native
   val PRIORITY_NON_SYSTEM: Float = js.native
 }

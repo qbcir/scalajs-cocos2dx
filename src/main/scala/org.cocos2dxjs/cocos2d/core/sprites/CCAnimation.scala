@@ -1,34 +1,40 @@
 package org.cocos2dxjs.cocos2d.core.sprites
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
+import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 
 @js.native
 trait t_ccAnimationFrame extends t_ccClass {
-  override def clone:js.Any = js.native
-  def copyWithZone:js.Any = js.native
-  def copy:js.Any = js.native
-  def initWithSpriteFrame(spriteFrame:ccSpriteFrame, delayUnits:Float, userInfo:js.Object):Unit = js.native
+  override def clone:js.Dynamic = js.native
+  def copyWithZone:js.Dynamic = js.native
+  def copy:js.Dynamic = js.native
+  def initWithSpriteFrame(spriteFrame:ccSpriteFrame, delayUnits:Float, userInfo:types.DynObject):Unit = js.native
   def getSpriteFrame:ccSpriteFrame = js.native
   def setSpriteFrame(spriteFrame:ccSpriteFrame):Unit = js.native
   def getDelayUnits:Float = js.native
-  def setDelayUnits(delayUnits:js.Any):Unit = js.native
-  def getUserInfo:js.Object = js.native
-  def setUserInfo(userInfo:js.Object):Unit = js.native
+  def setDelayUnits(delayUnits:js.Dynamic):Unit = js.native
+  def getUserInfo:types.DynObject = js.native
+  def setUserInfo(userInfo:types.DynObject):Unit = js.native
+}
+
+@js.native
+trait ts_ccAnimationFrame extends ts_ccClass {
 }
 
 @js.native
 @JSGlobal("cc.AnimationFrame")
-class ccAnimationFrame(spriteFrame:js.Any, delayUnits:js.Any, userInfo:js.Any) extends t_ccAnimationFrame {
+class ccAnimationFrame(spriteFrame:js.Dynamic, delayUnits:js.Dynamic, userInfo:js.Dynamic) extends t_ccAnimationFrame {
 }
 
 @js.native
 @JSGlobal("cc.AnimationFrame")
-object ccAnimationFrame extends js.Object {
+object ccAnimationFrame extends ts_ccAnimationFrame {
 }
 
 @js.native
@@ -41,7 +47,7 @@ trait t_ccAnimation extends t_ccClass {
   def initWithAnimationFrames(arrayOfAnimationFrames:js.Array[js.Any], delayPerUnit:Float, loops:Float):Unit = js.native
   override def clone:ccAnimation = js.native
   def copyWithZone:ccAnimation = js.native
-  def copy(pZone:js.Any):ccAnimation = js.native
+  def copy(pZone:js.Dynamic):ccAnimation = js.native
   def getLoops:Float = js.native
   def setLoops(value:Float):Unit = js.native
   def setRestoreOriginalFrame(restOrigFrame:Boolean):Unit = js.native
@@ -56,13 +62,17 @@ trait t_ccAnimation extends t_ccClass {
 }
 
 @js.native
+trait ts_ccAnimation extends ts_ccClass {
+}
+
+@js.native
 @JSGlobal("cc.Animation")
 class ccAnimation(frames:js.Array[js.Any], delay:Float, loops:Float) extends t_ccAnimation {
 }
 
 @js.native
 @JSGlobal("cc.Animation")
-object ccAnimation extends js.Object {
+object ccAnimation extends ts_ccAnimation {
 }
 
 

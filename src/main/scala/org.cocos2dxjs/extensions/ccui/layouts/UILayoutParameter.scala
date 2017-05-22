@@ -1,9 +1,11 @@
 package org.cocos2dxjs.extensions.ccui.layouts
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiClass
+import org.cocos2dxjs.extensions.ccui.system.ts_ccuiClass
 
 @js.native
 trait t_ccuiMargin extends t_ccuiClass {
@@ -16,13 +18,17 @@ trait t_ccuiMargin extends t_ccuiClass {
 }
 
 @js.native
-@JSGlobal("ccui.Margin")
-class ccuiMargin(margin:Float, top:Float, right:Float, bottom:Float) extends t_ccuiMargin {
+trait ts_ccuiMargin extends ts_ccuiClass {
 }
 
 @js.native
 @JSGlobal("ccui.Margin")
-object ccuiMargin extends js.Object {
+class ccuiMargin(margin:Float | ccuiMargin, top:Float, right:Float, bottom:Float) extends t_ccuiMargin {
+}
+
+@js.native
+@JSGlobal("ccui.Margin")
+object ccuiMargin extends ts_ccuiMargin {
 }
 
 @js.native
@@ -36,17 +42,21 @@ trait t_ccuiLayoutParameter extends t_ccuiClass {
 }
 
 @js.native
+trait ts_ccuiLayoutParameter extends ts_ccuiClass {
+  def create():Unit = js.native
+}
+
+@js.native
 @JSGlobal("ccui.LayoutParameter")
 class ccuiLayoutParameter extends t_ccuiLayoutParameter {
 }
 
 @js.native
 @JSGlobal("ccui.LayoutParameter")
-object ccuiLayoutParameter extends js.Object {
+object ccuiLayoutParameter extends ts_ccuiLayoutParameter {
   val NONE: Float = js.native
   val LINEAR: Float = js.native
   val RELATIVE: Float = js.native
-  def create():Unit = js.native
 }
 
 @js.native
@@ -56,13 +66,17 @@ trait t_ccuiLinearLayoutParameter extends t_ccuiLayoutParameter {
 }
 
 @js.native
+trait ts_ccuiLinearLayoutParameter extends ts_ccuiLayoutParameter {
+}
+
+@js.native
 @JSGlobal("ccui.LinearLayoutParameter")
 class ccuiLinearLayoutParameter extends t_ccuiLinearLayoutParameter {
 }
 
 @js.native
 @JSGlobal("ccui.LinearLayoutParameter")
-object ccuiLinearLayoutParameter extends js.Object {
+object ccuiLinearLayoutParameter extends ts_ccuiLinearLayoutParameter {
   val NONE: Float = js.native
   val LEFT: Float = js.native
   val TOP: Float = js.native
@@ -83,13 +97,17 @@ trait t_ccuiRelativeLayoutParameter extends t_ccuiLayoutParameter {
 }
 
 @js.native
+trait ts_ccuiRelativeLayoutParameter extends ts_ccuiLayoutParameter {
+}
+
+@js.native
 @JSGlobal("ccui.RelativeLayoutParameter")
 class ccuiRelativeLayoutParameter extends t_ccuiRelativeLayoutParameter {
 }
 
 @js.native
 @JSGlobal("ccui.RelativeLayoutParameter")
-object ccuiRelativeLayoutParameter extends js.Object {
+object ccuiRelativeLayoutParameter extends ts_ccuiRelativeLayoutParameter {
   val NONE: Float = js.native
   val PARENT_TOP_LEFT: Float = js.native
   val PARENT_TOP_CENTER_HORIZONTAL: Float = js.native

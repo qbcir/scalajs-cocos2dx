@@ -1,9 +1,11 @@
 package org.cocos2dxjs.cocos2d.shaders
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
+import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
 @js.native
 trait t_ccGLProgram extends t_ccClass {
@@ -17,25 +19,25 @@ trait t_ccGLProgram extends t_ccClass {
   def use():Unit = js.native
   def updateUniforms():Unit = js.native
   def getUniformLocationForName(name:String):Float = js.native
-  def getUniformMVPMatrix:js.Any = js.native
-  def getUniformSampler:js.Any = js.native
-  def setUniformLocationWith1i(location:js.Any, i1:Float):Unit = js.native
-  def setUniformLocationWith2i(location:js.Any, i1:Float, i2:Float):Unit = js.native
-  def setUniformLocationWith3i(location:js.Any, i1:Float, i2:Float, i3:Float):Unit = js.native
-  def setUniformLocationWith4i(location:js.Any, i1:Float, i2:Float, i3:Float, i4:Float):Unit = js.native
-  def setUniformLocationWith2iv(location:js.Any, intArray:js.Any, numberOfArrays:Float):Unit = js.native
-  def setUniformLocationWith3iv(location:js.Any, intArray:js.Any):Unit = js.native
-  def setUniformLocationWith4iv(location:js.Any, intArray:js.Any):Unit = js.native
-  def setUniformLocationI32(location:js.Any, i1:Float):Unit = js.native
-  def setUniformLocationWith1f(location:js.Any, f1:Float):Unit = js.native
-  def setUniformLocationWith2f(location:js.Any, f1:Float, f2:Float):Unit = js.native
-  def setUniformLocationWith3f(location:js.Any, f1:Float, f2:Float, f3:Float):Unit = js.native
-  def setUniformLocationWith4f(location:js.Any, f1:Float, f2:Float, f3:Float, f4:Float):Unit = js.native
-  def setUniformLocationWith2fv(location:js.Any, floatArray:js.Any):Unit = js.native
-  def setUniformLocationWith3fv(location:js.Any, floatArray:js.Any):Unit = js.native
-  def setUniformLocationWith4fv(location:js.Any, floatArray:js.Any):Unit = js.native
-  def setUniformLocationWithMatrix3fv(location:js.Any, matrixArray:js.Any):Unit = js.native
-  def setUniformLocationWithMatrix4fv(location:js.Any, matrixArray:js.Any):Unit = js.native
+  def getUniformMVPMatrix:js.Dynamic = js.native
+  def getUniformSampler:js.Dynamic = js.native
+  def setUniformLocationWith1i(location:js.Dynamic | String, i1:Float):Unit = js.native
+  def setUniformLocationWith2i(location:js.Dynamic | String, i1:Float, i2:Float):Unit = js.native
+  def setUniformLocationWith3i(location:js.Dynamic | String, i1:Float, i2:Float, i3:Float):Unit = js.native
+  def setUniformLocationWith4i(location:js.Dynamic | String, i1:Float, i2:Float, i3:Float, i4:Float):Unit = js.native
+  def setUniformLocationWith2iv(location:js.Dynamic | String, intArray:js.Dynamic, numberOfArrays:Float):Unit = js.native
+  def setUniformLocationWith3iv(location:js.Dynamic | String, intArray:js.Dynamic):Unit = js.native
+  def setUniformLocationWith4iv(location:js.Dynamic | String, intArray:js.Dynamic):Unit = js.native
+  def setUniformLocationI32(location:js.Dynamic | String, i1:Float):Unit = js.native
+  def setUniformLocationWith1f(location:js.Dynamic | String, f1:Float):Unit = js.native
+  def setUniformLocationWith2f(location:js.Dynamic | String, f1:Float, f2:Float):Unit = js.native
+  def setUniformLocationWith3f(location:js.Dynamic | String, f1:Float, f2:Float, f3:Float):Unit = js.native
+  def setUniformLocationWith4f(location:js.Dynamic | String, f1:Float, f2:Float, f3:Float, f4:Float):Unit = js.native
+  def setUniformLocationWith2fv(location:js.Dynamic | String, floatArray:js.Dynamic):Unit = js.native
+  def setUniformLocationWith3fv(location:js.Dynamic | String, floatArray:js.Dynamic):Unit = js.native
+  def setUniformLocationWith4fv(location:js.Dynamic | String, floatArray:js.Dynamic):Unit = js.native
+  def setUniformLocationWithMatrix3fv(location:js.Dynamic | String, matrixArray:js.Dynamic):Unit = js.native
+  def setUniformLocationWithMatrix4fv(location:js.Dynamic | String, matrixArray:js.Dynamic):Unit = js.native
   def setUniformsForBuiltins():Unit = js.native
   def setUniformForModelViewProjectionMatrix():Unit = js.native
   def vertexShaderLog:String = js.native
@@ -45,8 +47,12 @@ trait t_ccGLProgram extends t_ccClass {
   def programLog:String = js.native
   def getProgramLog:String = js.native
   def reset():Unit = js.native
-  def getProgram:js.Any = js.native
+  def getProgram:js.Dynamic = js.native
   def retain():Unit = js.native
+}
+
+@js.native
+trait ts_ccGLProgram extends ts_ccClass {
 }
 
 @js.native
@@ -56,7 +62,7 @@ class ccGLProgram(vShaderFileName:String, fShaderFileName:String) extends t_ccGL
 
 @js.native
 @JSGlobal("cc.GLProgram")
-object ccGLProgram extends js.Object {
+object ccGLProgram extends ts_ccGLProgram {
 }
 
 

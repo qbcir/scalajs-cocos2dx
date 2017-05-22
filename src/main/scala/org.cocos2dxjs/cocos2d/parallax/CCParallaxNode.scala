@@ -1,12 +1,15 @@
 package org.cocos2dxjs.cocos2d.parallax
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
+import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
 @js.native
 trait t_ccPointObject extends t_ccClass {
@@ -20,13 +23,17 @@ trait t_ccPointObject extends t_ccClass {
 }
 
 @js.native
+trait ts_ccPointObject extends ts_ccClass {
+}
+
+@js.native
 @JSGlobal("cc.PointObject")
 class ccPointObject extends t_ccPointObject {
 }
 
 @js.native
 @JSGlobal("cc.PointObject")
-object ccPointObject extends js.Object {
+object ccPointObject extends ts_ccPointObject {
 }
 
 @js.native
@@ -40,13 +47,17 @@ trait t_ccParallaxNode extends t_ccNode {
 }
 
 @js.native
+trait ts_ccParallaxNode extends ts_ccNode {
+}
+
+@js.native
 @JSGlobal("cc.ParallaxNode")
 class ccParallaxNode extends t_ccParallaxNode {
 }
 
 @js.native
 @JSGlobal("cc.ParallaxNode")
-object ccParallaxNode extends js.Object {
+object ccParallaxNode extends ts_ccParallaxNode {
 }
 
 

@@ -1,11 +1,17 @@
 package org.cocos2dxjs.cocos2d.core.platform
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccClass extends js.Object {
+}
+
+@js.native
+trait ts_ccClass extends js.Object {
+  def extend(props:types.DynObject):types.DynFunction = js.native
 }
 
 @js.native
@@ -15,8 +21,7 @@ class ccClass extends t_ccClass {
 
 @js.native
 @JSGlobal("cc.Class")
-object ccClass extends js.Object {
-  def extend(props:js.Object):js.Function = js.native
+object ccClass extends ts_ccClass {
 }
 
 

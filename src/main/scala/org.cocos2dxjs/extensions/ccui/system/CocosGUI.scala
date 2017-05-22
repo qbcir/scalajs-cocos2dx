@@ -1,13 +1,20 @@
 package org.cocos2dxjs.extensions.ccui.system
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.layouts.ccuilinearVerticalLayoutManager
+import org.cocos2dxjs.extensions.ccui.layouts.ccuilinearHorizontalLayoutManager
+import org.cocos2dxjs.extensions.ccui.layouts.ccuirelativeLayoutManager
 import org.cocos2dxjs.extensions.ccui.layouts.ccuiMargin
 
 @js.native
 trait t_ccuiClass extends js.Object {
+}
+
+@js.native
+trait ts_ccuiClass extends js.Object {
 }
 
 @js.native
@@ -17,11 +24,15 @@ class ccuiClass extends t_ccuiClass {
 
 @js.native
 @JSGlobal("ccui.Class")
-object ccuiClass extends js.Object {
+object ccuiClass extends ts_ccuiClass {
 }
 
 @js.native
 trait t_ccuiNode extends t_ccuiClass {
+}
+
+@js.native
+trait ts_ccuiNode extends ts_ccuiClass {
 }
 
 @js.native
@@ -31,11 +42,15 @@ class ccuiNode extends t_ccuiNode {
 
 @js.native
 @JSGlobal("ccui.Node")
-object ccuiNode extends js.Object {
+object ccuiNode extends ts_ccuiNode {
 }
 
 @js.native
 trait t_ccuiProtectedNode extends t_ccuiNode {
+}
+
+@js.native
+trait ts_ccuiProtectedNode extends ts_ccuiNode {
 }
 
 @js.native
@@ -45,7 +60,7 @@ class ccuiProtectedNode extends t_ccuiProtectedNode {
 
 @js.native
 @JSGlobal("ccui.ProtectedNode")
-object ccuiProtectedNode extends js.Object {
+object ccuiProtectedNode extends ts_ccuiProtectedNode {
 }
 
 
@@ -53,10 +68,10 @@ object ccuiProtectedNode extends js.Object {
 @JSGlobal("ccui")
 object ccui extends js.Object {
 
-  var LINEAR_GRAVITY_NONE: js.Any = js.native
+  var LINEAR_GRAVITY_NONE: js.Dynamic = js.native
   var cocosGUIVersion: String = js.native
-  var _TextFieldRenderer: js.Any = js.native
-  def getLayoutManager(_type:Float):ccuilinearVerticalLayoutManager = js.native
+  var _TextFieldRenderer: js.Dynamic = js.native
+  def getLayoutManager(_type:Float):ccuilinearVerticalLayoutManager | ccuilinearHorizontalLayoutManager | ccuirelativeLayoutManager | js.Dynamic = js.native
   def MarginZero:ccuiMargin = js.native
 }
 

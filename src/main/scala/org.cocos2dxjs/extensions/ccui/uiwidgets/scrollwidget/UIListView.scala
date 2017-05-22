@@ -1,8 +1,9 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -14,7 +15,7 @@ trait t_ccuiListView extends t_ccuiScrollView {
   def pushBackDefaultItem():Unit = js.native
   def insertDefaultItem(index:Float):Unit = js.native
   def pushBackCustomItem(item:ccuiWidget):Unit = js.native
-  override def addChild(widget:ccNode, zOrder:Float, tag:Float):Boolean = js.native
+  override def addChild(widget:ccNode, zOrder:Float, tag:Float | String):Boolean = js.native
   def removeChild(widget:ccNode, cleanup:Boolean):Unit = js.native
   override def removeAllChildren():Unit = js.native
   override def removeAllChildrenWithCleanup(cleanup:Boolean):Unit = js.native
@@ -32,7 +33,7 @@ trait t_ccuiListView extends t_ccuiScrollView {
   def getMagneticAllowedOutOfBoundary:Boolean = js.native
   def setItemsMargin(margin:Float):Unit = js.native
   def getItemsMargin:Float = js.native
-  override def setDirection(dir:Float):Unit = js.native
+  override def setDirection(dir:Float | Float | Float | Float):Unit = js.native
   def getClosestItemToPosition(targetPosition:ccPoint, itemAnchorPoint:ccPoint):ccuiWidget = js.native
   def getClosestItemToPositionInCurrentView(positionRatioInView:ccPoint, itemAnchorPoint:ccPoint):ccuiWidget = js.native
   def getCenterItemInCurrentView:ccuiWidget = js.native
@@ -50,15 +51,19 @@ trait t_ccuiListView extends t_ccuiScrollView {
 }
 
 @js.native
-@JSGlobal("ccui.ListView")
-class ccuiListView extends t_ccuiListView {
-  var onFocusChanged: js.Any = js.native
-  var onNextFocusedWidget: js.Any = js.native
+trait ts_ccuiListView extends ts_ccuiScrollView {
 }
 
 @js.native
 @JSGlobal("ccui.ListView")
-object ccuiListView extends js.Object {
+class ccuiListView extends t_ccuiListView {
+  var onFocusChanged: js.Dynamic = js.native
+  var onNextFocusedWidget: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("ccui.ListView")
+object ccuiListView extends ts_ccuiListView {
   val EVENT_SELECTED_ITEM: Float = js.native
   val ON_SELECTED_ITEM_START: Float = js.native
   val ON_SELECTED_ITEM_END: Float = js.native

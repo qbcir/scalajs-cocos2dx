@@ -1,11 +1,19 @@
 package org.cocos2dxjs.extensions.cocostudio.armature.utils
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccsspriteFrameCacheHelper extends js.Object {
+}
+
+@js.native
+trait ts_ccsspriteFrameCacheHelper extends js.Object {
+  def addSpriteFrameFromFile(plistPath:js.Dynamic, imagePath:js.Dynamic):Unit = js.native
+  def getTextureAtlasWithTexture(texture:js.Dynamic):js.Dynamic = js.native
+  def clear():Unit = js.native
 }
 
 @js.native
@@ -15,10 +23,7 @@ class ccsspriteFrameCacheHelper extends t_ccsspriteFrameCacheHelper {
 
 @js.native
 @JSGlobal("ccs.spriteFrameCacheHelper")
-object ccsspriteFrameCacheHelper extends js.Object {
-  def addSpriteFrameFromFile(plistPath:js.Any, imagePath:js.Any):Unit = js.native
-  def getTextureAtlasWithTexture(texture:js.Any):js.Any = js.native
-  def clear():Unit = js.native
+object ccsspriteFrameCacheHelper extends ts_ccsspriteFrameCacheHelper {
 }
 
 

@@ -1,13 +1,16 @@
 package org.cocos2dxjs.cocos2d.textinput
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
+import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.labelttf.t_ccLabelTTF
+import org.cocos2dxjs.cocos2d.core.labelttf.ts_ccLabelTTF
 
 @js.native
 trait t_ccTextFieldDelegate extends t_ccClass {
@@ -19,13 +22,17 @@ trait t_ccTextFieldDelegate extends t_ccClass {
 }
 
 @js.native
+trait ts_ccTextFieldDelegate extends ts_ccClass {
+}
+
+@js.native
 @JSGlobal("cc.TextFieldDelegate")
 class ccTextFieldDelegate extends t_ccTextFieldDelegate {
 }
 
 @js.native
 @JSGlobal("cc.TextFieldDelegate")
-object ccTextFieldDelegate extends js.Object {
+object ccTextFieldDelegate extends ts_ccTextFieldDelegate {
 }
 
 @js.native
@@ -45,7 +52,7 @@ trait t_ccTextFieldTTF extends t_ccLabelTTF {
   override def getString:String = js.native
   def setPlaceHolder(text:String):Unit = js.native
   def getPlaceHolder:String = js.native
-  override def draw(ctx:js.Any):Unit = js.native
+  override def draw(ctx:js.Dynamic | js.Dynamic):Unit = js.native
   def attachWithIME:Boolean = js.native
   def detachWithIME:Boolean = js.native
   def canAttachWithIME:Boolean = js.native
@@ -61,13 +68,17 @@ trait t_ccTextFieldTTF extends t_ccLabelTTF {
 }
 
 @js.native
+trait ts_ccTextFieldTTF extends ts_ccLabelTTF {
+}
+
+@js.native
 @JSGlobal("cc.TextFieldTTF")
 class ccTextFieldTTF(placeholder:String, dimensions:ccSize, alignment:Float, fontName:String, fontSize:Float) extends t_ccTextFieldTTF {
 }
 
 @js.native
 @JSGlobal("cc.TextFieldTTF")
-object ccTextFieldTTF extends js.Object {
+object ccTextFieldTTF extends ts_ccTextFieldTTF {
 }
 
 

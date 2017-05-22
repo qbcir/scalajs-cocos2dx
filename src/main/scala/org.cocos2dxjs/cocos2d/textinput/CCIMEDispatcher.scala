@@ -1,13 +1,19 @@
 package org.cocos2dxjs.cocos2d.textinput
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
+import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
 @js.native
 trait t_ccIMEKeyboardNotificationInfo extends js.Object {
+}
+
+@js.native
+trait ts_ccIMEKeyboardNotificationInfo extends js.Object {
 }
 
 @js.native
@@ -17,7 +23,7 @@ class ccIMEKeyboardNotificationInfo(begin:ccRect, end:ccRect, duration:Float) ex
 
 @js.native
 @JSGlobal("cc.IMEKeyboardNotificationInfo")
-object ccIMEKeyboardNotificationInfo extends js.Object {
+object ccIMEKeyboardNotificationInfo extends ts_ccIMEKeyboardNotificationInfo {
 }
 
 @js.native
@@ -35,13 +41,17 @@ trait t_ccIMEDelegate extends t_ccClass {
 }
 
 @js.native
+trait ts_ccIMEDelegate extends ts_ccClass {
+}
+
+@js.native
 @JSGlobal("cc.IMEDelegate")
 class ccIMEDelegate extends t_ccIMEDelegate {
 }
 
 @js.native
 @JSGlobal("cc.IMEDelegate")
-object ccIMEDelegate extends js.Object {
+object ccIMEDelegate extends ts_ccIMEDelegate {
 }
 
 @js.native
@@ -61,18 +71,26 @@ trait t_ccimeDispatcher extends js.Object {
 }
 
 @js.native
+trait ts_ccimeDispatcher extends js.Object {
+}
+
+@js.native
 @JSGlobal("cc.imeDispatcher")
 class ccimeDispatcher extends t_ccimeDispatcher {
 }
 
 @js.native
 @JSGlobal("cc.imeDispatcher")
-object ccimeDispatcher extends js.Object {
+object ccimeDispatcher extends ts_ccimeDispatcher {
 }
 
 @js.native
 trait t_ccIMEDispatcherImpl extends t_ccClass {
-  def findDelegate(delegate:ccIMEDelegate):Float = js.native
+  def findDelegate(delegate:ccIMEDelegate):Float | js.Dynamic = js.native
+}
+
+@js.native
+trait ts_ccIMEDispatcherImpl extends ts_ccClass {
 }
 
 @js.native
@@ -82,7 +100,7 @@ class ccIMEDispatcherImpl extends t_ccIMEDispatcherImpl {
 
 @js.native
 @JSGlobal("cc.IMEDispatcher.Impl")
-object ccIMEDispatcherImpl extends js.Object {
+object ccIMEDispatcherImpl extends ts_ccIMEDispatcherImpl {
 }
 
 

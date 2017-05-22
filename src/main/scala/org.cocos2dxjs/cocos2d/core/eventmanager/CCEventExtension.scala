@@ -1,11 +1,16 @@
 package org.cocos2dxjs.cocos2d.core.eventmanager
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccEventAcceleration extends t_ccEvent {
+}
+
+@js.native
+trait ts_ccEventAcceleration extends ts_ccEvent {
 }
 
 @js.native
@@ -15,11 +20,15 @@ class ccEventAcceleration extends t_ccEventAcceleration {
 
 @js.native
 @JSGlobal("cc.EventAcceleration")
-object ccEventAcceleration extends js.Object {
+object ccEventAcceleration extends ts_ccEventAcceleration {
 }
 
 @js.native
 trait t_ccEventKeyboard extends t_ccEvent {
+}
+
+@js.native
+trait ts_ccEventKeyboard extends ts_ccEvent {
 }
 
 @js.native
@@ -29,7 +38,7 @@ class ccEventKeyboard extends t_ccEventKeyboard {
 
 @js.native
 @JSGlobal("cc.EventKeyboard")
-object ccEventKeyboard extends js.Object {
+object ccEventKeyboard extends ts_ccEventKeyboard {
 }
 
 

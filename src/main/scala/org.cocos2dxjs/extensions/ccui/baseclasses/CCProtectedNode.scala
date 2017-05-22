@@ -1,10 +1,12 @@
 package org.cocos2dxjs.extensions.ccui.baseclasses
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
 @js.native
 trait t_ccProtectedNode extends t_ccNode {
@@ -19,13 +21,17 @@ trait t_ccProtectedNode extends t_ccNode {
 }
 
 @js.native
+trait ts_ccProtectedNode extends ts_ccNode {
+}
+
+@js.native
 @JSGlobal("cc.ProtectedNode")
 class ccProtectedNode extends t_ccProtectedNode {
 }
 
 @js.native
 @JSGlobal("cc.ProtectedNode")
-object ccProtectedNode extends js.Object {
+object ccProtectedNode extends ts_ccProtectedNode {
 }
 
 

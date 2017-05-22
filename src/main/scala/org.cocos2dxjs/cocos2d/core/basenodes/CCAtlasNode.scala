@@ -1,8 +1,9 @@
 package org.cocos2dxjs.cocos2d.core.basenodes
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.textures.ccTextureAtlas
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
@@ -18,7 +19,7 @@ trait t_ccAtlasNode extends t_ccNode {
   override def setOpacityModifyRGB(value:Boolean):Unit = js.native
   override def isOpacityModifyRGB:Boolean = js.native
   def getBlendFunc:ccBlendFunc = js.native
-  def setBlendFunc(src:Float, dst:Float):Unit = js.native
+  def setBlendFunc(src:Float | ccBlendFunc, dst:Float):Unit = js.native
   def setTextureAtlas(value:ccTextureAtlas):Unit = js.native
   def getTextureAtlas:ccTextureAtlas = js.native
   def getQuadsToDraw:Float = js.native
@@ -32,13 +33,17 @@ trait t_ccAtlasNode extends t_ccNode {
 }
 
 @js.native
+trait ts_ccAtlasNode extends ts_ccNode {
+}
+
+@js.native
 @JSGlobal("cc.AtlasNode")
 class ccAtlasNode(tile:String, tileWidth:Float, tileHeight:Float, itemsToRender:Float) extends t_ccAtlasNode {
 }
 
 @js.native
 @JSGlobal("cc.AtlasNode")
-object ccAtlasNode extends js.Object {
+object ccAtlasNode extends ts_ccAtlasNode {
 }
 
 

@@ -1,14 +1,20 @@
 package org.cocos2dxjs.extensions.cocostudio.armature.physics
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
+import org.cocos2dxjs.extensions.cocostudio.ts_ccsClass
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsContourData
 import org.cocos2dxjs.extensions.cocostudio.armature.ccsBone
 
 @js.native
 trait t_ccsColliderFilter extends t_ccsClass {
+}
+
+@js.native
+trait ts_ccsColliderFilter extends ts_ccsClass {
 }
 
 @js.native
@@ -18,7 +24,7 @@ class ccsColliderFilter extends t_ccsColliderFilter {
 
 @js.native
 @JSGlobal("ccs.ColliderFilter")
-object ccsColliderFilter extends js.Object {
+object ccsColliderFilter extends ts_ccsColliderFilter {
 }
 
 @js.native
@@ -36,26 +42,34 @@ trait t_ccsColliderBody extends t_ccsClass {
 }
 
 @js.native
+trait ts_ccsColliderBody extends ts_ccsClass {
+}
+
+@js.native
 @JSGlobal("ccs.ColliderBody")
 class ccsColliderBody extends t_ccsColliderBody {
 }
 
 @js.native
 @JSGlobal("ccs.ColliderBody")
-object ccsColliderBody extends js.Object {
+object ccsColliderBody extends ts_ccsColliderBody {
 }
 
 @js.native
 trait t_ccsColliderDetector extends t_ccsClass {
   var colliderFilter: ccsColliderFilter = js.native
   var active: Boolean = js.native
-  var body: js.Object = js.native
+  var body: types.DynObject = js.native
   def addContourData(contourData:ccsContourData):Unit = js.native
   def addContourDataList(contourDataList:js.Array[js.Any]):Unit = js.native
-  def removeContourData(contourData:js.Any):Unit = js.native
+  def removeContourData(contourData:js.Dynamic):Unit = js.native
   def removeAll():Unit = js.native
   def setColliderFilter(filter:ccsColliderFilter):Unit = js.native
   def getColliderFilter:ccsColliderFilter = js.native
+}
+
+@js.native
+trait ts_ccsColliderDetector extends ts_ccsClass {
 }
 
 @js.native
@@ -65,7 +79,7 @@ class ccsColliderDetector(bone:ccsBone) extends t_ccsColliderDetector {
 
 @js.native
 @JSGlobal("ccs.ColliderDetector")
-object ccsColliderDetector extends js.Object {
+object ccsColliderDetector extends ts_ccsColliderDetector {
 }
 
 

@@ -1,8 +1,9 @@
 package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
@@ -24,7 +25,7 @@ trait t_ccControlButton extends t_ccControl {
   def setTitleForState(title:String, state:Float):Unit = js.native
   def getTitleColorForState(state:Float):ccColor = js.native
   def setTitleColorForState(color:ccColor, state:Float):Unit = js.native
-  def getTitleLabelForState(state:js.Any):ccNode = js.native
+  def getTitleLabelForState(state:js.Dynamic):ccNode = js.native
   def setTitleLabelForState(titleLabel:ccNode, state:Float):Unit = js.native
   def setTitleTTFForState(fntFile:String, state:Float):Unit = js.native
   def getTitleTTFForState(state:Float):String = js.native
@@ -32,19 +33,23 @@ trait t_ccControlButton extends t_ccControl {
   def getTitleTTFSizeForState(state:Float):Float = js.native
   def setTitleBMFontForState(fntFile:String, state:Float):Unit = js.native
   def getBackgroundSpriteForState(state:Float):Unit = js.native
-  def setBackgroundSpriteForState(sprite:js.Any, state:Float):Unit = js.native
-  def setBackgroundSpriteFrameForState(spriteFrame:js.Any, state:Float):Unit = js.native
+  def setBackgroundSpriteForState(sprite:js.Dynamic, state:Float):Unit = js.native
+  def setBackgroundSpriteFrameForState(spriteFrame:js.Dynamic, state:Float):Unit = js.native
+}
+
+@js.native
+trait ts_ccControlButton extends ts_ccControl {
 }
 
 @js.native
 @JSGlobal("cc.ControlButton")
 class ccControlButton extends t_ccControlButton {
-  var _state: js.Any = js.native
+  var _state: js.Dynamic = js.native
 }
 
 @js.native
 @JSGlobal("cc.ControlButton")
-object ccControlButton extends js.Object {
+object ccControlButton extends ts_ccControlButton {
 }
 
 

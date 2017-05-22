@@ -1,8 +1,9 @@
 package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
 import org.cocos2dxjs.cocos2d.core.labelttf.ccLabelTTF
 
@@ -22,15 +23,19 @@ trait t_ccControlStepper extends t_ccControl {
 }
 
 @js.native
-@JSGlobal("cc.ControlStepper")
-class ccControlStepper extends t_ccControlStepper {
-  var _state: js.Any = js.native
+trait ts_ccControlStepper extends ts_ccControl {
+  def create(minusSprite:ccSprite, plusSprite:ccSprite):js.Dynamic = js.native
 }
 
 @js.native
 @JSGlobal("cc.ControlStepper")
-object ccControlStepper extends js.Object {
-  def create(minusSprite:ccSprite, plusSprite:ccSprite):js.Any = js.native
+class ccControlStepper extends t_ccControlStepper {
+  var _state: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("cc.ControlStepper")
+object ccControlStepper extends ts_ccControlStepper {
 }
 
 

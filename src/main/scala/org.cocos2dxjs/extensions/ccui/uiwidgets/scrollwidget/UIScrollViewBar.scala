@@ -1,10 +1,12 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiProtectedNode
+import org.cocos2dxjs.extensions.ccui.system.ts_ccuiProtectedNode
 
 @js.native
 trait t_ccuiScrollViewBar extends t_ccuiProtectedNode {
@@ -26,14 +28,18 @@ trait t_ccuiScrollViewBar extends t_ccuiProtectedNode {
 }
 
 @js.native
-@JSGlobal("ccui.ScrollViewBar")
-class ccuiScrollViewBar(parent:ccuiScrollView, direction:Float) extends t_ccuiScrollViewBar {
+trait ts_ccuiScrollViewBar extends ts_ccuiProtectedNode {
 }
 
 @js.native
 @JSGlobal("ccui.ScrollViewBar")
-object ccuiScrollViewBar extends js.Object {
-  var DEFAULT_COLOR: js.Any = js.native
+class ccuiScrollViewBar(parent:ccuiScrollView, direction:Float | Float | Float | Float) extends t_ccuiScrollViewBar {
+}
+
+@js.native
+@JSGlobal("ccui.ScrollViewBar")
+object ccuiScrollViewBar extends ts_ccuiScrollViewBar {
+  var DEFAULT_COLOR: js.Dynamic = js.native
 }
 
 

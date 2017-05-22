@@ -1,9 +1,11 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
 @js.native
 trait t_ccuiVideoPlayer extends t_ccuiWidget {
@@ -25,16 +27,20 @@ trait t_ccuiVideoPlayer extends t_ccuiWidget {
 }
 
 @js.native
-@JSGlobal("ccui.VideoPlayer")
-class ccuiVideoPlayer extends t_ccuiVideoPlayer {
-  var onFocusChanged: js.Any = js.native
-  var onNextFocusedWidget: js.Any = js.native
+trait ts_ccuiVideoPlayer extends ts_ccuiWidget {
 }
 
 @js.native
 @JSGlobal("ccui.VideoPlayer")
-object ccuiVideoPlayer extends js.Object {
-  var EventType: js.Object = js.native
+class ccuiVideoPlayer extends t_ccuiVideoPlayer {
+  var onFocusChanged: js.Dynamic = js.native
+  var onNextFocusedWidget: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("ccui.VideoPlayer")
+object ccuiVideoPlayer extends ts_ccuiVideoPlayer {
+  var EventType: types.DynObject = js.native
 }
 
 

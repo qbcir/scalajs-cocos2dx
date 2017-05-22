@@ -1,28 +1,34 @@
 package org.cocos2dxjs.extensions.cocostudio.components
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
+import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
 @js.native
 trait t_ccComponentContainer extends t_ccClass {
-  def getComponent(name:js.Any):js.Any = js.native
+  def getComponent(name:js.Dynamic):js.Dynamic = js.native
   def add(component:ccComponent):Boolean = js.native
-  def remove(name:String):Boolean = js.native
+  def remove(name:String | ccComponent):Boolean = js.native
   def removeAll():Unit = js.native
   def visit(delta:Float):Unit = js.native
   def isEmpty:Boolean = js.native
 }
 
 @js.native
-@JSGlobal("cc.ComponentContainer")
-class ccComponentContainer(node:js.Any) extends t_ccComponentContainer {
+trait ts_ccComponentContainer extends ts_ccClass {
 }
 
 @js.native
 @JSGlobal("cc.ComponentContainer")
-object ccComponentContainer extends js.Object {
+class ccComponentContainer(node:js.Dynamic) extends t_ccComponentContainer {
+}
+
+@js.native
+@JSGlobal("cc.ComponentContainer")
+object ccComponentContainer extends ts_ccComponentContainer {
 }
 
 

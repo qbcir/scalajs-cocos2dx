@@ -1,8 +1,9 @@
 package org.cocos2dxjs.cocos2d.core.sprites
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.textures.ccTextureAtlas
 import org.cocos2dxjs.cocos2d.core.platform.ccV3F_C4B_T2F_Quad
@@ -11,6 +12,7 @@ import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
 @js.native
 trait t_ccSprite extends t_ccNode {
@@ -47,30 +49,34 @@ trait t_ccSprite extends t_ccNode {
   override def setOpacityModifyRGB(modify:Boolean):Unit = js.native
   override def isOpacityModifyRGB:Boolean = js.native
   def setDisplayFrameWithAnimationName(animationName:String, frameIndex:Float):Unit = js.native
-  def getBatchNode:ccSpriteBatchNode = js.native
+  def getBatchNode:ccSpriteBatchNode | js.Dynamic = js.native
   def getTexture:ccTexture2D = js.native
-  def getQuad:ccV3F_C4B_T2F_Quad = js.native
-  def setBlendFunc(src:Float, dst:Float):Unit = js.native
+  def getQuad:ccV3F_C4B_T2F_Quad | js.Dynamic = js.native
+  def setBlendFunc(src:Float | ccBlendFunc, dst:Float):Unit = js.native
   override def init:Boolean = js.native
   def initWithFile(filename:String, rect:ccRect):Boolean = js.native
-  def initWithTexture(texture:ccTexture2D, rect:ccRect, rotated:Boolean, counterclockwise:Boolean):Boolean = js.native
+  def initWithTexture(texture:ccTexture2D | js.Dynamic | js.Dynamic, rect:ccRect, rotated:Boolean, counterclockwise:Boolean):Boolean = js.native
   def setTextureRect(rect:ccRect, rotated:Boolean, untrimmedSize:ccSize, needConvert:Boolean):Unit = js.native
-  def addChild(child:ccSprite, localZOrder:Float, tag:Float):Unit = js.native
-  def setSpriteFrame(newFrame:ccSpriteFrame):Unit = js.native
+  def addChild(child:ccSprite, localZOrder:Float, tag:Float | String):Unit = js.native
+  def setSpriteFrame(newFrame:ccSpriteFrame | String):Unit = js.native
   def isFrameDisplayed(frame:ccSpriteFrame):Boolean = js.native
   def getSpriteFrame:ccSpriteFrame = js.native
-  def setBatchNode(spriteBatchNode:ccSpriteBatchNode):Unit = js.native
-  def setTexture(texture:ccTexture2D):Unit = js.native
+  def setBatchNode(spriteBatchNode:ccSpriteBatchNode | js.Dynamic):Unit = js.native
+  def setTexture(texture:ccTexture2D | String):Unit = js.native
+}
+
+@js.native
+trait ts_ccSprite extends ts_ccNode {
 }
 
 @js.native
 @JSGlobal("cc.Sprite")
-class ccSprite(fileName:String, rect:ccRect, rotated:Boolean) extends t_ccSprite {
+class ccSprite(fileName:String | ccSpriteFrame | js.Dynamic | ccTexture2D, rect:ccRect, rotated:Boolean) extends t_ccSprite {
 }
 
 @js.native
 @JSGlobal("cc.Sprite")
-object ccSprite extends js.Object {
+object ccSprite extends ts_ccSprite {
   val INDEX_NOT_INITIALIZED: Float = js.native
 }
 

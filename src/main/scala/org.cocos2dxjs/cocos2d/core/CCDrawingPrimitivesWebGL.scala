@@ -1,11 +1,13 @@
 package org.cocos2dxjs.cocos2d.core
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
+import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
 @js.native
 trait t_ccDrawingPrimitiveWebGL extends t_ccClass {
@@ -28,13 +30,17 @@ trait t_ccDrawingPrimitiveWebGL extends t_ccClass {
 }
 
 @js.native
-@JSGlobal("cc.DrawingPrimitiveWebGL")
-class ccDrawingPrimitiveWebGL(ctx:js.Any) extends t_ccDrawingPrimitiveWebGL {
+trait ts_ccDrawingPrimitiveWebGL extends ts_ccClass {
 }
 
 @js.native
 @JSGlobal("cc.DrawingPrimitiveWebGL")
-object ccDrawingPrimitiveWebGL extends js.Object {
+class ccDrawingPrimitiveWebGL(ctx:js.Dynamic) extends t_ccDrawingPrimitiveWebGL {
+}
+
+@js.native
+@JSGlobal("cc.DrawingPrimitiveWebGL")
+object ccDrawingPrimitiveWebGL extends ts_ccDrawingPrimitiveWebGL {
 }
 
 

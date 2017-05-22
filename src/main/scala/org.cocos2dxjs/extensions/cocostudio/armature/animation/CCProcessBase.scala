@@ -1,9 +1,11 @@
 package org.cocos2dxjs.extensions.cocostudio.armature.animation
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
+import org.cocos2dxjs.extensions.cocostudio.ts_ccsClass
 
 @js.native
 trait t_ccsProcessBase extends t_ccsClass {
@@ -32,10 +34,14 @@ trait t_ccsProcessBase extends t_ccsClass {
   def getLoop:Float = js.native
   def getTweenEasing:Float = js.native
   def getAnimationInternal:Float = js.native
-  def setAnimationInternal(animationInternal:js.Any):Unit = js.native
+  def setAnimationInternal(animationInternal:js.Dynamic):Unit = js.native
   def getProcessScale:Float = js.native
-  def setProcessScale(processScale:js.Any):Unit = js.native
+  def setProcessScale(processScale:js.Dynamic):Unit = js.native
   def isPlaying:Boolean = js.native
+}
+
+@js.native
+trait ts_ccsProcessBase extends ts_ccsClass {
 }
 
 @js.native
@@ -45,7 +51,7 @@ class ccsProcessBase extends t_ccsProcessBase {
 
 @js.native
 @JSGlobal("ccs.ProcessBase")
-object ccsProcessBase extends js.Object {
+object ccsProcessBase extends ts_ccsProcessBase {
 }
 
 

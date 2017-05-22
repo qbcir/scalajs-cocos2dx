@@ -1,12 +1,14 @@
 package org.cocos2dxjs.cocos2d.core.labelttf
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.platform.ccFontDefinition
+import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.sprites.t_ccSprite
+import org.cocos2dxjs.cocos2d.core.sprites.ts_ccSprite
 
 @js.native
 trait t_ccLabelTTF extends t_ccSprite {
@@ -27,15 +29,15 @@ trait t_ccLabelTTF extends t_ccSprite {
   var shadowBlur: Float = js.native
   def initWithString(label:String, fontName:String, fontSize:Float, dimensions:ccSize, hAlignment:Float, vAlignment:Float):Boolean = js.native
   def getString:String = js.native
-  def getHorizontalAlignment:Float = js.native
-  def getVerticalAlignment:Float = js.native
+  def getHorizontalAlignment:Float | Float | Float = js.native
+  def getVerticalAlignment:Float | Float | Float = js.native
   def getDimensions:ccSize = js.native
   def getFontSize:Float = js.native
   def getFontName:String = js.native
   def initWithStringAndTextDefinition(text:String, textDefinition:ccFontDefinition):Boolean = js.native
   def setTextDefinition(theDefinition:ccFontDefinition):Unit = js.native
   def getTextDefinition:ccFontDefinition = js.native
-  def enableShadow(a:ccColor, b:ccSize, c:Float, d:js.Any):Unit = js.native
+  def enableShadow(a:ccColor | Float, b:ccSize | Float, c:Float, d:js.Dynamic | Float):Unit = js.native
   def disableShadow():Unit = js.native
   def enableStroke(strokeColor:ccColor, strokeSize:Float):Unit = js.native
   def disableStroke():Unit = js.native
@@ -47,24 +49,28 @@ trait t_ccLabelTTF extends t_ccSprite {
   override def getScaleY:Float = js.native
   override def setScaleY(newScaleY:Float):Unit = js.native
   def setString(text:String):Unit = js.native
-  def setHorizontalAlignment(alignment:Float):Unit = js.native
-  def setVerticalAlignment(verticalAlignment:Float):Unit = js.native
-  def setDimensions(dim:ccSize, height:Float):Unit = js.native
+  def setHorizontalAlignment(alignment:Float | Float | Float):Unit = js.native
+  def setVerticalAlignment(verticalAlignment:Float | Float | Float):Unit = js.native
+  def setDimensions(dim:ccSize | Float, height:Float):Unit = js.native
   def setFontSize(fontSize:Float):Unit = js.native
   def setFontName(fontName:String):Unit = js.native
   override def getContentSize:ccSize = js.native
-  def setDrawMode(boolean:js.Any):Unit = js.native
+  def setDrawMode(boolean:js.Dynamic):Unit = js.native
+}
+
+@js.native
+trait ts_ccLabelTTF extends ts_ccSprite {
+  def __getFontHeightByDiv(fontName:String | ccFontDefinition, fontSize:Float):Float = js.native
 }
 
 @js.native
 @JSGlobal("cc.LabelTTF")
-class ccLabelTTF(text:String, fontName:String, fontSize:Float, dimensions:ccSize, hAlignment:Float, vAlignment:Float) extends t_ccLabelTTF {
+class ccLabelTTF(text:String, fontName:String | ccFontDefinition, fontSize:Float, dimensions:ccSize, hAlignment:Float, vAlignment:Float) extends t_ccLabelTTF {
 }
 
 @js.native
 @JSGlobal("cc.LabelTTF")
-object ccLabelTTF extends js.Object {
-  def __getFontHeightByDiv(fontName:String, fontSize:Float):Float = js.native
+object ccLabelTTF extends ts_ccLabelTTF {
 }
 
 

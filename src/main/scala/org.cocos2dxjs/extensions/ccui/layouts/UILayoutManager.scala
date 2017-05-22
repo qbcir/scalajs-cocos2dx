@@ -1,11 +1,16 @@
 package org.cocos2dxjs.extensions.ccui.layouts
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccuilinearVerticalLayoutManager extends js.Object {
+}
+
+@js.native
+trait ts_ccuilinearVerticalLayoutManager extends js.Object {
 }
 
 @js.native
@@ -15,11 +20,15 @@ class ccuilinearVerticalLayoutManager extends t_ccuilinearVerticalLayoutManager 
 
 @js.native
 @JSGlobal("ccui.linearVerticalLayoutManager")
-object ccuilinearVerticalLayoutManager extends js.Object {
+object ccuilinearVerticalLayoutManager extends ts_ccuilinearVerticalLayoutManager {
 }
 
 @js.native
 trait t_ccuilinearHorizontalLayoutManager extends js.Object {
+}
+
+@js.native
+trait ts_ccuilinearHorizontalLayoutManager extends js.Object {
 }
 
 @js.native
@@ -29,11 +38,15 @@ class ccuilinearHorizontalLayoutManager extends t_ccuilinearHorizontalLayoutMana
 
 @js.native
 @JSGlobal("ccui.linearHorizontalLayoutManager")
-object ccuilinearHorizontalLayoutManager extends js.Object {
+object ccuilinearHorizontalLayoutManager extends ts_ccuilinearHorizontalLayoutManager {
 }
 
 @js.native
 trait t_ccuirelativeLayoutManager extends js.Object {
+}
+
+@js.native
+trait ts_ccuirelativeLayoutManager extends js.Object {
 }
 
 @js.native
@@ -43,7 +56,7 @@ class ccuirelativeLayoutManager extends t_ccuirelativeLayoutManager {
 
 @js.native
 @JSGlobal("ccui.relativeLayoutManager")
-object ccuirelativeLayoutManager extends js.Object {
+object ccuirelativeLayoutManager extends ts_ccuirelativeLayoutManager {
 }
 
 

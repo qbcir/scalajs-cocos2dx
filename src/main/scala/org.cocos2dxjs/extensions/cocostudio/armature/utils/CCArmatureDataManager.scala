@@ -1,8 +1,9 @@
 package org.cocos2dxjs.extensions.cocostudio.armature.utils
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsArmatureData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsAnimationData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsTextureData
@@ -12,13 +13,17 @@ trait t_ccsRelativeData extends js.Object {
 }
 
 @js.native
+trait ts_ccsRelativeData extends js.Object {
+}
+
+@js.native
 @JSGlobal("ccs.RelativeData")
 class ccsRelativeData extends t_ccsRelativeData {
 }
 
 @js.native
 @JSGlobal("ccs.RelativeData")
-object ccsRelativeData extends js.Object {
+object ccsRelativeData extends ts_ccsRelativeData {
 }
 
 @js.native
@@ -26,13 +31,7 @@ trait t_ccsarmatureDataManager extends js.Object {
 }
 
 @js.native
-@JSGlobal("ccs.armatureDataManager")
-class ccsarmatureDataManager extends t_ccsarmatureDataManager {
-}
-
-@js.native
-@JSGlobal("ccs.armatureDataManager")
-object ccsarmatureDataManager extends js.Object {
+trait ts_ccsarmatureDataManager extends js.Object {
   def removeArmatureFileInfo(configFilePath:String):Unit = js.native
   def addArmatureData(id:String, armatureData:ccsArmatureData):Unit = js.native
   def getArmatureData(id:String):ccsArmatureData = js.native
@@ -44,15 +43,25 @@ object ccsarmatureDataManager extends js.Object {
   def getTextureData(id:String):ccsTextureData = js.native
   def removeTextureData(id:String):Unit = js.native
   def addArmatureFileInfo(imagePath:String, plistPath:String, configFilePath:String):Unit = js.native
-  def addArmatureFileInfoAsync(imagePath:String, plistPath:String, configFilePath:String, selector:js.Function, target:js.Object):Unit = js.native
+  def addArmatureFileInfoAsync(imagePath:String, plistPath:String, configFilePath:String, selector:js.Function, target:types.DynObject):Unit = js.native
   def addSpriteFrameFromFile(plistPath:String, imagePath:String, configFilePath:String):Unit = js.native
   def isAutoLoadSpriteFile:Boolean = js.native
-  def getArmatureDatas:js.Object = js.native
-  def getAnimationDatas:js.Object = js.native
-  def getTextureDatas:js.Object = js.native
+  def getArmatureDatas:types.DynObject = js.native
+  def getAnimationDatas:types.DynObject = js.native
+  def getTextureDatas:types.DynObject = js.native
   def addRelativeData(configFilePath:String):Unit = js.native
   def getRelativeData(configFilePath:String):ccsRelativeData = js.native
   def clear():Unit = js.native
+}
+
+@js.native
+@JSGlobal("ccs.armatureDataManager")
+class ccsarmatureDataManager extends t_ccsarmatureDataManager {
+}
+
+@js.native
+@JSGlobal("ccs.armatureDataManager")
+object ccsarmatureDataManager extends ts_ccsarmatureDataManager {
 }
 
 

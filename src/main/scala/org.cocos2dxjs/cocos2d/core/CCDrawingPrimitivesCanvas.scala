@@ -1,12 +1,14 @@
 package org.cocos2dxjs.cocos2d.core
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
+import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
 @js.native
 trait t_ccDrawingPrimitiveCanvas extends t_ccClass {
@@ -22,7 +24,7 @@ trait t_ccDrawingPrimitiveCanvas extends t_ccClass {
   def drawCubicBezier(origin:ccPoint, control1:ccPoint, control2:ccPoint, destination:ccPoint, segments:Float):Unit = js.native
   def drawCatmullRom(points:js.Array[js.Any], segments:Float):Unit = js.native
   def drawCardinalSpline(config:js.Array[js.Any], tension:Float, segments:Float):Unit = js.native
-  def drawImage(image:js.Any, sourcePoint:ccPoint, sourceSize:ccSize, destPoint:ccPoint, destSize:ccSize):Unit = js.native
+  def drawImage(image:js.Dynamic | js.Dynamic, sourcePoint:ccPoint, sourceSize:ccSize, destPoint:ccPoint, destSize:ccSize):Unit = js.native
   def drawStar(ctx:js.Any/*ccCanvasContextWrapper*/, radius:Float, color:ccColor):Unit = js.native
   def drawColorBall(ctx:js.Any/*ccCanvasContextWrapper*/, radius:Float, color:ccColor):Unit = js.native
   def fillText(strText:String, x:Float, y:Float):Unit = js.native
@@ -32,13 +34,17 @@ trait t_ccDrawingPrimitiveCanvas extends t_ccClass {
 }
 
 @js.native
+trait ts_ccDrawingPrimitiveCanvas extends ts_ccClass {
+}
+
+@js.native
 @JSGlobal("cc.DrawingPrimitiveCanvas")
 class ccDrawingPrimitiveCanvas(renderContext:js.Any/*ccCanvasContextWrapper*/) extends t_ccDrawingPrimitiveCanvas {
 }
 
 @js.native
 @JSGlobal("cc.DrawingPrimitiveCanvas")
-object ccDrawingPrimitiveCanvas extends js.Object {
+object ccDrawingPrimitiveCanvas extends ts_ccDrawingPrimitiveCanvas {
 }
 
 

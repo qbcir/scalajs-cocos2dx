@@ -1,12 +1,14 @@
 package org.cocos2dxjs.cocos2d.tilemap
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
 import org.cocos2dxjs.cocos2d.core.sprites.t_ccSpriteBatchNode
+import org.cocos2dxjs.cocos2d.core.sprites.ts_ccSpriteBatchNode
 
 @js.native
 trait t_ccTMXLayer extends t_ccSpriteBatchNode {
@@ -32,16 +34,20 @@ trait t_ccTMXLayer extends t_ccSpriteBatchNode {
   def setLayerOrientation(Var:Float):Unit = js.native
   def getProperties:js.Array[js.Any] = js.native
   def setProperties(Var:js.Array[js.Any]):Unit = js.native
-  def getProperty(propertyName:String):js.Any = js.native
+  def getProperty(propertyName:String):js.Dynamic = js.native
   def getLayerName:String = js.native
   def setLayerName(layerName:String):Unit = js.native
   def releaseMap():Unit = js.native
-  def getTileAt(pos:ccPoint, y:Float):ccSprite = js.native
-  def getTileGIDAt(pos:ccPoint, y:Float):Float = js.native
-  def setTileGID(gid:Float, posOrX:ccPoint, flagsOrY:Float, flags:Float):Unit = js.native
-  def getTileFlagsAt(pos:ccPoint, y:Float):Float = js.native
-  def removeTileAt(pos:ccPoint, y:Float):Unit = js.native
-  def getPositionAt(pos:ccPoint, y:Float):ccPoint = js.native
+  def getTileAt(pos:ccPoint | Float, y:Float):ccSprite = js.native
+  def getTileGIDAt(pos:ccPoint | Float, y:Float):Float = js.native
+  def setTileGID(gid:Float, posOrX:ccPoint | Float, flagsOrY:Float, flags:Float):Unit = js.native
+  def getTileFlagsAt(pos:ccPoint | Float, y:Float):Float = js.native
+  def removeTileAt(pos:ccPoint | Float, y:Float):Unit = js.native
+  def getPositionAt(pos:ccPoint | Float, y:Float):ccPoint = js.native
+}
+
+@js.native
+trait ts_ccTMXLayer extends ts_ccSpriteBatchNode {
 }
 
 @js.native
@@ -51,7 +57,7 @@ class ccTMXLayer(tilesetInfo:ccTMXTilesetInfo, layerInfo:ccTMXLayerInfo, mapInfo
 
 @js.native
 @JSGlobal("cc.TMXLayer")
-object ccTMXLayer extends js.Object {
+object ccTMXLayer extends ts_ccTMXLayer {
 }
 
 

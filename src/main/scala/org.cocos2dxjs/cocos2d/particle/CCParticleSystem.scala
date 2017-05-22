@@ -1,8 +1,9 @@
 package org.cocos2dxjs.cocos2d.particle
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
@@ -13,9 +14,14 @@ import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 import org.cocos2dxjs.cocos2d.core.sprites.ccSpriteFrame
 import org.cocos2dxjs.cocos2d.core.platform.ccClass
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
 @js.native
 trait t_ccParticle extends js.Object {
+}
+
+@js.native
+trait ts_ccParticle extends js.Object {
 }
 
 @js.native
@@ -25,12 +31,16 @@ class ccParticle(pos:ccPoint, startPos:ccPoint, color:ccColor, deltaColor:ccColo
 
 @js.native
 @JSGlobal("cc.Particle")
-object ccParticle extends js.Object {
-  var TemporaryPoints: js.Any = js.native
+object ccParticle extends ts_ccParticle {
+  var TemporaryPoints: js.Dynamic = js.native
 }
 
 @js.native
 trait t_ccParticleModeA extends js.Object {
+}
+
+@js.native
+trait ts_ccParticleModeA extends js.Object {
 }
 
 @js.native
@@ -40,11 +50,15 @@ class ccParticleModeA(dir:ccPoint, radialAccel:Float, tangentialAccel:Float) ext
 
 @js.native
 @JSGlobal("cc.Particle.ModeA")
-object ccParticleModeA extends js.Object {
+object ccParticleModeA extends ts_ccParticleModeA {
 }
 
 @js.native
 trait t_ccParticleModeB extends js.Object {
+}
+
+@js.native
+trait ts_ccParticleModeB extends js.Object {
 }
 
 @js.native
@@ -54,7 +68,7 @@ class ccParticleModeB(angle:Float, degreesPerSecond:Float, radius:Float, deltaRa
 
 @js.native
 @JSGlobal("cc.Particle.ModeB")
-object ccParticleModeB extends js.Object {
+object ccParticleModeB extends ts_ccParticleModeB {
 }
 
 @js.native
@@ -100,7 +114,7 @@ trait t_ccParticleSystem extends t_ccNode {
   var positionType: Float = js.native
   var totalParticles: Float = js.native
   var autoRemoveOnFinish: Boolean = js.native
-  var texture: ccTexture2D = js.native
+  var texture: ccTexture2D | js.Dynamic | js.Dynamic = js.native
   def ignoreColor(ignore:Boolean):Unit = js.native
   def initTexCoordsWithRect(pointRect:ccRect):Unit = js.native
   def getBatchNode:ccParticleBatchNode = js.native
@@ -116,9 +130,9 @@ trait t_ccParticleSystem extends t_ccNode {
   def setParticleCount(particleCount:Float):Unit = js.native
   def getDuration:Float = js.native
   def setDuration(duration:Float):Unit = js.native
-  def getSourcePosition:ccPoint = js.native
-  def setSourcePosition(sourcePosition:js.Any):Unit = js.native
-  def getPosVar:ccPoint = js.native
+  def getSourcePosition:ccPoint | types.DynObject = js.native
+  def setSourcePosition(sourcePosition:js.Dynamic):Unit = js.native
+  def getPosVar:ccPoint | types.DynObject = js.native
   def setPosVar(posVar:ccPoint):Unit = js.native
   def getLife:Float = js.native
   def setLife(life:Float):Unit = js.native
@@ -127,7 +141,7 @@ trait t_ccParticleSystem extends t_ccNode {
   def getAngle:Float = js.native
   def setAngle(angle:Float):Unit = js.native
   def getAngleVar:Float = js.native
-  def setAngleVar(angleVar:js.Any):Unit = js.native
+  def setAngleVar(angleVar:js.Dynamic):Unit = js.native
   def getGravity:ccPoint = js.native
   def setGravity(gravity:ccPoint):Unit = js.native
   def getSpeed:Float = js.native
@@ -151,17 +165,17 @@ trait t_ccParticleSystem extends t_ccNode {
   def getEndRadius:Float = js.native
   def setEndRadius(endRadius:Float):Unit = js.native
   def getEndRadiusVar:Float = js.native
-  def setEndRadiusVar(endRadiusVar:js.Any):Unit = js.native
+  def setEndRadiusVar(endRadiusVar:js.Dynamic):Unit = js.native
   def getRotatePerSecond:Float = js.native
   def setRotatePerSecond(degrees:Float):Unit = js.native
   def getRotatePerSecondVar:Float = js.native
-  def setRotatePerSecondVar(degrees:js.Any):Unit = js.native
+  def setRotatePerSecondVar(degrees:js.Dynamic):Unit = js.native
   def getStartSize:Float = js.native
   def setStartSize(startSize:Float):Unit = js.native
   def getStartSizeVar:Float = js.native
   def setStartSizeVar(startSizeVar:Float):Unit = js.native
   def getEndSize:Float = js.native
-  def setEndSize(endSize:js.Any):Unit = js.native
+  def setEndSize(endSize:js.Dynamic):Unit = js.native
   def getEndSizeVar:Float = js.native
   def setEndSizeVar(endSizeVar:Float):Unit = js.native
   def getStartColor:ccColor = js.native
@@ -189,7 +203,7 @@ trait t_ccParticleSystem extends t_ccNode {
   def getBlendFunc:ccBlendFunc = js.native
   def setBlendFunc(src:Float, dst:Float):Unit = js.native
   override def isOpacityModifyRGB:Boolean = js.native
-  def setOpacityModifyRGB(newValue:js.Any):Unit = js.native
+  def setOpacityModifyRGB(newValue:js.Dynamic):Unit = js.native
   def isBlendAdditive:Boolean = js.native
   def setBlendAdditive(isBlendAdditive:Boolean):Unit = js.native
   def getPositionType:Float = js.native
@@ -201,7 +215,7 @@ trait t_ccParticleSystem extends t_ccNode {
   override def init:Boolean = js.native
   def initWithFile(plistFile:String):Boolean = js.native
   override def getBoundingBoxToWorld:ccRect = js.native
-  def initWithDictionary(dictionary:js.Object, dirname:String):Boolean = js.native
+  def initWithDictionary(dictionary:types.DynObject, dirname:String):Boolean = js.native
   def initWithTotalParticles(numberOfParticles:Float):Boolean = js.native
   def destroyParticleSystem():Unit = js.native
   def addParticle:Boolean = js.native
@@ -220,13 +234,18 @@ trait t_ccParticleSystem extends t_ccNode {
 }
 
 @js.native
-@JSGlobal("cc.ParticleSystem")
-class ccParticleSystem(plistFile:String) extends t_ccParticleSystem {
+trait ts_ccParticleSystem extends ts_ccNode {
+  def WebGLRenderCmd():Unit = js.native
 }
 
 @js.native
 @JSGlobal("cc.ParticleSystem")
-object ccParticleSystem extends js.Object {
+class ccParticleSystem(plistFile:String | Float) extends t_ccParticleSystem {
+}
+
+@js.native
+@JSGlobal("cc.ParticleSystem")
+object ccParticleSystem extends ts_ccParticleSystem {
   val SHAPE_MODE: Float = js.native
   val TEXTURE_MODE: Float = js.native
   val STAR_SHAPE: Float = js.native
@@ -239,7 +258,6 @@ object ccParticleSystem extends js.Object {
   val TYPE_FREE: Float = js.native
   val TYPE_RELATIVE: Float = js.native
   val TYPE_GROUPED: Float = js.native
-  def WebGLRenderCmd():Unit = js.native
 }
 
 @js.native
@@ -247,21 +265,25 @@ trait t_ccParticleSystemModeA extends js.Object {
 }
 
 @js.native
-@JSGlobal("cc.ParticleSystem.ModeA")
-class ccParticleSystemModeA(gravity:ccPoint, speed:Float, speedVar:Float, tangentialAccel:Float, tangentialAccelVar:Float, radialAccel:Float, radialAccelVar:Float, rotationIsDir:Boolean) extends t_ccParticleSystemModeA {
-  var gravity: js.Any = js.native
-  var speed: js.Any = js.native
-  var speedVar: js.Any = js.native
-  var tangentialAccel: js.Any = js.native
-  var tangentialAccelVar: js.Any = js.native
-  var radialAccel: js.Any = js.native
-  var radialAccelVar: js.Any = js.native
-  var rotationIsDir: js.Any = js.native
+trait ts_ccParticleSystemModeA extends js.Object {
 }
 
 @js.native
 @JSGlobal("cc.ParticleSystem.ModeA")
-object ccParticleSystemModeA extends js.Object {
+class ccParticleSystemModeA(gravity:ccPoint, speed:Float, speedVar:Float, tangentialAccel:Float, tangentialAccelVar:Float, radialAccel:Float, radialAccelVar:Float, rotationIsDir:Boolean) extends t_ccParticleSystemModeA {
+  var gravity: js.Dynamic = js.native
+  var speed: js.Dynamic = js.native
+  var speedVar: js.Dynamic = js.native
+  var tangentialAccel: js.Dynamic = js.native
+  var tangentialAccelVar: js.Dynamic = js.native
+  var radialAccel: js.Dynamic = js.native
+  var radialAccelVar: js.Dynamic = js.native
+  var rotationIsDir: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("cc.ParticleSystem.ModeA")
+object ccParticleSystemModeA extends ts_ccParticleSystemModeA {
 }
 
 @js.native
@@ -269,19 +291,23 @@ trait t_ccParticleSystemModeB extends js.Object {
 }
 
 @js.native
-@JSGlobal("cc.ParticleSystem.ModeB")
-class ccParticleSystemModeB(startRadius:Float, startRadiusVar:Float, endRadius:Float, endRadiusVar:Float, rotatePerSecond:Float, rotatePerSecondVar:Float) extends t_ccParticleSystemModeB {
-  var startRadius: js.Any = js.native
-  var startRadiusVar: js.Any = js.native
-  var endRadius: js.Any = js.native
-  var endRadiusVar: js.Any = js.native
-  var rotatePerSecond: js.Any = js.native
-  var rotatePerSecondVar: js.Any = js.native
+trait ts_ccParticleSystemModeB extends js.Object {
 }
 
 @js.native
 @JSGlobal("cc.ParticleSystem.ModeB")
-object ccParticleSystemModeB extends js.Object {
+class ccParticleSystemModeB(startRadius:Float, startRadiusVar:Float, endRadius:Float, endRadiusVar:Float, rotatePerSecond:Float, rotatePerSecondVar:Float) extends t_ccParticleSystemModeB {
+  var startRadius: js.Dynamic = js.native
+  var startRadiusVar: js.Dynamic = js.native
+  var endRadius: js.Dynamic = js.native
+  var endRadiusVar: js.Dynamic = js.native
+  var rotatePerSecond: js.Dynamic = js.native
+  var rotatePerSecondVar: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("cc.ParticleSystem.ModeB")
+object ccParticleSystemModeB extends ts_ccParticleSystemModeB {
 }
 
 

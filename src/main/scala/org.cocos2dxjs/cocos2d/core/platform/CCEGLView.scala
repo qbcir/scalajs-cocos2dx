@@ -1,8 +1,9 @@
 package org.cocos2dxjs.cocos2d.core.platform
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
@@ -12,7 +13,7 @@ trait t_ccEGLView extends js.Object {
   def setTargetDensityDPI(densityDPI:String):Unit = js.native
   def getTargetDensityDPI:String = js.native
   def resizeWithBrowserSize(enabled:Boolean):Unit = js.native
-  def setResizeCallback(callback:js.Function):Unit = js.native
+  def setResizeCallback(callback:js.Function | js.Dynamic):Unit = js.native
   def setOrientation(orientation:Float):Unit = js.native
   def adjustViewPort(enabled:Boolean):Unit = js.native
   def enableRetina(enabled:Boolean):Unit = js.native
@@ -23,7 +24,7 @@ trait t_ccEGLView extends js.Object {
   def swapBuffers():Unit = js.native
   def setIMEKeyboardState(isOpen:Boolean):Unit = js.native
   def setContentTranslateLeftTop(offsetLeft:Float, offsetTop:Float):Unit = js.native
-  def getContentTranslateLeftTop:ccSize = js.native
+  def getContentTranslateLeftTop:ccSize | types.DynObject = js.native
   def getCanvasSize:ccSize = js.native
   def getFrameSize:ccSize = js.native
   def setFrameSize(width:Float, height:Float):Unit = js.native
@@ -33,10 +34,10 @@ trait t_ccEGLView extends js.Object {
   def getVisibleOriginInPixel:ccPoint = js.native
   def canSetContentScaleFactor:Boolean = js.native
   def getResolutionPolicy:ccResolutionPolicy = js.native
-  def setResolutionPolicy(resolutionPolicy:ccResolutionPolicy):Unit = js.native
-  def setDesignResolutionSize(width:Float, height:Float, resolutionPolicy:ccResolutionPolicy):Unit = js.native
+  def setResolutionPolicy(resolutionPolicy:ccResolutionPolicy | Float):Unit = js.native
+  def setDesignResolutionSize(width:Float, height:Float, resolutionPolicy:ccResolutionPolicy | Float):Unit = js.native
   def getDesignResolutionSize:ccSize = js.native
-  def setRealPixelResolution(width:Float, height:Float, resolutionPolicy:ccResolutionPolicy):Unit = js.native
+  def setRealPixelResolution(width:Float, height:Float, resolutionPolicy:ccResolutionPolicy | Float):Unit = js.native
   def setViewPortInPoints(x:Float, y:Float, w:Float, h:Float):Unit = js.native
   def setScissorInPoints(x:Float, y:Float, w:Float, h:Float):Unit = js.native
   def isScissorEnabled:Boolean = js.native
@@ -47,7 +48,12 @@ trait t_ccEGLView extends js.Object {
   def getScaleX:Float = js.native
   def getScaleY:Float = js.native
   def getDevicePixelRatio:Float = js.native
-  def convertToLocationInView(tx:Float, ty:Float, relatedPos:js.Object):ccPoint = js.native
+  def convertToLocationInView(tx:Float, ty:Float, relatedPos:types.DynObject):ccPoint = js.native
+}
+
+@js.native
+trait ts_ccEGLView extends js.Object {
+  def _getInstance:ccEGLView = js.native
 }
 
 @js.native
@@ -57,8 +63,7 @@ class ccEGLView extends t_ccEGLView {
 
 @js.native
 @JSGlobal("cc.EGLView")
-object ccEGLView extends js.Object {
-  def _getInstance:ccEGLView = js.native
+object ccEGLView extends ts_ccEGLView {
 }
 
 @js.native
@@ -69,20 +74,28 @@ trait t_ccContainerStrategy extends t_ccClass {
 }
 
 @js.native
+trait ts_ccContainerStrategy extends ts_ccClass {
+}
+
+@js.native
 @JSGlobal("cc.ContainerStrategy")
 class ccContainerStrategy extends t_ccContainerStrategy {
 }
 
 @js.native
 @JSGlobal("cc.ContainerStrategy")
-object ccContainerStrategy extends js.Object {
+object ccContainerStrategy extends ts_ccContainerStrategy {
 }
 
 @js.native
 trait t_ccContentStrategy extends t_ccClass {
   def preApply(view:ccEGLView):Unit = js.native
-  def apply(view:ccEGLView, designedResolution:ccSize):js.Object = js.native
+  def apply(view:ccEGLView, designedResolution:ccSize):types.DynObject = js.native
   def postApply(view:ccEGLView):Unit = js.native
+}
+
+@js.native
+trait ts_ccContentStrategy extends ts_ccClass {
 }
 
 @js.native
@@ -92,16 +105,20 @@ class ccContentStrategy extends t_ccContentStrategy {
 
 @js.native
 @JSGlobal("cc.ContentStrategy")
-object ccContentStrategy extends js.Object {
+object ccContentStrategy extends ts_ccContentStrategy {
 }
 
 @js.native
 trait t_ccResolutionPolicy extends t_ccClass {
   def preApply(view:ccEGLView):Unit = js.native
-  def apply(view:ccEGLView, designedResolution:ccSize):js.Object = js.native
+  def apply(view:ccEGLView, designedResolution:ccSize):types.DynObject = js.native
   def postApply(view:ccEGLView):Unit = js.native
   def setContainerStrategy(containerStg:ccContainerStrategy):Unit = js.native
   def setContentStrategy(contentStg:ccContentStrategy):Unit = js.native
+}
+
+@js.native
+trait ts_ccResolutionPolicy extends ts_ccClass {
 }
 
 @js.native
@@ -111,7 +128,7 @@ class ccResolutionPolicy(containerStg:ccContainerStrategy, contentStg:ccContentS
 
 @js.native
 @JSGlobal("cc.ResolutionPolicy")
-object ccResolutionPolicy extends js.Object {
+object ccResolutionPolicy extends ts_ccResolutionPolicy {
   val EXACT_FIT: Float = js.native
   val NO_BORDER: Float = js.native
   val SHOW_ALL: Float = js.native

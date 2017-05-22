@@ -1,8 +1,9 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -12,12 +13,13 @@ import org.cocos2dxjs.cocos2d.core.eventmanager.ccEvent
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.extensions.ccui.layouts.ccuiLayout
 import org.cocos2dxjs.extensions.ccui.layouts.t_ccuiLayout
+import org.cocos2dxjs.extensions.ccui.layouts.ts_ccuiLayout
 
 @js.native
 trait t_ccuiScrollView extends t_ccuiLayout {
   var innerWidth: Float = js.native
   var innerHeight: Float = js.native
-  var direction: Float = js.native
+  var direction: Float | Float | Float | Float = js.native
   var bounceEnabled: Boolean = js.native
   var inertiaScrollEnabled: Boolean = js.native
   var touchTotalTimeThreshold: Float = js.native
@@ -27,7 +29,7 @@ trait t_ccuiScrollView extends t_ccuiLayout {
   def setInnerContainerPosition(position:ccPoint):Unit = js.native
   def getInnerContainerPosition():Unit = js.native
   def getInnerContainerSize:ccSize = js.native
-  def addChild(widget:ccNode, zOrder:Float, tag:Float):Boolean = js.native
+  def addChild(widget:ccNode, zOrder:Float, tag:Float | String):Boolean = js.native
   def removeAllChildren():Unit = js.native
   override def removeAllChildrenWithCleanup(cleanup:Boolean):Unit = js.native
   override def removeChild(child:ccuiWidget, cleanup:Boolean):Unit = js.native
@@ -67,8 +69,8 @@ trait t_ccuiScrollView extends t_ccuiLayout {
   def update(dt:Float):Unit = js.native
   override def interceptTouchEvent(event:Float, sender:ccuiWidget, touch:ccTouch):Unit = js.native
   def addEventListener(selector:js.Function):Unit = js.native
-  def setDirection(dir:Float):Unit = js.native
-  def getDirection:Float = js.native
+  def setDirection(dir:Float | Float | Float | Float):Unit = js.native
+  def getDirection:Float | Float | Float | Float = js.native
   def setBounceEnabled(enabled:Boolean):Unit = js.native
   def isBounceEnabled:Boolean = js.native
   def setInertiaScrollEnabled(enabled:Boolean):Unit = js.native
@@ -91,21 +93,25 @@ trait t_ccuiScrollView extends t_ccuiLayout {
   def setScrollBarAutoHideTime(autoHideTime:Float):Unit = js.native
   def getScrollBarAutoHideTime:Float = js.native
   def getInnerContainer:ccuiLayout = js.native
-  override def setLayoutType(_type:Float):Unit = js.native
-  override def getLayoutType:js.Any = js.native
+  override def setLayoutType(_type:Float | Float | Float | Float):Unit = js.native
+  override def getLayoutType:js.Dynamic = js.native
   override def getDescription:String = js.native
+}
+
+@js.native
+trait ts_ccuiScrollView extends ts_ccuiLayout {
 }
 
 @js.native
 @JSGlobal("ccui.ScrollView")
 class ccuiScrollView extends t_ccuiScrollView {
-  var onFocusChanged: js.Any = js.native
-  var onNextFocusedWidget: js.Any = js.native
+  var onFocusChanged: js.Dynamic = js.native
+  var onNextFocusedWidget: js.Dynamic = js.native
 }
 
 @js.native
 @JSGlobal("ccui.ScrollView")
-object ccuiScrollView extends js.Object {
+object ccuiScrollView extends ts_ccuiScrollView {
   val DIR_NONE: Float = js.native
   val DIR_VERTICAL: Float = js.native
   val DIR_HORIZONTAL: Float = js.native
@@ -121,7 +127,7 @@ object ccuiScrollView extends js.Object {
   val EVENT_BOUNCE_RIGHT: Float = js.native
   val EVENT_CONTAINER_MOVED: Float = js.native
   val EVENT_AUTOSCROLL_ENDED: Float = js.native
-  var MOVEDIR_TOP: js.Any = js.native
+  var MOVEDIR_TOP: js.Dynamic = js.native
 }
 
 

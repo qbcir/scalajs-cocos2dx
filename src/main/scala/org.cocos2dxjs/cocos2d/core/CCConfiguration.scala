@@ -1,21 +1,16 @@
 package org.cocos2dxjs.cocos2d.core
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccconfiguration extends js.Object {
 }
 
 @js.native
-@JSGlobal("cc.configuration")
-class ccconfiguration extends t_ccconfiguration {
-}
-
-@js.native
-@JSGlobal("cc.configuration")
-object ccconfiguration extends js.Object {
+trait ts_ccconfiguration extends js.Object {
   def getMaxTextureSize:Float = js.native
   def getMaxModelviewStackDepth:Float = js.native
   def getMaxTextureUnits:Float = js.native
@@ -28,11 +23,21 @@ object ccconfiguration extends js.Object {
   def supportsDiscardFramebuffer:Boolean = js.native
   def supportsShareableVAO:Boolean = js.native
   def checkForGLExtension(searchName:String):Unit = js.native
-  def getValue(key:String, default_value:String):String = js.native
-  def setValue(key:String, value:String):Unit = js.native
+  def getValue(key:String, default_value:String | js.Dynamic | Float | types.DynObject):String | js.Dynamic | Float | types.DynObject = js.native
+  def setValue(key:String, value:String | js.Dynamic | Float | types.DynObject):Unit = js.native
   def dumpInfo():Unit = js.native
   def gatherGPUInfo():Unit = js.native
   def loadConfigFile(url:String):Unit = js.native
+}
+
+@js.native
+@JSGlobal("cc.configuration")
+class ccconfiguration extends t_ccconfiguration {
+}
+
+@js.native
+@JSGlobal("cc.configuration")
+object ccconfiguration extends ts_ccconfiguration {
 }
 
 

@@ -1,11 +1,16 @@
 package org.cocos2dxjs.cocos2d.tilemap
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccImageTGA extends js.Object {
+}
+
+@js.native
+trait ts_ccImageTGA extends js.Object {
 }
 
 @js.native
@@ -15,7 +20,7 @@ class ccImageTGA(status:Float, _type:Float, pixelDepth:Float, width:Float, heigh
 
 @js.native
 @JSGlobal("cc.ImageTGA")
-object ccImageTGA extends js.Object {
+object ccImageTGA extends ts_ccImageTGA {
 }
 
 @js.native
@@ -23,13 +28,17 @@ trait t_ccBinaryStreamReader extends js.Object {
 }
 
 @js.native
-@JSGlobal("cc.BinaryStreamReader")
-class ccBinaryStreamReader(binaryData:js.Any) extends t_ccBinaryStreamReader {
+trait ts_ccBinaryStreamReader extends js.Object {
 }
 
 @js.native
 @JSGlobal("cc.BinaryStreamReader")
-object ccBinaryStreamReader extends js.Object {
+class ccBinaryStreamReader(binaryData:js.Dynamic) extends t_ccBinaryStreamReader {
+}
+
+@js.native
+@JSGlobal("cc.BinaryStreamReader")
+object ccBinaryStreamReader extends ts_ccBinaryStreamReader {
 }
 
 

@@ -1,8 +1,9 @@
 package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
 
 @js.native
@@ -20,14 +21,18 @@ trait t_ccControlSlider extends t_ccControl {
 }
 
 @js.native
-@JSGlobal("cc.ControlSlider")
-class ccControlSlider extends t_ccControlSlider {
-  var _state: js.Any = js.native
+trait ts_ccControlSlider extends ts_ccControl {
 }
 
 @js.native
 @JSGlobal("cc.ControlSlider")
-object ccControlSlider extends js.Object {
+class ccControlSlider extends t_ccControlSlider {
+  var _state: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("cc.ControlSlider")
+object ccControlSlider extends ts_ccControlSlider {
 }
 
 

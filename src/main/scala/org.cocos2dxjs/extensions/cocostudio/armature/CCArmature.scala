@@ -1,8 +1,9 @@
 package org.cocos2dxjs.extensions.cocostudio.armature
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.armature.animation.ccsArmatureAnimation
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsArmatureData
 import org.cocos2dxjs.cocos2d.core.sprites.ccSpriteBatchNode
@@ -10,6 +11,7 @@ import org.cocos2dxjs.extensions.cocostudio.armature.physics.ccsColliderFilter
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 import org.cocos2dxjs.extensions.cocostudio.t_ccsNode
+import org.cocos2dxjs.extensions.cocostudio.ts_ccsNode
 
 @js.native
 trait t_ccsArmature extends t_ccsNode {
@@ -19,7 +21,7 @@ trait t_ccsArmature extends t_ccsNode {
   var name: String = js.native
   var batchNode: ccSpriteBatchNode = js.native
   var version: Float = js.native
-  var body: js.Object = js.native
+  var body: types.DynObject = js.native
   var colliderFilter: ccsColliderFilter = js.native
   def init(name:String, parentBone:ccsBone):Boolean = js.native
   def createBone(boneName:String):ccsBone = js.native
@@ -27,7 +29,7 @@ trait t_ccsArmature extends t_ccsNode {
   def removeBone(bone:ccsBone, recursion:Boolean):Unit = js.native
   def getBone(name:String):ccsBone = js.native
   def changeBoneParent(bone:ccsBone, parentName:String):Unit = js.native
-  def getBoneDic:js.Object = js.native
+  def getBoneDic:types.DynObject = js.native
   def updateOffsetPoint():Unit = js.native
   def setAnimation(animation:ccsArmatureAnimation):Unit = js.native
   def getAnimation:ccsArmatureAnimation = js.native
@@ -40,7 +42,7 @@ trait t_ccsArmature extends t_ccsNode {
   def setParentBone(parentBone:ccsBone):Unit = js.native
   def getParentBone:ccsBone = js.native
   def drawContour():Unit = js.native
-  def setBlendFunc(blendFunc:ccBlendFunc, dst:Float):Unit = js.native
+  def setBlendFunc(blendFunc:ccBlendFunc | Float, dst:Float):Unit = js.native
   def getBlendFunc:ccBlendFunc = js.native
   def setColliderFilter(filter:ccsColliderFilter):Unit = js.native
   def getArmatureData:ccsArmatureData = js.native
@@ -50,13 +52,17 @@ trait t_ccsArmature extends t_ccsNode {
 }
 
 @js.native
+trait ts_ccsArmature extends ts_ccsNode {
+}
+
+@js.native
 @JSGlobal("ccs.Armature")
 class ccsArmature(name:String, parentBone:ccsBone) extends t_ccsArmature {
 }
 
 @js.native
 @JSGlobal("ccs.Armature")
-object ccsArmature extends js.Object {
+object ccsArmature extends ts_ccsArmature {
 }
 
 

@@ -1,13 +1,15 @@
 package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
 import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
 import org.cocos2dxjs.cocos2d.core.labelttf.ccLabelTTF
 import org.cocos2dxjs.cocos2d.core.sprites.t_ccSprite
+import org.cocos2dxjs.cocos2d.core.sprites.ts_ccSprite
 
 @js.native
 trait t_ccControlSwitch extends t_ccControl {
@@ -15,16 +17,20 @@ trait t_ccControlSwitch extends t_ccControl {
 }
 
 @js.native
-@JSGlobal("cc.ControlSwitch")
-class ccControlSwitch extends t_ccControlSwitch {
-  var _switchSprite: js.Any = js.native
-  var _on: js.Any = js.native
-  var _state: js.Any = js.native
+trait ts_ccControlSwitch extends ts_ccControl {
 }
 
 @js.native
 @JSGlobal("cc.ControlSwitch")
-object ccControlSwitch extends js.Object {
+class ccControlSwitch extends t_ccControlSwitch {
+  var _switchSprite: js.Dynamic = js.native
+  var _on: js.Dynamic = js.native
+  var _state: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("cc.ControlSwitch")
+object ccControlSwitch extends ts_ccControlSwitch {
 }
 
 @js.native
@@ -45,13 +51,17 @@ trait t_ccControlSwitchSprite extends t_ccSprite {
 }
 
 @js.native
+trait ts_ccControlSwitchSprite extends ts_ccSprite {
+}
+
+@js.native
 @JSGlobal("cc.ControlSwitchSprite")
 class ccControlSwitchSprite extends t_ccControlSwitchSprite {
 }
 
 @js.native
 @JSGlobal("cc.ControlSwitchSprite")
-object ccControlSwitchSprite extends js.Object {
+object ccControlSwitchSprite extends ts_ccControlSwitchSprite {
 }
 
 

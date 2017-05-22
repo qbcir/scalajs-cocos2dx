@@ -1,8 +1,9 @@
 package org.cocos2dxjs.extensions.cocostudio.armature
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsBoneData
 import org.cocos2dxjs.extensions.cocostudio.armature.animation.ccsTween
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsFrameData
@@ -14,6 +15,7 @@ import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsDisplayData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsBaseData
 import org.cocos2dxjs.extensions.cocostudio.t_ccsNode
+import org.cocos2dxjs.extensions.cocostudio.ts_ccsNode
 
 @js.native
 trait t_ccsBone extends t_ccsNode {
@@ -35,7 +37,7 @@ trait t_ccsBone extends t_ccsNode {
   def setArmature(armature:ccsArmature):Unit = js.native
   def getArmature:ccsArmature = js.native
   def update(delta:Float):Unit = js.native
-  def setBlendFunc(blendFunc:ccBlendFunc, dst:Float):Unit = js.native
+  def setBlendFunc(blendFunc:ccBlendFunc | Float, dst:Float):Unit = js.native
   def updateColor():Unit = js.native
   def updateZOrder():Unit = js.native
   def addChildBone(child:ccsBone):Unit = js.native
@@ -55,7 +57,7 @@ trait t_ccsBone extends t_ccsNode {
   def removeDisplay(index:Float):Unit = js.native
   def changeDisplayWithIndex(index:Float, force:Boolean):Unit = js.native
   def changeDisplayWithName(name:String, force:Boolean):Unit = js.native
-  def getColliderDetector:js.Any = js.native
+  def getColliderDetector:js.Dynamic = js.native
   def setColliderFilter(filter:ccsColliderFilter):Unit = js.native
   def getColliderFilter:ccsColliderFilter = js.native
   def setTransformDirty(dirty:Boolean):Unit = js.native
@@ -65,9 +67,13 @@ trait t_ccsBone extends t_ccsNode {
   def isIgnoreMovementBoneData:Boolean = js.native
   def getBlendFunc:ccBlendFunc = js.native
   def setBlendDirty(dirty:Boolean):Unit = js.native
-  def isBlendDirty:Boolean = js.native
+  def isBlendDirty:Boolean | js.Dynamic | Float = js.native
   def getTweenData:ccsFrameData = js.native
   def getWorldInfo:ccsBaseData = js.native
+}
+
+@js.native
+trait ts_ccsBone extends ts_ccsNode {
 }
 
 @js.native
@@ -77,7 +83,7 @@ class ccsBone(name:String) extends t_ccsBone {
 
 @js.native
 @JSGlobal("ccs.Bone")
-object ccsBone extends js.Object {
+object ccsBone extends ts_ccsBone {
 }
 
 

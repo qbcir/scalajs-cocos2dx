@@ -1,10 +1,12 @@
 package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.eventmanager.ccTouch
 import org.cocos2dxjs.cocos2d.core.layers.t_ccLayer
+import org.cocos2dxjs.cocos2d.core.layers.ts_ccLayer
 
 @js.native
 trait t_ccControl extends t_ccLayer {
@@ -16,26 +18,30 @@ trait t_ccControl extends t_ccLayer {
   def setSelected(selected:Boolean):Unit = js.native
   def setHighlighted(highlighted:Boolean):Unit = js.native
   def sendActionsForControlEvents(controlEvents:Float):Unit = js.native
-  def addTargetWithActionForControlEvents(target:js.Object, action:js.Function, controlEvents:Float):Unit = js.native
-  def removeTargetWithActionForControlEvents(target:js.Object, action:js.Function, controlEvents:Float):Unit = js.native
+  def addTargetWithActionForControlEvents(target:types.DynObject, action:js.Function, controlEvents:Float):Unit = js.native
+  def removeTargetWithActionForControlEvents(target:types.DynObject, action:js.Function, controlEvents:Float):Unit = js.native
   def getTouchLocation(touch:ccTouch):Unit = js.native
   def isTouchInside(touch:ccTouch):Boolean = js.native
-  def _invocationWithTargetAndActionForControlEvent(target:js.Object, action:js.Function, controlEvent:Float):ccInvocation = js.native
+  def _invocationWithTargetAndActionForControlEvent(target:types.DynObject, action:js.Function, controlEvent:Float):ccInvocation = js.native
   def _dispatchListforControlEvent(controlEvent:Float):ccInvocation = js.native
-  def _addTargetWithActionForControlEvent(target:js.Any, action:js.Any, controlEvent:js.Any):Unit = js.native
-  def _removeTargetWithActionForControlEvent(target:js.Object, action:js.Function, controlEvent:Float):Unit = js.native
+  def _addTargetWithActionForControlEvent(target:js.Dynamic, action:js.Dynamic, controlEvent:js.Dynamic):Unit = js.native
+  def _removeTargetWithActionForControlEvent(target:types.DynObject, action:js.Function, controlEvent:Float):Unit = js.native
   def needsLayout():Unit = js.native
+}
+
+@js.native
+trait ts_ccControl extends ts_ccLayer {
 }
 
 @js.native
 @JSGlobal("cc.Control")
 class ccControl extends t_ccControl {
-  var _state: js.Any = js.native
+  var _state: js.Dynamic = js.native
 }
 
 @js.native
 @JSGlobal("cc.Control")
-object ccControl extends js.Object {
+object ccControl extends ts_ccControl {
 }
 
 

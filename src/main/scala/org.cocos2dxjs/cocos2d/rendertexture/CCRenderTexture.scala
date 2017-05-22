@@ -1,14 +1,16 @@
 package org.cocos2dxjs.cocos2d.rendertexture
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.platform.ccClass
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
 @js.native
 trait t_ccRenderTexture extends t_ccNode {
@@ -22,11 +24,11 @@ trait t_ccRenderTexture extends t_ccNode {
   def getSprite:ccSprite = js.native
   def setSprite(sprite:ccSprite):Unit = js.native
   def setVirtualViewport(rtBegin:ccPoint, fullRect:ccRect, fullViewport:ccRect):Unit = js.native
-  def initWithWidthAndHeight(width:Float, height:Float, format:Float, depthStencilFormat:Float):Boolean = js.native
+  def initWithWidthAndHeight(width:Float, height:Float, format:Float | Float | Float, depthStencilFormat:Float):Boolean = js.native
   def begin():Unit = js.native
   def beginWithClear(r:Float, g:Float, b:Float, a:Float, depthValue:Float, stencilValue:Float):Unit = js.native
   def end():Unit = js.native
-  def clear(r:Float, g:Float, b:Float, a:Float):Unit = js.native
+  def clear(r:Float | ccRect, g:Float, b:Float, a:Float):Unit = js.native
   def clearRect(x:Float, y:Float, width:Float, height:Float):Unit = js.native
   def clearDepth(depthValue:Float):Unit = js.native
   def clearStencil(stencilValue:Float):Unit = js.native
@@ -41,19 +43,23 @@ trait t_ccRenderTexture extends t_ccNode {
   def isAutoDraw:Boolean = js.native
   def setAutoDraw:Boolean = js.native
   def saveToFile(filePath:Float, format:Float):Unit = js.native
-  def newCCImage:js.Any = js.native
+  def newCCImage:js.Dynamic = js.native
   def listenToBackground(obj:ccClass):Unit = js.native
   def listenToForeground(obj:ccClass):Unit = js.native
 }
 
 @js.native
-@JSGlobal("cc.RenderTexture")
-class ccRenderTexture(width:Float, height:Float, format:Float, depthStencilFormat:Float) extends t_ccRenderTexture {
+trait ts_ccRenderTexture extends ts_ccNode {
 }
 
 @js.native
 @JSGlobal("cc.RenderTexture")
-object ccRenderTexture extends js.Object {
+class ccRenderTexture(width:Float, height:Float, format:Float | Float | Float, depthStencilFormat:Float) extends t_ccRenderTexture {
+}
+
+@js.native
+@JSGlobal("cc.RenderTexture")
+object ccRenderTexture extends ts_ccRenderTexture {
 }
 
 

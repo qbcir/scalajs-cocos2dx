@@ -1,10 +1,12 @@
 package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
+import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 
 @js.native
@@ -29,13 +31,17 @@ trait t_ccAction extends t_ccClass {
 }
 
 @js.native
+trait ts_ccAction extends ts_ccClass {
+}
+
+@js.native
 @JSGlobal("cc.Action")
 class ccAction extends t_ccAction {
 }
 
 @js.native
 @JSGlobal("cc.Action")
-object ccAction extends js.Object {
+object ccAction extends ts_ccAction {
 }
 
 @js.native
@@ -47,13 +53,17 @@ trait t_ccFiniteTimeAction extends t_ccAction {
 }
 
 @js.native
+trait ts_ccFiniteTimeAction extends ts_ccAction {
+}
+
+@js.native
 @JSGlobal("cc.FiniteTimeAction")
 class ccFiniteTimeAction extends t_ccFiniteTimeAction {
 }
 
 @js.native
 @JSGlobal("cc.FiniteTimeAction")
-object ccFiniteTimeAction extends js.Object {
+object ccFiniteTimeAction extends ts_ccFiniteTimeAction {
 }
 
 @js.native
@@ -72,13 +82,17 @@ trait t_ccSpeed extends t_ccAction {
 }
 
 @js.native
+trait ts_ccSpeed extends ts_ccAction {
+}
+
+@js.native
 @JSGlobal("cc.Speed")
 class ccSpeed(action:ccActionInterval, speed:Float) extends t_ccSpeed {
 }
 
 @js.native
 @JSGlobal("cc.Speed")
-object ccSpeed extends js.Object {
+object ccSpeed extends ts_ccSpeed {
 }
 
 @js.native
@@ -97,13 +111,17 @@ trait t_ccFollow extends t_ccAction {
 }
 
 @js.native
+trait ts_ccFollow extends ts_ccAction {
+}
+
+@js.native
 @JSGlobal("cc.Follow")
 class ccFollow(followedNode:ccNode, rect:ccRect) extends t_ccFollow {
 }
 
 @js.native
 @JSGlobal("cc.Follow")
-object ccFollow extends js.Object {
+object ccFollow extends ts_ccFollow {
 }
 
 

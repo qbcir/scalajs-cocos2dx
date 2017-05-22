@@ -1,10 +1,12 @@
 package org.cocos2dxjs.extensions.cocostudio.action
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.actions.ccCallFunc
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
+import org.cocos2dxjs.extensions.cocostudio.ts_ccsClass
 
 @js.native
 trait t_ccsActionObject extends t_ccsClass {
@@ -18,7 +20,7 @@ trait t_ccsActionObject extends t_ccsClass {
   def setCurrentTime(time:Float):Unit = js.native
   def getTotalTime:Float = js.native
   def isPlaying:Boolean = js.native
-  def initWithDictionary(dic:js.Object, root:js.Object):Unit = js.native
+  def initWithDictionary(dic:types.DynObject, root:types.DynObject):Unit = js.native
   def addActionNode(node:ccsActionNode):Unit = js.native
   def removeActionNode(node:ccsActionNode):Unit = js.native
   def play(fun:ccCallFunc):Unit = js.native
@@ -29,13 +31,17 @@ trait t_ccsActionObject extends t_ccsClass {
 }
 
 @js.native
+trait ts_ccsActionObject extends ts_ccsClass {
+}
+
+@js.native
 @JSGlobal("ccs.ActionObject")
 class ccsActionObject extends t_ccsActionObject {
 }
 
 @js.native
 @JSGlobal("ccs.ActionObject")
-object ccsActionObject extends js.Object {
+object ccsActionObject extends ts_ccsActionObject {
 }
 
 

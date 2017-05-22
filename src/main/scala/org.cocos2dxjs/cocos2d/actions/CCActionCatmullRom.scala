@@ -1,8 +1,9 @@
 package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 
@@ -19,14 +20,18 @@ trait t_ccCardinalSplineTo extends t_ccActionInterval {
 }
 
 @js.native
-@JSGlobal("cc.CardinalSplineTo")
-class ccCardinalSplineTo(duration:Float, points:js.Array[js.Any], tension:Float) extends t_ccCardinalSplineTo {
-  var _points: js.Any = js.native
+trait ts_ccCardinalSplineTo extends ts_ccActionInterval {
 }
 
 @js.native
 @JSGlobal("cc.CardinalSplineTo")
-object ccCardinalSplineTo extends js.Object {
+class ccCardinalSplineTo(duration:Float, points:js.Array[js.Any], tension:Float) extends t_ccCardinalSplineTo {
+  var _points: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("cc.CardinalSplineTo")
+object ccCardinalSplineTo extends ts_ccCardinalSplineTo {
 }
 
 @js.native
@@ -38,14 +43,18 @@ trait t_ccCardinalSplineBy extends t_ccCardinalSplineTo {
 }
 
 @js.native
-@JSGlobal("cc.CardinalSplineBy")
-class ccCardinalSplineBy(duration:Float, points:js.Array[js.Any], tension:Float) extends t_ccCardinalSplineBy {
-  var _points: js.Any = js.native
+trait ts_ccCardinalSplineBy extends ts_ccCardinalSplineTo {
 }
 
 @js.native
 @JSGlobal("cc.CardinalSplineBy")
-object ccCardinalSplineBy extends js.Object {
+class ccCardinalSplineBy(duration:Float, points:js.Array[js.Any], tension:Float) extends t_ccCardinalSplineBy {
+  var _points: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("cc.CardinalSplineBy")
+object ccCardinalSplineBy extends ts_ccCardinalSplineBy {
 }
 
 @js.native
@@ -55,14 +64,18 @@ trait t_ccCatmullRomTo extends t_ccCardinalSplineTo {
 }
 
 @js.native
-@JSGlobal("cc.CatmullRomTo")
-class ccCatmullRomTo(dt:Float, points:js.Array[js.Any]) extends t_ccCatmullRomTo {
-  var _points: js.Any = js.native
+trait ts_ccCatmullRomTo extends ts_ccCardinalSplineTo {
 }
 
 @js.native
 @JSGlobal("cc.CatmullRomTo")
-object ccCatmullRomTo extends js.Object {
+class ccCatmullRomTo(dt:Float, points:js.Array[js.Any]) extends t_ccCatmullRomTo {
+  var _points: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("cc.CatmullRomTo")
+object ccCatmullRomTo extends ts_ccCatmullRomTo {
 }
 
 @js.native
@@ -70,14 +83,18 @@ trait t_ccCatmullRomBy extends t_ccCardinalSplineBy {
 }
 
 @js.native
-@JSGlobal("cc.CatmullRomBy")
-class ccCatmullRomBy(dt:Float, points:js.Array[js.Any]) extends t_ccCatmullRomBy {
-  var _points: js.Any = js.native
+trait ts_ccCatmullRomBy extends ts_ccCardinalSplineBy {
 }
 
 @js.native
 @JSGlobal("cc.CatmullRomBy")
-object ccCatmullRomBy extends js.Object {
+class ccCatmullRomBy(dt:Float, points:js.Array[js.Any]) extends t_ccCatmullRomBy {
+  var _points: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("cc.CatmullRomBy")
+object ccCatmullRomBy extends ts_ccCatmullRomBy {
 }
 
 

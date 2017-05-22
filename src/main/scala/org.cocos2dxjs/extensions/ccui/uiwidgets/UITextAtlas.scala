@@ -1,11 +1,13 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
 @js.native
 trait t_ccuiTextAtlas extends t_ccuiWidget {
@@ -13,22 +15,26 @@ trait t_ccuiTextAtlas extends t_ccuiWidget {
   def setProperty(stringValue:String, charMapFile:String, itemWidth:Float, itemHeight:Float, startCharMap:String):Unit = js.native
   def setString(value:String):Unit = js.native
   def getString:String = js.native
-  def getStringLength:js.Any = js.native
+  def getStringLength:js.Dynamic | Float | js.Dynamic | js.Dynamic = js.native
   override def getVirtualRendererSize:ccSize = js.native
   override def getVirtualRenderer:ccuiWidget = js.native
   override def getDescription:String = js.native
 }
 
 @js.native
-@JSGlobal("ccui.TextAtlas")
-class ccuiTextAtlas(stringValue:String, charMapFile:String, itemWidth:Float, itemHeight:Float, startCharMap:String) extends t_ccuiTextAtlas {
-  var onFocusChanged: js.Any = js.native
-  var onNextFocusedWidget: js.Any = js.native
+trait ts_ccuiTextAtlas extends ts_ccuiWidget {
 }
 
 @js.native
 @JSGlobal("ccui.TextAtlas")
-object ccuiTextAtlas extends js.Object {
+class ccuiTextAtlas(stringValue:String, charMapFile:String, itemWidth:Float, itemHeight:Float, startCharMap:String) extends t_ccuiTextAtlas {
+  var onFocusChanged: js.Dynamic = js.native
+  var onNextFocusedWidget: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("ccui.TextAtlas")
+object ccuiTextAtlas extends ts_ccuiTextAtlas {
   var RENDERER_ZORDER: Float = js.native
 }
 

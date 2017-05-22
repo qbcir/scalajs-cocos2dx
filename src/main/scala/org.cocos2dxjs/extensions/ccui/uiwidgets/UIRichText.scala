@@ -1,18 +1,25 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiClass
+import org.cocos2dxjs.extensions.ccui.system.ts_ccuiClass
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.platform.ccFontDefinition
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
 @js.native
 trait t_ccuiRichElement extends t_ccuiClass {
+}
+
+@js.native
+trait ts_ccuiRichElement extends ts_ccuiClass {
 }
 
 @js.native
@@ -22,7 +29,7 @@ class ccuiRichElement extends t_ccuiRichElement {
 
 @js.native
 @JSGlobal("ccui.RichElement")
-object ccuiRichElement extends js.Object {
+object ccuiRichElement extends ts_ccuiRichElement {
   val TEXT: Float = js.native
   val IMAGE: Float = js.native
   val CUSTOM: Float = js.native
@@ -33,18 +40,26 @@ trait t_ccuiRichElementText extends t_ccuiRichElement {
 }
 
 @js.native
+trait ts_ccuiRichElementText extends ts_ccuiRichElement {
+}
+
+@js.native
 @JSGlobal("ccui.RichElementText")
-class ccuiRichElementText(tag:Float, colorOrFontDef:ccColor, opacity:Float, text:String, fontName:String, fontSize:Float) extends t_ccuiRichElementText {
+class ccuiRichElementText(tag:Float, colorOrFontDef:ccColor | ccFontDefinition, opacity:Float, text:String, fontName:String, fontSize:Float) extends t_ccuiRichElementText {
   var _fontDefinition: ccFontDefinition = js.native
 }
 
 @js.native
 @JSGlobal("ccui.RichElementText")
-object ccuiRichElementText extends js.Object {
+object ccuiRichElementText extends ts_ccuiRichElementText {
 }
 
 @js.native
 trait t_ccuiRichElementImage extends t_ccuiRichElement {
+}
+
+@js.native
+trait ts_ccuiRichElementImage extends ts_ccuiRichElement {
 }
 
 @js.native
@@ -54,11 +69,15 @@ class ccuiRichElementImage(tag:Float, color:ccColor, opacity:Float, filePath:Str
 
 @js.native
 @JSGlobal("ccui.RichElementImage")
-object ccuiRichElementImage extends js.Object {
+object ccuiRichElementImage extends ts_ccuiRichElementImage {
 }
 
 @js.native
 trait t_ccuiRichElementCustomNode extends t_ccuiRichElement {
+}
+
+@js.native
+trait ts_ccuiRichElementCustomNode extends ts_ccuiRichElement {
 }
 
 @js.native
@@ -68,7 +87,7 @@ class ccuiRichElementCustomNode(tag:Float, color:ccColor, opacity:Float, customN
 
 @js.native
 @JSGlobal("ccui.RichElementCustomNode")
-object ccuiRichElementCustomNode extends js.Object {
+object ccuiRichElementCustomNode extends ts_ccuiRichElementCustomNode {
 }
 
 @js.native
@@ -77,7 +96,7 @@ trait t_ccuiRichText extends t_ccuiWidget {
   def pushBackElement(element:ccuiRichElement):Unit = js.native
   def removeElement(element:ccuiRichElement):Unit = js.native
   def formatText():Unit = js.native
-  def _handleTextRenderer(text:String, fontNameOrFontDef:String, fontSize:Float, color:ccColor):Unit = js.native
+  def _handleTextRenderer(text:String, fontNameOrFontDef:String | ccFontDefinition, fontSize:Float, color:ccColor):Unit = js.native
   def formatRenderers():Unit = js.native
   def setVerticalSpace(space:Float):Unit = js.native
   def setAnchorPoint(pt:ccPoint):Unit = js.native
@@ -86,21 +105,25 @@ trait t_ccuiRichText extends t_ccuiWidget {
   def getContentSize:ccSize = js.native
   override def getDescription:String = js.native
   def setCascadeOpacityEnabled(value:Boolean):Unit = js.native
-  def setLineBreakOnSpace(value:js.Any):Unit = js.native
+  def setLineBreakOnSpace(value:js.Dynamic):Unit = js.native
   def setTextHorizontalAlignment(value:Float):Unit = js.native
   def setTextVerticalAlignment(value:Float):Unit = js.native
 }
 
 @js.native
-@JSGlobal("ccui.RichText")
-class ccuiRichText extends t_ccuiRichText {
-  var onFocusChanged: js.Any = js.native
-  var onNextFocusedWidget: js.Any = js.native
+trait ts_ccuiRichText extends ts_ccuiWidget {
 }
 
 @js.native
 @JSGlobal("ccui.RichText")
-object ccuiRichText extends js.Object {
+class ccuiRichText extends t_ccuiRichText {
+  var onFocusChanged: js.Dynamic = js.native
+  var onNextFocusedWidget: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("ccui.RichText")
+object ccuiRichText extends ts_ccuiRichText {
 }
 
 

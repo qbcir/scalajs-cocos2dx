@@ -1,9 +1,11 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
 @js.native
 trait t_ccuiWebView extends t_ccuiWidget {
@@ -24,16 +26,20 @@ trait t_ccuiWebView extends t_ccuiWidget {
 }
 
 @js.native
-@JSGlobal("ccui.WebView")
-class ccuiWebView extends t_ccuiWebView {
-  var onFocusChanged: js.Any = js.native
-  var onNextFocusedWidget: js.Any = js.native
+trait ts_ccuiWebView extends ts_ccuiWidget {
 }
 
 @js.native
 @JSGlobal("ccui.WebView")
-object ccuiWebView extends js.Object {
-  var EventType: js.Object = js.native
+class ccuiWebView extends t_ccuiWebView {
+  var onFocusChanged: js.Dynamic = js.native
+  var onNextFocusedWidget: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("ccui.WebView")
+object ccuiWebView extends ts_ccuiWebView {
+  var EventType: types.DynObject = js.native
 }
 
 

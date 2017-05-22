@@ -1,10 +1,12 @@
 package org.cocos2dxjs.cocos2d.tilemap
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
 @js.native
 trait t_ccTMXTiledMap extends t_ccNode {
@@ -23,15 +25,19 @@ trait t_ccTMXTiledMap extends t_ccNode {
   def setMapOrientation(Var:Float):Unit = js.native
   def getObjectGroups:js.Array[js.Any] = js.native
   def setObjectGroups(Var:js.Array[js.Any]):Unit = js.native
-  def getProperties:js.Object = js.native
-  def setProperties(Var:js.Object):Unit = js.native
+  def getProperties:types.DynObject = js.native
+  def setProperties(Var:types.DynObject):Unit = js.native
   def initWithTMXFile(tmxFile:String):Boolean = js.native
   def initWithXML(tmxString:String, resourcePath:String):Boolean = js.native
   def allLayers:js.Array[js.Any] = js.native
   def getLayer(layerName:String):ccTMXLayer = js.native
   def getObjectGroup(groupName:String):ccTMXObjectGroup = js.native
   def getProperty(propertyName:String):String = js.native
-  def getPropertiesForGID(GID:Float):js.Object = js.native
+  def getPropertiesForGID(GID:Float):types.DynObject = js.native
+}
+
+@js.native
+trait ts_ccTMXTiledMap extends ts_ccNode {
 }
 
 @js.native
@@ -41,7 +47,7 @@ class ccTMXTiledMap(tmxFile:String, resourcePath:String) extends t_ccTMXTiledMap
 
 @js.native
 @JSGlobal("cc.TMXTiledMap")
-object ccTMXTiledMap extends js.Object {
+object ccTMXTiledMap extends ts_ccTMXTiledMap {
 }
 
 

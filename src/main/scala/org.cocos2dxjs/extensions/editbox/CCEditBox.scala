@@ -1,14 +1,21 @@
 package org.cocos2dxjs.extensions.editbox
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
+import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
 @js.native
 trait t_ccEditBoxDelegate extends t_ccClass {
+}
+
+@js.native
+trait ts_ccEditBoxDelegate extends ts_ccClass {
 }
 
 @js.native
@@ -18,7 +25,7 @@ class ccEditBoxDelegate extends t_ccEditBoxDelegate {
 
 @js.native
 @JSGlobal("cc.EditBoxDelegate")
-object ccEditBoxDelegate extends js.Object {
+object ccEditBoxDelegate extends ts_ccEditBoxDelegate {
 }
 
 @js.native
@@ -35,9 +42,13 @@ trait t_ccEditBox extends t_ccNode {
   var placeHolderFontSize: Float = js.native
   var placeHolderFontColor: ccColor = js.native
   var inputFlag: Float = js.native
-  var delegate: js.Object = js.native
+  var delegate: types.DynObject = js.native
   var inputMode: Float = js.native
   var returnType: Float = js.native
+}
+
+@js.native
+trait ts_ccEditBox extends ts_ccNode {
 }
 
 @js.native
@@ -47,7 +58,7 @@ class ccEditBox extends t_ccEditBox {
 
 @js.native
 @JSGlobal("cc.EditBox")
-object ccEditBox extends js.Object {
+object ccEditBox extends ts_ccEditBox {
 }
 
 

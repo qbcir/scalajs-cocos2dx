@@ -1,12 +1,14 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
 @js.native
 trait t_ccuiText extends t_ccuiWidget {
@@ -27,13 +29,13 @@ trait t_ccuiText extends t_ccuiWidget {
   def getFontSize:Float = js.native
   def setFontName:String = js.native
   def getFontName:String = js.native
-  def getType:js.Any = js.native
+  def getType:js.Dynamic = js.native
   def setTextAreaSize(size:ccSize):Unit = js.native
   def getTextAreaSize:ccSize = js.native
-  def setTextHorizontalAlignment(alignment:Float):Unit = js.native
-  def getTextHorizontalAlignment:js.Any = js.native
-  def setTextVerticalAlignment(alignment:Float):Unit = js.native
-  def getTextVerticalAlignment:js.Any = js.native
+  def setTextHorizontalAlignment(alignment:Float | Float | Float):Unit = js.native
+  def getTextHorizontalAlignment:js.Dynamic | js.Dynamic | js.Dynamic = js.native
+  def setTextVerticalAlignment(alignment:Float | Float | Float):Unit = js.native
+  def getTextVerticalAlignment:js.Dynamic | js.Dynamic | js.Dynamic = js.native
   def setTouchScaleChangeEnabled(enable:Boolean):Unit = js.native
   def isTouchScaleChangeEnabled:Boolean = js.native
   override def getVirtualRendererSize:ccSize = js.native
@@ -41,22 +43,26 @@ trait t_ccuiText extends t_ccuiWidget {
   override def getDescription:String = js.native
   def enableShadow(shadowColor:ccColor, offset:ccSize, blurRadius:Float):Unit = js.native
   def enableOutline(outlineColor:ccColor, outlineSize:ccSize):Unit = js.native
-  def enableGlow(glowColor:js.Any):Unit = js.native
+  def enableGlow(glowColor:js.Dynamic):Unit = js.native
   def disableEffect():Unit = js.native
+}
+
+@js.native
+trait ts_ccuiText extends ts_ccuiWidget {
 }
 
 @js.native
 @JSGlobal("ccui.Text")
 class ccuiText(textContent:String, fontName:String, fontSize:Float) extends t_ccuiText {
-  var onFocusChanged: js.Any = js.native
-  var onNextFocusedWidget: js.Any = js.native
+  var onFocusChanged: js.Dynamic = js.native
+  var onNextFocusedWidget: js.Dynamic = js.native
 }
 
 @js.native
 @JSGlobal("ccui.Text")
-object ccuiText extends js.Object {
+object ccuiText extends ts_ccuiText {
   val RENDERER_ZORDER: Float = js.native
-  var Type: js.Any = js.native
+  var Type: js.Dynamic = js.native
 }
 
 

@@ -1,8 +1,9 @@
 package org.cocos2dxjs.extensions.cocostudio.armature.animation
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.cocostudio.armature.ccsBone
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsMovementBoneData
 import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsFrameData
@@ -22,7 +23,11 @@ trait t_ccsTween extends t_ccsProcessBase {
   def updateFrameData(currentPercent:Float):Float = js.native
   def setAnimation(animation:ccsArmatureAnimation):Unit = js.native
   def getAnimation:ccsArmatureAnimation = js.native
-  def setMovementBoneData(data:js.Any):Unit = js.native
+  def setMovementBoneData(data:js.Dynamic):Unit = js.native
+}
+
+@js.native
+trait ts_ccsTween extends ts_ccsProcessBase {
 }
 
 @js.native
@@ -32,7 +37,7 @@ class ccsTween(The:ccsBone) extends t_ccsTween {
 
 @js.native
 @JSGlobal("ccs.Tween")
-object ccsTween extends js.Object {
+object ccsTween extends ts_ccsTween {
 }
 
 

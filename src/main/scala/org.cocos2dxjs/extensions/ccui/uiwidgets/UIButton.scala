@@ -1,14 +1,16 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
 import org.cocos2dxjs.cocos2d.core.labelttf.ccLabelTTF
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
+import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
 @js.native
 trait t_ccuiButton extends t_ccuiWidget {
@@ -22,10 +24,10 @@ trait t_ccuiButton extends t_ccuiWidget {
   def isScale9Enabled:Boolean = js.native
   override def ignoreContentAdaptWithSize(ignore:Boolean):Unit = js.native
   override def getVirtualRendererSize:ccSize = js.native
-  def loadTextures(normal:String, selected:String, disabled:String, texType:Float):Unit = js.native
-  def loadTextureNormal(normal:String, texType:Float):Unit = js.native
-  def loadTexturePressed(selected:String, texType:Float):Unit = js.native
-  def loadTextureDisabled(disabled:String, texType:Float):Unit = js.native
+  def loadTextures(normal:String, selected:String, disabled:String, texType:Float | Float):Unit = js.native
+  def loadTextureNormal(normal:String, texType:Float | Float):Unit = js.native
+  def loadTexturePressed(selected:String, texType:Float | Float):Unit = js.native
+  def loadTextureDisabled(disabled:String, texType:Float | Float):Unit = js.native
   def setCapInsets(capInsets:ccRect):Unit = js.native
   def setCapInsetsNormalRenderer(capInsets:ccRect):Unit = js.native
   def getCapInsetsNormalRenderer:ccRect = js.native
@@ -41,7 +43,7 @@ trait t_ccuiButton extends t_ccuiWidget {
   def getTitleColor:ccColor = js.native
   def setTitleFontSize(size:ccSize):Unit = js.native
   def getTitleFontSize:Float = js.native
-  def setZoomScale(scale:js.Any):Unit = js.native
+  def setZoomScale(scale:js.Dynamic):Unit = js.native
   def getZoomScale:Float = js.native
   def getNormalTextureSize:ccSize = js.native
   def setTitleFontName(fontName:String):Unit = js.native
@@ -51,21 +53,25 @@ trait t_ccuiButton extends t_ccuiWidget {
 }
 
 @js.native
-@JSGlobal("ccui.Button")
-class ccuiButton(normalImage:String, selectedImage:String, disableImage:String, texType:Float) extends t_ccuiButton {
-  var onFocusChanged: js.Any = js.native
-  var onNextFocusedWidget: js.Any = js.native
+trait ts_ccuiButton extends ts_ccuiWidget {
 }
 
 @js.native
 @JSGlobal("ccui.Button")
-object ccuiButton extends js.Object {
+class ccuiButton(normalImage:String, selectedImage:String, disableImage:String, texType:Float) extends t_ccuiButton {
+  var onFocusChanged: js.Dynamic = js.native
+  var onNextFocusedWidget: js.Dynamic = js.native
+}
+
+@js.native
+@JSGlobal("ccui.Button")
+object ccuiButton extends ts_ccuiButton {
   val NORMAL_RENDERER_ZORDER: Float = js.native
   val PRESSED_RENDERER_ZORDER: Float = js.native
   val DISABLED_RENDERER_ZORDER: Float = js.native
   val TITLE_RENDERER_ZORDER: Float = js.native
   val ZOOM_ACTION_TIME_STEP: Float = js.native
-  var SYSTEM: js.Any = js.native
+  var SYSTEM: js.Dynamic = js.native
 }
 
 

@@ -1,18 +1,19 @@
 package org.cocos2dxjs.extensions.spine
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 
 @js.native
 trait t_spSkeletonAnimation extends t_spSkeleton {
   override def init:Boolean = js.native
-  def setAnimationStateData(stateData:js.Any):Unit = js.native
+  def setAnimationStateData(stateData:js.Dynamic):Unit = js.native
   def setMix(fromAnimation:String, toAnimation:String, duration:Float):Unit = js.native
-  def setAnimationListener(target:js.Object, callback:js.Function):Unit = js.native
-  def setAnimation(trackIndex:Float, name:String, loop:Boolean):js.Any = js.native
-  def addAnimation(trackIndex:Float, name:String, loop:Boolean, delay:Float):js.Any = js.native
-  def getCurrent(trackIndex:js.Any):js.Any = js.native
+  def setAnimationListener(target:types.DynObject, callback:js.Function):Unit = js.native
+  def setAnimation(trackIndex:Float, name:String, loop:Boolean):js.Dynamic | js.Dynamic = js.native
+  def addAnimation(trackIndex:Float, name:String, loop:Boolean, delay:Float):js.Dynamic | js.Dynamic = js.native
+  def getCurrent(trackIndex:js.Dynamic):js.Dynamic | js.Dynamic = js.native
   def clearTracks():Unit = js.native
   def clearTrack(trackIndex:Float):Unit = js.native
   override def update(dt:Float):Unit = js.native
@@ -23,13 +24,17 @@ trait t_spSkeletonAnimation extends t_spSkeleton {
 }
 
 @js.native
+trait ts_spSkeletonAnimation extends ts_spSkeleton {
+}
+
+@js.native
 @JSGlobal("sp.SkeletonAnimation")
 class spSkeletonAnimation extends t_spSkeletonAnimation {
 }
 
 @js.native
 @JSGlobal("sp.SkeletonAnimation")
-object spSkeletonAnimation extends js.Object {
+object spSkeletonAnimation extends ts_spSkeletonAnimation {
 }
 
 

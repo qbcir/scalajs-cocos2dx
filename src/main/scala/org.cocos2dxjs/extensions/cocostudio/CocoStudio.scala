@@ -1,11 +1,16 @@
 package org.cocos2dxjs.extensions.cocostudio
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 
 @js.native
 trait t_ccsClass extends js.Object {
+}
+
+@js.native
+trait ts_ccsClass extends js.Object {
 }
 
 @js.native
@@ -15,11 +20,15 @@ class ccsClass extends t_ccsClass {
 
 @js.native
 @JSGlobal("ccs.Class")
-object ccsClass extends js.Object {
+object ccsClass extends ts_ccsClass {
 }
 
 @js.native
 trait t_ccsNode extends t_ccsClass {
+}
+
+@js.native
+trait ts_ccsNode extends ts_ccsClass {
 }
 
 @js.native
@@ -29,11 +38,15 @@ class ccsNode extends t_ccsNode {
 
 @js.native
 @JSGlobal("ccs.Node")
-object ccsNode extends js.Object {
+object ccsNode extends ts_ccsNode {
 }
 
 @js.native
 trait t_ccsSprite extends t_ccsClass {
+}
+
+@js.native
+trait ts_ccsSprite extends ts_ccsClass {
 }
 
 @js.native
@@ -43,11 +56,15 @@ class ccsSprite extends t_ccsSprite {
 
 @js.native
 @JSGlobal("ccs.Sprite")
-object ccsSprite extends js.Object {
+object ccsSprite extends ts_ccsSprite {
 }
 
 @js.native
 trait t_ccsComponent extends t_ccsClass {
+}
+
+@js.native
+trait ts_ccsComponent extends ts_ccsClass {
 }
 
 @js.native
@@ -57,7 +74,7 @@ class ccsComponent extends t_ccsComponent {
 
 @js.native
 @JSGlobal("ccs.Component")
-object ccsComponent extends js.Object {
+object ccsComponent extends ts_ccsComponent {
 }
 
 
@@ -72,8 +89,8 @@ object ccs extends js.Object {
   val FRAME_TYPE_TINT: Float = js.native
   val FRAME_TYPE_FADE: Float = js.native
   val FRAME_TYPE_MAX: Float = js.native
-  val FrameEaseType: js.Object = js.native
-  val MovementEventType: js.Object = js.native
+  val FrameEaseType: types.DynObject = js.native
+  val MovementEventType: types.DynObject = js.native
   val ANIMATION_TYPE_SINGLE_FRAME: Float = js.native
   val ANIMATION_TYPE_NO_LOOP: Float = js.native
   val ANIMATION_TYPE_TO_LOOP_FRONT: Float = js.native
@@ -98,14 +115,14 @@ object ccs extends js.Object {
   val DISPLAY_TYPE_SPRITE: Float = js.native
   val DISPLAY_TYPE_ARMATURE: Float = js.native
   val DISPLAY_TYPE_PARTICLE: Float = js.native
-  var displayFactory: js.Any = js.native
-  var PT_RATIO: js.Any = js.native
-  var VERSION_COMBINED: js.Any = js.native
-  var CONST_VERSION: js.Any = js.native
-  var TweenType: js.Object = js.native
+  var displayFactory: js.Dynamic = js.native
+  var PT_RATIO: js.Dynamic = js.native
+  var VERSION_COMBINED: js.Dynamic = js.native
+  var CONST_VERSION: js.Dynamic = js.native
+  var TweenType: types.DynObject = js.native
   def armatureVersion:String = js.native
-  def load(file:String, path:String):js.Object = js.native
-  def loadWithVisibleSize(file:String, path:String):js.Object = js.native
+  def load(file:String, path:String):types.DynObject = js.native
+  def loadWithVisibleSize(file:String, path:String):types.DynObject = js.native
   def sendEvent(event:Float):Unit = js.native
   def registerTriggerClass(className:String, func:js.Function):Unit = js.native
 }

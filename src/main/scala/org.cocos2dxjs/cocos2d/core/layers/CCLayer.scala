@@ -1,9 +1,11 @@
 package org.cocos2dxjs.cocos2d.core.layers
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 import org.cocos2dxjs.cocos2d.core.platform.ccColor
 import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
@@ -17,20 +19,28 @@ trait t_ccLayer extends t_ccNode {
 }
 
 @js.native
+trait ts_ccLayer extends ts_ccNode {
+}
+
+@js.native
 @JSGlobal("cc.Layer")
 class ccLayer extends t_ccLayer {
 }
 
 @js.native
 @JSGlobal("cc.Layer")
-object ccLayer extends js.Object {
+object ccLayer extends ts_ccLayer {
 }
 
 @js.native
 trait t_ccLayerColor extends t_ccLayer {
   def getBlendFunc:ccBlendFunc = js.native
   def init(color:ccColor, width:Float, height:Float):Boolean = js.native
-  def setBlendFunc(src:Float, dst:Float):Unit = js.native
+  def setBlendFunc(src:Float | ccBlendFunc, dst:Float):Unit = js.native
+}
+
+@js.native
+trait ts_ccLayerColor extends ts_ccLayer {
 }
 
 @js.native
@@ -40,7 +50,7 @@ class ccLayerColor(color:ccColor, width:Float, height:Float) extends t_ccLayerCo
 
 @js.native
 @JSGlobal("cc.LayerColor")
-object ccLayerColor extends js.Object {
+object ccLayerColor extends ts_ccLayerColor {
 }
 
 @js.native
@@ -51,8 +61,8 @@ trait t_ccLayerGradient extends t_ccLayerColor {
   var endOpacity: Float = js.native
   var vector: Float = js.native
   var compressedInterpolation: Float = js.native
-  def init(start:ccColor, end:ccColor, v:ccPoint, stops:js.Array[js.Any]):Boolean = js.native
-  override def setContentSize(size:ccSize, height:Float):Unit = js.native
+  def init(start:ccColor, end:ccColor, v:ccPoint | js.Dynamic, stops:js.Array[js.Any] | js.Dynamic):Boolean = js.native
+  override def setContentSize(size:ccSize | Float, height:Float):Unit = js.native
   def getStartColor:ccColor = js.native
   def setStartColor(color:ccColor):Unit = js.native
   def setEndColor(color:ccColor):Unit = js.native
@@ -66,17 +76,21 @@ trait t_ccLayerGradient extends t_ccLayerColor {
   def isCompressedInterpolation:Boolean = js.native
   def setCompressedInterpolation(compress:Boolean):Unit = js.native
   def getColorStops:js.Array[js.Any] = js.native
-  def setColorStops(colorStops:js.Any):Unit = js.native
+  def setColorStops(colorStops:js.Dynamic):Unit = js.native
+}
+
+@js.native
+trait ts_ccLayerGradient extends ts_ccLayerColor {
 }
 
 @js.native
 @JSGlobal("cc.LayerGradient")
-class ccLayerGradient(start:ccColor, end:ccColor, v:ccPoint, stops:js.Array[js.Any]) extends t_ccLayerGradient {
+class ccLayerGradient(start:ccColor, end:ccColor, v:ccPoint, stops:js.Array[js.Any] | js.Dynamic) extends t_ccLayerGradient {
 }
 
 @js.native
 @JSGlobal("cc.LayerGradient")
-object ccLayerGradient extends js.Object {
+object ccLayerGradient extends ts_ccLayerGradient {
 }
 
 @js.native
@@ -88,13 +102,17 @@ trait t_ccLayerMultiplex extends t_ccLayer {
 }
 
 @js.native
+trait ts_ccLayerMultiplex extends ts_ccLayer {
+}
+
+@js.native
 @JSGlobal("cc.LayerMultiplex")
 class ccLayerMultiplex(layers:js.Array[js.Any]) extends t_ccLayerMultiplex {
 }
 
 @js.native
 @JSGlobal("cc.LayerMultiplex")
-object ccLayerMultiplex extends js.Object {
+object ccLayerMultiplex extends ts_ccLayerMultiplex {
 }
 
 

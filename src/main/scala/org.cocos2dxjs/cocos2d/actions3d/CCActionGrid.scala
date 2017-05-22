@@ -1,18 +1,21 @@
 package org.cocos2dxjs.cocos2d.actions3d
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
 import org.cocos2dxjs.cocos2d.actions.ccAction
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.effects.ccGridBase
 import org.cocos2dxjs.cocos2d.actions.t_ccActionInterval
+import org.cocos2dxjs.cocos2d.actions.ts_ccActionInterval
 import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 import org.cocos2dxjs.cocos2d.core.platform.ccVertex3F
 import org.cocos2dxjs.cocos2d.core.platform.ccQuad3
 import org.cocos2dxjs.cocos2d.actions.t_ccActionInstant
+import org.cocos2dxjs.cocos2d.actions.ts_ccActionInstant
 
 @js.native
 trait t_ccGridAction extends t_ccActionInterval {
@@ -24,13 +27,17 @@ trait t_ccGridAction extends t_ccActionInterval {
 }
 
 @js.native
+trait ts_ccGridAction extends ts_ccActionInterval {
+}
+
+@js.native
 @JSGlobal("cc.GridAction")
 class ccGridAction(duration:Float, gridSize:ccSize) extends t_ccGridAction {
 }
 
 @js.native
 @JSGlobal("cc.GridAction")
-object ccGridAction extends js.Object {
+object ccGridAction extends ts_ccGridAction {
 }
 
 @js.native
@@ -45,13 +52,17 @@ trait t_ccGrid3DAction extends t_ccGridAction {
 }
 
 @js.native
+trait ts_ccGrid3DAction extends ts_ccGridAction {
+}
+
+@js.native
 @JSGlobal("cc.Grid3DAction")
 class ccGrid3DAction extends t_ccGrid3DAction {
 }
 
 @js.native
 @JSGlobal("cc.Grid3DAction")
-object ccGrid3DAction extends js.Object {
+object ccGrid3DAction extends ts_ccGrid3DAction {
 }
 
 @js.native
@@ -65,18 +76,26 @@ trait t_ccTiledGrid3DAction extends t_ccGridAction {
 }
 
 @js.native
+trait ts_ccTiledGrid3DAction extends ts_ccGridAction {
+}
+
+@js.native
 @JSGlobal("cc.TiledGrid3DAction")
 class ccTiledGrid3DAction extends t_ccTiledGrid3DAction {
 }
 
 @js.native
 @JSGlobal("cc.TiledGrid3DAction")
-object ccTiledGrid3DAction extends js.Object {
+object ccTiledGrid3DAction extends ts_ccTiledGrid3DAction {
 }
 
 @js.native
 trait t_ccStopGrid extends t_ccActionInstant {
   override def startWithTarget(target:ccNode):Unit = js.native
+}
+
+@js.native
+trait ts_ccStopGrid extends ts_ccActionInstant {
 }
 
 @js.native
@@ -86,7 +105,7 @@ class ccStopGrid extends t_ccStopGrid {
 
 @js.native
 @JSGlobal("cc.StopGrid")
-object ccStopGrid extends js.Object {
+object ccStopGrid extends ts_ccStopGrid {
 }
 
 @js.native
@@ -96,13 +115,17 @@ trait t_ccReuseGrid extends t_ccActionInstant {
 }
 
 @js.native
+trait ts_ccReuseGrid extends ts_ccActionInstant {
+}
+
+@js.native
 @JSGlobal("cc.ReuseGrid")
 class ccReuseGrid(times:Float) extends t_ccReuseGrid {
 }
 
 @js.native
 @JSGlobal("cc.ReuseGrid")
-object ccReuseGrid extends js.Object {
+object ccReuseGrid extends ts_ccReuseGrid {
 }
 
 

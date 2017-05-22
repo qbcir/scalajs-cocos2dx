@@ -1,11 +1,13 @@
 package org.cocos2dxjs.cocos2d.progresstimer
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.actions.ccAction
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.cocos2d.actions.t_ccActionInterval
+import org.cocos2dxjs.cocos2d.actions.ts_ccActionInterval
 
 @js.native
 trait t_ccProgressTo extends t_ccActionInterval {
@@ -17,13 +19,17 @@ trait t_ccProgressTo extends t_ccActionInterval {
 }
 
 @js.native
+trait ts_ccProgressTo extends ts_ccActionInterval {
+}
+
+@js.native
 @JSGlobal("cc.ProgressTo")
 class ccProgressTo(duration:Float, percent:Float) extends t_ccProgressTo {
 }
 
 @js.native
 @JSGlobal("cc.ProgressTo")
-object ccProgressTo extends js.Object {
+object ccProgressTo extends ts_ccProgressTo {
 }
 
 @js.native
@@ -36,13 +42,17 @@ trait t_ccProgressFromTo extends t_ccActionInterval {
 }
 
 @js.native
+trait ts_ccProgressFromTo extends ts_ccActionInterval {
+}
+
+@js.native
 @JSGlobal("cc.ProgressFromTo")
 class ccProgressFromTo(duration:Float, fromPercentage:Float, toPercentage:Float) extends t_ccProgressFromTo {
 }
 
 @js.native
 @JSGlobal("cc.ProgressFromTo")
-object ccProgressFromTo extends js.Object {
+object ccProgressFromTo extends ts_ccProgressFromTo {
 }
 
 

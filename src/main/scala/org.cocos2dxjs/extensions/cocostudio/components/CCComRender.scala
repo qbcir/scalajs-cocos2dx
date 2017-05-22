@@ -1,10 +1,12 @@
 package org.cocos2dxjs.extensions.cocostudio.components
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
 import org.cocos2dxjs.extensions.cocostudio.t_ccsComponent
+import org.cocos2dxjs.extensions.cocostudio.ts_ccsComponent
 
 @js.native
 trait t_ccsComRender extends t_ccsComponent {
@@ -15,13 +17,17 @@ trait t_ccsComRender extends t_ccsComponent {
 }
 
 @js.native
+trait ts_ccsComRender extends ts_ccsComponent {
+}
+
+@js.native
 @JSGlobal("ccs.ComRender")
 class ccsComRender(node:ccNode, comName:String) extends t_ccsComRender {
 }
 
 @js.native
 @JSGlobal("ccs.ComRender")
-object ccsComRender extends js.Object {
+object ccsComRender extends ts_ccsComRender {
 }
 
 

@@ -1,8 +1,9 @@
 package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
+import org.cocos2dxjs.core.{types, Implicits}
 import scala.scalajs.js.annotation._
-
+import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
 
 @js.native
@@ -15,13 +16,17 @@ trait t_ccActionInstant extends t_ccFiniteTimeAction {
 }
 
 @js.native
+trait ts_ccActionInstant extends ts_ccFiniteTimeAction {
+}
+
+@js.native
 @JSGlobal("cc.ActionInstant")
 class ccActionInstant extends t_ccActionInstant {
 }
 
 @js.native
 @JSGlobal("cc.ActionInstant")
-object ccActionInstant extends js.Object {
+object ccActionInstant extends ts_ccActionInstant {
 }
 
 @js.native
@@ -32,13 +37,17 @@ trait t_ccShow extends t_ccActionInstant {
 }
 
 @js.native
+trait ts_ccShow extends ts_ccActionInstant {
+}
+
+@js.native
 @JSGlobal("cc.Show")
 class ccShow extends t_ccShow {
 }
 
 @js.native
 @JSGlobal("cc.Show")
-object ccShow extends js.Object {
+object ccShow extends ts_ccShow {
 }
 
 @js.native
@@ -49,13 +58,17 @@ trait t_ccHide extends t_ccActionInstant {
 }
 
 @js.native
+trait ts_ccHide extends ts_ccActionInstant {
+}
+
+@js.native
 @JSGlobal("cc.Hide")
 class ccHide extends t_ccHide {
 }
 
 @js.native
 @JSGlobal("cc.Hide")
-object ccHide extends js.Object {
+object ccHide extends ts_ccHide {
 }
 
 @js.native
@@ -66,17 +79,25 @@ trait t_ccToggleVisibility extends t_ccActionInstant {
 }
 
 @js.native
+trait ts_ccToggleVisibility extends ts_ccActionInstant {
+}
+
+@js.native
 @JSGlobal("cc.ToggleVisibility")
 class ccToggleVisibility extends t_ccToggleVisibility {
 }
 
 @js.native
 @JSGlobal("cc.ToggleVisibility")
-object ccToggleVisibility extends js.Object {
+object ccToggleVisibility extends ts_ccToggleVisibility {
 }
 
 @js.native
 trait t_ccRemoveSelf extends t_ccActionInstant {
+}
+
+@js.native
+trait ts_ccRemoveSelf extends ts_ccActionInstant {
 }
 
 @js.native
@@ -86,7 +107,7 @@ class ccRemoveSelf(isNeedCleanUp:Boolean) extends t_ccRemoveSelf {
 
 @js.native
 @JSGlobal("cc.RemoveSelf")
-object ccRemoveSelf extends js.Object {
+object ccRemoveSelf extends ts_ccRemoveSelf {
 }
 
 @js.native
@@ -98,13 +119,17 @@ trait t_ccFlipX extends t_ccActionInstant {
 }
 
 @js.native
+trait ts_ccFlipX extends ts_ccActionInstant {
+}
+
+@js.native
 @JSGlobal("cc.FlipX")
 class ccFlipX(flip:Boolean) extends t_ccFlipX {
 }
 
 @js.native
 @JSGlobal("cc.FlipX")
-object ccFlipX extends js.Object {
+object ccFlipX extends ts_ccFlipX {
 }
 
 @js.native
@@ -116,13 +141,17 @@ trait t_ccFlipY extends t_ccActionInstant {
 }
 
 @js.native
+trait ts_ccFlipY extends ts_ccActionInstant {
+}
+
+@js.native
 @JSGlobal("cc.FlipY")
 class ccFlipY(flip:Boolean) extends t_ccFlipY {
 }
 
 @js.native
 @JSGlobal("cc.FlipY")
-object ccFlipY extends js.Object {
+object ccFlipY extends ts_ccFlipY {
 }
 
 @js.native
@@ -133,33 +162,41 @@ trait t_ccPlace extends t_ccActionInstant {
 }
 
 @js.native
-@JSGlobal("cc.Place")
-class ccPlace(pos:ccPoint, y:Float) extends t_ccPlace {
+trait ts_ccPlace extends ts_ccActionInstant {
 }
 
 @js.native
 @JSGlobal("cc.Place")
-object ccPlace extends js.Object {
+class ccPlace(pos:ccPoint | Float, y:Float) extends t_ccPlace {
+}
+
+@js.native
+@JSGlobal("cc.Place")
+object ccPlace extends ts_ccPlace {
 }
 
 @js.native
 trait t_ccCallFunc extends t_ccActionInstant {
-  def initWithFunction(selector:js.Function, selectorTarget:js.Object, data:js.Any):Boolean = js.native
+  def initWithFunction(selector:js.Function, selectorTarget:types.DynObject | js.Dynamic, data:js.Dynamic | js.Dynamic):Boolean = js.native
   def execute():Unit = js.native
   override def update(dt:Float):Unit = js.native
-  def getTargetCallback:js.Object = js.native
-  def setTargetCallback(sel:js.Object):Unit = js.native
+  def getTargetCallback:types.DynObject = js.native
+  def setTargetCallback(sel:types.DynObject):Unit = js.native
   override def clone:ccAction = js.native
 }
 
 @js.native
-@JSGlobal("cc.CallFunc")
-class ccCallFunc(selector:js.Function, selectorTarget:js.Object, data:js.Any) extends t_ccCallFunc {
+trait ts_ccCallFunc extends ts_ccActionInstant {
 }
 
 @js.native
 @JSGlobal("cc.CallFunc")
-object ccCallFunc extends js.Object {
+class ccCallFunc(selector:js.Function, selectorTarget:types.DynObject | js.Dynamic, data:js.Dynamic | js.Dynamic) extends t_ccCallFunc {
+}
+
+@js.native
+@JSGlobal("cc.CallFunc")
+object ccCallFunc extends ts_ccCallFunc {
 }
 
 
