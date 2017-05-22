@@ -1,10 +1,10 @@
 package org.cocos2dxjs.extensions.cocostudio.trigger
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.extensions.cocostudio.armature.ccsArmature
+import org.cocos2dxjs.extensions.cocostudio.armature.{ccsArmature, t_ccsArmature}
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.extensions.cocostudio.ts_ccsClass
 
@@ -22,9 +22,9 @@ trait ts_ccstriggerManager extends js.Object {
   def remove(event:js.Dynamic, Obj:js.Dynamic):Boolean = js.native
   def removeTriggerObj(id:Float):Boolean = js.native
   def isEmpty:Boolean = js.native
-  def addArmatureMovementCallBack(armature:ccsArmature, callFunc:js.Function, target:types.DynObject):Unit = js.native
-  def removeArmatureMovementCallBack(armature:ccsArmature, target:types.DynObject, callFunc:js.Function):Unit = js.native
-  def removeArmatureAllMovementCallBack(armature:ccsArmature):Unit = js.native
+  def addArmatureMovementCallBack(armature:t_ccsArmature, callFunc:js.Function, target:types.DynObject):Unit = js.native
+  def removeArmatureMovementCallBack(armature:t_ccsArmature, target:types.DynObject, callFunc:js.Function):Unit = js.native
+  def removeArmatureAllMovementCallBack(armature:t_ccsArmature):Unit = js.native
   def removeAllArmatureMovementCallBack():Unit = js.native
   def version:String = js.native
 }
@@ -41,7 +41,7 @@ object ccstriggerManager extends ts_ccstriggerManager {
 
 @js.native
 trait t_ccsArmatureMovementDispatcher extends t_ccsClass {
-  def animationEvent(armature:ccsArmature, movementType:Float, movementID:String):Unit = js.native
+  def animationEvent(armature:t_ccsArmature, movementType:Float, movementID:String):Unit = js.native
   def addAnimationEventCallBack(callFunc:js.Function, target:types.DynObject | js.Dynamic):Unit = js.native
   def removeAnimationEventCallBack(callFunc:js.Function, target:types.DynObject | js.Dynamic):Unit = js.native
 }

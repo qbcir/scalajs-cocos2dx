@@ -1,24 +1,24 @@
 package org.cocos2dxjs.cocos2d.textinput
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
-import org.cocos2dxjs.cocos2d.core.platform.ccColor
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
+import org.cocos2dxjs.cocos2d.core.platform.{ccColor, t_ccColor}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
 import org.cocos2dxjs.cocos2d.core.labelttf.t_ccLabelTTF
 import org.cocos2dxjs.cocos2d.core.labelttf.ts_ccLabelTTF
 
 @js.native
 trait t_ccTextFieldDelegate extends t_ccClass {
-  def onTextFieldAttachWithIME(sender:ccTextFieldTTF):Boolean = js.native
-  def onTextFieldDetachWithIME(sender:ccTextFieldTTF):Boolean = js.native
-  def onTextFieldInsertText(sender:ccTextFieldTTF, text:String, len:Float):Boolean = js.native
-  def onTextFieldDeleteBackward(sender:ccTextFieldTTF, delText:String, len:Float):Boolean = js.native
-  def onDraw(sender:ccTextFieldTTF):Boolean = js.native
+  def onTextFieldAttachWithIME(sender:t_ccTextFieldTTF):Boolean = js.native
+  def onTextFieldDetachWithIME(sender:t_ccTextFieldTTF):Boolean = js.native
+  def onTextFieldInsertText(sender:t_ccTextFieldTTF, text:String, len:Float):Boolean = js.native
+  def onTextFieldDeleteBackward(sender:t_ccTextFieldTTF, delText:String, len:Float):Boolean = js.native
+  def onDraw(sender:t_ccTextFieldTTF):Boolean = js.native
 }
 
 @js.native
@@ -42,12 +42,12 @@ trait t_ccTextFieldTTF extends t_ccLabelTTF {
   var placeHolder: String = js.native
   var colorSpaceHolder: ccColor = js.native
   def getDelegate:ccNode = js.native
-  def setDelegate(value:ccNode):Unit = js.native
+  def setDelegate(value:t_ccNode):Unit = js.native
   def getCharCount:Float = js.native
   def getColorSpaceHolder:ccColor = js.native
-  def setColorSpaceHolder(value:ccColor):Unit = js.native
-  def setTextColor(textColor:ccColor):Unit = js.native
-  def initWithPlaceHolder(placeholder:String, dimensions:ccSize, alignment:Float, fontName:String, fontSize:Float):Boolean = js.native
+  def setColorSpaceHolder(value:t_ccColor):Unit = js.native
+  def setTextColor(textColor:t_ccColor):Unit = js.native
+  def initWithPlaceHolder(placeholder:String, dimensions:t_ccSize, alignment:Float, fontName:String, fontSize:Float):Boolean = js.native
   override def setString(text:String):Unit = js.native
   override def getString:String = js.native
   def setPlaceHolder(text:String):Unit = js.native
@@ -73,7 +73,7 @@ trait ts_ccTextFieldTTF extends ts_ccLabelTTF {
 
 @js.native
 @JSGlobal("cc.TextFieldTTF")
-class ccTextFieldTTF(placeholder:String, dimensions:ccSize, alignment:Float, fontName:String, fontSize:Float) extends t_ccTextFieldTTF {
+class ccTextFieldTTF(placeholder:String, dimensions:t_ccSize, alignment:Float, fontName:String, fontSize:Float) extends t_ccTextFieldTTF {
 }
 
 @js.native

@@ -1,12 +1,12 @@
 package org.cocos2dxjs.cocos2d.core.platform
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccRect, t_ccRect}
 
 @js.native
 trait t_ccEGLView extends js.Object {
@@ -34,10 +34,10 @@ trait t_ccEGLView extends js.Object {
   def getVisibleOriginInPixel:ccPoint = js.native
   def canSetContentScaleFactor:Boolean = js.native
   def getResolutionPolicy:ccResolutionPolicy = js.native
-  def setResolutionPolicy(resolutionPolicy:ccResolutionPolicy | Float):Unit = js.native
-  def setDesignResolutionSize(width:Float, height:Float, resolutionPolicy:ccResolutionPolicy | Float):Unit = js.native
+  def setResolutionPolicy(resolutionPolicy:t_ccResolutionPolicy | Float):Unit = js.native
+  def setDesignResolutionSize(width:Float, height:Float, resolutionPolicy:t_ccResolutionPolicy | Float):Unit = js.native
   def getDesignResolutionSize:ccSize = js.native
-  def setRealPixelResolution(width:Float, height:Float, resolutionPolicy:ccResolutionPolicy | Float):Unit = js.native
+  def setRealPixelResolution(width:Float, height:Float, resolutionPolicy:t_ccResolutionPolicy | Float):Unit = js.native
   def setViewPortInPoints(x:Float, y:Float, w:Float, h:Float):Unit = js.native
   def setScissorInPoints(x:Float, y:Float, w:Float, h:Float):Unit = js.native
   def isScissorEnabled:Boolean = js.native
@@ -68,9 +68,9 @@ object ccEGLView extends ts_ccEGLView {
 
 @js.native
 trait t_ccContainerStrategy extends t_ccClass {
-  def preApply(The:ccEGLView):Unit = js.native
-  def apply(view:ccEGLView, designedResolution:ccSize):Unit = js.native
-  def postApply(view:ccEGLView):Unit = js.native
+  def preApply(The:t_ccEGLView):Unit = js.native
+  def apply(view:t_ccEGLView, designedResolution:t_ccSize):Unit = js.native
+  def postApply(view:t_ccEGLView):Unit = js.native
 }
 
 @js.native
@@ -89,9 +89,9 @@ object ccContainerStrategy extends ts_ccContainerStrategy {
 
 @js.native
 trait t_ccContentStrategy extends t_ccClass {
-  def preApply(view:ccEGLView):Unit = js.native
-  def apply(view:ccEGLView, designedResolution:ccSize):types.DynObject = js.native
-  def postApply(view:ccEGLView):Unit = js.native
+  def preApply(view:t_ccEGLView):Unit = js.native
+  def apply(view:t_ccEGLView, designedResolution:t_ccSize):types.DynObject = js.native
+  def postApply(view:t_ccEGLView):Unit = js.native
 }
 
 @js.native
@@ -110,11 +110,11 @@ object ccContentStrategy extends ts_ccContentStrategy {
 
 @js.native
 trait t_ccResolutionPolicy extends t_ccClass {
-  def preApply(view:ccEGLView):Unit = js.native
-  def apply(view:ccEGLView, designedResolution:ccSize):types.DynObject = js.native
-  def postApply(view:ccEGLView):Unit = js.native
-  def setContainerStrategy(containerStg:ccContainerStrategy):Unit = js.native
-  def setContentStrategy(contentStg:ccContentStrategy):Unit = js.native
+  def preApply(view:t_ccEGLView):Unit = js.native
+  def apply(view:t_ccEGLView, designedResolution:t_ccSize):types.DynObject = js.native
+  def postApply(view:t_ccEGLView):Unit = js.native
+  def setContainerStrategy(containerStg:t_ccContainerStrategy):Unit = js.native
+  def setContentStrategy(contentStg:t_ccContentStrategy):Unit = js.native
 }
 
 @js.native
@@ -123,7 +123,7 @@ trait ts_ccResolutionPolicy extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.ResolutionPolicy")
-class ccResolutionPolicy(containerStg:ccContainerStrategy, contentStg:ccContentStrategy) extends t_ccResolutionPolicy {
+class ccResolutionPolicy(containerStg:t_ccContainerStrategy, contentStg:t_ccContentStrategy) extends t_ccResolutionPolicy {
 }
 
 @js.native

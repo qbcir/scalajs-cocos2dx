@@ -1,14 +1,14 @@
 package org.cocos2dxjs.extensions.gui.scrollview
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
 
 @js.native
 trait t_ccTableViewCell extends t_ccNode {
@@ -33,9 +33,9 @@ object ccTableViewCell extends ts_ccTableViewCell {
 
 @js.native
 trait t_ccTableViewDelegate extends t_ccClass {
-  def tableCellTouched(table:ccTableView, cell:ccTableViewCell):Unit = js.native
-  def tableCellHighlight(table:ccTableView, cell:ccTableViewCell):Unit = js.native
-  def tableCellUnhighlight(table:ccTableView, cell:ccTableViewCell):Unit = js.native
+  def tableCellTouched(table:t_ccTableView, cell:t_ccTableViewCell):Unit = js.native
+  def tableCellHighlight(table:t_ccTableView, cell:t_ccTableViewCell):Unit = js.native
+  def tableCellUnhighlight(table:t_ccTableView, cell:t_ccTableViewCell):Unit = js.native
   def tableCellWillRecycle(table:js.Dynamic, cell:js.Dynamic):Unit = js.native
 }
 
@@ -55,10 +55,10 @@ object ccTableViewDelegate extends ts_ccTableViewDelegate {
 
 @js.native
 trait t_ccTableViewDataSource extends t_ccClass {
-  def tableCellSizeForIndex(table:ccTableView, idx:Float):ccSize = js.native
-  def cellSizeForTable(table:ccTableView):ccSize = js.native
-  def tableCellAtIndex(table:ccTableView, idx:js.Dynamic):ccTableView = js.native
-  def numberOfCellsInTableView(table:ccTableView):Float = js.native
+  def tableCellSizeForIndex(table:t_ccTableView, idx:Float):ccSize = js.native
+  def cellSizeForTable(table:t_ccTableView):ccSize = js.native
+  def tableCellAtIndex(table:t_ccTableView, idx:js.Dynamic):ccTableView = js.native
+  def numberOfCellsInTableView(table:t_ccTableView):Float = js.native
 }
 
 @js.native

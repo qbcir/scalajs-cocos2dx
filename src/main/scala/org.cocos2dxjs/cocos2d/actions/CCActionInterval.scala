@@ -1,24 +1,24 @@
 package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.sprites.ccAnimation
-import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.cocos2d.core.sprites.{ccAnimation, t_ccAnimation}
+import org.cocos2dxjs.cocos2d.core.sprites.{ccSprite, t_ccSprite}
 
 @js.native
 trait t_ccActionInterval extends t_ccFiniteTimeAction {
   def getElapsed:Float = js.native
   def initWithDuration(d:Float):Boolean = js.native
   override def isDone:Boolean = js.native
-  def _cloneDecoration(action:ccAction):Unit = js.native
+  def _cloneDecoration(action:t_ccAction):Unit = js.native
   override def clone:ccAction = js.native
   def easing(easeObj:types.DynObject):ccActionInterval = js.native
   override def step(dt:Float):Unit = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def reverse:ccAction = js.native
   def setAmplitudeRate(amp:Float):Unit = js.native
   def getAmplitudeRate:Float = js.native
@@ -45,9 +45,9 @@ object ccActionInterval extends ts_ccActionInterval {
 
 @js.native
 trait t_ccSequence extends t_ccActionInterval {
-  def initWithTwoActions(actionOne:ccFiniteTimeAction, actionTwo:ccFiniteTimeAction):Boolean = js.native
+  def initWithTwoActions(actionOne:t_ccFiniteTimeAction, actionTwo:t_ccFiniteTimeAction):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def stop():Unit = js.native
   override def update(dt:Float):Unit = js.native
   override def reverse:ccAction = js.native
@@ -55,12 +55,12 @@ trait t_ccSequence extends t_ccActionInterval {
 
 @js.native
 trait ts_ccSequence extends ts_ccActionInterval {
-  def _actionOneTwo(actionOne:ccFiniteTimeAction, actionTwo:ccFiniteTimeAction):ccSequence = js.native
+  def _actionOneTwo(actionOne:t_ccFiniteTimeAction, actionTwo:t_ccFiniteTimeAction):ccSequence = js.native
 }
 
 @js.native
 @JSGlobal("cc.Sequence")
-class ccSequence(tempArray:js.Array[js.Any] | ccFiniteTimeAction) extends t_ccSequence {
+class ccSequence(tempArray:js.Array[js.Any] | t_ccFiniteTimeAction) extends t_ccSequence {
 }
 
 @js.native
@@ -70,14 +70,14 @@ object ccSequence extends ts_ccSequence {
 
 @js.native
 trait t_ccRepeat extends t_ccActionInterval {
-  def initWithAction(action:ccFiniteTimeAction, times:Float):Boolean = js.native
+  def initWithAction(action:t_ccFiniteTimeAction, times:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def stop():Unit = js.native
   override def update(dt:Float):Unit = js.native
   override def isDone:Boolean = js.native
   override def reverse:ccAction = js.native
-  def setInnerAction(action:ccFiniteTimeAction):Unit = js.native
+  def setInnerAction(action:t_ccFiniteTimeAction):Unit = js.native
   def getInnerAction:ccFiniteTimeAction = js.native
 }
 
@@ -87,7 +87,7 @@ trait ts_ccRepeat extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.Repeat")
-class ccRepeat(action:ccFiniteTimeAction, times:Float) extends t_ccRepeat {
+class ccRepeat(action:t_ccFiniteTimeAction, times:Float) extends t_ccRepeat {
 }
 
 @js.native
@@ -97,13 +97,13 @@ object ccRepeat extends ts_ccRepeat {
 
 @js.native
 trait t_ccRepeatForever extends t_ccActionInterval {
-  def initWithAction(action:ccActionInterval):Boolean = js.native
+  def initWithAction(action:t_ccActionInterval):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   def step(dt:js.Dynamic):Unit = js.native
   override def isDone:Boolean = js.native
   override def reverse:ccAction = js.native
-  def setInnerAction(action:ccActionInterval):Unit = js.native
+  def setInnerAction(action:t_ccActionInterval):Unit = js.native
   def getInnerAction:ccActionInterval = js.native
 }
 
@@ -113,7 +113,7 @@ trait ts_ccRepeatForever extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.RepeatForever")
-class ccRepeatForever(action:ccFiniteTimeAction) extends t_ccRepeatForever {
+class ccRepeatForever(action:t_ccFiniteTimeAction) extends t_ccRepeatForever {
 }
 
 @js.native
@@ -123,9 +123,9 @@ object ccRepeatForever extends ts_ccRepeatForever {
 
 @js.native
 trait t_ccSpawn extends t_ccActionInterval {
-  def initWithTwoActions(action1:ccFiniteTimeAction, action2:ccFiniteTimeAction):Boolean = js.native
+  def initWithTwoActions(action1:t_ccFiniteTimeAction, action2:t_ccFiniteTimeAction):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def stop():Unit = js.native
   override def update(dt:Float):Unit = js.native
   override def reverse:ccAction = js.native
@@ -133,12 +133,12 @@ trait t_ccSpawn extends t_ccActionInterval {
 
 @js.native
 trait ts_ccSpawn extends ts_ccActionInterval {
-  def _actionOneTwo(action1:ccFiniteTimeAction, action2:ccFiniteTimeAction):ccSpawn = js.native
+  def _actionOneTwo(action1:t_ccFiniteTimeAction, action2:t_ccFiniteTimeAction):ccSpawn = js.native
 }
 
 @js.native
 @JSGlobal("cc.Spawn")
-class ccSpawn(tempArray:js.Array[js.Any] | ccFiniteTimeAction) extends t_ccSpawn {
+class ccSpawn(tempArray:js.Array[js.Any] | t_ccFiniteTimeAction) extends t_ccSpawn {
 }
 
 @js.native
@@ -150,7 +150,7 @@ object ccSpawn extends ts_ccSpawn {
 trait t_ccRotateTo extends t_ccActionInterval {
   def initWithDuration(duration:Float, deltaAngleX:Float, deltaAngleY:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def reverse:ccAction = js.native
   override def update(dt:Float):Unit = js.native
 }
@@ -173,7 +173,7 @@ object ccRotateTo extends ts_ccRotateTo {
 trait t_ccRotateBy extends t_ccActionInterval {
   def initWithDuration(duration:Float, deltaAngleX:Float, deltaAngleY:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def update(dt:Float):Unit = js.native
   override def reverse:ccAction = js.native
 }
@@ -194,9 +194,9 @@ object ccRotateBy extends ts_ccRotateBy {
 
 @js.native
 trait t_ccMoveBy extends t_ccActionInterval {
-  def initWithDuration(duration:Float, position:ccPoint, y:Float):Boolean = js.native
+  def initWithDuration(duration:Float, position:t_ccPoint, y:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def update(dt:Float):Unit = js.native
   override def reverse:ccAction = js.native
 }
@@ -207,7 +207,7 @@ trait ts_ccMoveBy extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.MoveBy")
-class ccMoveBy(duration:Float, deltaPos:ccPoint | Float, deltaY:Float) extends t_ccMoveBy {
+class ccMoveBy(duration:Float, deltaPos:t_ccPoint | Float, deltaY:Float) extends t_ccMoveBy {
 }
 
 @js.native
@@ -217,9 +217,9 @@ object ccMoveBy extends ts_ccMoveBy {
 
 @js.native
 trait t_ccMoveTo extends t_ccMoveBy {
-  override def initWithDuration(duration:Float, position:ccPoint, y:Float):Boolean = js.native
+  override def initWithDuration(duration:Float, position:t_ccPoint, y:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
 }
 
 @js.native
@@ -228,7 +228,7 @@ trait ts_ccMoveTo extends ts_ccMoveBy {
 
 @js.native
 @JSGlobal("cc.MoveTo")
-class ccMoveTo(duration:Float, position:ccPoint | Float, y:Float) extends t_ccMoveTo {
+class ccMoveTo(duration:Float, position:t_ccPoint | Float, y:Float) extends t_ccMoveTo {
 }
 
 @js.native
@@ -240,7 +240,7 @@ object ccMoveTo extends ts_ccMoveTo {
 trait t_ccSkewTo extends t_ccActionInterval {
   def initWithDuration(t:Float, sx:Float, sy:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def update(dt:Float):Unit = js.native
 }
 
@@ -262,7 +262,7 @@ object ccSkewTo extends ts_ccSkewTo {
 trait t_ccSkewBy extends t_ccSkewTo {
   override def initWithDuration(t:Float, deltaSkewX:Float, deltaSkewY:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def reverse:ccAction = js.native
 }
 
@@ -282,9 +282,9 @@ object ccSkewBy extends ts_ccSkewBy {
 
 @js.native
 trait t_ccJumpBy extends t_ccActionInterval {
-  def initWithDuration(duration:Float, position:ccPoint | Float, y:Float, height:Float, jumps:Float):Boolean = js.native
+  def initWithDuration(duration:Float, position:t_ccPoint | Float, y:Float, height:Float, jumps:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def update(dt:Float):Unit = js.native
   override def reverse:ccAction = js.native
 }
@@ -295,7 +295,7 @@ trait ts_ccJumpBy extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.JumpBy")
-class ccJumpBy(duration:Float, position:ccPoint | Float, y:Float, height:Float, jumps:Float) extends t_ccJumpBy {
+class ccJumpBy(duration:Float, position:t_ccPoint | Float, y:Float, height:Float, jumps:Float) extends t_ccJumpBy {
 }
 
 @js.native
@@ -305,8 +305,8 @@ object ccJumpBy extends ts_ccJumpBy {
 
 @js.native
 trait t_ccJumpTo extends t_ccJumpBy {
-  override def initWithDuration(duration:Float, position:ccPoint | Float, y:Float, height:Float, jumps:Float):Boolean = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def initWithDuration(duration:Float, position:t_ccPoint | Float, y:Float, height:Float, jumps:Float):Boolean = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def clone:ccAction = js.native
 }
 
@@ -316,7 +316,7 @@ trait ts_ccJumpTo extends ts_ccJumpBy {
 
 @js.native
 @JSGlobal("cc.JumpTo")
-class ccJumpTo(duration:Float, position:ccPoint | Float, y:Float, height:Float, jumps:Float) extends t_ccJumpTo {
+class ccJumpTo(duration:Float, position:t_ccPoint | Float, y:Float, height:Float, jumps:Float) extends t_ccJumpTo {
 }
 
 @js.native
@@ -328,7 +328,7 @@ object ccJumpTo extends ts_ccJumpTo {
 trait t_ccBezierBy extends t_ccActionInterval {
   def initWithDuration(t:Float, c:js.Array[js.Any]):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def update(dt:Float):Unit = js.native
   override def reverse:ccAction = js.native
 }
@@ -351,7 +351,7 @@ object ccBezierBy extends ts_ccBezierBy {
 trait t_ccBezierTo extends t_ccBezierBy {
   override def initWithDuration(t:Float, c:js.Array[js.Any]):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
 }
 
 @js.native
@@ -372,7 +372,7 @@ object ccBezierTo extends ts_ccBezierTo {
 trait t_ccScaleTo extends t_ccActionInterval {
   def initWithDuration(duration:Float, sx:Float, sy:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def update(dt:Float):Unit = js.native
 }
 
@@ -392,7 +392,7 @@ object ccScaleTo extends ts_ccScaleTo {
 
 @js.native
 trait t_ccScaleBy extends t_ccScaleTo {
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def reverse:ccAction = js.native
   override def clone:ccAction = js.native
 }
@@ -416,7 +416,7 @@ trait t_ccBlink extends t_ccActionInterval {
   def initWithDuration(duration:Float, blinks:Float):Boolean = js.native
   override def clone:ccAction = js.native
   override def update(dt:Float):Unit = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def stop():Unit = js.native
   override def reverse:ccAction = js.native
 }
@@ -440,7 +440,7 @@ trait t_ccFadeTo extends t_ccActionInterval {
   def initWithDuration(duration:Float, opacity:Float):Boolean = js.native
   override def clone:ccAction = js.native
   override def update(time:Float):Unit = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
 }
 
 @js.native
@@ -461,7 +461,7 @@ object ccFadeTo extends ts_ccFadeTo {
 trait t_ccFadeIn extends t_ccFadeTo {
   override def reverse:ccAction = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
 }
 
 @js.native
@@ -502,7 +502,7 @@ object ccFadeOut extends ts_ccFadeOut {
 trait t_ccTintTo extends t_ccActionInterval {
   def initWithDuration(duration:Float, red:Float, green:Float, blue:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def update(dt:Float):Unit = js.native
 }
 
@@ -524,7 +524,7 @@ object ccTintTo extends ts_ccTintTo {
 trait t_ccTintBy extends t_ccActionInterval {
   def initWithDuration(duration:Float, deltaRed:Float, deltaGreen:Float, deltaBlue:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def update(dt:Float):Unit = js.native
   override def reverse:ccAction = js.native
 }
@@ -566,9 +566,9 @@ object ccDelayTime extends ts_ccDelayTime {
 
 @js.native
 trait t_ccReverseTime extends t_ccActionInterval {
-  def initWithAction(action:ccFiniteTimeAction):Boolean = js.native
+  def initWithAction(action:t_ccFiniteTimeAction):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def update(dt:Float):Unit = js.native
   override def reverse:ccAction = js.native
   override def stop():Unit = js.native
@@ -580,7 +580,7 @@ trait ts_ccReverseTime extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.ReverseTime")
-class ccReverseTime(action:ccFiniteTimeAction) extends t_ccReverseTime {
+class ccReverseTime(action:t_ccFiniteTimeAction) extends t_ccReverseTime {
 }
 
 @js.native
@@ -591,11 +591,11 @@ object ccReverseTime extends ts_ccReverseTime {
 @js.native
 trait t_ccAnimate extends t_ccActionInterval {
   def getAnimation:ccAnimation = js.native
-  def setAnimation(animation:ccAnimation):Unit = js.native
+  def setAnimation(animation:t_ccAnimation):Unit = js.native
   def getCurrentFrameIndex:Float = js.native
-  def initWithAnimation(animation:ccAnimation):Boolean = js.native
+  def initWithAnimation(animation:t_ccAnimation):Boolean = js.native
   override def clone:ccAction = js.native
-  def startWithTarget(target:ccSprite):Unit = js.native
+  def startWithTarget(target:t_ccSprite):Unit = js.native
   override def update(dt:Float):Unit = js.native
   override def reverse:ccAction = js.native
   override def stop():Unit = js.native
@@ -607,7 +607,7 @@ trait ts_ccAnimate extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.Animate")
-class ccAnimate(animation:ccAnimation) extends t_ccAnimate {
+class ccAnimate(animation:t_ccAnimation) extends t_ccAnimate {
 }
 
 @js.native
@@ -617,13 +617,13 @@ object ccAnimate extends ts_ccAnimate {
 
 @js.native
 trait t_ccTargetedAction extends t_ccActionInterval {
-  def initWithTarget(target:ccNode, action:ccFiniteTimeAction):Boolean = js.native
+  def initWithTarget(target:t_ccNode, action:t_ccFiniteTimeAction):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def stop():Unit = js.native
   override def update(dt:Float):Unit = js.native
   def getForcedTarget:ccNode = js.native
-  def setForcedTarget(forcedTarget:ccNode):Unit = js.native
+  def setForcedTarget(forcedTarget:t_ccNode):Unit = js.native
 }
 
 @js.native
@@ -632,7 +632,7 @@ trait ts_ccTargetedAction extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.TargetedAction")
-class ccTargetedAction(target:ccNode, action:ccFiniteTimeAction) extends t_ccTargetedAction {
+class ccTargetedAction(target:t_ccNode, action:t_ccFiniteTimeAction) extends t_ccTargetedAction {
 }
 
 @js.native

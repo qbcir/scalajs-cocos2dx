@@ -1,7 +1,7 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget

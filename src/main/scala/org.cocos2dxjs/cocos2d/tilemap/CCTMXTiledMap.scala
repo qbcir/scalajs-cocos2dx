@@ -1,10 +1,10 @@
 package org.cocos2dxjs.cocos2d.tilemap
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
@@ -18,9 +18,9 @@ trait t_ccTMXTiledMap extends t_ccNode {
   var tileWidth: Float = js.native
   var tileHeight: Float = js.native
   def getMapSize:ccSize = js.native
-  def setMapSize(Var:ccSize):Unit = js.native
+  def setMapSize(Var:t_ccSize):Unit = js.native
   def getTileSize:ccSize = js.native
-  def setTileSize(Var:ccSize):Unit = js.native
+  def setTileSize(Var:t_ccSize):Unit = js.native
   def getMapOrientation:Float = js.native
   def setMapOrientation(Var:Float):Unit = js.native
   def getObjectGroups:js.Array[js.Any] = js.native

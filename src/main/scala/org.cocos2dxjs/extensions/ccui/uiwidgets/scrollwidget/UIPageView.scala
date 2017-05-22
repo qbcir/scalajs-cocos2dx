@@ -1,19 +1,19 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
-import org.cocos2dxjs.extensions.ccui.layouts.ccuiLayout
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.platform.ccColor
+import org.cocos2dxjs.extensions.ccui.baseclasses.{ccuiWidget, t_ccuiWidget}
+import org.cocos2dxjs.extensions.ccui.layouts.{ccuiLayout, t_ccuiLayout}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.cocos2d.core.platform.{ccColor, t_ccColor}
 
 @js.native
 trait t_ccuiPageView extends t_ccuiListView {
-  def addPage(page:ccuiWidget):Unit = js.native
-  def insertPage(page:ccuiWidget, idx:Float):Unit = js.native
-  def removePage(page:ccuiWidget):Unit = js.native
+  def addPage(page:t_ccuiWidget):Unit = js.native
+  def insertPage(page:t_ccuiWidget, idx:Float):Unit = js.native
+  def removePage(page:t_ccuiWidget):Unit = js.native
   def removePageAtIndex(index:Float):Unit = js.native
   def removeAllPages():Unit = js.native
   def scrollToItem(idx:Float):Unit = js.native
@@ -26,15 +26,15 @@ trait t_ccuiPageView extends t_ccuiListView {
   override def getDescription:String = js.native
   def setIndicatorEnabled(enabled:Boolean):Unit = js.native
   def getIndicatorEnabled:Boolean = js.native
-  def setIndicatorPositionAsAnchorPoint(positionAsAnchorPoint:ccPoint):Unit = js.native
+  def setIndicatorPositionAsAnchorPoint(positionAsAnchorPoint:t_ccPoint):Unit = js.native
   def getIndicatorPositionAsAnchorPoint:ccPoint = js.native
-  def setIndicatorPosition(position:ccPoint):Unit = js.native
+  def setIndicatorPosition(position:t_ccPoint):Unit = js.native
   def getIndicatorPosition:ccPoint = js.native
   def setIndicatorSpaceBetweenIndexNodes(spaceBetweenIndexNodes:Float):Unit = js.native
   def getIndicatorSpaceBetweenIndexNodes:Float = js.native
-  def setIndicatorSelectedIndexColor(color:ccColor):Unit = js.native
+  def setIndicatorSelectedIndexColor(color:t_ccColor):Unit = js.native
   def getIndicatorSelectedIndexColor:ccColor = js.native
-  def setIndicatorIndexNodesColor(color:ccColor):Unit = js.native
+  def setIndicatorIndexNodesColor(color:t_ccColor):Unit = js.native
   def getIndicatorIndexNodesColor:ccColor = js.native
   def setIndicatorIndexNodesScale(scale:Float):Unit = js.native
   def getIndicatorIndexNodesScale:Float = js.native

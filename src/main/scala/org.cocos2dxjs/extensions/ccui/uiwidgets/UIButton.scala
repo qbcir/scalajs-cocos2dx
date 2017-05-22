@@ -1,14 +1,14 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.platform.ccColor
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
-import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
-import org.cocos2dxjs.cocos2d.core.labelttf.ccLabelTTF
+import org.cocos2dxjs.cocos2d.core.platform.{ccColor, t_ccColor}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccRect, t_ccRect}
+import org.cocos2dxjs.extensions.ccui.baseclasses.{ccuiWidget, t_ccuiWidget}
+import org.cocos2dxjs.cocos2d.core.labelttf.{ccLabelTTF, t_ccLabelTTF}
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
@@ -28,20 +28,20 @@ trait t_ccuiButton extends t_ccuiWidget {
   def loadTextureNormal(normal:String, texType:Float | Float):Unit = js.native
   def loadTexturePressed(selected:String, texType:Float | Float):Unit = js.native
   def loadTextureDisabled(disabled:String, texType:Float | Float):Unit = js.native
-  def setCapInsets(capInsets:ccRect):Unit = js.native
-  def setCapInsetsNormalRenderer(capInsets:ccRect):Unit = js.native
+  def setCapInsets(capInsets:t_ccRect):Unit = js.native
+  def setCapInsetsNormalRenderer(capInsets:t_ccRect):Unit = js.native
   def getCapInsetsNormalRenderer:ccRect = js.native
-  def setCapInsetsPressedRenderer(capInsets:ccRect):Unit = js.native
+  def setCapInsetsPressedRenderer(capInsets:t_ccRect):Unit = js.native
   def getCapInsetsPressedRenderer:ccRect = js.native
-  def setCapInsetsDisabledRenderer(capInsets:ccRect):Unit = js.native
+  def setCapInsetsDisabledRenderer(capInsets:t_ccRect):Unit = js.native
   def getCapInsetsDisabledRenderer:ccRect = js.native
   override def getVirtualRenderer:ccuiWidget = js.native
   def setPressedActionEnabled(enabled:Boolean):Unit = js.native
   def setTitleText(text:String):Unit = js.native
   def getTitleText:String = js.native
-  def setTitleColor(color:ccColor):Unit = js.native
+  def setTitleColor(color:t_ccColor):Unit = js.native
   def getTitleColor:ccColor = js.native
-  def setTitleFontSize(size:ccSize):Unit = js.native
+  def setTitleFontSize(size:t_ccSize):Unit = js.native
   def getTitleFontSize:Float = js.native
   def setZoomScale(scale:js.Dynamic):Unit = js.native
   def getZoomScale:Float = js.native

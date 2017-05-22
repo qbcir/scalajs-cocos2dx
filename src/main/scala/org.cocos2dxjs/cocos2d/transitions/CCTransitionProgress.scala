@@ -1,10 +1,10 @@
 package org.cocos2dxjs.cocos2d.transitions
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.scenes.ccScene
+import org.cocos2dxjs.cocos2d.core.scenes.{ccScene, t_ccScene}
 
 @js.native
 trait t_ccTransitionProgress extends t_ccTransitionScene {
@@ -18,7 +18,7 @@ trait ts_ccTransitionProgress extends ts_ccTransitionScene {
 
 @js.native
 @JSGlobal("cc.TransitionProgress")
-class ccTransitionProgress(t:Float, scene:ccScene) extends t_ccTransitionProgress {
+class ccTransitionProgress(t:Float, scene:t_ccScene) extends t_ccTransitionProgress {
   var _className: js.Dynamic = js.native
 }
 
@@ -37,7 +37,7 @@ trait ts_ccTransitionProgressRadialCCW extends ts_ccTransitionProgress {
 
 @js.native
 @JSGlobal("cc.TransitionProgressRadialCCW")
-class ccTransitionProgressRadialCCW(t:Float, scene:ccScene) extends t_ccTransitionProgressRadialCCW {
+class ccTransitionProgressRadialCCW(t:Float, scene:t_ccScene) extends t_ccTransitionProgressRadialCCW {
   var _className: js.Dynamic = js.native
 }
 
@@ -56,7 +56,7 @@ trait ts_ccTransitionProgressRadialCW extends ts_ccTransitionProgress {
 
 @js.native
 @JSGlobal("cc.TransitionProgressRadialCW")
-class ccTransitionProgressRadialCW(t:Float, scene:ccScene) extends t_ccTransitionProgressRadialCW {
+class ccTransitionProgressRadialCW(t:Float, scene:t_ccScene) extends t_ccTransitionProgressRadialCW {
   var _className: js.Dynamic = js.native
 }
 
@@ -75,7 +75,7 @@ trait ts_ccTransitionProgressHorizontal extends ts_ccTransitionProgress {
 
 @js.native
 @JSGlobal("cc.TransitionProgressHorizontal")
-class ccTransitionProgressHorizontal(t:Float, scene:ccScene) extends t_ccTransitionProgressHorizontal {
+class ccTransitionProgressHorizontal(t:Float, scene:t_ccScene) extends t_ccTransitionProgressHorizontal {
   var _className: js.Dynamic = js.native
 }
 
@@ -94,7 +94,7 @@ trait ts_ccTransitionProgressVertical extends ts_ccTransitionProgress {
 
 @js.native
 @JSGlobal("cc.TransitionProgressVertical")
-class ccTransitionProgressVertical(t:Float, scene:ccScene) extends t_ccTransitionProgressVertical {
+class ccTransitionProgressVertical(t:Float, scene:t_ccScene) extends t_ccTransitionProgressVertical {
   var _className: js.Dynamic = js.native
 }
 
@@ -113,7 +113,7 @@ trait ts_ccTransitionProgressInOut extends ts_ccTransitionProgress {
 
 @js.native
 @JSGlobal("cc.TransitionProgressInOut")
-class ccTransitionProgressInOut(t:Float, scene:ccScene) extends t_ccTransitionProgressInOut {
+class ccTransitionProgressInOut(t:Float, scene:t_ccScene) extends t_ccTransitionProgressInOut {
   var _className: js.Dynamic = js.native
 }
 
@@ -132,7 +132,7 @@ trait ts_ccTransitionProgressOutIn extends ts_ccTransitionProgress {
 
 @js.native
 @JSGlobal("cc.TransitionProgressOutIn")
-class ccTransitionProgressOutIn(t:Float, scene:ccScene) extends t_ccTransitionProgressOutIn {
+class ccTransitionProgressOutIn(t:Float, scene:t_ccScene) extends t_ccTransitionProgressOutIn {
   var _className: js.Dynamic = js.native
 }
 

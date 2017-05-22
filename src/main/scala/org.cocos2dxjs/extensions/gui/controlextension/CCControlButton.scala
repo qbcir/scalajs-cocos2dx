@@ -1,12 +1,12 @@
 package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.platform.ccColor
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
+import org.cocos2dxjs.cocos2d.core.platform.{ccColor, t_ccColor}
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
 
 @js.native
 trait t_ccControlButton extends t_ccControl {
@@ -24,9 +24,9 @@ trait t_ccControlButton extends t_ccControl {
   def getTitleForState(state:Float):String = js.native
   def setTitleForState(title:String, state:Float):Unit = js.native
   def getTitleColorForState(state:Float):ccColor = js.native
-  def setTitleColorForState(color:ccColor, state:Float):Unit = js.native
+  def setTitleColorForState(color:t_ccColor, state:Float):Unit = js.native
   def getTitleLabelForState(state:js.Dynamic):ccNode = js.native
-  def setTitleLabelForState(titleLabel:ccNode, state:Float):Unit = js.native
+  def setTitleLabelForState(titleLabel:t_ccNode, state:Float):Unit = js.native
   def setTitleTTFForState(fntFile:String, state:Float):Unit = js.native
   def getTitleTTFForState(state:Float):String = js.native
   def setTitleTTFSizeForState(size:Float, state:Float):Unit = js.native

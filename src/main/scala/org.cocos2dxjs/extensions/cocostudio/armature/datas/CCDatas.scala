@@ -1,14 +1,14 @@
 package org.cocos2dxjs.extensions.cocostudio.armature.datas
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.platform.ccColor
+import org.cocos2dxjs.cocos2d.core.platform.{ccColor, t_ccColor}
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.extensions.cocostudio.ts_ccsClass
-import org.cocos2dxjs.cocos2d.core.cocoa.ccAffineTransform
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccAffineTransform, t_ccAffineTransform}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
 
 @js.native
 trait t_ccsBaseData extends t_ccsClass {
@@ -25,10 +25,10 @@ trait t_ccsBaseData extends t_ccsClass {
   var g: Float = js.native
   var b: Float = js.native
   var a: Float = js.native
-  def copy(node:ccsBaseData):Unit = js.native
-  def setColor(color:ccColor):Unit = js.native
+  def copy(node:t_ccsBaseData):Unit = js.native
+  def setColor(color:t_ccColor):Unit = js.native
   def getColor:ccColor = js.native
-  def subtract(from:ccsBaseData, to:ccsBaseData, limit:Boolean):Unit = js.native
+  def subtract(from:t_ccsBaseData, to:t_ccsBaseData, limit:Boolean):Unit = js.native
 }
 
 @js.native
@@ -50,7 +50,7 @@ trait t_ccsDisplayData extends t_ccsClass {
   var displayType: Float = js.native
   var displayName: String = js.native
   def changeDisplayToTexture(displayName:String):String = js.native
-  def copy(displayData:ccsDisplayData):Unit = js.native
+  def copy(displayData:t_ccsDisplayData):Unit = js.native
 }
 
 @js.native
@@ -70,7 +70,7 @@ object ccsDisplayData extends ts_ccsDisplayData {
 @js.native
 trait t_ccsSpriteDisplayData extends t_ccsDisplayData {
   var skinData: ccsBaseData = js.native
-  def copy(displayData:ccsSpriteDisplayData):Unit = js.native
+  def copy(displayData:t_ccsSpriteDisplayData):Unit = js.native
 }
 
 @js.native
@@ -130,7 +130,7 @@ trait t_ccsBoneData extends t_ccsBaseData {
   var parentName: String = js.native
   var boneDataTransform: ccAffineTransform = js.native
   def init:Boolean = js.native
-  def addDisplayData(displayData:ccsDisplayData):Unit = js.native
+  def addDisplayData(displayData:t_ccsDisplayData):Unit = js.native
   def getDisplayData(index:Float):ccsDisplayData = js.native
 }
 
@@ -154,7 +154,7 @@ trait t_ccsArmatureData extends t_ccsClass {
   var name: String = js.native
   var dataVersion: Float = js.native
   def init:Boolean = js.native
-  def addBoneData(boneData:ccsBoneData):Unit = js.native
+  def addBoneData(boneData:t_ccsBoneData):Unit = js.native
   def getBoneDataDic:types.DynObject = js.native
   def getBoneData(boneName:String):ccsBoneData = js.native
 }
@@ -212,7 +212,7 @@ trait t_ccsMovementBoneData extends t_ccsClass {
   var frameList: js.Array[js.Any] = js.native
   var name: String = js.native
   def init:Boolean = js.native
-  def addFrameData(frameData:ccsFrameData):Unit = js.native
+  def addFrameData(frameData:t_ccsFrameData):Unit = js.native
   def getFrameData(index:Float):ccsFrameData = js.native
 }
 
@@ -232,7 +232,7 @@ object ccsMovementBoneData extends ts_ccsMovementBoneData {
 
 @js.native
 trait t_ccsMovementData extends js.Object {
-  def addMovementBoneData(movBoneData:ccsMovementBoneData):Unit = js.native
+  def addMovementBoneData(movBoneData:t_ccsMovementBoneData):Unit = js.native
   def getMovementBoneData(boneName:js.Dynamic):ccsMovementBoneData = js.native
 }
 
@@ -255,7 +255,7 @@ object ccsMovementData extends ts_ccsMovementData {
 
 @js.native
 trait t_ccsAnimationData extends t_ccsClass {
-  def addMovement(moveData:ccsMovementData):Unit = js.native
+  def addMovement(moveData:t_ccsMovementData):Unit = js.native
   def getMovement(moveName:String):ccsMovementData = js.native
   def getMovementCount:Float = js.native
 }
@@ -294,7 +294,7 @@ object ccsContourVertex2 extends ts_ccsContourVertex2 {
 
 @js.native
 trait t_ccsContourData extends js.Object {
-  def addVertex(p:ccPoint):Unit = js.native
+  def addVertex(p:t_ccPoint):Unit = js.native
 }
 
 @js.native
@@ -313,7 +313,7 @@ object ccsContourData extends ts_ccsContourData {
 
 @js.native
 trait t_ccsTextureData extends js.Object {
-  def addContourData(contourData:ccsContourData):Unit = js.native
+  def addContourData(contourData:t_ccsContourData):Unit = js.native
   def getContourData(index:Float):ccsContourData = js.native
 }
 

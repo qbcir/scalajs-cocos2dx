@@ -1,13 +1,13 @@
 package org.cocos2dxjs.extensions.ccui.system
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.extensions.ccui.layouts.ccuilinearVerticalLayoutManager
-import org.cocos2dxjs.extensions.ccui.layouts.ccuilinearHorizontalLayoutManager
-import org.cocos2dxjs.extensions.ccui.layouts.ccuirelativeLayoutManager
-import org.cocos2dxjs.extensions.ccui.layouts.ccuiMargin
+import org.cocos2dxjs.extensions.ccui.layouts.{ccuilinearVerticalLayoutManager, t_ccuilinearVerticalLayoutManager}
+import org.cocos2dxjs.extensions.ccui.layouts.{ccuilinearHorizontalLayoutManager, t_ccuilinearHorizontalLayoutManager}
+import org.cocos2dxjs.extensions.ccui.layouts.{ccuirelativeLayoutManager, t_ccuirelativeLayoutManager}
+import org.cocos2dxjs.extensions.ccui.layouts.{ccuiMargin, t_ccuiMargin}
 
 @js.native
 trait t_ccuiClass extends js.Object {

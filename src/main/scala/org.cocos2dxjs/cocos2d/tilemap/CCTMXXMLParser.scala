@@ -1,13 +1,13 @@
 package org.cocos2dxjs.cocos2d.tilemap
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccRect, t_ccRect}
 import org.cocos2dxjs.cocos2d.core.platform.t_ccSAXParser
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccSAXParser
 
@@ -78,15 +78,15 @@ trait t_ccTMXMapInfo extends t_ccSAXParser {
   def getOrientation:Float = js.native
   def setOrientation(value:Float):Unit = js.native
   def getMapSize:ccSize = js.native
-  def setMapSize(value:ccSize):Unit = js.native
+  def setMapSize(value:t_ccSize):Unit = js.native
   def getTileSize:ccSize = js.native
-  def setTileSize(value:ccSize):Unit = js.native
+  def setTileSize(value:t_ccSize):Unit = js.native
   def getLayers:js.Array[js.Any] = js.native
-  def setLayers(value:ccTMXLayerInfo):Unit = js.native
+  def setLayers(value:t_ccTMXLayerInfo):Unit = js.native
   def getTilesets:js.Array[js.Any] = js.native
-  def setTilesets(value:ccTMXTilesetInfo):Unit = js.native
+  def setTilesets(value:t_ccTMXTilesetInfo):Unit = js.native
   def getObjectGroups:js.Array[js.Any] = js.native
-  def setObjectGroups(value:ccTMXObjectGroup):Unit = js.native
+  def setObjectGroups(value:t_ccTMXObjectGroup):Unit = js.native
   def getParentElement:types.DynObject = js.native
   def setParentElement(value:types.DynObject):Unit = js.native
   def getParentGID:Float = js.native

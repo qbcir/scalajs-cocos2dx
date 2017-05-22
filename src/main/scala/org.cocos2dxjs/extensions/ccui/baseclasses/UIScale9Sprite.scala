@@ -1,12 +1,12 @@
 package org.cocos2dxjs.extensions.ccui.baseclasses
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
-import org.cocos2dxjs.cocos2d.core.sprites.ccSpriteFrame
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccRect, t_ccRect}
+import org.cocos2dxjs.cocos2d.core.sprites.{ccSpriteFrame, t_ccSpriteFrame}
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
@@ -43,7 +43,7 @@ trait ts_ccuiScale9Sprite extends ts_ccNode {
 
 @js.native
 @JSGlobal("ccui.Scale9Sprite")
-class ccuiScale9Sprite(file:String | ccSpriteFrame, rectOrCapInsets:ccRect, capInsets:ccRect) extends t_ccuiScale9Sprite {
+class ccuiScale9Sprite(file:String | t_ccSpriteFrame, rectOrCapInsets:t_ccRect, capInsets:t_ccRect) extends t_ccuiScale9Sprite {
 }
 
 @js.native

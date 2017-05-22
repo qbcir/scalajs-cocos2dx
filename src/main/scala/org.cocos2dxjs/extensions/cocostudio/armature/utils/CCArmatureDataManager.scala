@@ -1,12 +1,12 @@
 package org.cocos2dxjs.extensions.cocostudio.armature.utils
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsArmatureData
-import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsAnimationData
-import org.cocos2dxjs.extensions.cocostudio.armature.datas.ccsTextureData
+import org.cocos2dxjs.extensions.cocostudio.armature.datas.{ccsArmatureData, t_ccsArmatureData}
+import org.cocos2dxjs.extensions.cocostudio.armature.datas.{ccsAnimationData, t_ccsAnimationData}
+import org.cocos2dxjs.extensions.cocostudio.armature.datas.{ccsTextureData, t_ccsTextureData}
 
 @js.native
 trait t_ccsRelativeData extends js.Object {
@@ -33,13 +33,13 @@ trait t_ccsarmatureDataManager extends js.Object {
 @js.native
 trait ts_ccsarmatureDataManager extends js.Object {
   def removeArmatureFileInfo(configFilePath:String):Unit = js.native
-  def addArmatureData(id:String, armatureData:ccsArmatureData):Unit = js.native
+  def addArmatureData(id:String, armatureData:t_ccsArmatureData):Unit = js.native
   def getArmatureData(id:String):ccsArmatureData = js.native
   def removeArmatureData(id:String):Unit = js.native
-  def addAnimationData(id:String, animationData:ccsAnimationData):Unit = js.native
+  def addAnimationData(id:String, animationData:t_ccsAnimationData):Unit = js.native
   def getAnimationData(id:String):ccsAnimationData = js.native
   def removeAnimationData(id:String):Unit = js.native
-  def addTextureData(id:String, textureData:ccsTextureData):Unit = js.native
+  def addTextureData(id:String, textureData:t_ccsTextureData):Unit = js.native
   def getTextureData(id:String):ccsTextureData = js.native
   def removeTextureData(id:String):Unit = js.native
   def addArmatureFileInfo(imagePath:String, plistPath:String, configFilePath:String):Unit = js.native

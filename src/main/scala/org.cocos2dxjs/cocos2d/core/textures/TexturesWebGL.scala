@@ -1,15 +1,15 @@
 package org.cocos2dxjs.cocos2d.core.textures
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.shaders.ccGLProgram
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
-import org.cocos2dxjs.cocos2d.core.platform.ccFontDefinition
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.shaders.{ccGLProgram, t_ccGLProgram}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccRect, t_ccRect}
+import org.cocos2dxjs.cocos2d.core.platform.{ccFontDefinition, t_ccFontDefinition}
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
@@ -36,20 +36,20 @@ trait t_ccTexture2D extends t_ccClass {
   def getMaxT:Float = js.native
   def setMaxT(maxT:Float):Unit = js.native
   def getShaderProgram:ccGLProgram = js.native
-  def setShaderProgram(shaderProgram:ccGLProgram):Unit = js.native
+  def setShaderProgram(shaderProgram:t_ccGLProgram):Unit = js.native
   def hasPremultipliedAlpha:Boolean = js.native
   def hasMipmaps:Boolean = js.native
   def description:String = js.native
   def releaseData(data:js.Array[js.Any]):Unit = js.native
-  def initWithData(data:js.Array[js.Any], pixelFormat:Float, pixelsWide:Float, pixelsHigh:Float, contentSize:ccSize):Boolean = js.native
-  def drawAtPoint(point:ccPoint):Unit = js.native
-  def drawInRect(rect:ccRect):Unit = js.native
+  def initWithData(data:js.Array[js.Any], pixelFormat:Float, pixelsWide:Float, pixelsHigh:Float, contentSize:t_ccSize):Boolean = js.native
+  def drawAtPoint(point:t_ccPoint):Unit = js.native
+  def drawInRect(rect:t_ccRect):Unit = js.native
   def initWithImage(uiImage:js.Dynamic):Boolean = js.native
   def initWithElement(element:js.Dynamic | js.Dynamic):Unit = js.native
   def getHtmlElementObj:js.Dynamic = js.native
   def isLoaded:Boolean = js.native
   def handleLoadedTexture(premultiplied:Boolean):Unit = js.native
-  def initWithString(text:String, fontName:String | ccFontDefinition, fontSize:Float, dimensions:ccSize, hAlignment:Float, vAlignment:Float):Boolean = js.native
+  def initWithString(text:String, fontName:String | t_ccFontDefinition, fontSize:Float, dimensions:t_ccSize, hAlignment:Float, vAlignment:Float):Boolean = js.native
   def initWithETCFile(file:String):Boolean = js.native
   def initWithPVRFile(file:String):Boolean = js.native
   def initWithPVRTCData(data:js.Array[js.Any], level:Float, bpp:Float, hasAlpha:Boolean, length:Float, pixelFormat:Float):Boolean = js.native
@@ -59,7 +59,7 @@ trait t_ccTexture2D extends t_ccClass {
   def generateMipmap():Unit = js.native
   def stringForFormat:String = js.native
   def bitsPerPixelForFormat:Float = js.native
-  def removeLoadedEventListener(target:ccNode):Unit = js.native
+  def removeLoadedEventListener(target:t_ccNode):Unit = js.native
 }
 
 @js.native

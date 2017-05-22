@@ -1,13 +1,13 @@
 package org.cocos2dxjs.cocos2d.core
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
-import org.cocos2dxjs.cocos2d.actions.ccAction
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.actions.{ccAction, t_ccAction}
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
 
 @js.native
 trait t_ccHashElement extends t_ccClass {
@@ -29,10 +29,10 @@ object ccHashElement extends ts_ccHashElement {
 
 @js.native
 trait t_ccActionManager extends t_ccClass {
-  def addAction(action:ccAction, target:ccNode, paused:Boolean):Unit = js.native
+  def addAction(action:t_ccAction, target:t_ccNode, paused:Boolean):Unit = js.native
   def removeAllActions():Unit = js.native
   def removeAllActionsFromTarget(target:types.DynObject, forceDelete:Boolean):Unit = js.native
-  def removeAction(action:ccAction):Unit = js.native
+  def removeAction(action:t_ccAction):Unit = js.native
   def removeActionByTag(tag:Float, target:types.DynObject):Unit = js.native
   def getActionByTag(tag:Float, target:types.DynObject):ccAction | js.Dynamic = js.native
   def numberOfRunningActionsInTarget(target:types.DynObject):Float = js.native

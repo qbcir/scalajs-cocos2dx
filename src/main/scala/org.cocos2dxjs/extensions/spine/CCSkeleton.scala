@@ -1,12 +1,12 @@
 package org.cocos2dxjs.extensions.spine
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
-import org.cocos2dxjs.cocos2d.core.platform.ccBlendFunc
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccRect, t_ccRect}
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
+import org.cocos2dxjs.cocos2d.core.platform.{ccBlendFunc, t_ccBlendFunc}
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
@@ -36,7 +36,7 @@ trait t_spSkeleton extends t_ccNode {
   def setSkeletonData(skeletonData:js.Dynamic, ownsSkeletonData:js.Dynamic):Unit = js.native
   def getTextureAtlas(regionAttachment:js.Dynamic | js.Dynamic):ccNode = js.native
   def getBlendFunc:ccBlendFunc = js.native
-  def setBlendFunc(src:ccBlendFunc | Float, dst:Float):Unit = js.native
+  def setBlendFunc(src:t_ccBlendFunc | Float, dst:Float):Unit = js.native
   override def update(dt:Float):Unit = js.native
 }
 

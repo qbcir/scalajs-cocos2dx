@@ -1,10 +1,10 @@
 package org.cocos2dxjs.extensions.cocostudio.action
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.actions.ccCallFunc
+import org.cocos2dxjs.cocos2d.actions.{ccCallFunc, t_ccCallFunc}
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.extensions.cocostudio.ts_ccsClass
 
@@ -21,9 +21,9 @@ trait t_ccsActionObject extends t_ccsClass {
   def getTotalTime:Float = js.native
   def isPlaying:Boolean = js.native
   def initWithDictionary(dic:types.DynObject, root:types.DynObject):Unit = js.native
-  def addActionNode(node:ccsActionNode):Unit = js.native
-  def removeActionNode(node:ccsActionNode):Unit = js.native
-  def play(fun:ccCallFunc):Unit = js.native
+  def addActionNode(node:t_ccsActionNode):Unit = js.native
+  def removeActionNode(node:t_ccsActionNode):Unit = js.native
+  def play(fun:t_ccCallFunc):Unit = js.native
   def pause():Unit = js.native
   def stop():Unit = js.native
   def updateToFrameByTime():Unit = js.native

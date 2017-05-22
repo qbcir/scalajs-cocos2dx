@@ -1,12 +1,12 @@
 package org.cocos2dxjs.cocos2d.tilemap
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.cocos2d.core.sprites.{ccSprite, t_ccSprite}
 import org.cocos2dxjs.cocos2d.core.sprites.t_ccSpriteBatchNode
 import org.cocos2dxjs.cocos2d.core.sprites.ts_ccSpriteBatchNode
 
@@ -21,15 +21,15 @@ trait t_ccTMXLayer extends t_ccSpriteBatchNode {
   var layerHeight: Float = js.native
   var tileWidth: Float = js.native
   var tileHeight: Float = js.native
-  def initWithTilesetInfo(tilesetInfo:ccTMXTilesetInfo, layerInfo:ccTMXLayerInfo, mapInfo:ccTMXMapInfo):Boolean = js.native
+  def initWithTilesetInfo(tilesetInfo:t_ccTMXTilesetInfo, layerInfo:t_ccTMXLayerInfo, mapInfo:t_ccTMXMapInfo):Boolean = js.native
   def getLayerSize:ccSize = js.native
-  def setLayerSize(Var:ccSize):Unit = js.native
+  def setLayerSize(Var:t_ccSize):Unit = js.native
   def getMapTileSize:ccSize = js.native
-  def setMapTileSize(Var:ccSize):Unit = js.native
+  def setMapTileSize(Var:t_ccSize):Unit = js.native
   def getTiles:js.Array[js.Any] = js.native
   def setTiles(Var:js.Array[js.Any]):Unit = js.native
   def getTileset:ccTMXTilesetInfo = js.native
-  def setTileset(Var:ccTMXTilesetInfo):Unit = js.native
+  def setTileset(Var:t_ccTMXTilesetInfo):Unit = js.native
   def getLayerOrientation:Float = js.native
   def setLayerOrientation(Var:Float):Unit = js.native
   def getProperties:js.Array[js.Any] = js.native
@@ -38,12 +38,12 @@ trait t_ccTMXLayer extends t_ccSpriteBatchNode {
   def getLayerName:String = js.native
   def setLayerName(layerName:String):Unit = js.native
   def releaseMap():Unit = js.native
-  def getTileAt(pos:ccPoint | Float, y:Float):ccSprite = js.native
-  def getTileGIDAt(pos:ccPoint | Float, y:Float):Float = js.native
-  def setTileGID(gid:Float, posOrX:ccPoint | Float, flagsOrY:Float, flags:Float):Unit = js.native
-  def getTileFlagsAt(pos:ccPoint | Float, y:Float):Float = js.native
-  def removeTileAt(pos:ccPoint | Float, y:Float):Unit = js.native
-  def getPositionAt(pos:ccPoint | Float, y:Float):ccPoint = js.native
+  def getTileAt(pos:t_ccPoint | Float, y:Float):ccSprite = js.native
+  def getTileGIDAt(pos:t_ccPoint | Float, y:Float):Float = js.native
+  def setTileGID(gid:Float, posOrX:t_ccPoint | Float, flagsOrY:Float, flags:Float):Unit = js.native
+  def getTileFlagsAt(pos:t_ccPoint | Float, y:Float):Float = js.native
+  def removeTileAt(pos:t_ccPoint | Float, y:Float):Unit = js.native
+  def getPositionAt(pos:t_ccPoint | Float, y:Float):ccPoint = js.native
 }
 
 @js.native
@@ -52,7 +52,7 @@ trait ts_ccTMXLayer extends ts_ccSpriteBatchNode {
 
 @js.native
 @JSGlobal("cc.TMXLayer")
-class ccTMXLayer(tilesetInfo:ccTMXTilesetInfo, layerInfo:ccTMXLayerInfo, mapInfo:ccTMXMapInfo) extends t_ccTMXLayer {
+class ccTMXLayer(tilesetInfo:t_ccTMXTilesetInfo, layerInfo:t_ccTMXLayerInfo, mapInfo:t_ccTMXMapInfo) extends t_ccTMXLayer {
 }
 
 @js.native

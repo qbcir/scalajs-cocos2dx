@@ -1,10 +1,10 @@
 package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.eventmanager.ccTouch
+import org.cocos2dxjs.cocos2d.core.eventmanager.{ccTouch, t_ccTouch}
 import org.cocos2dxjs.cocos2d.core.layers.t_ccLayer
 import org.cocos2dxjs.cocos2d.core.layers.ts_ccLayer
 
@@ -20,8 +20,8 @@ trait t_ccControl extends t_ccLayer {
   def sendActionsForControlEvents(controlEvents:Float):Unit = js.native
   def addTargetWithActionForControlEvents(target:types.DynObject, action:js.Function, controlEvents:Float):Unit = js.native
   def removeTargetWithActionForControlEvents(target:types.DynObject, action:js.Function, controlEvents:Float):Unit = js.native
-  def getTouchLocation(touch:ccTouch):Unit = js.native
-  def isTouchInside(touch:ccTouch):Boolean = js.native
+  def getTouchLocation(touch:t_ccTouch):Unit = js.native
+  def isTouchInside(touch:t_ccTouch):Boolean = js.native
   def _invocationWithTargetAndActionForControlEvent(target:types.DynObject, action:js.Function, controlEvent:Float):ccInvocation = js.native
   def _dispatchListforControlEvent(controlEvent:Float):ccInvocation = js.native
   def _addTargetWithActionForControlEvent(target:js.Dynamic, action:js.Dynamic, controlEvent:js.Dynamic):Unit = js.native

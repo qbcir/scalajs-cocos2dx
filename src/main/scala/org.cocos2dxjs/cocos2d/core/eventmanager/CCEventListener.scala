@@ -1,10 +1,10 @@
 package org.cocos2dxjs.cocos2d.core.eventmanager
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
@@ -18,7 +18,7 @@ trait t_ccEventListener extends t_ccClass {
   def _getListenerID:String = js.native
   def _setFixedPriority(fixedPriority:Float):Unit = js.native
   def _getFixedPriority:Float = js.native
-  def _setSceneGraphPriority(node:ccNode):Unit = js.native
+  def _setSceneGraphPriority(node:t_ccNode):Unit = js.native
   def _getSceneGraphPriority:ccNode = js.native
   def checkAvailable:Boolean = js.native
   override def clone:ccEventListener = js.native

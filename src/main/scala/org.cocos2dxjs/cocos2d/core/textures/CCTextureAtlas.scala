@@ -1,10 +1,10 @@
 package org.cocos2dxjs.cocos2d.core.textures
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.platform.ccV3F_C4B_T2F_Quad
+import org.cocos2dxjs.cocos2d.core.platform.{ccV3F_C4B_T2F_Quad, t_ccV3F_C4B_T2F_Quad}
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
@@ -26,8 +26,8 @@ trait t_ccTextureAtlas extends t_ccClass {
   def description:String = js.native
   def initWithFile(file:String, capacity:Float):Boolean = js.native
   def initWithTexture(texture:js.Dynamic, capacity:Float):Boolean = js.native
-  def updateQuad(quad:ccV3F_C4B_T2F_Quad, index:Float):Unit = js.native
-  def insertQuad(quad:ccV3F_C4B_T2F_Quad, index:Float):Unit = js.native
+  def updateQuad(quad:t_ccV3F_C4B_T2F_Quad, index:Float):Unit = js.native
+  def insertQuad(quad:t_ccV3F_C4B_T2F_Quad, index:Float):Unit = js.native
   def insertQuads(quads:js.Array[js.Any], index:Float, amount:Float):Unit = js.native
   def insertQuadFromIndex(fromIndex:Float, newIndex:Float):Unit = js.native
   def removeQuadAtIndex(index:Float):Unit = js.native
@@ -46,7 +46,7 @@ trait ts_ccTextureAtlas extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.TextureAtlas")
-class ccTextureAtlas(fileName:String | ccTexture2D, capacity:Float) extends t_ccTextureAtlas {
+class ccTextureAtlas(fileName:String | t_ccTexture2D, capacity:Float) extends t_ccTextureAtlas {
 }
 
 @js.native

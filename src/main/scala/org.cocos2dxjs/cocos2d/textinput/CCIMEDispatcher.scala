@@ -1,10 +1,10 @@
 package org.cocos2dxjs.cocos2d.textinput
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccRect, t_ccRect}
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
@@ -18,7 +18,7 @@ trait ts_ccIMEKeyboardNotificationInfo extends js.Object {
 
 @js.native
 @JSGlobal("cc.IMEKeyboardNotificationInfo")
-class ccIMEKeyboardNotificationInfo(begin:ccRect, end:ccRect, duration:Float) extends t_ccIMEKeyboardNotificationInfo {
+class ccIMEKeyboardNotificationInfo(begin:t_ccRect, end:t_ccRect, duration:Float) extends t_ccIMEKeyboardNotificationInfo {
 }
 
 @js.native
@@ -59,14 +59,14 @@ trait t_ccimeDispatcher extends js.Object {
   def dispatchInsertText(text:String, len:Float):Unit = js.native
   def dispatchDeleteBackward():Unit = js.native
   def getContentText:String = js.native
-  def dispatchKeyboardWillShow(info:ccIMEKeyboardNotificationInfo):Unit = js.native
-  def dispatchKeyboardDidShow(info:ccIMEKeyboardNotificationInfo):Unit = js.native
-  def dispatchKeyboardWillHide(info:ccIMEKeyboardNotificationInfo):Unit = js.native
-  def dispatchKeyboardDidHide(info:ccIMEKeyboardNotificationInfo):Unit = js.native
-  def addDelegate(delegate:ccIMEDelegate):Unit = js.native
-  def attachDelegateWithIME(delegate:ccIMEDelegate):Boolean = js.native
-  def detachDelegateWithIME(delegate:ccIMEDelegate):Boolean = js.native
-  def removeDelegate(delegate:ccIMEDelegate):Unit = js.native
+  def dispatchKeyboardWillShow(info:t_ccIMEKeyboardNotificationInfo):Unit = js.native
+  def dispatchKeyboardDidShow(info:t_ccIMEKeyboardNotificationInfo):Unit = js.native
+  def dispatchKeyboardWillHide(info:t_ccIMEKeyboardNotificationInfo):Unit = js.native
+  def dispatchKeyboardDidHide(info:t_ccIMEKeyboardNotificationInfo):Unit = js.native
+  def addDelegate(delegate:t_ccIMEDelegate):Unit = js.native
+  def attachDelegateWithIME(delegate:t_ccIMEDelegate):Boolean = js.native
+  def detachDelegateWithIME(delegate:t_ccIMEDelegate):Boolean = js.native
+  def removeDelegate(delegate:t_ccIMEDelegate):Unit = js.native
   def processKeycode(keyCode:Float):Unit = js.native
 }
 
@@ -86,7 +86,7 @@ object ccimeDispatcher extends ts_ccimeDispatcher {
 
 @js.native
 trait t_ccIMEDispatcherImpl extends t_ccClass {
-  def findDelegate(delegate:ccIMEDelegate):Float | js.Dynamic = js.native
+  def findDelegate(delegate:t_ccIMEDelegate):Float | js.Dynamic = js.native
 }
 
 @js.native

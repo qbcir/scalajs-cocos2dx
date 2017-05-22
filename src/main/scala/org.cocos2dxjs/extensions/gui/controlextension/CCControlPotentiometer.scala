@@ -1,12 +1,12 @@
 package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.progresstimer.ccProgressTimer
-import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
+import org.cocos2dxjs.cocos2d.progresstimer.{ccProgressTimer, t_ccProgressTimer}
+import org.cocos2dxjs.cocos2d.core.sprites.{ccSprite, t_ccSprite}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
 
 @js.native
 trait t_ccControlPotentiometer extends t_ccControl {
@@ -16,9 +16,9 @@ trait t_ccControlPotentiometer extends t_ccControl {
   var progressTimer: ccProgressTimer = js.native
   var thumbSprite: ccSprite = js.native
   var prevLocation: ccPoint = js.native
-  def initWithTrackSprite_ProgressTimer_ThumbSprite(trackSprite:ccSprite, progressTimer:ccProgressTimer, thumbSprite:ccSprite):Boolean = js.native
-  def distanceBetweenPointAndPoint(point1:ccPoint, point2:ccPoint):Float = js.native
-  def angleInDegreesBetweenLineFromPoint_toPoint_toLineFromPoint_toPoint(beginLineA:ccPoint, endLineA:ccPoint, beginLineB:ccPoint, endLineB:ccPoint):Float = js.native
+  def initWithTrackSprite_ProgressTimer_ThumbSprite(trackSprite:t_ccSprite, progressTimer:t_ccProgressTimer, thumbSprite:t_ccSprite):Boolean = js.native
+  def distanceBetweenPointAndPoint(point1:t_ccPoint, point2:t_ccPoint):Float = js.native
+  def angleInDegreesBetweenLineFromPoint_toPoint_toLineFromPoint_toPoint(beginLineA:t_ccPoint, endLineA:t_ccPoint, beginLineB:t_ccPoint, endLineB:t_ccPoint):Float = js.native
 }
 
 @js.native

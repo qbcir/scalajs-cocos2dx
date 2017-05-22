@@ -1,14 +1,14 @@
 package org.cocos2dxjs.extensions.ccui.baseclasses
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.eventmanager.ccTouch
-import org.cocos2dxjs.cocos2d.core.eventmanager.ccEvent
-import org.cocos2dxjs.extensions.ccui.layouts.ccuiLayoutParameter
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.cocos2d.core.eventmanager.{ccTouch, t_ccTouch}
+import org.cocos2dxjs.cocos2d.core.eventmanager.{ccEvent, t_ccEvent}
+import org.cocos2dxjs.extensions.ccui.layouts.{ccuiLayoutParameter, t_ccuiLayoutParameter}
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiProtectedNode
 import org.cocos2dxjs.extensions.ccui.system.ts_ccuiProtectedNode
 
@@ -38,9 +38,9 @@ trait t_ccuiWidget extends t_ccuiProtectedNode {
   def isSwallowTouches:Boolean = js.native
   def setEnabled(enabled:Boolean):Unit = js.native
   def _initRenderer():Unit = js.native
-  def setContentSize(contentSize:ccSize | Float, height:Float):Unit = js.native
-  def setSizePercent(percent:ccPoint):Unit = js.native
-  def updateSizeAndPosition(parentSize:ccSize):Unit = js.native
+  def setContentSize(contentSize:t_ccSize | Float, height:Float):Unit = js.native
+  def setSizePercent(percent:t_ccPoint):Unit = js.native
+  def updateSizeAndPosition(parentSize:t_ccSize):Unit = js.native
   def setSizeType(_type:Float | Float):Unit = js.native
   def getSizeType:Float | Float = js.native
   def ignoreContentAdaptWithSize(ignore:Boolean):Unit = js.native
@@ -63,23 +63,23 @@ trait t_ccuiWidget extends t_ccuiProtectedNode {
   def findNextFocusedWidget(direction:js.Dynamic, current:js.Dynamic):Unit = js.native
   def requestFocus():Unit = js.native
   def getCurrentFocusedWidget():Unit = js.native
-  def interceptTouchEvent(eventType:Float, sender:ccuiWidget, touch:ccTouch):Unit = js.native
-  def onFocusChange(widgetLostFocus:ccuiWidget, widgetGetFocus:ccuiWidget):Unit = js.native
-  def dispatchFocusEvent(widgetLostFocus:ccuiWidget, widgetGetFocus:ccuiWidget):Unit = js.native
+  def interceptTouchEvent(eventType:Float, sender:t_ccuiWidget, touch:t_ccTouch):Unit = js.native
+  def onFocusChange(widgetLostFocus:t_ccuiWidget, widgetGetFocus:t_ccuiWidget):Unit = js.native
+  def dispatchFocusEvent(widgetLostFocus:t_ccuiWidget, widgetGetFocus:t_ccuiWidget):Unit = js.native
   def setBright(bright:Boolean):Unit = js.native
   def setBrightStyle(style:Float):Unit = js.native
   def didNotSelectSelf():Unit = js.native
-  def onTouchBegan(touch:ccTouch, event:ccEvent):Boolean = js.native
-  def onTouchMoved(touch:ccTouch, event:ccEvent):Unit = js.native
+  def onTouchBegan(touch:t_ccTouch, event:t_ccEvent):Boolean = js.native
+  def onTouchMoved(touch:t_ccTouch, event:t_ccEvent):Unit = js.native
   def onTouchEnded(touch:js.Dynamic, event:js.Dynamic):Unit = js.native
-  def onTouchCancelled(touchPoint:ccPoint):Unit = js.native
-  def onTouchLongClicked(touchPoint:ccPoint):Unit = js.native
+  def onTouchCancelled(touchPoint:t_ccPoint):Unit = js.native
+  def onTouchLongClicked(touchPoint:t_ccPoint):Unit = js.native
   def addTouchEventListener(selector:js.Function, target:types.DynObject):Unit = js.native
-  def hitTest(pt:ccPoint):Boolean = js.native
-  def isClippingParentContainsPoint(pt:ccPoint):Boolean = js.native
-  def checkChildInfo(handleState:Float, sender:ccuiWidget, touchPoint:ccPoint):Unit = js.native
-  def setPosition(pos:ccPoint | Float, posY:Float):Unit = js.native
-  def setPositionPercent(percent:ccPoint):Unit = js.native
+  def hitTest(pt:t_ccPoint):Boolean = js.native
+  def isClippingParentContainsPoint(pt:t_ccPoint):Boolean = js.native
+  def checkChildInfo(handleState:Float, sender:t_ccuiWidget, touchPoint:t_ccPoint):Unit = js.native
+  def setPosition(pos:t_ccPoint | Float, posY:Float):Unit = js.native
+  def setPositionPercent(percent:t_ccPoint):Unit = js.native
   def getPositionPercent:ccPoint = js.native
   def setPositionType(_type:Float):Unit = js.native
   def getPositionType:Float = js.native
@@ -97,7 +97,7 @@ trait t_ccuiWidget extends t_ccuiProtectedNode {
   def getTouchMovePosition:ccPoint = js.native
   def getTouchEndPosition:ccPoint = js.native
   def getWidgetType:Float | Float = js.native
-  def setLayoutParameter(parameter:ccuiLayoutParameter):Unit = js.native
+  def setLayoutParameter(parameter:t_ccuiLayoutParameter):Unit = js.native
   def getLayoutParameter(_type:Float | Float | Float):ccuiLayoutParameter = js.native
   def getDescription:String = js.native
   override def clone:ccuiWidget = js.native

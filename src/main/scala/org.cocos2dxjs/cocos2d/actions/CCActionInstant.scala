@@ -1,10 +1,10 @@
 package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
 
 @js.native
 trait t_ccActionInstant extends t_ccFiniteTimeAction {
@@ -167,7 +167,7 @@ trait ts_ccPlace extends ts_ccActionInstant {
 
 @js.native
 @JSGlobal("cc.Place")
-class ccPlace(pos:ccPoint | Float, y:Float) extends t_ccPlace {
+class ccPlace(pos:t_ccPoint | Float, y:Float) extends t_ccPlace {
 }
 
 @js.native

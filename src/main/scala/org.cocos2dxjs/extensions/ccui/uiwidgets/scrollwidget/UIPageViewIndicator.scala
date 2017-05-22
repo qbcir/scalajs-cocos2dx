@@ -1,10 +1,10 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets.scrollwidget
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.platform.ccColor
+import org.cocos2dxjs.cocos2d.core.platform.{ccColor, t_ccColor}
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiProtectedNode
 import org.cocos2dxjs.extensions.ccui.system.ts_ccuiProtectedNode
 
@@ -16,9 +16,9 @@ trait t_ccuiPageViewIndicator extends t_ccuiProtectedNode {
   def indicate(index:Float):Unit = js.native
   def setSpaceBetweenIndexNodes(spaceBetweenIndexNodes:Float):Unit = js.native
   def getSpaceBetweenIndexNodes:Float = js.native
-  def setSelectedIndexColor(color:ccColor):Unit = js.native
+  def setSelectedIndexColor(color:t_ccColor):Unit = js.native
   def getSelectedIndexColor:ccColor = js.native
-  def setIndexNodesColor(indexNodesColor:ccColor):Unit = js.native
+  def setIndexNodesColor(indexNodesColor:t_ccColor):Unit = js.native
   def getIndexNodesColor:ccColor = js.native
   def setIndexNodesScale(indexNodesScale:Float):Unit = js.native
   def getIndexNodesScale:Float = js.native

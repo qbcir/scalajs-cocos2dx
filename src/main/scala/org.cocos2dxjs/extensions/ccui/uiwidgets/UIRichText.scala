@@ -1,16 +1,16 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiClass
 import org.cocos2dxjs.extensions.ccui.system.ts_ccuiClass
-import org.cocos2dxjs.cocos2d.core.platform.ccColor
-import org.cocos2dxjs.cocos2d.core.platform.ccFontDefinition
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
+import org.cocos2dxjs.cocos2d.core.platform.{ccColor, t_ccColor}
+import org.cocos2dxjs.cocos2d.core.platform.{ccFontDefinition, t_ccFontDefinition}
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
@@ -45,7 +45,7 @@ trait ts_ccuiRichElementText extends ts_ccuiRichElement {
 
 @js.native
 @JSGlobal("ccui.RichElementText")
-class ccuiRichElementText(tag:Float, colorOrFontDef:ccColor | ccFontDefinition, opacity:Float, text:String, fontName:String, fontSize:Float) extends t_ccuiRichElementText {
+class ccuiRichElementText(tag:Float, colorOrFontDef:t_ccColor | t_ccFontDefinition, opacity:Float, text:String, fontName:String, fontSize:Float) extends t_ccuiRichElementText {
   var _fontDefinition: ccFontDefinition = js.native
 }
 
@@ -64,7 +64,7 @@ trait ts_ccuiRichElementImage extends ts_ccuiRichElement {
 
 @js.native
 @JSGlobal("ccui.RichElementImage")
-class ccuiRichElementImage(tag:Float, color:ccColor, opacity:Float, filePath:String) extends t_ccuiRichElementImage {
+class ccuiRichElementImage(tag:Float, color:t_ccColor, opacity:Float, filePath:String) extends t_ccuiRichElementImage {
 }
 
 @js.native
@@ -82,7 +82,7 @@ trait ts_ccuiRichElementCustomNode extends ts_ccuiRichElement {
 
 @js.native
 @JSGlobal("ccui.RichElementCustomNode")
-class ccuiRichElementCustomNode(tag:Float, color:ccColor, opacity:Float, customNode:ccNode) extends t_ccuiRichElementCustomNode {
+class ccuiRichElementCustomNode(tag:Float, color:t_ccColor, opacity:Float, customNode:t_ccNode) extends t_ccuiRichElementCustomNode {
 }
 
 @js.native
@@ -92,14 +92,14 @@ object ccuiRichElementCustomNode extends ts_ccuiRichElementCustomNode {
 
 @js.native
 trait t_ccuiRichText extends t_ccuiWidget {
-  def insertElement(element:ccuiRichElement, index:Float):Unit = js.native
-  def pushBackElement(element:ccuiRichElement):Unit = js.native
-  def removeElement(element:ccuiRichElement):Unit = js.native
+  def insertElement(element:t_ccuiRichElement, index:Float):Unit = js.native
+  def pushBackElement(element:t_ccuiRichElement):Unit = js.native
+  def removeElement(element:t_ccuiRichElement):Unit = js.native
   def formatText():Unit = js.native
-  def _handleTextRenderer(text:String, fontNameOrFontDef:String | ccFontDefinition, fontSize:Float, color:ccColor):Unit = js.native
+  def _handleTextRenderer(text:String, fontNameOrFontDef:String | t_ccFontDefinition, fontSize:Float, color:t_ccColor):Unit = js.native
   def formatRenderers():Unit = js.native
   def setVerticalSpace(space:Float):Unit = js.native
-  def setAnchorPoint(pt:ccPoint):Unit = js.native
+  def setAnchorPoint(pt:t_ccPoint):Unit = js.native
   override def getVirtualRendererSize:ccSize = js.native
   override def ignoreContentAdaptWithSize(ignore:Boolean):Unit = js.native
   def getContentSize:ccSize = js.native

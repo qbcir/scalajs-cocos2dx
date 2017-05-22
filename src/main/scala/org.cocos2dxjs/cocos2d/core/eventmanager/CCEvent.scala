@@ -1,14 +1,14 @@
 package org.cocos2dxjs.cocos2d.core.eventmanager
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.extensions.ccui.baseclasses.{ccuiWidget, t_ccuiWidget}
 
 @js.native
 trait t_ccEvent extends t_ccClass {
@@ -115,7 +115,7 @@ trait ts_ccEventTouch extends ts_ccEvent {
 
 @js.native
 @JSGlobal("cc.EventTouch")
-class ccEventTouch(widgetLoseFocus:ccuiWidget, widgetGetFocus:ccuiWidget) extends t_ccEventTouch {
+class ccEventTouch(widgetLoseFocus:t_ccuiWidget, widgetGetFocus:t_ccuiWidget) extends t_ccEventTouch {
 }
 
 @js.native

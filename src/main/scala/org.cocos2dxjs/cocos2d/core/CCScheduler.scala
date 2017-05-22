@@ -1,10 +1,10 @@
 package org.cocos2dxjs.cocos2d.core
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.platform.ccClass
+import org.cocos2dxjs.cocos2d.core.platform.{ccClass, t_ccClass}
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
@@ -16,9 +16,9 @@ trait t_ccScheduler extends t_ccClass {
   def pauseAllTargets():Unit = js.native
   def pauseAllTargetsWithMinPriority(minPriority:Float):Unit = js.native
   def resumeTargets(targetsToResume:js.Array[js.Any]):Unit = js.native
-  def pauseTarget(target:ccClass):Unit = js.native
-  def resumeTarget(target:ccClass):Unit = js.native
-  def isTargetPaused(target:ccClass):Boolean = js.native
+  def pauseTarget(target:t_ccClass):Unit = js.native
+  def resumeTarget(target:t_ccClass):Unit = js.native
+  def isTargetPaused(target:t_ccClass):Boolean = js.native
 }
 
 @js.native

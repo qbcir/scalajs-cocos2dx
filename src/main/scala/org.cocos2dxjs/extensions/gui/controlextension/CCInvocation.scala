@@ -1,7 +1,7 @@
 package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass

@@ -1,13 +1,13 @@
 package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.textures.ccTexture2D
-import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
-import org.cocos2dxjs.cocos2d.core.labelttf.ccLabelTTF
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.cocos2d.core.textures.{ccTexture2D, t_ccTexture2D}
+import org.cocos2dxjs.cocos2d.core.sprites.{ccSprite, t_ccSprite}
+import org.cocos2dxjs.cocos2d.core.labelttf.{ccLabelTTF, t_ccLabelTTF}
 import org.cocos2dxjs.cocos2d.core.sprites.t_ccSprite
 import org.cocos2dxjs.cocos2d.core.sprites.ts_ccSprite
 

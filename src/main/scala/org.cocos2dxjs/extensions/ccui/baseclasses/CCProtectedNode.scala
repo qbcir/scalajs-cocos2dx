@@ -1,22 +1,22 @@
 package org.cocos2dxjs.extensions.ccui.baseclasses
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
 import org.cocos2dxjs.cocos2d.core.basenodes.t_ccNode
 import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
 @js.native
 trait t_ccProtectedNode extends t_ccNode {
-  def addProtectedChild(child:ccNode, localZOrder:Float, tag:Float):Unit = js.native
+  def addProtectedChild(child:t_ccNode, localZOrder:Float, tag:Float):Unit = js.native
   def getProtectedChildByTag(tag:Float):ccNode = js.native
-  def removeProtectedChild(child:ccNode, cleanup:Boolean):Unit = js.native
+  def removeProtectedChild(child:t_ccNode, cleanup:Boolean):Unit = js.native
   def removeProtectedChildByTag(tag:Float, cleanup:Boolean):Unit = js.native
   def removeAllProtectedChildren():Unit = js.native
   def removeAllProtectedChildrenWithCleanup(cleanup:Boolean):Unit = js.native
-  def reorderProtectedChild(child:ccNode, localZOrder:Float):Unit = js.native
+  def reorderProtectedChild(child:t_ccNode, localZOrder:Float):Unit = js.native
   def sortAllProtectedChildren():Unit = js.native
 }
 

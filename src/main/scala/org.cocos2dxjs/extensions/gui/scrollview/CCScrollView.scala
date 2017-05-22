@@ -1,13 +1,13 @@
 package org.cocos2dxjs.extensions.gui.scrollview
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.layers.ccLayer
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
+import org.cocos2dxjs.cocos2d.core.layers.{ccLayer, t_ccLayer}
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
 import org.cocos2dxjs.cocos2d.core.layers.t_ccLayer
 import org.cocos2dxjs.cocos2d.core.layers.ts_ccLayer
 
@@ -21,14 +21,14 @@ trait t_ccScrollView extends t_ccLayer {
   var direction: Float = js.native
   var delegate: js.Any/*ccScrollViewDelegate*/ = js.native
   var clippingToBounds: Boolean = js.native
-  def initWithViewSize(size:ccSize, container:ccNode):Boolean = js.native
-  def setContentOffset(offset:ccPoint, animated:Float):Unit = js.native
-  def setContentOffsetInDuration(offset:ccPoint, dt:Float):Unit = js.native
+  def initWithViewSize(size:t_ccSize, container:t_ccNode):Boolean = js.native
+  def setContentOffset(offset:t_ccPoint, animated:Float):Unit = js.native
+  def setContentOffsetInDuration(offset:t_ccPoint, dt:Float):Unit = js.native
   def setZoomScale(scale:Float, animated:Boolean):Unit = js.native
   def setZoomScaleInDuration(s:Float, dt:Float):Unit = js.native
   def minContainerOffset:ccPoint = js.native
   def maxContainerOffset:ccPoint = js.native
-  def isNodeVisible(node:ccNode):Boolean = js.native
+  def isNodeVisible(node:t_ccNode):Boolean = js.native
   override def pause():Unit = js.native
   override def resume():Unit = js.native
   def getViewSize():Unit = js.native

@@ -1,7 +1,7 @@
 package org.cocos2dxjs.cocos2d.core.platform
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
 
@@ -108,7 +108,7 @@ trait ts_ccQuad2 extends js.Object {
 
 @js.native
 @JSGlobal("cc.Quad2")
-class ccQuad2(tl:ccVertex2F, tr:ccVertex2F, bl:ccVertex2F, br:ccVertex2F, arrayBuffer:js.Array[js.Any], offset:Float) extends t_ccQuad2 {
+class ccQuad2(tl:t_ccVertex2F, tr:t_ccVertex2F, bl:t_ccVertex2F, br:t_ccVertex2F, arrayBuffer:js.Array[js.Any], offset:Float) extends t_ccQuad2 {
 }
 
 @js.native
@@ -127,7 +127,7 @@ trait ts_ccQuad3 extends js.Object {
 
 @js.native
 @JSGlobal("cc.Quad3")
-class ccQuad3(bl:ccVertex3F, br:ccVertex3F, tl:ccVertex3F, tr:ccVertex3F) extends t_ccQuad3 {
+class ccQuad3(bl:t_ccVertex3F, br:t_ccVertex3F, tl:t_ccVertex3F, tr:t_ccVertex3F) extends t_ccQuad3 {
 }
 
 @js.native
@@ -146,7 +146,7 @@ trait ts_ccV3F_C4B_T2F extends js.Object {
 
 @js.native
 @JSGlobal("cc.V3F_C4B_T2F")
-class ccV3F_C4B_T2F(vertices:ccVertex3F, colors:ccColor, texCoords:ccTex2F, arrayBuffer:js.Array[js.Any], offset:Float) extends t_ccV3F_C4B_T2F {
+class ccV3F_C4B_T2F(vertices:t_ccVertex3F, colors:t_ccColor, texCoords:t_ccTex2F, arrayBuffer:js.Array[js.Any], offset:Float) extends t_ccV3F_C4B_T2F {
 }
 
 @js.native
@@ -165,7 +165,7 @@ trait ts_ccV3F_C4B_T2F_Quad extends js.Object {
 
 @js.native
 @JSGlobal("cc.V3F_C4B_T2F_Quad")
-class ccV3F_C4B_T2F_Quad(tl:ccV3F_C4B_T2F, bl:ccV3F_C4B_T2F, tr:ccV3F_C4B_T2F, br:ccV3F_C4B_T2F, arrayBuffer:js.Array[js.Any], offset:Float) extends t_ccV3F_C4B_T2F_Quad {
+class ccV3F_C4B_T2F_Quad(tl:t_ccV3F_C4B_T2F, bl:t_ccV3F_C4B_T2F, tr:t_ccV3F_C4B_T2F, br:t_ccV3F_C4B_T2F, arrayBuffer:js.Array[js.Any], offset:Float) extends t_ccV3F_C4B_T2F_Quad {
 }
 
 @js.native
@@ -184,7 +184,7 @@ trait ts_ccV2F_C4B_T2F extends js.Object {
 
 @js.native
 @JSGlobal("cc.V2F_C4B_T2F")
-class ccV2F_C4B_T2F(vertices:ccVertex2F, colors:ccColor, texCoords:ccTex2F, arrayBuffer:js.Array[js.Any], offset:Float) extends t_ccV2F_C4B_T2F {
+class ccV2F_C4B_T2F(vertices:t_ccVertex2F, colors:t_ccColor, texCoords:t_ccTex2F, arrayBuffer:js.Array[js.Any], offset:Float) extends t_ccV2F_C4B_T2F {
 }
 
 @js.native
@@ -203,7 +203,7 @@ trait ts_ccV2F_C4B_T2F_Triangle extends js.Object {
 
 @js.native
 @JSGlobal("cc.V2F_C4B_T2F_Triangle")
-class ccV2F_C4B_T2F_Triangle(a:ccV2F_C4B_T2F, b:ccV2F_C4B_T2F, c:ccV2F_C4B_T2F, arrayBuffer:js.Array[js.Any], offset:Float) extends t_ccV2F_C4B_T2F_Triangle {
+class ccV2F_C4B_T2F_Triangle(a:t_ccV2F_C4B_T2F, b:t_ccV2F_C4B_T2F, c:t_ccV2F_C4B_T2F, arrayBuffer:js.Array[js.Any], offset:Float) extends t_ccV2F_C4B_T2F_Triangle {
 }
 
 @js.native

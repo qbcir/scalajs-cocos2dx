@@ -1,11 +1,11 @@
 package org.cocos2dxjs.cocos2d.core.platform
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccRect, t_ccRect}
 
 @js.native
 trait t_ccvisibleRect extends js.Object {
@@ -24,7 +24,7 @@ trait t_ccvisibleRect extends js.Object {
 
 @js.native
 trait ts_ccvisibleRect extends js.Object {
-  def init(visibleRect:ccRect):Unit = js.native
+  def init(visibleRect:t_ccRect):Unit = js.native
 }
 
 @js.native

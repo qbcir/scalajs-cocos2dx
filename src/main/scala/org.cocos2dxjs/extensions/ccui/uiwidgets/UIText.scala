@@ -1,12 +1,12 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
-import org.cocos2dxjs.cocos2d.core.platform.ccColor
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
+import org.cocos2dxjs.extensions.ccui.baseclasses.{ccuiWidget, t_ccuiWidget}
+import org.cocos2dxjs.cocos2d.core.platform.{ccColor, t_ccColor}
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
@@ -30,7 +30,7 @@ trait t_ccuiText extends t_ccuiWidget {
   def setFontName:String = js.native
   def getFontName:String = js.native
   def getType:js.Dynamic = js.native
-  def setTextAreaSize(size:ccSize):Unit = js.native
+  def setTextAreaSize(size:t_ccSize):Unit = js.native
   def getTextAreaSize:ccSize = js.native
   def setTextHorizontalAlignment(alignment:Float | Float | Float):Unit = js.native
   def getTextHorizontalAlignment:js.Dynamic | js.Dynamic | js.Dynamic = js.native
@@ -41,8 +41,8 @@ trait t_ccuiText extends t_ccuiWidget {
   override def getVirtualRendererSize:ccSize = js.native
   override def getVirtualRenderer:ccuiWidget = js.native
   override def getDescription:String = js.native
-  def enableShadow(shadowColor:ccColor, offset:ccSize, blurRadius:Float):Unit = js.native
-  def enableOutline(outlineColor:ccColor, outlineSize:ccSize):Unit = js.native
+  def enableShadow(shadowColor:t_ccColor, offset:t_ccSize, blurRadius:Float):Unit = js.native
+  def enableOutline(outlineColor:t_ccColor, outlineSize:t_ccSize):Unit = js.native
   def enableGlow(glowColor:js.Dynamic):Unit = js.native
   def disableEffect():Unit = js.native
 }

@@ -1,7 +1,7 @@
 package org.cocos2dxjs.extensions.ccui.layouts
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
 import org.cocos2dxjs.extensions.ccui.system.t_ccuiClass
@@ -14,7 +14,7 @@ trait t_ccuiMargin extends t_ccuiClass {
   var right: Float = js.native
   var bottom: Float = js.native
   def setMargin(l:Float, t:Float, r:Float, b:Float):Unit = js.native
-  def equals(target:ccuiMargin):Boolean = js.native
+  def equals(target:t_ccuiMargin):Boolean = js.native
 }
 
 @js.native
@@ -23,7 +23,7 @@ trait ts_ccuiMargin extends ts_ccuiClass {
 
 @js.native
 @JSGlobal("ccui.Margin")
-class ccuiMargin(margin:Float | ccuiMargin, top:Float, right:Float, bottom:Float) extends t_ccuiMargin {
+class ccuiMargin(margin:Float | t_ccuiMargin, top:Float, right:Float, bottom:Float) extends t_ccuiMargin {
 }
 
 @js.native
@@ -33,12 +33,12 @@ object ccuiMargin extends ts_ccuiMargin {
 
 @js.native
 trait t_ccuiLayoutParameter extends t_ccuiClass {
-  def setMargin(margin:ccuiMargin):Unit = js.native
+  def setMargin(margin:t_ccuiMargin):Unit = js.native
   def getMargin:ccuiMargin = js.native
   def getLayoutType:Float = js.native
   override def clone:ccuiLayoutParameter = js.native
   def _createCloneInstance:ccuiLayoutParameter = js.native
-  def _copyProperties(model:ccuiLayoutParameter):Unit = js.native
+  def _copyProperties(model:t_ccuiLayoutParameter):Unit = js.native
 }
 
 @js.native

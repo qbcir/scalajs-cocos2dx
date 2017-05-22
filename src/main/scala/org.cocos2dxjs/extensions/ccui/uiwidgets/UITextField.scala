@@ -1,13 +1,13 @@
 package org.cocos2dxjs.extensions.ccui.uiwidgets
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.cocoa.ccSize
-import org.cocos2dxjs.cocos2d.core.cocoa.ccPoint
-import org.cocos2dxjs.cocos2d.core.platform.ccColor
-import org.cocos2dxjs.extensions.ccui.baseclasses.ccuiWidget
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
+import org.cocos2dxjs.cocos2d.core.platform.{ccColor, t_ccColor}
+import org.cocos2dxjs.extensions.ccui.baseclasses.{ccuiWidget, t_ccuiWidget}
 import org.cocos2dxjs.extensions.ccui.baseclasses.t_ccuiWidget
 import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
@@ -22,9 +22,9 @@ trait t_ccuiTextField extends t_ccuiWidget {
   var maxLength: Float = js.native
   var passwordEnabled: Boolean = js.native
   override def onEnter():Unit = js.native
-  def setTouchSize(size:ccSize):Unit = js.native
+  def setTouchSize(size:t_ccSize):Unit = js.native
   def setTouchAreaEnabled(enable:js.Dynamic):Unit = js.native
-  override def hitTest(pt:ccPoint):Boolean = js.native
+  override def hitTest(pt:t_ccPoint):Boolean = js.native
   def getTouchSize:ccSize = js.native
   def setString(text:String):Unit = js.native
   def setPlaceHolder(value:String):Unit = js.native
@@ -39,7 +39,7 @@ trait t_ccuiTextField extends t_ccuiWidget {
   override def didNotSelectSelf():Unit = js.native
   def getString:String = js.native
   def getStringLength:Float = js.native
-  def onTouchBegan(touchPoint:ccPoint):Unit = js.native
+  def onTouchBegan(touchPoint:t_ccPoint):Unit = js.native
   def setMaxLengthEnabled(enable:Boolean):Unit = js.native
   def isMaxLengthEnabled:Boolean = js.native
   def setMaxLength(length:Float):Unit = js.native
@@ -61,7 +61,7 @@ trait t_ccuiTextField extends t_ccuiWidget {
   override def getVirtualRenderer:ccuiWidget = js.native
   override def getDescription:String = js.native
   def attachWithIME:Boolean = js.native
-  def setTextAreaSize(size:ccSize):Unit = js.native
+  def setTextAreaSize(size:t_ccSize):Unit = js.native
   def setTextHorizontalAlignment(alignment:js.Dynamic):Unit = js.native
   def setTextVerticalAlignment(alignment:js.Dynamic):Unit = js.native
 }

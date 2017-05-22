@@ -1,10 +1,10 @@
 package org.cocos2dxjs.extensions.gui.controlextension
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.sprites.ccSprite
+import org.cocos2dxjs.cocos2d.core.sprites.{ccSprite, t_ccSprite}
 
 @js.native
 trait t_ccControlSlider extends t_ccControl {
@@ -16,7 +16,7 @@ trait t_ccControlSlider extends t_ccControl {
   val thumbSprite: Float = js.native
   val progressSprite: ccSprite = js.native
   val backgroundSprite: ccSprite = js.native
-  def initWithSprites(backgroundSprite:ccSprite, progressSprite:ccSprite, thumbSprite:ccSprite):Unit = js.native
+  def initWithSprites(backgroundSprite:t_ccSprite, progressSprite:t_ccSprite, thumbSprite:t_ccSprite):Unit = js.native
   def valueForLocation():Unit = js.native
 }
 

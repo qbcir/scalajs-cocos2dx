@@ -1,16 +1,16 @@
 package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
 
 @js.native
 trait t_ccActionEase extends t_ccActionInterval {
-  def initWithAction(action:ccActionInterval):Boolean = js.native
+  def initWithAction(action:t_ccActionInterval):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def stop():Unit = js.native
   override def update(dt:Float):Unit = js.native
   override def reverse:ccAction = js.native
@@ -23,7 +23,7 @@ trait ts_ccActionEase extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.ActionEase")
-class ccActionEase(action:ccActionInterval) extends t_ccActionEase {
+class ccActionEase(action:t_ccActionInterval) extends t_ccActionEase {
 }
 
 @js.native
@@ -35,7 +35,7 @@ object ccActionEase extends ts_ccActionEase {
 trait t_ccEaseRateAction extends t_ccActionEase {
   def setRate(rate:Float):Unit = js.native
   def getRate:Float = js.native
-  def initWithAction(action:ccActionInterval, rate:Float):Boolean = js.native
+  def initWithAction(action:t_ccActionInterval, rate:Float):Boolean = js.native
   override def clone:ccAction = js.native
   override def reverse:ccAction = js.native
 }
@@ -46,7 +46,7 @@ trait ts_ccEaseRateAction extends ts_ccActionEase {
 
 @js.native
 @JSGlobal("cc.EaseRateAction")
-class ccEaseRateAction(action:ccActionInterval, rate:Float) extends t_ccEaseRateAction {
+class ccEaseRateAction(action:t_ccActionInterval, rate:Float) extends t_ccEaseRateAction {
 }
 
 @js.native
@@ -247,7 +247,7 @@ object ccEaseSineInOut extends ts_ccEaseSineInOut {
 trait t_ccEaseElastic extends t_ccActionEase {
   def getPeriod:Float = js.native
   def setPeriod(period:Float):Unit = js.native
-  def initWithAction(action:ccActionInterval, period:Float):Boolean = js.native
+  def initWithAction(action:t_ccActionInterval, period:Float):Boolean = js.native
   override def reverse:ccAction = js.native
   override def clone:ccAction = js.native
 }
@@ -258,7 +258,7 @@ trait ts_ccEaseElastic extends ts_ccActionEase {
 
 @js.native
 @JSGlobal("cc.EaseElastic")
-class ccEaseElastic(action:ccActionInterval, period:Float) extends t_ccEaseElastic {
+class ccEaseElastic(action:t_ccActionInterval, period:Float) extends t_ccEaseElastic {
 }
 
 @js.native
@@ -490,7 +490,7 @@ trait ts_ccEaseBezierAction extends ts_ccActionEase {
 
 @js.native
 @JSGlobal("cc.EaseBezierAction")
-class ccEaseBezierAction(action:ccAction) extends t_ccEaseBezierAction {
+class ccEaseBezierAction(action:t_ccAction) extends t_ccEaseBezierAction {
 }
 
 @js.native

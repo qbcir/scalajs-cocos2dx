@@ -1,11 +1,11 @@
 package org.cocos2dxjs.extensions.cocostudio.action
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
-import org.cocos2dxjs.cocos2d.actions.ccCallFunc
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
+import org.cocos2dxjs.cocos2d.actions.{ccCallFunc, t_ccCallFunc}
 import org.cocos2dxjs.extensions.cocostudio.t_ccsClass
 import org.cocos2dxjs.extensions.cocostudio.ts_ccsClass
 
@@ -19,11 +19,11 @@ trait t_ccsActionNode extends t_ccsClass {
   def setObject(node:types.DynObject):Unit = js.native
   def getObject:js.Dynamic = js.native
   def getActionNode:ccNode = js.native
-  def insertFrame(index:Float, frame:ccsActionFrame):Unit = js.native
-  def addFrame(frame:ccsActionFrame):Unit = js.native
-  def deleteFrame(frame:ccsActionFrame):Unit = js.native
+  def insertFrame(index:Float, frame:t_ccsActionFrame):Unit = js.native
+  def addFrame(frame:t_ccsActionFrame):Unit = js.native
+  def deleteFrame(frame:t_ccsActionFrame):Unit = js.native
   def clearAllFrame():Unit = js.native
-  def playAction(fun:ccCallFunc):Unit = js.native
+  def playAction(fun:t_ccCallFunc):Unit = js.native
   def stopAction():Unit = js.native
   def getFirstFrameIndex:Float = js.native
   def getLastFrameIndex:Float = js.native

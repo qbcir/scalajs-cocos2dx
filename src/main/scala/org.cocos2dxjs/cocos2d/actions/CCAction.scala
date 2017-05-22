@@ -1,13 +1,13 @@
 package org.cocos2dxjs.cocos2d.actions
 
 import scalajs.js
-import org.cocos2dxjs.core.{types, Implicits}
+import org.cocos2dxjs.core.types
 import scala.scalajs.js.annotation._
 import scala.scalajs.js.|
-import org.cocos2dxjs.cocos2d.core.basenodes.ccNode
+import org.cocos2dxjs.cocos2d.core.basenodes.{ccNode, t_ccNode}
 import org.cocos2dxjs.cocos2d.core.platform.t_ccClass
 import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
-import org.cocos2dxjs.cocos2d.core.cocoa.ccRect
+import org.cocos2dxjs.cocos2d.core.cocoa.{ccRect, t_ccRect}
 
 @js.native
 trait t_ccAction extends t_ccClass {
@@ -16,14 +16,14 @@ trait t_ccAction extends t_ccClass {
   var tag: Float = js.native
   override def clone:ccAction = js.native
   def isDone:Boolean = js.native
-  def startWithTarget(target:ccNode):Unit = js.native
+  def startWithTarget(target:t_ccNode):Unit = js.native
   def stop():Unit = js.native
   def step(dt:Float):Unit = js.native
   def update(dt:Float):Unit = js.native
   def getTarget:ccNode = js.native
-  def setTarget(target:ccNode):Unit = js.native
+  def setTarget(target:t_ccNode):Unit = js.native
   def getOriginalTarget:ccNode = js.native
-  def setOriginalTarget(originalTarget:ccNode):Unit = js.native
+  def setOriginalTarget(originalTarget:t_ccNode):Unit = js.native
   def getTag:Float = js.native
   def setTag(tag:Float):Unit = js.native
   def retain():Unit = js.native
@@ -70,14 +70,14 @@ object ccFiniteTimeAction extends ts_ccFiniteTimeAction {
 trait t_ccSpeed extends t_ccAction {
   def getSpeed:Float = js.native
   def setSpeed(speed:Float):Unit = js.native
-  def initWithAction(action:ccActionInterval, speed:Float):Boolean = js.native
+  def initWithAction(action:t_ccActionInterval, speed:Float):Boolean = js.native
   override def clone:ccAction = js.native
-  override def startWithTarget(target:ccNode):Unit = js.native
+  override def startWithTarget(target:t_ccNode):Unit = js.native
   override def stop():Unit = js.native
   override def step(dt:Float):Unit = js.native
   override def isDone:Boolean = js.native
   def reverse:ccSpeed = js.native
-  def setInnerAction(action:ccActionInterval):Unit = js.native
+  def setInnerAction(action:t_ccActionInterval):Unit = js.native
   def getInnerAction:ccActionInterval = js.native
 }
 
@@ -87,7 +87,7 @@ trait ts_ccSpeed extends ts_ccAction {
 
 @js.native
 @JSGlobal("cc.Speed")
-class ccSpeed(action:ccActionInterval, speed:Float) extends t_ccSpeed {
+class ccSpeed(action:t_ccActionInterval, speed:Float) extends t_ccSpeed {
 }
 
 @js.native
@@ -104,7 +104,7 @@ trait t_ccFollow extends t_ccAction {
   override def clone:ccAction = js.native
   def isBoundarySet:Boolean = js.native
   def setBoudarySet(value:Boolean):Unit = js.native
-  def initWithTarget(followedNode:ccNode, rect:ccRect):Boolean = js.native
+  def initWithTarget(followedNode:t_ccNode, rect:t_ccRect):Boolean = js.native
   override def step(dt:Float):Unit = js.native
   override def isDone:Boolean = js.native
   override def stop():Unit = js.native
@@ -116,7 +116,7 @@ trait ts_ccFollow extends ts_ccAction {
 
 @js.native
 @JSGlobal("cc.Follow")
-class ccFollow(followedNode:ccNode, rect:ccRect) extends t_ccFollow {
+class ccFollow(followedNode:t_ccNode, rect:t_ccRect) extends t_ccFollow {
 }
 
 @js.native
