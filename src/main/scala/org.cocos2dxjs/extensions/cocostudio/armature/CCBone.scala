@@ -37,7 +37,7 @@ trait t_ccsBone extends t_ccsNode {
   def setArmature(armature:t_ccsArmature):Unit = js.native
   def getArmature:ccsArmature = js.native
   def update(delta:Float):Unit = js.native
-  def setBlendFunc(blendFunc:t_ccBlendFunc | Float, dst:Float):Unit = js.native
+  def setBlendFunc(blendFunc:Float|t_ccBlendFunc, dst:Float):Unit = js.native
   def updateColor():Unit = js.native
   def updateZOrder():Unit = js.native
   def addChildBone(child:t_ccsBone):Unit = js.native
@@ -67,7 +67,7 @@ trait t_ccsBone extends t_ccsNode {
   def isIgnoreMovementBoneData:Boolean = js.native
   def getBlendFunc:ccBlendFunc = js.native
   def setBlendDirty(dirty:Boolean):Unit = js.native
-  def isBlendDirty:Boolean | js.Dynamic | Float = js.native
+  def isBlendDirty:Boolean = js.native
   def getTweenData:ccsFrameData = js.native
   def getWorldInfo:ccsBaseData = js.native
 }

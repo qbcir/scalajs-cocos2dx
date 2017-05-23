@@ -81,8 +81,8 @@ trait t_ccNode extends t_ccClass {
   def setScaleX(newScaleX:Float):Unit = js.native
   def getScaleY:Float = js.native
   def setScaleY(newScaleY:Float):Unit = js.native
-  def setPosition(newPosOrxValue:t_ccPoint | Float, yValue:Float):Unit = js.native
-  def setNormalizedPosition(posOrX:t_ccPoint | Float, y:Float):Unit = js.native
+  def setPosition(newPosOrxValue:Float|t_ccPoint, yValue:Float):Unit = js.native
+  def setNormalizedPosition(posOrX:Float|t_ccPoint, y:Float):Unit = js.native
   def getPosition:ccPoint = js.native
   def getNormalizedPosition:ccPoint = js.native
   def getPositionX:Float = js.native
@@ -94,10 +94,10 @@ trait t_ccNode extends t_ccClass {
   def isVisible:Boolean = js.native
   def setVisible(visible:Boolean):Unit = js.native
   def getAnchorPoint:ccPoint = js.native
-  def setAnchorPoint(point:t_ccPoint | Float, y:Float):Unit = js.native
+  def setAnchorPoint(point:Float|t_ccPoint, y:Float):Unit = js.native
   def getAnchorPointInPoints:ccPoint = js.native
   def getContentSize:ccSize = js.native
-  def setContentSize(size:t_ccSize | Float, height:Float):Unit = js.native
+  def setContentSize(size:Float|t_ccSize, height:Float):Unit = js.native
   def isRunning:Boolean = js.native
   def getParent:ccNode = js.native
   def setParent(parent:t_ccNode):Unit = js.native
@@ -121,7 +121,7 @@ trait t_ccNode extends t_ccClass {
   def cleanup():Unit = js.native
   def getChildByTag(aTag:Float):ccNode = js.native
   def getChildByName(name:String):ccNode = js.native
-  def addChild(child:t_ccNode, localZOrder:Float, tag:Float | String):Unit = js.native
+  def addChild(child:t_ccNode, localZOrder:Float, tag:Float|String):Unit = js.native
   def removeFromParent(cleanup:Boolean):Unit = js.native
   def removeChild(child:t_ccNode, cleanup:Boolean):Unit = js.native
   def removeChildByTag(tag:Float, cleanup:Boolean):Unit = js.native
@@ -129,7 +129,7 @@ trait t_ccNode extends t_ccClass {
   def removeAllChildren(cleanup:Boolean):Unit = js.native
   def reorderChild(child:t_ccNode, zOrder:Float):Unit = js.native
   def sortAllChildren():Unit = js.native
-  def draw(ctx:js.Dynamic | js.Dynamic):Unit = js.native
+  def draw(ctx:js.Dynamic):Unit = js.native
   def onEnter():Unit = js.native
   def onEnterTransitionDidFinish():Unit = js.native
   def onExitTransitionDidStart():Unit = js.native
@@ -165,7 +165,7 @@ trait t_ccNode extends t_ccClass {
   def release():Unit = js.native
   def getComponent(name:String):ccComponent = js.native
   def addComponent(component:t_ccComponent):Unit = js.native
-  def removeComponent(component:String | t_ccComponent):Unit = js.native
+  def removeComponent(component:String|t_ccComponent):Unit = js.native
   def removeAllComponents():Unit = js.native
   def visit(parent:t_ccNode):Unit = js.native
   def transform(parentCmd:js.Any/*ccNodeRenderCmd*/, recursive:Boolean):Unit = js.native

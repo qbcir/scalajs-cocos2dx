@@ -43,7 +43,7 @@ trait ts_ccuiScale9Sprite extends ts_ccNode {
 
 @js.native
 @JSGlobal("ccui.Scale9Sprite")
-class ccuiScale9Sprite(file:String | t_ccSpriteFrame, rectOrCapInsets:t_ccRect, capInsets:t_ccRect) extends t_ccuiScale9Sprite {
+class ccuiScale9Sprite(file:String|t_ccSpriteFrame, rectOrCapInsets:t_ccRect, capInsets:t_ccRect) extends t_ccuiScale9Sprite {
 }
 
 @js.native

@@ -167,7 +167,7 @@ trait ts_ccPlace extends ts_ccActionInstant {
 
 @js.native
 @JSGlobal("cc.Place")
-class ccPlace(pos:t_ccPoint | Float, y:Float) extends t_ccPlace {
+class ccPlace(pos:Float|t_ccPoint, y:Float) extends t_ccPlace {
 }
 
 @js.native
@@ -177,7 +177,7 @@ object ccPlace extends ts_ccPlace {
 
 @js.native
 trait t_ccCallFunc extends t_ccActionInstant {
-  def initWithFunction(selector:js.Function, selectorTarget:types.DynObject | js.Dynamic, data:js.Dynamic | js.Dynamic):Boolean = js.native
+  def initWithFunction(selector:js.Function, selectorTarget:js.Dynamic|types.DynObject, data:js.Dynamic):Boolean = js.native
   def execute():Unit = js.native
   override def update(dt:Float):Unit = js.native
   def getTargetCallback:types.DynObject = js.native
@@ -191,7 +191,7 @@ trait ts_ccCallFunc extends ts_ccActionInstant {
 
 @js.native
 @JSGlobal("cc.CallFunc")
-class ccCallFunc(selector:js.Function, selectorTarget:types.DynObject | js.Dynamic, data:js.Dynamic | js.Dynamic) extends t_ccCallFunc {
+class ccCallFunc(selector:js.Function, selectorTarget:Null|types.DynObject, data:Null|js.Dynamic) extends t_ccCallFunc {
 }
 
 @js.native

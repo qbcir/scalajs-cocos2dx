@@ -13,7 +13,7 @@ trait t_ccEGLView extends js.Object {
   def setTargetDensityDPI(densityDPI:String):Unit = js.native
   def getTargetDensityDPI:String = js.native
   def resizeWithBrowserSize(enabled:Boolean):Unit = js.native
-  def setResizeCallback(callback:js.Function | js.Dynamic):Unit = js.native
+  def setResizeCallback(callback:Null|js.Function):Unit = js.native
   def setOrientation(orientation:Float):Unit = js.native
   def adjustViewPort(enabled:Boolean):Unit = js.native
   def enableRetina(enabled:Boolean):Unit = js.native
@@ -24,7 +24,7 @@ trait t_ccEGLView extends js.Object {
   def swapBuffers():Unit = js.native
   def setIMEKeyboardState(isOpen:Boolean):Unit = js.native
   def setContentTranslateLeftTop(offsetLeft:Float, offsetTop:Float):Unit = js.native
-  def getContentTranslateLeftTop:ccSize | types.DynObject = js.native
+  def getContentTranslateLeftTop:ccSize|types.DynObject = js.native
   def getCanvasSize:ccSize = js.native
   def getFrameSize:ccSize = js.native
   def setFrameSize(width:Float, height:Float):Unit = js.native
@@ -34,10 +34,10 @@ trait t_ccEGLView extends js.Object {
   def getVisibleOriginInPixel:ccPoint = js.native
   def canSetContentScaleFactor:Boolean = js.native
   def getResolutionPolicy:ccResolutionPolicy = js.native
-  def setResolutionPolicy(resolutionPolicy:t_ccResolutionPolicy | Float):Unit = js.native
-  def setDesignResolutionSize(width:Float, height:Float, resolutionPolicy:t_ccResolutionPolicy | Float):Unit = js.native
+  def setResolutionPolicy(resolutionPolicy:Float|t_ccResolutionPolicy):Unit = js.native
+  def setDesignResolutionSize(width:Float, height:Float, resolutionPolicy:Float|t_ccResolutionPolicy):Unit = js.native
   def getDesignResolutionSize:ccSize = js.native
-  def setRealPixelResolution(width:Float, height:Float, resolutionPolicy:t_ccResolutionPolicy | Float):Unit = js.native
+  def setRealPixelResolution(width:Float, height:Float, resolutionPolicy:Float|t_ccResolutionPolicy):Unit = js.native
   def setViewPortInPoints(x:Float, y:Float, w:Float, h:Float):Unit = js.native
   def setScissorInPoints(x:Float, y:Float, w:Float, h:Float):Unit = js.native
   def isScissorEnabled:Boolean = js.native

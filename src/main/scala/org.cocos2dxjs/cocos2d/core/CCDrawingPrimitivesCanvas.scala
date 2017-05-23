@@ -24,7 +24,7 @@ trait t_ccDrawingPrimitiveCanvas extends t_ccClass {
   def drawCubicBezier(origin:t_ccPoint, control1:t_ccPoint, control2:t_ccPoint, destination:t_ccPoint, segments:Float):Unit = js.native
   def drawCatmullRom(points:js.Array[js.Any], segments:Float):Unit = js.native
   def drawCardinalSpline(config:js.Array[js.Any], tension:Float, segments:Float):Unit = js.native
-  def drawImage(image:js.Dynamic | js.Dynamic, sourcePoint:t_ccPoint, sourceSize:t_ccSize, destPoint:t_ccPoint, destSize:t_ccSize):Unit = js.native
+  def drawImage(image:js.Dynamic, sourcePoint:t_ccPoint, sourceSize:t_ccSize, destPoint:t_ccPoint, destSize:t_ccSize):Unit = js.native
   def drawStar(ctx:js.Any/*ccCanvasContextWrapper*/, radius:Float, color:t_ccColor):Unit = js.native
   def drawColorBall(ctx:js.Any/*ccCanvasContextWrapper*/, radius:Float, color:t_ccColor):Unit = js.native
   def fillText(strText:String, x:Float, y:Float):Unit = js.native

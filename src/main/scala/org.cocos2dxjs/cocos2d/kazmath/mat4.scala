@@ -19,7 +19,7 @@ trait ts_ccmathMatrix4 extends js.Object {
   def createByRotationTranslation(rotation:t_ccmathMatrix3, translation:t_ccmathVec3, matrix:t_ccmathMatrix4):ccmathMatrix4 = js.native
   def createByScale(x:Float, y:Float, z:Float, matrix:t_ccmathMatrix4):ccmathMatrix4 = js.native
   def createByTranslation(x:Float, y:Float, z:Float, matrix:t_ccmathMatrix4):ccmathMatrix4 = js.native
-  def createPerspectiveProjection(fovY:Float, aspect:Float, zNear:Float, zFar:Float):ccmathMatrix4 | js.Dynamic = js.native
+  def createPerspectiveProjection(fovY:Float, aspect:Float, zNear:Float, zFar:Float):ccmathMatrix4|js.Dynamic = js.native
   def createOrthographicProjection(left:Float, right:Float, bottom:Float, top:Float, nearVal:Float, farVal:Float):ccmathMatrix4 = js.native
   def createByAxisAndAngle(axis:t_ccmathVec3, radians:Float, matrix:t_ccmathMatrix4):ccmathMatrix4 = js.native
 }

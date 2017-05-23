@@ -12,12 +12,12 @@ trait t_ccspriteFrameCache extends js.Object {
 
 @js.native
 trait ts_ccspriteFrameCache extends js.Object {
-  def addSpriteFrames(url:String, texture:js.Dynamic | t_ccTexture2D | String):Unit = js.native
+  def addSpriteFrames(url:String, texture:String|js.Dynamic|t_ccTexture2D):Unit = js.native
   def addSpriteFrame(frame:t_ccSpriteFrame, frameName:String):Unit = js.native
   def removeSpriteFrames():Unit = js.native
   def removeSpriteFrameByName(name:String):Unit = js.native
   def removeSpriteFramesFromFile(url:String):Unit = js.native
-  def removeSpriteFramesFromTexture(texture:js.Dynamic | js.Dynamic | t_ccTexture2D):Unit = js.native
+  def removeSpriteFramesFromTexture(texture:js.Dynamic|t_ccTexture2D):Unit = js.native
   def getSpriteFrame(name:String):ccSpriteFrame = js.native
 }
 

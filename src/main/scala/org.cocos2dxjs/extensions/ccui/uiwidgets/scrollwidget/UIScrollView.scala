@@ -19,7 +19,7 @@ import org.cocos2dxjs.extensions.ccui.layouts.ts_ccuiLayout
 trait t_ccuiScrollView extends t_ccuiLayout {
   var innerWidth: Float = js.native
   var innerHeight: Float = js.native
-  var direction: Float | Float | Float | Float = js.native
+  var direction: Float = js.native
   var bounceEnabled: Boolean = js.native
   var inertiaScrollEnabled: Boolean = js.native
   var touchTotalTimeThreshold: Float = js.native
@@ -29,7 +29,7 @@ trait t_ccuiScrollView extends t_ccuiLayout {
   def setInnerContainerPosition(position:t_ccPoint):Unit = js.native
   def getInnerContainerPosition():Unit = js.native
   def getInnerContainerSize:ccSize = js.native
-  def addChild(widget:t_ccNode, zOrder:Float, tag:Float | String):Boolean = js.native
+  def addChild(widget:t_ccNode, zOrder:Float, tag:Float|String):Boolean = js.native
   def removeAllChildren():Unit = js.native
   override def removeAllChildrenWithCleanup(cleanup:Boolean):Unit = js.native
   override def removeChild(child:t_ccuiWidget, cleanup:Boolean):Unit = js.native
@@ -69,8 +69,8 @@ trait t_ccuiScrollView extends t_ccuiLayout {
   def update(dt:Float):Unit = js.native
   override def interceptTouchEvent(event:Float, sender:t_ccuiWidget, touch:t_ccTouch):Unit = js.native
   def addEventListener(selector:js.Function):Unit = js.native
-  def setDirection(dir:Float | Float | Float | Float):Unit = js.native
-  def getDirection:Float | Float | Float | Float = js.native
+  def setDirection(dir:Float):Unit = js.native
+  def getDirection:Float = js.native
   def setBounceEnabled(enabled:Boolean):Unit = js.native
   def isBounceEnabled:Boolean = js.native
   def setInertiaScrollEnabled(enabled:Boolean):Unit = js.native
@@ -93,8 +93,8 @@ trait t_ccuiScrollView extends t_ccuiLayout {
   def setScrollBarAutoHideTime(autoHideTime:Float):Unit = js.native
   def getScrollBarAutoHideTime:Float = js.native
   def getInnerContainer:ccuiLayout = js.native
-  override def setLayoutType(_type:Float | Float | Float | Float):Unit = js.native
-  override def getLayoutType:js.Dynamic = js.native
+  override def setLayoutType(_type:Float):Unit = js.native
+  override def getLayoutType:Null = js.native
   override def getDescription:String = js.native
 }
 

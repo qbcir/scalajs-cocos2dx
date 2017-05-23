@@ -11,7 +11,7 @@ trait t_ccLoaderScene extends t_ccScene {
 
 @js.native
 trait ts_ccLoaderScene extends ts_ccScene {
-  def preload(resources:js.Dynamic, cb:js.Dynamic, target:js.Dynamic):ccLoaderScene | js.Dynamic = js.native
+  def preload(resources:js.Dynamic, cb:js.Dynamic, target:js.Dynamic):ccLoaderScene|js.Dynamic = js.native
 }
 
 @js.native

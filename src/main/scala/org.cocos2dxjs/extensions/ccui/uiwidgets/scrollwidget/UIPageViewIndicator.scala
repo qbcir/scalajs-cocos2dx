@@ -11,7 +11,7 @@ import org.cocos2dxjs.extensions.ccui.system.ts_ccuiProtectedNode
 @js.native
 trait t_ccuiPageViewIndicator extends t_ccuiProtectedNode {
   var spaceBetweenIndexNodes: Float = js.native
-  def setDirection(direction:Float | Float | Float | Float):Unit = js.native
+  def setDirection(direction:Float):Unit = js.native
   def reset(numberOfTotalPages:Float):Unit = js.native
   def indicate(index:Float):Unit = js.native
   def setSpaceBetweenIndexNodes(spaceBetweenIndexNodes:Float):Unit = js.native
@@ -22,7 +22,7 @@ trait t_ccuiPageViewIndicator extends t_ccuiProtectedNode {
   def getIndexNodesColor:ccColor = js.native
   def setIndexNodesScale(indexNodesScale:Float):Unit = js.native
   def getIndexNodesScale:Float = js.native
-  def setIndexNodesTexture(texName:String, texType:Float | Float):Unit = js.native
+  def setIndexNodesTexture(texName:String, texType:Float):Unit = js.native
   def clear():Unit = js.native
 }
 

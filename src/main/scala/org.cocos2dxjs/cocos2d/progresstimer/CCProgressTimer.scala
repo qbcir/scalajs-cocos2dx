@@ -23,7 +23,7 @@ trait t_ccProgressTimer extends t_ccNode {
   def setMidpoint(mpoint:t_ccPoint):Unit = js.native
   def getBarChangeRate:ccPoint = js.native
   def setBarChangeRate(barChangeRate:t_ccPoint):Unit = js.native
-  def getType:Float | Float = js.native
+  def getType:Float = js.native
   def getPercentage:Float = js.native
   def getSprite:ccSprite = js.native
   def setPercentage(percentage:Float):Unit = js.native
@@ -36,7 +36,7 @@ trait t_ccProgressTimer extends t_ccNode {
   override def getOpacity:Float = js.native
   def setReverseProgress(reverse:Boolean):Unit = js.native
   def setSprite(sprite:t_ccSprite):Unit = js.native
-  def setType(_type:Float | Float):Unit = js.native
+  def setType(_type:Float):Unit = js.native
   def setReverseDirection(reverse:Boolean):Unit = js.native
   def initWithSprite(sprite:t_ccSprite):Boolean = js.native
 }

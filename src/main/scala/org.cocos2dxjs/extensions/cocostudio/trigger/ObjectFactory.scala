@@ -14,7 +14,7 @@ trait t_ccsobjectFactory extends js.Object {
 trait ts_ccsobjectFactory extends js.Object {
   def createObject(className:String):js.Dynamic = js.native
   def registerType(t:t_ccsTInfo):Unit = js.native
-  def createGUI(name:String):ccuiWidget | js.Dynamic = js.native
+  def createGUI(name:String):Null|ccuiWidget = js.native
 }
 
 @js.native

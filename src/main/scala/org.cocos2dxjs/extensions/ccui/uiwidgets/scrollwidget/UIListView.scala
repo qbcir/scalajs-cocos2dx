@@ -15,7 +15,6 @@ trait t_ccuiListView extends t_ccuiScrollView {
   def pushBackDefaultItem():Unit = js.native
   def insertDefaultItem(index:Float):Unit = js.native
   def pushBackCustomItem(item:t_ccuiWidget):Unit = js.native
-  override def addChild(widget:t_ccNode, zOrder:Float, tag:Float | String):Boolean = js.native
   def removeChild(widget:t_ccNode, cleanup:Boolean):Unit = js.native
   override def removeAllChildren():Unit = js.native
   override def removeAllChildrenWithCleanup(cleanup:Boolean):Unit = js.native
@@ -33,7 +32,7 @@ trait t_ccuiListView extends t_ccuiScrollView {
   def getMagneticAllowedOutOfBoundary:Boolean = js.native
   def setItemsMargin(margin:Float):Unit = js.native
   def getItemsMargin:Float = js.native
-  override def setDirection(dir:Float | Float | Float | Float):Unit = js.native
+  override def setDirection(dir:Float):Unit = js.native
   def getClosestItemToPosition(targetPosition:t_ccPoint, itemAnchorPoint:t_ccPoint):ccuiWidget = js.native
   def getClosestItemToPositionInCurrentView(positionRatioInView:t_ccPoint, itemAnchorPoint:t_ccPoint):ccuiWidget = js.native
   def getCenterItemInCurrentView:ccuiWidget = js.native

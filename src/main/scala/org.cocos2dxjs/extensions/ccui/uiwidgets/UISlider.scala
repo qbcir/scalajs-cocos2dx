@@ -14,8 +14,8 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 @js.native
 trait t_ccuiSlider extends t_ccuiWidget {
   var percent: Float = js.native
-  def loadBarTexture(fileName:String, texType:Float | Float):Unit = js.native
-  def loadProgressBarTexture(fileName:String, texType:Float | Float):Unit = js.native
+  def loadBarTexture(fileName:String, texType:Float):Unit = js.native
+  def loadProgressBarTexture(fileName:String, texType:Float):Unit = js.native
   def setScale9Enabled(able:Boolean):Unit = js.native
   def isScale9Enabled:Boolean = js.native
   override def ignoreContentAdaptWithSize(ignore:Boolean):Unit = js.native
@@ -24,10 +24,10 @@ trait t_ccuiSlider extends t_ccuiWidget {
   def getCapInsetsBarRenderer:ccRect = js.native
   def setCapInsetProgressBarRenderer(capInsets:t_ccRect):Unit = js.native
   def getCapInsetsProgressBarRenderer:ccRect = js.native
-  def loadSlidBallTextures(normal:String, pressed:String, disabled:String, texType:Float | Float):Unit = js.native
-  def loadSlidBallTextureNormal(normal:String, texType:Float | Float):Unit = js.native
-  def loadSlidBallTexturePressed(pressed:String, texType:Float | Float):Unit = js.native
-  def loadSlidBallTextureDisabled(disabled:String, texType:Float | Float):Unit = js.native
+  def loadSlidBallTextures(normal:String, pressed:String, disabled:String, texType:Float):Unit = js.native
+  def loadSlidBallTextureNormal(normal:String, texType:Float):Unit = js.native
+  def loadSlidBallTexturePressed(pressed:String, texType:Float):Unit = js.native
+  def loadSlidBallTextureDisabled(disabled:String, texType:Float):Unit = js.native
   def setPercent(percent:Float):Unit = js.native
   override def hitTest(pt:t_ccPoint):Boolean = js.native
   def _getPercentWithBallPos(px:t_ccPoint):Float = js.native

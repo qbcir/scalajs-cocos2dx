@@ -34,7 +34,7 @@ trait t_ccActionManager extends t_ccClass {
   def removeAllActionsFromTarget(target:types.DynObject, forceDelete:Boolean):Unit = js.native
   def removeAction(action:t_ccAction):Unit = js.native
   def removeActionByTag(tag:Float, target:types.DynObject):Unit = js.native
-  def getActionByTag(tag:Float, target:types.DynObject):ccAction | js.Dynamic = js.native
+  def getActionByTag(tag:Float, target:types.DynObject):ccAction|js.Dynamic = js.native
   def numberOfRunningActionsInTarget(target:types.DynObject):Float = js.native
   def pauseTarget(target:types.DynObject):Unit = js.native
   def resumeTarget(target:types.DynObject):Unit = js.native

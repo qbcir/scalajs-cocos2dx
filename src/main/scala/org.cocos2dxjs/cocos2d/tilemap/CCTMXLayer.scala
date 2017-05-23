@@ -38,12 +38,12 @@ trait t_ccTMXLayer extends t_ccSpriteBatchNode {
   def getLayerName:String = js.native
   def setLayerName(layerName:String):Unit = js.native
   def releaseMap():Unit = js.native
-  def getTileAt(pos:t_ccPoint | Float, y:Float):ccSprite = js.native
-  def getTileGIDAt(pos:t_ccPoint | Float, y:Float):Float = js.native
-  def setTileGID(gid:Float, posOrX:t_ccPoint | Float, flagsOrY:Float, flags:Float):Unit = js.native
-  def getTileFlagsAt(pos:t_ccPoint | Float, y:Float):Float = js.native
-  def removeTileAt(pos:t_ccPoint | Float, y:Float):Unit = js.native
-  def getPositionAt(pos:t_ccPoint | Float, y:Float):ccPoint = js.native
+  def getTileAt(pos:Float|t_ccPoint, y:Float):ccSprite = js.native
+  def getTileGIDAt(pos:Float|t_ccPoint, y:Float):Float = js.native
+  def setTileGID(gid:Float, posOrX:Float|t_ccPoint, flagsOrY:Float, flags:Float):Unit = js.native
+  def getTileFlagsAt(pos:Float|t_ccPoint, y:Float):Float = js.native
+  def removeTileAt(pos:Float|t_ccPoint, y:Float):Unit = js.native
+  def getPositionAt(pos:Float|t_ccPoint, y:Float):ccPoint = js.native
 }
 
 @js.native

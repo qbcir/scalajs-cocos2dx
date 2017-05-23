@@ -23,8 +23,8 @@ trait ts_ccconfiguration extends js.Object {
   def supportsDiscardFramebuffer:Boolean = js.native
   def supportsShareableVAO:Boolean = js.native
   def checkForGLExtension(searchName:String):Unit = js.native
-  def getValue(key:String, default_value:String | js.Dynamic | Float | types.DynObject):String | js.Dynamic | Float | types.DynObject = js.native
-  def setValue(key:String, value:String | js.Dynamic | Float | types.DynObject):Unit = js.native
+  def getValue(key:String, default_value:Float|String|js.Dynamic|types.DynObject):Float|String|js.Dynamic|types.DynObject = js.native
+  def setValue(key:String, value:Float|String|js.Dynamic|types.DynObject):Unit = js.native
   def dumpInfo():Unit = js.native
   def gatherGPUInfo():Unit = js.native
   def loadConfigFile(url:String):Unit = js.native

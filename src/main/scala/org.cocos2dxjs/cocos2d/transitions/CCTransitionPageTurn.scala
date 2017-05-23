@@ -11,7 +11,7 @@ import org.cocos2dxjs.cocos2d.actions.{ccReverseTime, t_ccReverseTime}
 @js.native
 trait t_ccTransitionPageTurn extends t_ccTransitionScene {
   def initWithDuration(t:Float, scene:t_ccScene, backwards:Boolean):Boolean = js.native
-  def actionWithSize(vector:t_ccSize):ccReverseTime | ccTransitionScene = js.native
+  def actionWithSize(vector:t_ccSize):ccReverseTime|ccTransitionScene = js.native
   override def onEnter():Unit = js.native
 }
 

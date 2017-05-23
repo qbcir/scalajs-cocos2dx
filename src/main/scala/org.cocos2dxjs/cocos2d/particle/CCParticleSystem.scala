@@ -114,7 +114,7 @@ trait t_ccParticleSystem extends t_ccNode {
   var positionType: Float = js.native
   var totalParticles: Float = js.native
   var autoRemoveOnFinish: Boolean = js.native
-  var texture: ccTexture2D | js.Dynamic | js.Dynamic = js.native
+  var texture: ccTexture2D|js.Dynamic = js.native
   def ignoreColor(ignore:Boolean):Unit = js.native
   def initTexCoordsWithRect(pointRect:t_ccRect):Unit = js.native
   def getBatchNode:ccParticleBatchNode = js.native
@@ -130,9 +130,9 @@ trait t_ccParticleSystem extends t_ccNode {
   def setParticleCount(particleCount:Float):Unit = js.native
   def getDuration:Float = js.native
   def setDuration(duration:Float):Unit = js.native
-  def getSourcePosition:ccPoint | types.DynObject = js.native
+  def getSourcePosition:ccPoint|types.DynObject = js.native
   def setSourcePosition(sourcePosition:js.Dynamic):Unit = js.native
-  def getPosVar:ccPoint | types.DynObject = js.native
+  def getPosVar:ccPoint|types.DynObject = js.native
   def setPosVar(posVar:t_ccPoint):Unit = js.native
   def getLife:Float = js.native
   def setLife(life:Float):Unit = js.native
@@ -240,7 +240,7 @@ trait ts_ccParticleSystem extends ts_ccNode {
 
 @js.native
 @JSGlobal("cc.ParticleSystem")
-class ccParticleSystem(plistFile:String | Float) extends t_ccParticleSystem {
+class ccParticleSystem(plistFile:Float|String) extends t_ccParticleSystem {
 }
 
 @js.native

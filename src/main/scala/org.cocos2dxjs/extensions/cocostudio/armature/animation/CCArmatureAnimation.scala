@@ -85,7 +85,7 @@ trait t_ccsArmatureAnimation extends t_ccsProcessBase {
   def setSpeedScale(speedScale:Float):Unit = js.native
   def getSpeedScale:Float = js.native
   def play(animationName:String, durationTo:Float, loop:Float):Unit = js.native
-  def playWithIndex(animationIndex:Float | js.Array[js.Any], durationTo:Float, loop:Float):Unit = js.native
+  def playWithIndex(animationIndex:Float|js.Array[js.Any], durationTo:Float, loop:Float):Unit = js.native
   def playWithNames(movementNames:js.Array[js.Any], durationTo:Float, loop:Boolean):Unit = js.native
   def playWithIndexes(movementIndexes:js.Array[js.Any], durationTo:Float, loop:Boolean):Unit = js.native
   def gotoAndPlay(frameIndex:Float):Unit = js.native

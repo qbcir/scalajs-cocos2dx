@@ -30,10 +30,9 @@ trait t_ccMotionStreak extends t_ccNode {
   def setStartingPositionInitialized(startingPositionInitialized:Boolean):Unit = js.native
   def getStroke:Float = js.native
   def setStroke(stroke:Float):Unit = js.native
-  def initWithFade(fade:Float, minSeg:Float, stroke:Float, color:Float, texture:String | t_ccTexture2D):Boolean = js.native
+  def initWithFade(fade:Float, minSeg:Float, stroke:Float, color:Float, texture:String|t_ccTexture2D):Boolean = js.native
   def tintWithColor(color:t_ccColor):Unit = js.native
   def reset():Unit = js.native
-  override def setPosition(position:t_ccPoint | Float, yValue:Float):Unit = js.native
   override def getPositionX:Float = js.native
   override def setPositionX(x:Float):Unit = js.native
   override def getPositionY:Float = js.native
@@ -47,7 +46,7 @@ trait ts_ccMotionStreak extends ts_ccNode {
 
 @js.native
 @JSGlobal("cc.MotionStreak")
-class ccMotionStreak(fade:Float, minSeg:Float, stroke:Float, color:Float, texture:String | t_ccTexture2D) extends t_ccMotionStreak {
+class ccMotionStreak(fade:Float, minSeg:Float, stroke:Float, color:Float, texture:String|t_ccTexture2D) extends t_ccMotionStreak {
   var _pointVertexes: js.Dynamic = js.native
 }
 

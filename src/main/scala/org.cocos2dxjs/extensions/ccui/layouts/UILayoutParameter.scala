@@ -23,7 +23,7 @@ trait ts_ccuiMargin extends ts_ccuiClass {
 
 @js.native
 @JSGlobal("ccui.Margin")
-class ccuiMargin(margin:Float | t_ccuiMargin, top:Float, right:Float, bottom:Float) extends t_ccuiMargin {
+class ccuiMargin(margin:Float|t_ccuiMargin, top:Float, right:Float, bottom:Float) extends t_ccuiMargin {
 }
 
 @js.native

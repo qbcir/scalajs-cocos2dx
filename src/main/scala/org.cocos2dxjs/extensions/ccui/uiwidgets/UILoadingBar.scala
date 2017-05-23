@@ -12,17 +12,16 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
 @js.native
 trait t_ccuiLoadingBar extends t_ccuiWidget {
-  var direction: Float | Float = js.native
+  var direction: Float = js.native
   var percent: Float = js.native
-  def setDirection(dir:Float | Float):Unit = js.native
-  def getDirection:Float | Float = js.native
-  def loadTexture(texture:String, texType:Float | Float):Unit = js.native
+  def setDirection(dir:Float):Unit = js.native
+  def getDirection:Float = js.native
+  def loadTexture(texture:String, texType:Float):Unit = js.native
   def setScale9Enabled(enabled:Boolean):Unit = js.native
   def isScale9Enabled:Boolean = js.native
   def setCapInsets(capInsets:t_ccRect):Unit = js.native
   def getCapInsets:ccRect = js.native
   def setPercent(percent:Float):Unit = js.native
-  //def setContentSize(contentSize:Float | t_ccSize, height:Float):Unit = js.native
   def getPercent:Float = js.native
   override def ignoreContentAdaptWithSize(ignore:Boolean):Unit = js.native
   override def getVirtualRendererSize:ccSize = js.native

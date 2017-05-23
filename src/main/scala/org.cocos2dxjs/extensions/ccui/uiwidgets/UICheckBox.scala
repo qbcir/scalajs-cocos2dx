@@ -12,12 +12,12 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 @js.native
 trait t_ccuiCheckBox extends t_ccuiWidget {
   var selected: Boolean = js.native
-  def loadTextures(backGround:String, backGroundSelected:String, cross:String, backGroundDisabled:String, frontCrossDisabled:String, texType:Float | Float):Unit = js.native
-  def loadTextureBackGround(backGround:String, texType:Float | Float):Unit = js.native
-  def loadTextureBackGroundSelected(backGroundSelected:String, texType:Float | Float):Unit = js.native
-  def loadTextureFrontCross(cross:String, texType:Float | Float):Unit = js.native
-  def loadTextureBackGroundDisabled(backGroundDisabled:String, texType:Float | Float):Unit = js.native
-  def loadTextureFrontCrossDisabled(frontCrossDisabled:String, texType:Float | Float):Unit = js.native
+  def loadTextures(backGround:String, backGroundSelected:String, cross:String, backGroundDisabled:String, frontCrossDisabled:String, texType:Float):Unit = js.native
+  def loadTextureBackGround(backGround:String, texType:Float):Unit = js.native
+  def loadTextureBackGroundSelected(backGroundSelected:String, texType:Float):Unit = js.native
+  def loadTextureFrontCross(cross:String, texType:Float):Unit = js.native
+  def loadTextureBackGroundDisabled(backGroundDisabled:String, texType:Float):Unit = js.native
+  def loadTextureFrontCrossDisabled(frontCrossDisabled:String, texType:Float):Unit = js.native
   def setSelected(selected:Boolean):Unit = js.native
   def isSelected:Boolean = js.native
   def addEventListener(selector:js.Function, target:types.DynObject):Unit = js.native

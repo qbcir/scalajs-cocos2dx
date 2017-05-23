@@ -46,7 +46,7 @@ trait ts_ccTextureAtlas extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.TextureAtlas")
-class ccTextureAtlas(fileName:String | t_ccTexture2D, capacity:Float) extends t_ccTextureAtlas {
+class ccTextureAtlas(fileName:String|t_ccTexture2D, capacity:Float) extends t_ccTextureAtlas {
 }
 
 @js.native

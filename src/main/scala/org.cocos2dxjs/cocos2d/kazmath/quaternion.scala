@@ -18,7 +18,7 @@ trait ts_ccmathQuaternion extends js.Object {
 
 @js.native
 @JSGlobal("cc.math.Quaternion")
-class ccmathQuaternion(x:Float | t_ccmathQuaternion, y:Float, z:Float, w:Float) extends t_ccmathQuaternion {
+class ccmathQuaternion(x:Float|t_ccmathQuaternion, y:Float, z:Float, w:Float) extends t_ccmathQuaternion {
 }
 
 @js.native

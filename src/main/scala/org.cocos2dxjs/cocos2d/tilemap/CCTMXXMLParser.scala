@@ -43,7 +43,7 @@ trait t_ccTMXTilesetInfo extends t_ccClass {
   var spacing: Float = js.native
   var margin: Float = js.native
   var sourceImage: String = js.native
-  var imageSize: ccSize | js.Dynamic = js.native
+  var imageSize: Null|ccSize = js.native
   def rectForGID(gid:Float):ccRect = js.native
 }
 

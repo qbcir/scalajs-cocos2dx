@@ -23,7 +23,7 @@ trait t_ccsSkin extends t_ccsSprite {
   def updateArmatureTransform():Unit = js.native
   def getNodeToWorldTransform:ccAffineTransform = js.native
   def setBone(bone:js.Dynamic):Unit = js.native
-  def getBone:js.Dynamic = js.native
+  def getBone:Null = js.native
   def getDisplayName:String = js.native
 }
 

@@ -42,7 +42,7 @@ object ccTransitionScene extends ts_ccTransitionScene {
 
 @js.native
 trait t_ccTransitionSceneOriented extends t_ccTransitionScene {
-  def initWithDuration(t:Float, scene:t_ccScene, orientation:Float | Float | Float | Float):Boolean = js.native
+  def initWithDuration(t:Float, scene:t_ccScene, orientation:Float):Boolean = js.native
 }
 
 @js.native
@@ -51,7 +51,7 @@ trait ts_ccTransitionSceneOriented extends ts_ccTransitionScene {
 
 @js.native
 @JSGlobal("cc.TransitionSceneOriented")
-class ccTransitionSceneOriented(t:Float, scene:t_ccScene, orientation:Float | Float | Float | Float) extends t_ccTransitionSceneOriented {
+class ccTransitionSceneOriented(t:Float, scene:t_ccScene, orientation:Float) extends t_ccTransitionSceneOriented {
   var _className: js.Dynamic = js.native
 }
 
@@ -303,7 +303,7 @@ trait ts_ccTransitionFade extends ts_ccTransitionScene {
 
 @js.native
 @JSGlobal("cc.TransitionFade")
-class ccTransitionFade(t:Float, scene:t_ccScene, o:Float | Float | Float | Float) extends t_ccTransitionFade {
+class ccTransitionFade(t:Float, scene:t_ccScene, o:Float) extends t_ccTransitionFade {
   var _className: js.Dynamic = js.native
 }
 

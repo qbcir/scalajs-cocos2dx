@@ -19,7 +19,7 @@ trait t_ccTMXObjectGroup extends t_ccClass {
   def getGroupName:String = js.native
   def setGroupName(groupName:String):Unit = js.native
   def propertyNamed(propertyName:String):types.DynObject = js.native
-  def getObject(objectName:String):types.DynObject | js.Dynamic = js.native
+  def getObject(objectName:String):js.Dynamic|types.DynObject = js.native
   def getObjects:js.Array[js.Any] = js.native
   def setObjects(objects:types.DynObject):Unit = js.native
 }

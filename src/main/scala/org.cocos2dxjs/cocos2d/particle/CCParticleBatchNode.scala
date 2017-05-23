@@ -11,7 +11,7 @@ import org.cocos2dxjs.cocos2d.core.platform.{ccBlendFunc, t_ccBlendFunc}
 @js.native
 trait t_ccParticleBatchNode extends t_ccParticleSystem {
   var textureAtlas: ccTextureAtlas = js.native
-  def initWithTexture(texture:t_ccTexture2D | js.Dynamic | js.Dynamic, capacity:Float):Boolean = js.native
+  def initWithTexture(texture:js.Dynamic|t_ccTexture2D, capacity:Float):Boolean = js.native
   def initWithFile(fileImage:String, capacity:Float):Boolean = js.native
   def init(fileImage:String, capacity:Float):Boolean = js.native
   def addChild(child:t_ccParticleSystem, zOrder:Float, tag:Float):Unit = js.native
@@ -23,7 +23,7 @@ trait t_ccParticleBatchNode extends t_ccParticleSystem {
   def disableParticle(particleIndex:Float):Unit = js.native
   override def getTexture:ccTexture2D = js.native
   override def setTexture(texture:t_ccTexture2D):Unit = js.native
-  def setBlendFunc(src:Float | types.DynObject, dst:Float):Unit = js.native
+  def setBlendFunc(src:Float|types.DynObject, dst:Float):Unit = js.native
   override def getBlendFunc:ccBlendFunc = js.native
   def getTextureAtlas:ccTextureAtlas = js.native
   def setTextureAtlas(textureAtlas:t_ccTextureAtlas):Unit = js.native
@@ -37,7 +37,7 @@ trait ts_ccParticleBatchNode extends ts_ccParticleSystem {
 
 @js.native
 @JSGlobal("cc.ParticleBatchNode")
-class ccParticleBatchNode(fileImage:String | t_ccTexture2D, capacity:Float) extends t_ccParticleBatchNode {
+class ccParticleBatchNode(fileImage:String|t_ccTexture2D, capacity:Float) extends t_ccParticleBatchNode {
 }
 
 @js.native

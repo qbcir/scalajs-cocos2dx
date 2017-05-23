@@ -60,7 +60,7 @@ trait ts_ccSequence extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.Sequence")
-class ccSequence(tempArray:js.Array[js.Any] | t_ccFiniteTimeAction) extends t_ccSequence {
+class ccSequence(tempArray:js.Array[js.Any]|t_ccFiniteTimeAction) extends t_ccSequence {
 }
 
 @js.native
@@ -138,7 +138,7 @@ trait ts_ccSpawn extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.Spawn")
-class ccSpawn(tempArray:js.Array[js.Any] | t_ccFiniteTimeAction) extends t_ccSpawn {
+class ccSpawn(tempArray:js.Array[js.Any]|t_ccFiniteTimeAction) extends t_ccSpawn {
 }
 
 @js.native
@@ -207,7 +207,7 @@ trait ts_ccMoveBy extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.MoveBy")
-class ccMoveBy(duration:Float, deltaPos:t_ccPoint | Float, deltaY:Float) extends t_ccMoveBy {
+class ccMoveBy(duration:Float, deltaPos:Float|t_ccPoint, deltaY:Float) extends t_ccMoveBy {
 }
 
 @js.native
@@ -228,7 +228,7 @@ trait ts_ccMoveTo extends ts_ccMoveBy {
 
 @js.native
 @JSGlobal("cc.MoveTo")
-class ccMoveTo(duration:Float, position:t_ccPoint | Float, y:Float) extends t_ccMoveTo {
+class ccMoveTo(duration:Float, position:Float|t_ccPoint, y:Float) extends t_ccMoveTo {
 }
 
 @js.native
@@ -282,7 +282,7 @@ object ccSkewBy extends ts_ccSkewBy {
 
 @js.native
 trait t_ccJumpBy extends t_ccActionInterval {
-  def initWithDuration(duration:Float, position:t_ccPoint | Float, y:Float, height:Float, jumps:Float):Boolean = js.native
+  def initWithDuration(duration:Float, position:Float|t_ccPoint, y:Float, height:Float, jumps:Float):Boolean = js.native
   override def clone:ccAction = js.native
   override def startWithTarget(target:t_ccNode):Unit = js.native
   override def update(dt:Float):Unit = js.native
@@ -295,7 +295,7 @@ trait ts_ccJumpBy extends ts_ccActionInterval {
 
 @js.native
 @JSGlobal("cc.JumpBy")
-class ccJumpBy(duration:Float, position:t_ccPoint | Float, y:Float, height:Float, jumps:Float) extends t_ccJumpBy {
+class ccJumpBy(duration:Float, position:Float|t_ccPoint, y:Float, height:Float, jumps:Float) extends t_ccJumpBy {
 }
 
 @js.native
@@ -305,7 +305,6 @@ object ccJumpBy extends ts_ccJumpBy {
 
 @js.native
 trait t_ccJumpTo extends t_ccJumpBy {
-  override def initWithDuration(duration:Float, position:t_ccPoint | Float, y:Float, height:Float, jumps:Float):Boolean = js.native
   override def startWithTarget(target:t_ccNode):Unit = js.native
   override def clone:ccAction = js.native
 }
@@ -316,7 +315,7 @@ trait ts_ccJumpTo extends ts_ccJumpBy {
 
 @js.native
 @JSGlobal("cc.JumpTo")
-class ccJumpTo(duration:Float, position:t_ccPoint | Float, y:Float, height:Float, jumps:Float) extends t_ccJumpTo {
+class ccJumpTo(duration:Float, position:Float|t_ccPoint, y:Float, height:Float, jumps:Float) extends t_ccJumpTo {
 }
 
 @js.native

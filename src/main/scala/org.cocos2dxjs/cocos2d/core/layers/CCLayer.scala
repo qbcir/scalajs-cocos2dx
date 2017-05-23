@@ -36,7 +36,7 @@ object ccLayer extends ts_ccLayer {
 trait t_ccLayerColor extends t_ccLayer {
   def getBlendFunc:ccBlendFunc = js.native
   def init(color:t_ccColor, width:Float, height:Float):Boolean = js.native
-  def setBlendFunc(src:Float | t_ccBlendFunc, dst:Float):Unit = js.native
+  def setBlendFunc(src:Float|t_ccBlendFunc, dst:Float):Unit = js.native
 }
 
 @js.native
@@ -61,8 +61,7 @@ trait t_ccLayerGradient extends t_ccLayerColor {
   var endOpacity: Float = js.native
   var vector: Float = js.native
   var compressedInterpolation: Float = js.native
-  def init(start:t_ccColor, end:t_ccColor, v:t_ccPoint | js.Dynamic, stops:js.Array[js.Any] | js.Dynamic):Boolean = js.native
-  override def setContentSize(size:t_ccSize | Float, height:Float):Unit = js.native
+  def init(start:t_ccColor, end:t_ccColor, v:js.Dynamic|t_ccPoint, stops:js.Array[js.Any]|js.Dynamic):Boolean = js.native
   def getStartColor:ccColor = js.native
   def setStartColor(color:t_ccColor):Unit = js.native
   def setEndColor(color:t_ccColor):Unit = js.native
@@ -85,7 +84,7 @@ trait ts_ccLayerGradient extends ts_ccLayerColor {
 
 @js.native
 @JSGlobal("cc.LayerGradient")
-class ccLayerGradient(start:t_ccColor, end:t_ccColor, v:t_ccPoint, stops:js.Array[js.Any] | js.Dynamic) extends t_ccLayerGradient {
+class ccLayerGradient(start:t_ccColor, end:t_ccColor, v:t_ccPoint, stops:js.Array[js.Any]|js.Dynamic) extends t_ccLayerGradient {
 }
 
 @js.native

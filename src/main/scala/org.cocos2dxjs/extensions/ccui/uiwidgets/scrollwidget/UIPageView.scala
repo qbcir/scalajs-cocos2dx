@@ -18,7 +18,7 @@ trait t_ccuiPageView extends t_ccuiListView {
   def removeAllPages():Unit = js.native
   def scrollToItem(idx:Float):Unit = js.native
   def scrollToPage(idx:Float):Unit = js.native
-  override def setDirection(direction:Float | Float | Float | Float):Unit = js.native
+  override def setDirection(direction:Float):Unit = js.native
   def setCurrentPageIndex(index:Float):Unit = js.native
   def getCurrentPageIndex:Float = js.native
   def getPages:js.Array[js.Any] = js.native
@@ -38,7 +38,7 @@ trait t_ccuiPageView extends t_ccuiListView {
   def getIndicatorIndexNodesColor:ccColor = js.native
   def setIndicatorIndexNodesScale(scale:Float):Unit = js.native
   def getIndicatorIndexNodesScale:Float = js.native
-  def setIndicatorIndexNodesTexture(texName:String, texType:Float | Float):Unit = js.native
+  def setIndicatorIndexNodesTexture(texName:String, texType:Float):Unit = js.native
 }
 
 @js.native

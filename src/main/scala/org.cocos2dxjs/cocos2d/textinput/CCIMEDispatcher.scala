@@ -86,7 +86,7 @@ object ccimeDispatcher extends ts_ccimeDispatcher {
 
 @js.native
 trait t_ccIMEDispatcherImpl extends t_ccClass {
-  def findDelegate(delegate:t_ccIMEDelegate):Float | js.Dynamic = js.native
+  def findDelegate(delegate:t_ccIMEDelegate):Float|js.Dynamic = js.native
 }
 
 @js.native

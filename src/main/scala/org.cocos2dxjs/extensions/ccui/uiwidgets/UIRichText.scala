@@ -45,7 +45,7 @@ trait ts_ccuiRichElementText extends ts_ccuiRichElement {
 
 @js.native
 @JSGlobal("ccui.RichElementText")
-class ccuiRichElementText(tag:Float, colorOrFontDef:t_ccColor | t_ccFontDefinition, opacity:Float, text:String, fontName:String, fontSize:Float) extends t_ccuiRichElementText {
+class ccuiRichElementText(tag:Float, colorOrFontDef:t_ccColor|t_ccFontDefinition, opacity:Float, text:String, fontName:String, fontSize:Float) extends t_ccuiRichElementText {
   var _fontDefinition: ccFontDefinition = js.native
 }
 
@@ -96,7 +96,7 @@ trait t_ccuiRichText extends t_ccuiWidget {
   def pushBackElement(element:t_ccuiRichElement):Unit = js.native
   def removeElement(element:t_ccuiRichElement):Unit = js.native
   def formatText():Unit = js.native
-  def _handleTextRenderer(text:String, fontNameOrFontDef:String | t_ccFontDefinition, fontSize:Float, color:t_ccColor):Unit = js.native
+  def _handleTextRenderer(text:String, fontNameOrFontDef:String|t_ccFontDefinition, fontSize:Float, color:t_ccColor):Unit = js.native
   def formatRenderers():Unit = js.native
   def setVerticalSpace(space:Float):Unit = js.native
   def setAnchorPoint(pt:t_ccPoint):Unit = js.native

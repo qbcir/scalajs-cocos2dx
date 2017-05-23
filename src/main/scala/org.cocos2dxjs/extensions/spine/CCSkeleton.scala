@@ -20,7 +20,7 @@ trait t_spSkeleton extends t_ccNode {
   def setDebugBonesEnabled(enabled:Boolean):Unit = js.native
   def getDebugBonesEnabled:Boolean = js.native
   def setTimeScale(scale:Float):Unit = js.native
-  def initWithArgs(skeletonDataFile:js.Dynamic | String, atlasFile:String | js.Dynamic | js.Dynamic, scale:Float):Unit = js.native
+  def initWithArgs(skeletonDataFile:String|js.Dynamic, atlasFile:String|js.Dynamic, scale:Float):Unit = js.native
   override def getBoundingBox:ccRect = js.native
   def updateWorldTransform():Unit = js.native
   def setToSetupPose():Unit = js.native
@@ -29,14 +29,14 @@ trait t_spSkeleton extends t_ccNode {
   def findBone(boneName:String):js.Dynamic = js.native
   def findSlot(slotName:String):js.Dynamic = js.native
   def setSkin(skinName:String):js.Dynamic = js.native
-  def getAttachment(slotName:String, attachmentName:String):js.Dynamic | js.Dynamic = js.native
+  def getAttachment(slotName:String, attachmentName:String):js.Dynamic = js.native
   def setAttachment(slotName:String, attachmentName:String):Unit = js.native
   def setPremultipliedAlpha(alpha:Float):Unit = js.native
   def isPremultipliedAlpha:Boolean = js.native
   def setSkeletonData(skeletonData:js.Dynamic, ownsSkeletonData:js.Dynamic):Unit = js.native
-  def getTextureAtlas(regionAttachment:js.Dynamic | js.Dynamic):ccNode = js.native
+  def getTextureAtlas(regionAttachment:js.Dynamic):ccNode = js.native
   def getBlendFunc:ccBlendFunc = js.native
-  def setBlendFunc(src:t_ccBlendFunc | Float, dst:Float):Unit = js.native
+  def setBlendFunc(src:Float|t_ccBlendFunc, dst:Float):Unit = js.native
   override def update(dt:Float):Unit = js.native
 }
 

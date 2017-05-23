@@ -52,7 +52,7 @@ trait t_ccTextFieldTTF extends t_ccLabelTTF {
   override def getString:String = js.native
   def setPlaceHolder(text:String):Unit = js.native
   def getPlaceHolder:String = js.native
-  override def draw(ctx:js.Dynamic | js.Dynamic):Unit = js.native
+  override def draw(ctx:js.Dynamic):Unit = js.native
   def attachWithIME:Boolean = js.native
   def detachWithIME:Boolean = js.native
   def canAttachWithIME:Boolean = js.native

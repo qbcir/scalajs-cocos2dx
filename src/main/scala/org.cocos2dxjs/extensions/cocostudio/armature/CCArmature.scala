@@ -42,7 +42,7 @@ trait t_ccsArmature extends t_ccsNode {
   def setParentBone(parentBone:t_ccsBone):Unit = js.native
   def getParentBone:ccsBone = js.native
   def drawContour():Unit = js.native
-  def setBlendFunc(blendFunc:t_ccBlendFunc | Float, dst:Float):Unit = js.native
+  def setBlendFunc(blendFunc:Float|t_ccBlendFunc, dst:Float):Unit = js.native
   def getBlendFunc:ccBlendFunc = js.native
   def setColliderFilter(filter:t_ccsColliderFilter):Unit = js.native
   def getArmatureData:ccsArmatureData = js.native

@@ -12,7 +12,7 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 
 @js.native
 trait t_ccuiImageView extends t_ccuiWidget {
-  def loadTexture(fileName:String, texType:Float | Float):Unit = js.native
+  def loadTexture(fileName:String, texType:Float):Unit = js.native
   def setTextureRect(rect:t_ccRect):Unit = js.native
   def setScale9Enabled(able:Boolean):Unit = js.native
   def isScale9Enabled:Boolean = js.native
@@ -22,7 +22,6 @@ trait t_ccuiImageView extends t_ccuiWidget {
   override def getVirtualRendererSize:ccSize = js.native
   override def getVirtualRenderer:ccuiWidget = js.native
   override def getDescription:String = js.native
-  override def setContentSize(contentSize:t_ccSize | Float, height:Float):Unit = js.native
 }
 
 @js.native

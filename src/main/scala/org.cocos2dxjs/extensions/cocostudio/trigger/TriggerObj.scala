@@ -60,7 +60,7 @@ trait t_ccsTriggerObj extends t_ccsClass {
   def serialize(jsonVal:js.Dynamic):Unit = js.native
   def getId:Float = js.native
   def setEnable(enable:Boolean):Unit = js.native
-  def getEvents:js.Dynamic | js.Array[js.Any] = js.native
+  def getEvents:Null|js.Array[js.Any] = js.native
 }
 
 @js.native

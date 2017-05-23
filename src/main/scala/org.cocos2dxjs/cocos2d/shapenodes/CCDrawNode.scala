@@ -26,8 +26,8 @@ trait t_ccDrawNode extends t_ccNode {
   def drawDot(pos:t_ccPoint, radius:Float, color:t_ccColor):Unit = js.native
   def drawDots(points:js.Array[js.Any], radius:Float, color:t_ccColor):Unit = js.native
   def drawSegment(from:t_ccPoint, to:t_ccPoint, lineWidth:Float, color:t_ccColor):Unit = js.native
-  def drawPoly_(verts:js.Array[js.Any], fillColor:t_ccColor | js.Dynamic, lineWidth:Float, color:t_ccColor):Unit = js.native
-  def drawPoly(verts:js.Array[js.Any], fillColor:t_ccColor | js.Dynamic, lineWidth:Float, lineColor:t_ccColor):Unit = js.native
+  def drawPoly_(verts:js.Array[js.Any], fillColor:Null|t_ccColor, lineWidth:Float, color:t_ccColor):Unit = js.native
+  def drawPoly(verts:js.Array[js.Any], fillColor:Null|t_ccColor, lineWidth:Float, lineColor:t_ccColor):Unit = js.native
   def clear():Unit = js.native
 }
 

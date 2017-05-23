@@ -42,8 +42,8 @@ object ccstriggerManager extends ts_ccstriggerManager {
 @js.native
 trait t_ccsArmatureMovementDispatcher extends t_ccsClass {
   def animationEvent(armature:t_ccsArmature, movementType:Float, movementID:String):Unit = js.native
-  def addAnimationEventCallBack(callFunc:js.Function, target:types.DynObject | js.Dynamic):Unit = js.native
-  def removeAnimationEventCallBack(callFunc:js.Function, target:types.DynObject | js.Dynamic):Unit = js.native
+  def addAnimationEventCallBack(callFunc:js.Function, target:Null|types.DynObject):Unit = js.native
+  def removeAnimationEventCallBack(callFunc:js.Function, target:Null|types.DynObject):Unit = js.native
 }
 
 @js.native

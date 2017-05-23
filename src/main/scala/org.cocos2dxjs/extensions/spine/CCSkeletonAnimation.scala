@@ -11,9 +11,9 @@ trait t_spSkeletonAnimation extends t_spSkeleton {
   def setAnimationStateData(stateData:js.Dynamic):Unit = js.native
   def setMix(fromAnimation:String, toAnimation:String, duration:Float):Unit = js.native
   def setAnimationListener(target:types.DynObject, callback:js.Function):Unit = js.native
-  def setAnimation(trackIndex:Float, name:String, loop:Boolean):js.Dynamic | js.Dynamic = js.native
-  def addAnimation(trackIndex:Float, name:String, loop:Boolean, delay:Float):js.Dynamic | js.Dynamic = js.native
-  def getCurrent(trackIndex:js.Dynamic):js.Dynamic | js.Dynamic = js.native
+  def setAnimation(trackIndex:Float, name:String, loop:Boolean):Null|js.Dynamic = js.native
+  def addAnimation(trackIndex:Float, name:String, loop:Boolean, delay:Float):Null|js.Dynamic = js.native
+  def getCurrent(trackIndex:js.Dynamic):Null|js.Dynamic = js.native
   def clearTracks():Unit = js.native
   def clearTrack(trackIndex:Float):Unit = js.native
   override def update(dt:Float):Unit = js.native

@@ -16,8 +16,8 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 @js.native
 trait t_ccuiLayout extends t_ccuiWidget {
   var clippingEnabled: Boolean = js.native
-  var clippingType: Float | Float = js.native
-  var layoutType: Float | Float | Float | Float = js.native
+  var clippingType: Float = js.native
+  var layoutType: Float = js.native
   override def onEnter():Unit = js.native
   override def onExit():Unit = js.native
   def visit(parent:t_ccNode):Unit = js.native
@@ -27,22 +27,22 @@ trait t_ccuiLayout extends t_ccuiWidget {
   def isPassFocusToChild:Boolean = js.native
   def findNextFocusedWidget(direction:Float, current:t_ccuiWidget):ccuiWidget = js.native
   def onPassFocusToChild(direction:Float, current:t_ccuiWidget):Unit = js.native
-  def addChild(widget:t_ccuiWidget, zOrder:Float, tag:Float | String):Unit = js.native
+  def addChild(widget:t_ccuiWidget, zOrder:Float, tag:Float|String):Unit = js.native
   def removeChild(widget:t_ccuiWidget, cleanup:Boolean):Unit = js.native
   def removeAllChildren(cleanup:Boolean):Unit = js.native
   def removeAllChildrenWithCleanup(cleanup:Boolean):Unit = js.native
   def isClippingEnabled:Boolean = js.native
   def setClippingEnabled(able:Boolean):Unit = js.native
-  def setClippingType(_type:Float | Float):Unit = js.native
-  def getClippingType:Float | Float = js.native
+  def setClippingType(_type:Float):Unit = js.native
+  def getClippingType:Float = js.native
   def setBackGroundImageScale9Enabled(able:Boolean):Unit = js.native
   def isBackGroundImageScale9Enabled:Boolean = js.native
-  def setBackGroundImage(fileName:String, texType:Float | Float):Unit = js.native
+  def setBackGroundImage(fileName:String, texType:Float):Unit = js.native
   def setBackGroundImageCapInsets(capInsets:t_ccRect):Unit = js.native
   def getBackGroundImageCapInsets:ccRect = js.native
   def removeBackGroundImage():Unit = js.native
-  def setBackGroundColorType(_type:Float | Float | Float):Unit = js.native
-  def getBackGroundColorType:Float | Float | Float = js.native
+  def setBackGroundColorType(_type:Float):Unit = js.native
+  def getBackGroundColorType:Float = js.native
   def setBackGroundColor(color:t_ccColor, endColor:t_ccColor):Unit = js.native
   def getBackGroundColor:ccColor = js.native
   def getBackGroundStartColor:ccColor = js.native
@@ -56,8 +56,8 @@ trait t_ccuiLayout extends t_ccuiWidget {
   def getBackGroundImageColor:ccColor = js.native
   def getBackGroundImageOpacity:Float = js.native
   def getBackGroundImageTextureSize:ccSize = js.native
-  def setLayoutType(_type:Float | Float | Float | Float):Unit = js.native
-  def getLayoutType:js.Dynamic = js.native
+  def setLayoutType(_type:Float):Unit = js.native
+  def getLayoutType:Null = js.native
   def requestDoLayout():Unit = js.native
   def _getLayoutAccumulatedSize:ccSize = js.native
   def _findNearestChildWidgetIndex(direction:Float, baseWidget:t_ccuiWidget):Float = js.native

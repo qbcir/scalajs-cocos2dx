@@ -19,7 +19,7 @@ trait t_ccAtlasNode extends t_ccNode {
   override def setOpacityModifyRGB(value:Boolean):Unit = js.native
   override def isOpacityModifyRGB:Boolean = js.native
   def getBlendFunc:ccBlendFunc = js.native
-  def setBlendFunc(src:Float | t_ccBlendFunc, dst:Float):Unit = js.native
+  def setBlendFunc(src:Float|t_ccBlendFunc, dst:Float):Unit = js.native
   def setTextureAtlas(value:t_ccTextureAtlas):Unit = js.native
   def getTextureAtlas:ccTextureAtlas = js.native
   def getQuadsToDraw:Float = js.native

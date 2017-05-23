@@ -24,11 +24,11 @@ trait t_ccRenderTexture extends t_ccNode {
   def getSprite:ccSprite = js.native
   def setSprite(sprite:t_ccSprite):Unit = js.native
   def setVirtualViewport(rtBegin:t_ccPoint, fullRect:t_ccRect, fullViewport:t_ccRect):Unit = js.native
-  def initWithWidthAndHeight(width:Float, height:Float, format:Float | Float | Float, depthStencilFormat:Float):Boolean = js.native
+  def initWithWidthAndHeight(width:Float, height:Float, format:Float, depthStencilFormat:Float):Boolean = js.native
   def begin():Unit = js.native
   def beginWithClear(r:Float, g:Float, b:Float, a:Float, depthValue:Float, stencilValue:Float):Unit = js.native
   def end():Unit = js.native
-  def clear(r:Float | t_ccRect, g:Float, b:Float, a:Float):Unit = js.native
+  def clear(r:Float|t_ccRect, g:Float, b:Float, a:Float):Unit = js.native
   def clearRect(x:Float, y:Float, width:Float, height:Float):Unit = js.native
   def clearDepth(depthValue:Float):Unit = js.native
   def clearStencil(stencilValue:Float):Unit = js.native
@@ -54,7 +54,7 @@ trait ts_ccRenderTexture extends ts_ccNode {
 
 @js.native
 @JSGlobal("cc.RenderTexture")
-class ccRenderTexture(width:Float, height:Float, format:Float | Float | Float, depthStencilFormat:Float) extends t_ccRenderTexture {
+class ccRenderTexture(width:Float, height:Float, format:Float, depthStencilFormat:Float) extends t_ccRenderTexture {
 }
 
 @js.native

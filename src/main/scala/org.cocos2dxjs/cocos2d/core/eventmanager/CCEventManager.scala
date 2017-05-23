@@ -14,10 +14,10 @@ trait t_cceventManager extends js.Object {
 trait ts_cceventManager extends js.Object {
   def pauseTarget(node:t_ccNode, recursive:Boolean):Unit = js.native
   def resumeTarget(node:t_ccNode, recursive:Boolean):Unit = js.native
-  def addListener(listener:t_ccEventListener | types.DynObject, nodeOrPriority:t_ccNode | Float):ccEventListener = js.native
+  def addListener(listener:t_ccEventListener|types.DynObject, nodeOrPriority:Float|t_ccNode):ccEventListener = js.native
   def addCustomListener(eventName:String, callback:js.Function):ccEventListener = js.native
   def removeListener(listener:t_ccEventListener):Unit = js.native
-  def removeListeners(listenerType:Float | t_ccNode, recursive:Boolean):Unit = js.native
+  def removeListeners(listenerType:Float|t_ccNode, recursive:Boolean):Unit = js.native
   def removeCustomListeners(customEventName:String):Unit = js.native
   def removeAllListeners():Unit = js.native
   def setPriority(listener:t_ccEventListener, fixedPriority:Float):Unit = js.native

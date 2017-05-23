@@ -172,7 +172,7 @@ object ccFadeOutDownTiles extends ts_ccFadeOutDownTiles {
 
 @js.native
 trait t_ccTurnOffTiles extends t_ccTiledGrid3DAction {
-  def initWithDuration(duration:Float, gridSize:t_ccSize, seed:Float | js.Dynamic):Boolean = js.native
+  def initWithDuration(duration:Float, gridSize:t_ccSize, seed:Float|js.Dynamic):Boolean = js.native
   def shuffle(array:js.Array[js.Any], len:Float):Unit = js.native
   def turnOnTile(pos:t_ccPoint):Unit = js.native
   def turnOffTile(pos:t_ccPoint):Unit = js.native
@@ -186,7 +186,7 @@ trait ts_ccTurnOffTiles extends ts_ccTiledGrid3DAction {
 
 @js.native
 @JSGlobal("cc.TurnOffTiles")
-class ccTurnOffTiles(duration:Float, gridSize:t_ccSize, seed:Float | js.Dynamic) extends t_ccTurnOffTiles {
+class ccTurnOffTiles(duration:Float, gridSize:t_ccSize, seed:Float|js.Dynamic) extends t_ccTurnOffTiles {
 }
 
 @js.native

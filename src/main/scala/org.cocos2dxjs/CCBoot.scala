@@ -108,7 +108,7 @@ trait ts_ccAsyncPool extends js.Object {
 
 @js.native
 @JSGlobal("cc.AsyncPool")
-class ccAsyncPool(srcObj:types.DynObject | js.Array[js.Any], limit:Float, iterator:js.Function, onEnd:js.Function, target:types.DynObject) extends t_ccAsyncPool {
+class ccAsyncPool(srcObj:js.Array[js.Any]|types.DynObject, limit:Float, iterator:js.Function, onEnd:js.Function, target:types.DynObject) extends t_ccAsyncPool {
 }
 
 @js.native
@@ -122,11 +122,11 @@ trait t_ccasync extends js.Object {
 
 @js.native
 trait ts_ccasync extends js.Object {
-  def series(tasks:js.Array[js.Any] | types.DynObject, cb:js.Function, target:types.DynObject):ccAsyncPool = js.native
-  def parallel(tasks:js.Array[js.Any] | types.DynObject, cb:js.Function, target:types.DynObject):ccAsyncPool = js.native
-  def waterfall(tasks:js.Array[js.Any] | types.DynObject, cb:js.Function, target:types.DynObject):ccAsyncPool = js.native
-  def map(tasks:js.Array[js.Any] | types.DynObject, iterator:js.Function | types.DynObject, callback:js.Function, target:types.DynObject):ccAsyncPool = js.native
-  def mapLimit(tasks:js.Array[js.Any] | types.DynObject, limit:Float, iterator:js.Function, cb:js.Function, target:types.DynObject):Unit = js.native
+  def series(tasks:js.Array[js.Any]|types.DynObject, cb:js.Function, target:types.DynObject):ccAsyncPool = js.native
+  def parallel(tasks:js.Array[js.Any]|types.DynObject, cb:js.Function, target:types.DynObject):ccAsyncPool = js.native
+  def waterfall(tasks:js.Array[js.Any]|types.DynObject, cb:js.Function, target:types.DynObject):ccAsyncPool = js.native
+  def map(tasks:js.Array[js.Any]|types.DynObject, iterator:js.Function|types.DynObject, callback:js.Function, target:types.DynObject):ccAsyncPool = js.native
+  def mapLimit(tasks:js.Array[js.Any]|types.DynObject, limit:Float, iterator:js.Function, cb:js.Function, target:types.DynObject):Unit = js.native
 }
 
 @js.native
@@ -174,7 +174,7 @@ trait t_ccLoader extends js.Object {
   def loadImg(url:String, option:types.DynObject, callback:js.Function):js.Dynamic = js.native
   def _loadResIterator(item:types.DynObject, index:Float, cb:js.Function):js.Dynamic = js.native
   def getUrl(basePath:String, url:String):js.Dynamic = js.native
-  def load(resources:String, option:js.Function, loadCallback:js.Function | types.DynObject):ccAsyncPool = js.native
+  def load(resources:String, option:js.Function, loadCallback:js.Function|types.DynObject):ccAsyncPool = js.native
   def loadAliases(url:String, callback:js.Function):Unit = js.native
   def register(extNames:String, loader:js.Function):Unit = js.native
   def getRes(url:js.Dynamic):js.Dynamic = js.native
@@ -214,7 +214,7 @@ trait ts_ccgame extends js.Object {
   def restart():Unit = js.native
   def end():Unit = js.native
   def prepare(cb:js.Dynamic):Unit = js.native
-  def run(config:types.DynObject | js.Function, onStart:js.Function):Unit = js.native
+  def run(config:js.Function|types.DynObject, onStart:js.Function):Unit = js.native
 }
 
 @js.native
@@ -244,8 +244,8 @@ object ccgame extends ts_ccgame {
   var container: types.DynObject = js.native
   var canvas: types.DynObject = js.native
   var config: types.DynObject = js.native
-  var onStart: js.Function | js.Dynamic = js.native
-  var onStop: js.Function | js.Dynamic = js.native
+  var onStart: Null|js.Function = js.native
+  var onStop: Null|js.Function = js.native
 }
 
 
@@ -253,6 +253,7 @@ object ccgame extends ts_ccgame {
 @JSGlobal("cc")
 object cc extends js.Object {
   type cckmMat4 = ccmathMatrix4
+  type t_cckmMat4 = t_ccmathMatrix4
   type ccDrawingPrimitive = ccDrawingPrimitiveCanvas | ccDrawingPrimitiveWebGL
 
   val ACTION_TAG_INVALID: Float = js.native
@@ -449,7 +450,7 @@ object cc extends js.Object {
   val TABLEVIEW_FILL_TOPDOWN: Float = js.native
   val TABLEVIEW_FILL_BOTTOMUP: Float = js.native
   var _drawingUtil: ccDrawingPrimitive = js.native
-  var _renderContext: js.Dynamic | js.Dynamic = js.native
+  var _renderContext: js.Dynamic = js.native
   var _canvas: js.Dynamic = js.native
   var container: js.Dynamic = js.native
   var loader: ccLoader = js.native
@@ -475,8 +476,8 @@ object cc extends js.Object {
   var SLIDER_MARGIN_H: js.Dynamic = js.native
   var CONTROL_STEPPER_PARTMINUS: js.Dynamic = js.native
   var SCROLLVIEW_DIRECTION_NONE: js.Dynamic = js.native
-  var network: types.DynObject | js.Dynamic = js.native
-  def each(obj:types.DynObject | js.Dynamic, iterator:js.Function, context:types.DynObject):Unit = js.native
+  var network: js.Any/*ccnetwork*/|js.Dynamic|types.DynObject = js.native
+  def each(obj:js.Dynamic|types.DynObject, iterator:js.Function, context:types.DynObject):Unit = js.native
   def extend(target:types.DynObject, sources:types.DynObject):types.DynObject = js.native
   def inherits(childCtor:js.Function, parentCtor:js.Function):Unit = js.native
   def isFunction(obj:js.Dynamic):Boolean = js.native
@@ -490,7 +491,7 @@ object cc extends js.Object {
   def _initDebugSetting(mode:Float):Unit = js.native
   def action:ccAction = js.native
   def speed(action:t_ccActionInterval, speed:Float):ccSpeed = js.native
-  def follow(followedNode:t_ccNode, rect:t_ccRect):ccFollow | js.Dynamic = js.native
+  def follow(followedNode:t_ccNode, rect:t_ccRect):ccFollow|js.Dynamic = js.native
   def cardinalSplineAt(p0:t_ccPoint, p1:t_ccPoint, p2:t_ccPoint, p3:t_ccPoint, tension:Float, t:Float, out:t_ccPoint):ccPoint = js.native
   def reverseControlPoints:js.Array[js.Any] = js.native
   def cloneControlPoints(controlPoints:js.Dynamic):js.Array[js.Any] = js.native
@@ -542,26 +543,26 @@ object cc extends js.Object {
   def removeSelf(isNeedCleanUp:Boolean):ccRemoveSelf = js.native
   def flipX(flip:Boolean):ccFlipX = js.native
   def flipY(flip:Boolean):ccFlipY = js.native
-  def place(pos:t_ccPoint | Float, y:Float):ccPlace = js.native
-  def callFunc(selector:js.Function, selectorTarget:types.DynObject | js.Dynamic, data:js.Dynamic | js.Dynamic):ccCallFunc = js.native
+  def place(pos:Float|t_ccPoint, y:Float):ccPlace = js.native
+  def callFunc(selector:js.Function, selectorTarget:Null|types.DynObject, data:Null|js.Dynamic):ccCallFunc = js.native
   def actionInterval(d:Float):ccActionInterval = js.native
-  def sequence(tempArray:js.Array[js.Any] | t_ccFiniteTimeAction):ccSequence = js.native
+  def sequence(tempArray:js.Array[js.Any]|t_ccFiniteTimeAction):ccSequence = js.native
   def repeat(action:t_ccFiniteTimeAction, times:Float):ccRepeat = js.native
   def repeatForever(action:t_ccFiniteTimeAction):ccRepeatForever = js.native
-  def spawn(tempArray:js.Array[js.Any] | t_ccFiniteTimeAction):ccFiniteTimeAction = js.native
+  def spawn(tempArray:js.Array[js.Any]|t_ccFiniteTimeAction):ccFiniteTimeAction = js.native
   def rotateTo(duration:Float, deltaAngleX:Float, deltaAngleY:Float):ccRotateTo = js.native
   def rotateBy(duration:Float, deltaAngleX:Float, deltaAngleY:Float):ccRotateBy = js.native
-  def moveBy(duration:Float, deltaPos:t_ccPoint | Float, deltaY:Float):ccMoveBy = js.native
+  def moveBy(duration:Float, deltaPos:Float|t_ccPoint, deltaY:Float):ccMoveBy = js.native
   def moveTo(duration:Float, position:t_ccPoint, y:Float):ccMoveBy = js.native
   def skewTo(t:Float, sx:Float, sy:Float):ccSkewTo = js.native
   def skewBy(t:Float, sx:Float, sy:Float):ccSkewBy = js.native
-  def jumpBy(duration:Float, position:t_ccPoint | Float, y:Float, height:Float, jumps:Float):ccJumpBy = js.native
-  def jumpTo(duration:Float, position:t_ccPoint | Float, y:Float, height:Float, jumps:Float):ccJumpTo = js.native
+  def jumpBy(duration:Float, position:Float|t_ccPoint, y:Float, height:Float, jumps:Float):ccJumpBy = js.native
+  def jumpTo(duration:Float, position:Float|t_ccPoint, y:Float, height:Float, jumps:Float):ccJumpTo = js.native
   def bezierAt(a:Float, b:Float, c:Float, d:Float, t:Float):Float = js.native
   def bezierBy(t:Float, c:js.Array[js.Any]):ccBezierBy = js.native
   def bezierTo(t:Float, c:js.Array[js.Any]):ccBezierTo = js.native
   def scaleTo(duration:Float, sx:Float, sy:Float):ccScaleTo = js.native
-  def scaleBy(duration:Float, sx:Float, sy:Float | js.Dynamic):ccScaleBy = js.native
+  def scaleBy(duration:Float, sx:Float, sy:Float|js.Dynamic):ccScaleBy = js.native
   def blink(duration:Float, blinks:js.Dynamic):ccBlink = js.native
   def fadeTo(duration:Float, opacity:Float):ccFadeTo = js.native
   def fadeIn(duration:Float):ccFadeIn = js.native
@@ -595,7 +596,7 @@ object cc extends js.Object {
   def fadeOutBLTiles(duration:js.Dynamic, gridSize:js.Dynamic):ccFadeOutBLTiles = js.native
   def fadeOutUpTiles(duration:Float, gridSize:t_ccSize):ccFadeOutUpTiles = js.native
   def fadeOutDownTiles(duration:Float, gridSize:t_ccSize):ccFadeOutDownTiles = js.native
-  def turnOffTiles(duration:Float, gridSize:t_ccSize, seed:Float | js.Dynamic):ccTurnOffTiles = js.native
+  def turnOffTiles(duration:Float, gridSize:t_ccSize, seed:Float|js.Dynamic):ccTurnOffTiles = js.native
   def wavesTiles3D(duration:Float, gridSize:t_ccSize, waves:Float, amplitude:Float):ccWavesTiles3D = js.native
   def jumpTiles3D(duration:Float, gridSize:t_ccSize, numberOfJumps:Float, amplitude:Float):ccJumpTiles3D = js.native
   def splitRows(duration:Float, rows:Float):ccSplitRows = js.native
@@ -606,7 +607,7 @@ object cc extends js.Object {
   def unzipAsArray(input:js.Array[js.Any], bytes:Float):js.Array[js.Any] = js.native
   def StringToArray(input:String):js.Array[js.Any] = js.native
   def affineTransformMake(a:Float, b:Float, c:Float, d:Float, tx:Float, ty:Float):ccAffineTransform = js.native
-  def pointApplyAffineTransform(point:t_ccPoint | Float, transOrY:t_ccAffineTransform | Float, t:t_ccAffineTransform):ccPoint = js.native
+  def pointApplyAffineTransform(point:Float|t_ccPoint, transOrY:Float|t_ccAffineTransform, t:t_ccAffineTransform):ccPoint = js.native
   def sizeApplyAffineTransform(size:t_ccSize, t:t_ccAffineTransform):ccSize = js.native
   def affineTransformMakeIdentity:ccAffineTransform = js.native
   def rectApplyAffineTransform(rect:t_ccRect, anAffineTransform:t_ccAffineTransform):ccRect = js.native
@@ -617,11 +618,11 @@ object cc extends js.Object {
   def affineTransformConcatIn(t1:t_ccAffineTransform, t2:t_ccAffineTransform):ccAffineTransform = js.native
   def affineTransformEqualToTransform(t1:t_ccAffineTransform, t2:t_ccAffineTransform):Boolean = js.native
   def affineTransformInvert(t:t_ccAffineTransform):ccAffineTransform = js.native
-  def p(x:Float | t_ccPoint, y:Float):ccPoint = js.native
+  def p(x:Float|t_ccPoint, y:Float):ccPoint = js.native
   def pointEqualToPoint(point1:t_ccPoint, point2:t_ccPoint):Boolean = js.native
-  def size(w:Float | t_ccSize, h:Float):ccSize = js.native
+  def size(w:Float|t_ccSize, h:Float):ccSize = js.native
   def sizeEqualToSize(size1:t_ccSize, size2:t_ccSize):Boolean = js.native
-  def rect(x:Float | t_ccRect, y:Float, w:Float, h:Float):ccRect = js.native
+  def rect(x:Float|t_ccRect, y:Float, w:Float, h:Float):ccRect = js.native
   def rectEqualToRect(rect1:t_ccRect, rect2:t_ccRect):Boolean = js.native
   def rectContainsRect(rect1:t_ccRect, rect2:t_ccRect):Boolean = js.native
   def rectGetMaxX(rect:t_ccRect):Float = js.native
@@ -636,7 +637,7 @@ object cc extends js.Object {
   def rectUnion(rectA:t_ccRect, rectB:t_ccRect):ccRect = js.native
   def rectIntersection(rectA:t_ccRect, rectB:t_ccRect):ccRect = js.native
   def defineGetterSetter(proto:types.DynObject, prop:String, getter:js.Function, setter:js.Function, getterName:String, setterName:String):Unit = js.native
-  def clone(obj:types.DynObject | js.Array[js.Any]):js.Array[js.Any] | types.DynObject = js.native
+  def clone(obj:js.Array[js.Any]|types.DynObject):js.Array[js.Any]|types.DynObject = js.native
   def associateWithNative(jsObj:types.DynObject, superclass:types.DynObject):Unit = js.native
   def getImageFormatByData(imgData:js.Array[js.Any]):Float = js.native
   def lerp(a:Float, b:Float, r:Float):Unit = js.native
@@ -663,7 +664,7 @@ object cc extends js.Object {
   def arrayRemoveArray(arr:js.Array[js.Any], minusArr:js.Array[js.Any]):Unit = js.native
   def arrayAppendObjectsToIndex(arr:js.Array[js.Any], addObjs:js.Array[js.Any], index:Float):js.Array[js.Any] = js.native
   def copyArray(arr:js.Array[js.Any]):js.Array[js.Any] = js.native
-  def color(r:Float | String | t_ccColor, g:Float, b:Float, a:Float):ccColor = js.native
+  def color(r:Float|String|t_ccColor, g:Float, b:Float, a:Float):ccColor = js.native
   def colorEqual(color1:t_ccColor, color2:t_ccColor):Boolean = js.native
   def V3F_C4B_T2F_QuadZero:ccV3F_C4B_T2F_Quad = js.native
   def V3F_C4B_T2F_QuadCopy(sourceQuad:t_ccV3F_C4B_T2F_Quad):ccV3F_C4B_T2F_Quad = js.native
@@ -716,8 +717,8 @@ object cc extends js.Object {
   def vertexLineToPolygon(points:js.Dynamic, stroke:Float, vertices:js.Dynamic, offset:Float, nuPoints:Float):Unit = js.native
   def vertexLineIntersect(Ax:Float, Ay:Float, Bx:Float, By:Float, Cx:Float, Cy:Float, Dx:Float, Dy:Float):types.DynObject = js.native
   def vertexListIsClockwise(verts:js.Array[js.Any]):Boolean = js.native
-  def CGAffineToGL(trans:t_ccAffineTransform, mat:cckmMat4):Unit = js.native
-  def GLToCGAffine(mat:cckmMat4, trans:t_ccAffineTransform):Unit = js.native
+  def CGAffineToGL(trans:t_ccAffineTransform, mat:t_cckmMat4):Unit = js.native
+  def GLToCGAffine(mat:t_cckmMat4, trans:t_ccAffineTransform):Unit = js.native
   def kmMat4Identity(pOut:js.Dynamic):Unit = js.native
   def kmMat4Inverse():Unit = js.native
   def kmMat4Multiply():Unit = js.native

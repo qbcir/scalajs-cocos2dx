@@ -33,7 +33,7 @@ trait t_ccSpriteFrame extends t_ccClass {
   override def clone:js.Dynamic = js.native
   def copyWithZone:ccSpriteFrame = js.native
   def copy:ccSpriteFrame = js.native
-  def initWithTexture(texture:String | t_ccTexture2D, rect:t_ccRect, rotated:Boolean, offset:t_ccPoint, originalSize:t_ccSize):Boolean = js.native
+  def initWithTexture(texture:String|t_ccTexture2D, rect:t_ccRect, rotated:Boolean, offset:t_ccPoint, originalSize:t_ccSize):Boolean = js.native
 }
 
 @js.native
@@ -42,7 +42,7 @@ trait ts_ccSpriteFrame extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.SpriteFrame")
-class ccSpriteFrame(filename:String | t_ccTexture2D, rect:t_ccRect, rotated:Boolean, offset:t_ccPoint, originalSize:t_ccSize) extends t_ccSpriteFrame {
+class ccSpriteFrame(filename:String|t_ccTexture2D, rect:t_ccRect, rotated:Boolean, offset:t_ccPoint, originalSize:t_ccSize) extends t_ccSpriteFrame {
 }
 
 @js.native

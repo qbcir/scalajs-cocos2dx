@@ -24,10 +24,10 @@ trait t_ccuiButton extends t_ccuiWidget {
   def isScale9Enabled:Boolean = js.native
   override def ignoreContentAdaptWithSize(ignore:Boolean):Unit = js.native
   override def getVirtualRendererSize:ccSize = js.native
-  def loadTextures(normal:String, selected:String, disabled:String, texType:Float | Float):Unit = js.native
-  def loadTextureNormal(normal:String, texType:Float | Float):Unit = js.native
-  def loadTexturePressed(selected:String, texType:Float | Float):Unit = js.native
-  def loadTextureDisabled(disabled:String, texType:Float | Float):Unit = js.native
+  def loadTextures(normal:String, selected:String, disabled:String, texType:Float):Unit = js.native
+  def loadTextureNormal(normal:String, texType:Float):Unit = js.native
+  def loadTexturePressed(selected:String, texType:Float):Unit = js.native
+  def loadTextureDisabled(disabled:String, texType:Float):Unit = js.native
   def setCapInsets(capInsets:t_ccRect):Unit = js.native
   def setCapInsetsNormalRenderer(capInsets:t_ccRect):Unit = js.native
   def getCapInsetsNormalRenderer:ccRect = js.native

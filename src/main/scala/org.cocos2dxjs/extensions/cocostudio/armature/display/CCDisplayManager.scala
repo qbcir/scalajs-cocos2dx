@@ -17,7 +17,7 @@ trait t_ccsDisplayManager extends js.Object {
 @js.native
 trait ts_ccsDisplayManager extends js.Object {
   def init(bone:js.Dynamic):Boolean = js.native
-  def addDisplay(display:t_ccsDisplayData | t_ccNode, index:Float):Unit = js.native
+  def addDisplay(display:t_ccNode|t_ccsDisplayData, index:Float):Unit = js.native
   def removeDisplay(index:Float):Unit = js.native
   def getDecorativeDisplayList:js.Array[js.Any] = js.native
   def changeDisplayWithIndex(index:Float, force:Boolean):Unit = js.native
@@ -29,7 +29,7 @@ trait ts_ccsDisplayManager extends js.Object {
   def getCurrentDecorativeDisplay:ccsDecorativeDisplay = js.native
   def getDecorativeDisplayByIndex(index:js.Dynamic):ccsDecorativeDisplay = js.native
   def initDisplayList(boneData:t_ccsBoneData):Unit = js.native
-  def containPoint(point:t_ccPoint | Float, y:Float):Boolean = js.native
+  def containPoint(point:Float|t_ccPoint, y:Float):Boolean = js.native
   def setVisible(visible:Boolean):Unit = js.native
   def isVisible:Boolean = js.native
 }

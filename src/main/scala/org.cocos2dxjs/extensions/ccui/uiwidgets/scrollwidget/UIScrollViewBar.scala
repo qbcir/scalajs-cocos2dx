@@ -33,7 +33,7 @@ trait ts_ccuiScrollViewBar extends ts_ccuiProtectedNode {
 
 @js.native
 @JSGlobal("ccui.ScrollViewBar")
-class ccuiScrollViewBar(parent:t_ccuiScrollView, direction:Float | Float | Float | Float) extends t_ccuiScrollViewBar {
+class ccuiScrollViewBar(parent:t_ccuiScrollView, direction:Float) extends t_ccuiScrollViewBar {
 }
 
 @js.native

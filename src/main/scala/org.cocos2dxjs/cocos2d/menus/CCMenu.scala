@@ -15,7 +15,7 @@ trait t_ccMenu extends t_ccLayer {
   def setEnabled(enabled:Boolean):Unit = js.native
   def initWithItems(args:js.Array[js.Any]):Boolean = js.native
   def initWithArray(arrayOfItems:js.Array[js.Any]):Boolean = js.native
-  def addChild(child:t_ccNode, zOrder:Float | js.Dynamic, tag:Float | js.Dynamic):Unit = js.native
+  def addChild(child:t_ccNode, zOrder:Float|js.Dynamic, tag:Float|js.Dynamic):Unit = js.native
   def alignItemsVertically():Unit = js.native
   def alignItemsVerticallyWithPadding(padding:Float):Unit = js.native
   def alignItemsHorizontally():Unit = js.native
@@ -34,7 +34,7 @@ trait ts_ccMenu extends ts_ccLayer {
 
 @js.native
 @JSGlobal("cc.Menu")
-class ccMenu(menuItems:t_ccMenuItem | js.Dynamic) extends t_ccMenu {
+class ccMenu(menuItems:Null|t_ccMenuItem) extends t_ccMenu {
 }
 
 @js.native

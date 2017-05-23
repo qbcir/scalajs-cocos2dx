@@ -71,7 +71,7 @@ object ccui extends js.Object {
   var LINEAR_GRAVITY_NONE: js.Dynamic = js.native
   var cocosGUIVersion: String = js.native
   var _TextFieldRenderer: js.Dynamic = js.native
-  def getLayoutManager(_type:Float):ccuilinearVerticalLayoutManager | ccuilinearHorizontalLayoutManager | ccuirelativeLayoutManager | js.Dynamic = js.native
+  def getLayoutManager(_type:Float):Null|ccuilinearHorizontalLayoutManager|ccuilinearVerticalLayoutManager|ccuirelativeLayoutManager = js.native
   def MarginZero:ccuiMargin = js.native
 }
 

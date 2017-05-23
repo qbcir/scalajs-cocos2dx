@@ -19,7 +19,7 @@ trait t_ccsActionFrame extends t_ccsClass {
   var easingType: Float = js.native
   var frameIndex: Float = js.native
   var time: Float = js.native
-  def getAction(duration:Float, srcFrame:t_ccsActionFrame):js.Dynamic = js.native
+  def getAction(duration:Float, srcFrame:t_ccsActionFrame):Null = js.native
   def setEasingParameter(parameter:js.Array[js.Any]):Unit = js.native
   def setEasingType(easingType:Float):Unit = js.native
 }
@@ -40,7 +40,7 @@ object ccsActionFrame extends ts_ccsActionFrame {
 
 @js.native
 trait t_ccsActionMoveFrame extends t_ccsActionFrame {
-  def setPosition(pos:t_ccPoint | Float, y:Float):Unit = js.native
+  def setPosition(pos:Float|t_ccPoint, y:Float):Unit = js.native
   def getPosition:ccPoint = js.native
   def getAction(duration:Float):ccMoveTo = js.native
 }
@@ -86,7 +86,7 @@ object ccsActionScaleFrame extends ts_ccsActionScaleFrame {
 trait t_ccsActionRotationFrame extends t_ccsActionFrame {
   def setRotation(rotation:Float):Unit = js.native
   def getRotation:Float = js.native
-  override def getAction(duration:Float, srcFrame:t_ccsActionFrame):js.Dynamic = js.native
+  override def getAction(duration:Float, srcFrame:t_ccsActionFrame):Null = js.native
 }
 
 @js.native

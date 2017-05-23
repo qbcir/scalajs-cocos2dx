@@ -49,20 +49,20 @@ trait t_ccSprite extends t_ccNode {
   override def setOpacityModifyRGB(modify:Boolean):Unit = js.native
   override def isOpacityModifyRGB:Boolean = js.native
   def setDisplayFrameWithAnimationName(animationName:String, frameIndex:Float):Unit = js.native
-  def getBatchNode:ccSpriteBatchNode | js.Dynamic = js.native
+  def getBatchNode:Null|ccSpriteBatchNode = js.native
   def getTexture:ccTexture2D = js.native
-  def getQuad:ccV3F_C4B_T2F_Quad | js.Dynamic = js.native
-  def setBlendFunc(src:Float | t_ccBlendFunc, dst:Float):Unit = js.native
+  def getQuad:Null|ccV3F_C4B_T2F_Quad = js.native
+  def setBlendFunc(src:Float|t_ccBlendFunc, dst:Float):Unit = js.native
   override def init:Boolean = js.native
   def initWithFile(filename:String, rect:t_ccRect):Boolean = js.native
-  def initWithTexture(texture:t_ccTexture2D | js.Dynamic | js.Dynamic, rect:t_ccRect, rotated:Boolean, counterclockwise:Boolean):Boolean = js.native
+  def initWithTexture(texture:js.Dynamic|t_ccTexture2D, rect:t_ccRect, rotated:Boolean, counterclockwise:Boolean):Boolean = js.native
   def setTextureRect(rect:t_ccRect, rotated:Boolean, untrimmedSize:t_ccSize, needConvert:Boolean):Unit = js.native
-  def addChild(child:t_ccSprite, localZOrder:Float, tag:Float | String):Unit = js.native
-  def setSpriteFrame(newFrame:t_ccSpriteFrame | String):Unit = js.native
+  def addChild(child:t_ccSprite, localZOrder:Float, tag:Float|String):Unit = js.native
+  def setSpriteFrame(newFrame:String|t_ccSpriteFrame):Unit = js.native
   def isFrameDisplayed(frame:t_ccSpriteFrame):Boolean = js.native
   def getSpriteFrame:ccSpriteFrame = js.native
-  def setBatchNode(spriteBatchNode:t_ccSpriteBatchNode | js.Dynamic):Unit = js.native
-  def setTexture(texture:t_ccTexture2D | String):Unit = js.native
+  def setBatchNode(spriteBatchNode:Null|t_ccSpriteBatchNode):Unit = js.native
+  def setTexture(texture:String|t_ccTexture2D):Unit = js.native
 }
 
 @js.native
@@ -71,7 +71,7 @@ trait ts_ccSprite extends ts_ccNode {
 
 @js.native
 @JSGlobal("cc.Sprite")
-class ccSprite(fileName:String | t_ccSpriteFrame | js.Dynamic | t_ccTexture2D, rect:t_ccRect, rotated:Boolean) extends t_ccSprite {
+class ccSprite(fileName:String|js.Dynamic|t_ccSpriteFrame|t_ccTexture2D, rect:t_ccRect, rotated:Boolean) extends t_ccSprite {
 }
 
 @js.native
