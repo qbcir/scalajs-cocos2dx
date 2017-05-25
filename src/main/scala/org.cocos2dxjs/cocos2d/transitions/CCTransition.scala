@@ -187,7 +187,7 @@ object ccTransitionMoveInB extends ts_ccTransitionMoveInB {
 trait t_ccTransitionSlideInL extends t_ccTransitionScene {
   override def onEnter():Unit = js.native
   def initScenes():Unit = js.native
-  def action:ccMoveBy = js.native
+  def action():ccMoveBy = js.native
   def easeActionWithAction(action:t_ccActionInterval):js.Dynamic = js.native
 }
 
@@ -209,7 +209,7 @@ object ccTransitionSlideInL extends ts_ccTransitionSlideInL {
 @js.native
 trait t_ccTransitionSlideInR extends t_ccTransitionSlideInL {
   override def initScenes():Unit = js.native
-  override def action:ccMoveBy = js.native
+  override def action():ccMoveBy = js.native
 }
 
 @js.native
@@ -230,7 +230,7 @@ object ccTransitionSlideInR extends ts_ccTransitionSlideInR {
 @js.native
 trait t_ccTransitionSlideInB extends t_ccTransitionSlideInL {
   override def initScenes():Unit = js.native
-  override def action:ccMoveBy = js.native
+  override def action():ccMoveBy = js.native
 }
 
 @js.native
@@ -251,7 +251,7 @@ object ccTransitionSlideInB extends ts_ccTransitionSlideInB {
 @js.native
 trait t_ccTransitionSlideInT extends t_ccTransitionSlideInL {
   override def initScenes():Unit = js.native
-  override def action:ccMoveBy = js.native
+  override def action():ccMoveBy = js.native
 }
 
 @js.native
@@ -358,7 +358,7 @@ object ccTransitionTurnOffTiles extends ts_ccTransitionTurnOffTiles {
 trait t_ccTransitionSplitCols extends t_ccTransitionScene {
   override def onEnter():Unit = js.native
   def easeActionWithAction(action:t_ccActionInterval):ccEaseInOut = js.native
-  def action:js.Dynamic = js.native
+  def action():js.Dynamic = js.native
 }
 
 @js.native
@@ -378,7 +378,7 @@ object ccTransitionSplitCols extends ts_ccTransitionSplitCols {
 
 @js.native
 trait t_ccTransitionSplitRows extends t_ccTransitionSplitCols {
-  override def action:js.Dynamic = js.native
+  override def action():js.Dynamic = js.native
 }
 
 @js.native

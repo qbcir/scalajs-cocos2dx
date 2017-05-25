@@ -11,7 +11,7 @@ import org.cocos2dxjs.cocos2d.core.layers.ts_ccLayer
 @js.native
 trait t_ccMenu extends t_ccLayer {
   override def onEnter():Unit = js.native
-  def isEnabled:Boolean = js.native
+  def isEnabled():Boolean = js.native
   def setEnabled(enabled:Boolean):Unit = js.native
   def initWithItems(args:js.Array[js.Any]):Boolean = js.native
   def initWithArray(arrayOfItems:js.Array[js.Any]):Boolean = js.native
@@ -25,7 +25,7 @@ trait t_ccMenu extends t_ccLayer {
   override def removeChild(child:t_ccNode, cleanup:Boolean):Unit = js.native
   override def onExit():Unit = js.native
   def setOpacityModifyRGB(value:js.Dynamic):Unit = js.native
-  override def isOpacityModifyRGB:Boolean = js.native
+  override def isOpacityModifyRGB():Boolean = js.native
 }
 
 @js.native

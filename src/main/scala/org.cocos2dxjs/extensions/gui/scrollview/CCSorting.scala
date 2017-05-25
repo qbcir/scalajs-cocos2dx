@@ -17,7 +17,7 @@ trait ts_ccSortableObject extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.SortableObject")
-class ccSortableObject extends t_ccSortableObject {
+class ccSortableObject() extends t_ccSortableObject {
 }
 
 @js.native
@@ -35,7 +35,7 @@ trait ts_ccSortedObject extends ts_ccSortableObject {
 
 @js.native
 @JSGlobal("cc.SortedObject")
-class ccSortedObject extends t_ccSortedObject {
+class ccSortedObject() extends t_ccSortedObject {
 }
 
 @js.native
@@ -54,7 +54,7 @@ trait ts_ccArrayForObjectSorting extends js.Object {
 
 @js.native
 @JSGlobal("cc.ArrayForObjectSorting")
-class ccArrayForObjectSorting extends t_ccArrayForObjectSorting {
+class ccArrayForObjectSorting() extends t_ccArrayForObjectSorting {
 }
 
 @js.native

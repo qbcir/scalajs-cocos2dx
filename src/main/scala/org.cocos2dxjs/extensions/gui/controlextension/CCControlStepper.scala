@@ -29,7 +29,7 @@ trait ts_ccControlStepper extends ts_ccControl {
 
 @js.native
 @JSGlobal("cc.ControlStepper")
-class ccControlStepper extends t_ccControlStepper {
+class ccControlStepper() extends t_ccControlStepper {
   var _state: js.Dynamic = js.native
 }
 

@@ -11,15 +11,15 @@ import org.cocos2dxjs.extensions.cocostudio.ts_ccsClass
 @js.native
 trait t_ccsActionObject extends t_ccsClass {
   def setName(name:String):Unit = js.native
-  def getName:String = js.native
+  def getName():String = js.native
   def setLoop(loop:Boolean):Unit = js.native
-  def getLoop:Boolean = js.native
+  def getLoop():Boolean = js.native
   def setUnitTime(time:Float):Unit = js.native
-  def getUnitTime:Float = js.native
-  def getCurrentTime:Float = js.native
+  def getUnitTime():Float = js.native
+  def getCurrentTime():Float = js.native
   def setCurrentTime(time:Float):Unit = js.native
-  def getTotalTime:Float = js.native
-  def isPlaying:Boolean = js.native
+  def getTotalTime():Float = js.native
+  def isPlaying():Boolean = js.native
   def initWithDictionary(dic:types.DynObject, root:types.DynObject):Unit = js.native
   def addActionNode(node:t_ccsActionNode):Unit = js.native
   def removeActionNode(node:t_ccsActionNode):Unit = js.native
@@ -36,7 +36,7 @@ trait ts_ccsActionObject extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.ActionObject")
-class ccsActionObject extends t_ccsActionObject {
+class ccsActionObject() extends t_ccsActionObject {
 }
 
 @js.native

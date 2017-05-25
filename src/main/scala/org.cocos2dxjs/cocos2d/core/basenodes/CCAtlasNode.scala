@@ -15,20 +15,20 @@ trait t_ccAtlasNode extends t_ccNode {
   var textureAtlas: ccTextureAtlas = js.native
   var quadsToDraw: Float = js.native
   def updateAtlasValues():Unit = js.native
-  override def getColor:ccColor = js.native
+  override def getColor():ccColor = js.native
   override def setOpacityModifyRGB(value:Boolean):Unit = js.native
-  override def isOpacityModifyRGB:Boolean = js.native
-  def getBlendFunc:ccBlendFunc = js.native
+  override def isOpacityModifyRGB():Boolean = js.native
+  def getBlendFunc():ccBlendFunc = js.native
   def setBlendFunc(src:Float|t_ccBlendFunc, dst:Float):Unit = js.native
   def setTextureAtlas(value:t_ccTextureAtlas):Unit = js.native
-  def getTextureAtlas:ccTextureAtlas = js.native
-  def getQuadsToDraw:Float = js.native
+  def getTextureAtlas():ccTextureAtlas = js.native
+  def getQuadsToDraw():Float = js.native
   def setQuadsToDraw(quadsToDraw:Float):Unit = js.native
   def initWithTileFile(tile:String, tileWidth:Float, tileHeight:Float, itemsToRender:Float):Boolean = js.native
   def initWithTexture(texture:t_ccTexture2D, tileWidth:Float, tileHeight:Float, itemsToRender:Float):Boolean = js.native
   override def setColor(color:t_ccColor):Unit = js.native
   override def setOpacity(opacity:Float):Unit = js.native
-  def getTexture:ccTexture2D = js.native
+  def getTexture():ccTexture2D = js.native
   def setTexture(texture:t_ccTexture2D):Unit = js.native
 }
 

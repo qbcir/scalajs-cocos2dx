@@ -16,7 +16,7 @@ trait ts_cctiffReader extends js.Object {
 
 @js.native
 @JSGlobal("cc.tiffReader")
-class cctiffReader extends t_cctiffReader {
+class cctiffReader() extends t_cctiffReader {
 }
 
 @js.native

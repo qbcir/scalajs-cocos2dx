@@ -27,7 +27,7 @@ trait ts_ccTextFieldDelegate extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.TextFieldDelegate")
-class ccTextFieldDelegate extends t_ccTextFieldDelegate {
+class ccTextFieldDelegate() extends t_ccTextFieldDelegate {
 }
 
 @js.native
@@ -41,30 +41,30 @@ trait t_ccTextFieldTTF extends t_ccLabelTTF {
   val charCount: Float = js.native
   var placeHolder: String = js.native
   var colorSpaceHolder: ccColor = js.native
-  def getDelegate:ccNode = js.native
+  def getDelegate():ccNode = js.native
   def setDelegate(value:t_ccNode):Unit = js.native
-  def getCharCount:Float = js.native
-  def getColorSpaceHolder:ccColor = js.native
+  def getCharCount():Float = js.native
+  def getColorSpaceHolder():ccColor = js.native
   def setColorSpaceHolder(value:t_ccColor):Unit = js.native
   def setTextColor(textColor:t_ccColor):Unit = js.native
   def initWithPlaceHolder(placeholder:String, dimensions:t_ccSize, alignment:Float, fontName:String, fontSize:Float):Boolean = js.native
   override def setString(text:String):Unit = js.native
-  override def getString:String = js.native
+  override def getString():String = js.native
   def setPlaceHolder(text:String):Unit = js.native
-  def getPlaceHolder:String = js.native
+  def getPlaceHolder():String = js.native
   override def draw(ctx:js.Dynamic):Unit = js.native
-  def attachWithIME:Boolean = js.native
-  def detachWithIME:Boolean = js.native
-  def canAttachWithIME:Boolean = js.native
+  def attachWithIME():Boolean = js.native
+  def detachWithIME():Boolean = js.native
+  def canAttachWithIME():Boolean = js.native
   def didAttachWithIME():Unit = js.native
-  def canDetachWithIME:Boolean = js.native
+  def canDetachWithIME():Boolean = js.native
   def didDetachWithIME():Unit = js.native
   def deleteBackward():Unit = js.native
   def removeDelegate():Unit = js.native
   def setTipMessage(tipMessage:String):Unit = js.native
-  def getTipMessage:String = js.native
+  def getTipMessage():String = js.native
   def insertText(text:String, len:Float):Unit = js.native
-  def getContentText:String = js.native
+  def getContentText():String = js.native
 }
 
 @js.native

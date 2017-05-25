@@ -21,11 +21,11 @@ trait t_ccParticleBatchNode extends t_ccParticleSystem {
   def removeChildAtIndex(index:Float, doCleanup:Boolean):Unit = js.native
   override def removeAllChildren(doCleanup:Boolean):Unit = js.native
   def disableParticle(particleIndex:Float):Unit = js.native
-  override def getTexture:ccTexture2D = js.native
+  override def getTexture():ccTexture2D = js.native
   override def setTexture(texture:t_ccTexture2D):Unit = js.native
   def setBlendFunc(src:Float|types.DynObject, dst:Float):Unit = js.native
-  override def getBlendFunc:ccBlendFunc = js.native
-  def getTextureAtlas:ccTextureAtlas = js.native
+  override def getBlendFunc():ccBlendFunc = js.native
+  def getTextureAtlas():ccTextureAtlas = js.native
   def setTextureAtlas(textureAtlas:t_ccTextureAtlas):Unit = js.native
 }
 

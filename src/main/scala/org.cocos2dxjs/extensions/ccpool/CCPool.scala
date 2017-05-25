@@ -20,7 +20,7 @@ trait ts_ccpool extends js.Object {
 
 @js.native
 @JSGlobal("cc.pool")
-class ccpool extends t_ccpool {
+class ccpool() extends t_ccpool {
 }
 
 @js.native

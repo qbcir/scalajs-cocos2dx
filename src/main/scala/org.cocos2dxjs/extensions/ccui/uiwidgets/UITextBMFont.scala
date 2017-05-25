@@ -18,7 +18,7 @@ trait ts_ccuiLabelBMFont extends ts_ccuiWidget {
 
 @js.native
 @JSGlobal("ccui.LabelBMFont")
-class ccuiLabelBMFont extends t_ccuiLabelBMFont {
+class ccuiLabelBMFont() extends t_ccuiLabelBMFont {
   var onFocusChanged: js.Dynamic = js.native
   var onNextFocusedWidget: js.Dynamic = js.native
 }

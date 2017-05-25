@@ -17,7 +17,7 @@ trait ts_ccBakeSprite extends js.Object {
 
 @js.native
 @JSGlobal("cc.BakeSprite")
-class ccBakeSprite extends t_ccBakeSprite {
+class ccBakeSprite() extends t_ccBakeSprite {
 }
 
 @js.native

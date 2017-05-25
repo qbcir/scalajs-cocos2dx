@@ -15,13 +15,13 @@ trait t_ccuiImageView extends t_ccuiWidget {
   def loadTexture(fileName:String, texType:Float):Unit = js.native
   def setTextureRect(rect:t_ccRect):Unit = js.native
   def setScale9Enabled(able:Boolean):Unit = js.native
-  def isScale9Enabled:Boolean = js.native
+  def isScale9Enabled():Boolean = js.native
   override def ignoreContentAdaptWithSize(ignore:Boolean):Unit = js.native
   def setCapInsets(capInsets:t_ccRect):Unit = js.native
-  def getCapInsets:ccRect = js.native
-  override def getVirtualRendererSize:ccSize = js.native
-  override def getVirtualRenderer:ccuiWidget = js.native
-  override def getDescription:String = js.native
+  def getCapInsets():ccRect = js.native
+  override def getVirtualRendererSize():ccSize = js.native
+  override def getVirtualRenderer():ccuiWidget = js.native
+  override def getDescription():String = js.native
 }
 
 @js.native

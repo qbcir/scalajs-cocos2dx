@@ -34,10 +34,10 @@ object ccuiMargin extends ts_ccuiMargin {
 @js.native
 trait t_ccuiLayoutParameter extends t_ccuiClass {
   def setMargin(margin:t_ccuiMargin):Unit = js.native
-  def getMargin:ccuiMargin = js.native
-  def getLayoutType:Float = js.native
-  override def clone:ccuiLayoutParameter = js.native
-  def _createCloneInstance:ccuiLayoutParameter = js.native
+  def getMargin():ccuiMargin = js.native
+  def getLayoutType():Float = js.native
+  override def clone():ccuiLayoutParameter = js.native
+  def _createCloneInstance():ccuiLayoutParameter = js.native
   def _copyProperties(model:t_ccuiLayoutParameter):Unit = js.native
 }
 
@@ -48,7 +48,7 @@ trait ts_ccuiLayoutParameter extends ts_ccuiClass {
 
 @js.native
 @JSGlobal("ccui.LayoutParameter")
-class ccuiLayoutParameter extends t_ccuiLayoutParameter {
+class ccuiLayoutParameter() extends t_ccuiLayoutParameter {
 }
 
 @js.native
@@ -62,7 +62,7 @@ object ccuiLayoutParameter extends ts_ccuiLayoutParameter {
 @js.native
 trait t_ccuiLinearLayoutParameter extends t_ccuiLayoutParameter {
   def setGravity(gravity:Float):Unit = js.native
-  def getGravity:Float = js.native
+  def getGravity():Float = js.native
 }
 
 @js.native
@@ -71,7 +71,7 @@ trait ts_ccuiLinearLayoutParameter extends ts_ccuiLayoutParameter {
 
 @js.native
 @JSGlobal("ccui.LinearLayoutParameter")
-class ccuiLinearLayoutParameter extends t_ccuiLinearLayoutParameter {
+class ccuiLinearLayoutParameter() extends t_ccuiLinearLayoutParameter {
 }
 
 @js.native
@@ -89,11 +89,11 @@ object ccuiLinearLayoutParameter extends ts_ccuiLinearLayoutParameter {
 @js.native
 trait t_ccuiRelativeLayoutParameter extends t_ccuiLayoutParameter {
   def setAlign(align:Float):Unit = js.native
-  def getAlign:Float = js.native
+  def getAlign():Float = js.native
   def setRelativeToWidgetName(name:String):Unit = js.native
-  def getRelativeToWidgetName:String = js.native
+  def getRelativeToWidgetName():String = js.native
   def setRelativeName(name:String):Unit = js.native
-  def getRelativeName:String = js.native
+  def getRelativeName():String = js.native
 }
 
 @js.native
@@ -102,7 +102,7 @@ trait ts_ccuiRelativeLayoutParameter extends ts_ccuiLayoutParameter {
 
 @js.native
 @JSGlobal("ccui.RelativeLayoutParameter")
-class ccuiRelativeLayoutParameter extends t_ccuiRelativeLayoutParameter {
+class ccuiRelativeLayoutParameter() extends t_ccuiRelativeLayoutParameter {
 }
 
 @js.native

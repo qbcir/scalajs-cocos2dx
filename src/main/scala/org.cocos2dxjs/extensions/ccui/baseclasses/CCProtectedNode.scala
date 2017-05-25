@@ -26,7 +26,7 @@ trait ts_ccProtectedNode extends ts_ccNode {
 
 @js.native
 @JSGlobal("cc.ProtectedNode")
-class ccProtectedNode extends t_ccProtectedNode {
+class ccProtectedNode() extends t_ccProtectedNode {
 }
 
 @js.native

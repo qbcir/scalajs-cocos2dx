@@ -35,7 +35,7 @@ trait ts_ccControl extends ts_ccLayer {
 
 @js.native
 @JSGlobal("cc.Control")
-class ccControl extends t_ccControl {
+class ccControl() extends t_ccControl {
   var _state: js.Dynamic = js.native
 }
 

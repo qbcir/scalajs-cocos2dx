@@ -29,25 +29,25 @@ trait t_ccsArmature extends t_ccsNode {
   def removeBone(bone:t_ccsBone, recursion:Boolean):Unit = js.native
   def getBone(name:String):ccsBone = js.native
   def changeBoneParent(bone:t_ccsBone, parentName:String):Unit = js.native
-  def getBoneDic:types.DynObject = js.native
+  def getBoneDic():types.DynObject = js.native
   def updateOffsetPoint():Unit = js.native
   def setAnimation(animation:t_ccsArmatureAnimation):Unit = js.native
-  def getAnimation:ccsArmatureAnimation = js.native
-  def getArmatureTransformDirty:Boolean = js.native
+  def getAnimation():ccsArmatureAnimation = js.native
+  def getArmatureTransformDirty():Boolean = js.native
   def update(dt:Float):Unit = js.native
   def onEnter():Unit = js.native
   def onExit():Unit = js.native
-  def getBoundingBox:ccRect = js.native
+  def getBoundingBox():ccRect = js.native
   def getBoneAtPoint(x:Float, y:Float):ccsBone = js.native
   def setParentBone(parentBone:t_ccsBone):Unit = js.native
-  def getParentBone:ccsBone = js.native
+  def getParentBone():ccsBone = js.native
   def drawContour():Unit = js.native
   def setBlendFunc(blendFunc:Float|t_ccBlendFunc, dst:Float):Unit = js.native
-  def getBlendFunc:ccBlendFunc = js.native
+  def getBlendFunc():ccBlendFunc = js.native
   def setColliderFilter(filter:t_ccsColliderFilter):Unit = js.native
-  def getArmatureData:ccsArmatureData = js.native
+  def getArmatureData():ccsArmatureData = js.native
   def setArmatureData(armatureData:t_ccsArmatureData):Unit = js.native
-  def getVersion:Float = js.native
+  def getVersion():Float = js.native
   def setVersion(version:Float):Unit = js.native
 }
 

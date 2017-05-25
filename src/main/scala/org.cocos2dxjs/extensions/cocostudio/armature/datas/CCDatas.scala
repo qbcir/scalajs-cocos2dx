@@ -27,7 +27,7 @@ trait t_ccsBaseData extends t_ccsClass {
   var a: Float = js.native
   def copy(node:t_ccsBaseData):Unit = js.native
   def setColor(color:t_ccColor):Unit = js.native
-  def getColor:ccColor = js.native
+  def getColor():ccColor = js.native
   def subtract(from:t_ccsBaseData, to:t_ccsBaseData, limit:Boolean):Unit = js.native
 }
 
@@ -37,7 +37,7 @@ trait ts_ccsBaseData extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.BaseData")
-class ccsBaseData extends t_ccsBaseData {
+class ccsBaseData() extends t_ccsBaseData {
 }
 
 @js.native
@@ -59,7 +59,7 @@ trait ts_ccsDisplayData extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.DisplayData")
-class ccsDisplayData extends t_ccsDisplayData {
+class ccsDisplayData() extends t_ccsDisplayData {
 }
 
 @js.native
@@ -79,7 +79,7 @@ trait ts_ccsSpriteDisplayData extends ts_ccsDisplayData {
 
 @js.native
 @JSGlobal("ccs.SpriteDisplayData")
-class ccsSpriteDisplayData extends t_ccsSpriteDisplayData {
+class ccsSpriteDisplayData() extends t_ccsSpriteDisplayData {
 }
 
 @js.native
@@ -97,7 +97,7 @@ trait ts_ccsArmatureDisplayData extends ts_ccsDisplayData {
 
 @js.native
 @JSGlobal("ccs.ArmatureDisplayData")
-class ccsArmatureDisplayData extends t_ccsArmatureDisplayData {
+class ccsArmatureDisplayData() extends t_ccsArmatureDisplayData {
 }
 
 @js.native
@@ -115,7 +115,7 @@ trait ts_ccsParticleDisplayData extends ts_ccsDisplayData {
 
 @js.native
 @JSGlobal("ccs.ParticleDisplayData")
-class ccsParticleDisplayData extends t_ccsParticleDisplayData {
+class ccsParticleDisplayData() extends t_ccsParticleDisplayData {
 }
 
 @js.native
@@ -129,7 +129,7 @@ trait t_ccsBoneData extends t_ccsBaseData {
   var name: String = js.native
   var parentName: String = js.native
   var boneDataTransform: ccAffineTransform = js.native
-  def init:Boolean = js.native
+  def init():Boolean = js.native
   def addDisplayData(displayData:t_ccsDisplayData):Unit = js.native
   def getDisplayData(index:Float):ccsDisplayData = js.native
 }
@@ -140,7 +140,7 @@ trait ts_ccsBoneData extends ts_ccsBaseData {
 
 @js.native
 @JSGlobal("ccs.BoneData")
-class ccsBoneData extends t_ccsBoneData {
+class ccsBoneData() extends t_ccsBoneData {
 }
 
 @js.native
@@ -153,9 +153,9 @@ trait t_ccsArmatureData extends t_ccsClass {
   var boneDataDic: types.DynObject = js.native
   var name: String = js.native
   var dataVersion: Float = js.native
-  def init:Boolean = js.native
+  def init():Boolean = js.native
   def addBoneData(boneData:t_ccsBoneData):Unit = js.native
-  def getBoneDataDic:types.DynObject = js.native
+  def getBoneDataDic():types.DynObject = js.native
   def getBoneData(boneName:String):ccsBoneData = js.native
 }
 
@@ -165,7 +165,7 @@ trait ts_ccsArmatureData extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.ArmatureData")
-class ccsArmatureData extends t_ccsArmatureData {
+class ccsArmatureData() extends t_ccsArmatureData {
 }
 
 @js.native
@@ -196,7 +196,7 @@ trait ts_ccsFrameData extends ts_ccsBaseData {
 
 @js.native
 @JSGlobal("ccs.FrameData")
-class ccsFrameData extends t_ccsFrameData {
+class ccsFrameData() extends t_ccsFrameData {
 }
 
 @js.native
@@ -211,7 +211,7 @@ trait t_ccsMovementBoneData extends t_ccsClass {
   var duration: Float = js.native
   var frameList: js.Array[js.Any] = js.native
   var name: String = js.native
-  def init:Boolean = js.native
+  def init():Boolean = js.native
   def addFrameData(frameData:t_ccsFrameData):Unit = js.native
   def getFrameData(index:Float):ccsFrameData = js.native
 }
@@ -222,7 +222,7 @@ trait ts_ccsMovementBoneData extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.MovementBoneData")
-class ccsMovementBoneData extends t_ccsMovementBoneData {
+class ccsMovementBoneData() extends t_ccsMovementBoneData {
 }
 
 @js.native
@@ -242,7 +242,7 @@ trait ts_ccsMovementData extends js.Object {
 
 @js.native
 @JSGlobal("ccs.MovementData")
-class ccsMovementData extends t_ccsMovementData {
+class ccsMovementData() extends t_ccsMovementData {
   var durationTo: js.Dynamic = js.native
   var durationTween: js.Dynamic = js.native
   var tweenEasing: js.Dynamic = js.native
@@ -257,7 +257,7 @@ object ccsMovementData extends ts_ccsMovementData {
 trait t_ccsAnimationData extends t_ccsClass {
   def addMovement(moveData:t_ccsMovementData):Unit = js.native
   def getMovement(moveName:String):ccsMovementData = js.native
-  def getMovementCount:Float = js.native
+  def getMovementCount():Float = js.native
 }
 
 @js.native
@@ -266,7 +266,7 @@ trait ts_ccsAnimationData extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.AnimationData")
-class ccsAnimationData extends t_ccsAnimationData {
+class ccsAnimationData() extends t_ccsAnimationData {
 }
 
 @js.native
@@ -303,7 +303,7 @@ trait ts_ccsContourData extends js.Object {
 
 @js.native
 @JSGlobal("ccs.ContourData")
-class ccsContourData extends t_ccsContourData {
+class ccsContourData() extends t_ccsContourData {
 }
 
 @js.native
@@ -323,7 +323,7 @@ trait ts_ccsTextureData extends js.Object {
 
 @js.native
 @JSGlobal("ccs.TextureData")
-class ccsTextureData extends t_ccsTextureData {
+class ccsTextureData() extends t_ccsTextureData {
 }
 
 @js.native

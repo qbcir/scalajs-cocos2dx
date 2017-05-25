@@ -17,7 +17,7 @@ trait ts_ccsBatchNode extends ts_ccNode {
 
 @js.native
 @JSGlobal("ccs.BatchNode")
-class ccsBatchNode extends t_ccsBatchNode {
+class ccsBatchNode() extends t_ccsBatchNode {
 }
 
 @js.native

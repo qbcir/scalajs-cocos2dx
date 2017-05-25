@@ -15,7 +15,7 @@ trait ts_ccPhysicsSprite extends js.Object {
 
 @js.native
 @JSGlobal("cc.PhysicsSprite")
-class ccPhysicsSprite extends t_ccPhysicsSprite {
+class ccPhysicsSprite() extends t_ccPhysicsSprite {
 }
 
 @js.native

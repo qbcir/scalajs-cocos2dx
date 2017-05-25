@@ -19,19 +19,19 @@ trait ts_ccsDisplayManager extends js.Object {
   def init(bone:js.Dynamic):Boolean = js.native
   def addDisplay(display:t_ccNode|t_ccsDisplayData, index:Float):Unit = js.native
   def removeDisplay(index:Float):Unit = js.native
-  def getDecorativeDisplayList:js.Array[js.Any] = js.native
+  def getDecorativeDisplayList():js.Array[js.Any] = js.native
   def changeDisplayWithIndex(index:Float, force:Boolean):Unit = js.native
   def changeDisplayWithName(name:String, force:Boolean):Unit = js.native
   def setCurrentDecorativeDisplay(decoDisplay:t_ccsDecorativeDisplay):Unit = js.native
-  def getDisplayRenderNode:ccNode = js.native
-  def getDisplayRenderNodeType:Float = js.native
-  def getCurrentDisplayIndex:Float = js.native
-  def getCurrentDecorativeDisplay:ccsDecorativeDisplay = js.native
+  def getDisplayRenderNode():ccNode = js.native
+  def getDisplayRenderNodeType():Float = js.native
+  def getCurrentDisplayIndex():Float = js.native
+  def getCurrentDecorativeDisplay():ccsDecorativeDisplay = js.native
   def getDecorativeDisplayByIndex(index:js.Dynamic):ccsDecorativeDisplay = js.native
   def initDisplayList(boneData:t_ccsBoneData):Unit = js.native
   def containPoint(point:Float|t_ccPoint, y:Float):Boolean = js.native
   def setVisible(visible:Boolean):Unit = js.native
-  def isVisible:Boolean = js.native
+  def isVisible():Boolean = js.native
 }
 
 @js.native

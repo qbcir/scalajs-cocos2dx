@@ -26,7 +26,7 @@ trait ts_ccControlSlider extends ts_ccControl {
 
 @js.native
 @JSGlobal("cc.ControlSlider")
-class ccControlSlider extends t_ccControlSlider {
+class ccControlSlider() extends t_ccControlSlider {
   var _state: js.Dynamic = js.native
 }
 

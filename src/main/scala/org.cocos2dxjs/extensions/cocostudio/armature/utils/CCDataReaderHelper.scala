@@ -24,7 +24,7 @@ trait ts_ccsDataInfo extends js.Object {
 
 @js.native
 @JSGlobal("ccs.DataInfo")
-class ccsDataInfo extends t_ccsDataInfo {
+class ccsDataInfo() extends t_ccsDataInfo {
 }
 
 @js.native
@@ -69,7 +69,7 @@ trait ts_ccsdataReaderHelper extends js.Object {
 
 @js.native
 @JSGlobal("ccs.dataReaderHelper")
-class ccsdataReaderHelper extends t_ccsdataReaderHelper {
+class ccsdataReaderHelper() extends t_ccsdataReaderHelper {
 }
 
 @js.native

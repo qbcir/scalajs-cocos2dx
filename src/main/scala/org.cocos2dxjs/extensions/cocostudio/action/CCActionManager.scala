@@ -22,7 +22,7 @@ trait ts_ccsactionManager extends js.Object {
 
 @js.native
 @JSGlobal("ccs.actionManager")
-class ccsactionManager extends t_ccsactionManager {
+class ccsactionManager() extends t_ccsactionManager {
 }
 
 @js.native

@@ -23,7 +23,7 @@ trait ts_ccspriteFrameCache extends js.Object {
 
 @js.native
 @JSGlobal("cc.spriteFrameCache")
-class ccspriteFrameCache extends t_ccspriteFrameCache {
+class ccspriteFrameCache() extends t_ccspriteFrameCache {
 }
 
 @js.native

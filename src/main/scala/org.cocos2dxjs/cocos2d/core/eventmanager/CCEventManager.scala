@@ -22,14 +22,14 @@ trait ts_cceventManager extends js.Object {
   def removeAllListeners():Unit = js.native
   def setPriority(listener:t_ccEventListener, fixedPriority:Float):Unit = js.native
   def setEnabled(enabled:Boolean):Unit = js.native
-  def isEnabled:Boolean = js.native
+  def isEnabled():Boolean = js.native
   def dispatchEvent(event:t_ccEvent):Unit = js.native
   def dispatchCustomEvent(eventName:String, optionalUserData:js.Dynamic):Unit = js.native
 }
 
 @js.native
 @JSGlobal("cc.eventManager")
-class cceventManager extends t_cceventManager {
+class cceventManager() extends t_cceventManager {
 }
 
 @js.native

@@ -18,7 +18,7 @@ trait ts_ccsRelativeData extends js.Object {
 
 @js.native
 @JSGlobal("ccs.RelativeData")
-class ccsRelativeData extends t_ccsRelativeData {
+class ccsRelativeData() extends t_ccsRelativeData {
 }
 
 @js.native
@@ -45,10 +45,10 @@ trait ts_ccsarmatureDataManager extends js.Object {
   def addArmatureFileInfo(imagePath:String, plistPath:String, configFilePath:String):Unit = js.native
   def addArmatureFileInfoAsync(imagePath:String, plistPath:String, configFilePath:String, selector:js.Function, target:types.DynObject):Unit = js.native
   def addSpriteFrameFromFile(plistPath:String, imagePath:String, configFilePath:String):Unit = js.native
-  def isAutoLoadSpriteFile:Boolean = js.native
-  def getArmatureDatas:types.DynObject = js.native
-  def getAnimationDatas:types.DynObject = js.native
-  def getTextureDatas:types.DynObject = js.native
+  def isAutoLoadSpriteFile():Boolean = js.native
+  def getArmatureDatas():types.DynObject = js.native
+  def getAnimationDatas():types.DynObject = js.native
+  def getTextureDatas():types.DynObject = js.native
   def addRelativeData(configFilePath:String):Unit = js.native
   def getRelativeData(configFilePath:String):ccsRelativeData = js.native
   def clear():Unit = js.native
@@ -56,7 +56,7 @@ trait ts_ccsarmatureDataManager extends js.Object {
 
 @js.native
 @JSGlobal("ccs.armatureDataManager")
-class ccsarmatureDataManager extends t_ccsarmatureDataManager {
+class ccsarmatureDataManager() extends t_ccsarmatureDataManager {
 }
 
 @js.native

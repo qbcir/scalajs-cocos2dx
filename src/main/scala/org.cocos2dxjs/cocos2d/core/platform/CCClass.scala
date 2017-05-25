@@ -11,12 +11,12 @@ trait t_ccClass extends js.Object {
 
 @js.native
 trait ts_ccClass extends js.Object {
-  def extend(props:types.DynObject):js.Function = js.native
+  def extend(props:types.DynObject):js.Dynamic = js.native
 }
 
 @js.native
 @JSGlobal("cc.Class")
-class ccClass extends t_ccClass {
+class ccClass() extends t_ccClass {
 }
 
 @js.native

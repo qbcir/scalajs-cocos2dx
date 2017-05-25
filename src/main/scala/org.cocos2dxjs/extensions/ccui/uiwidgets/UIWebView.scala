@@ -31,7 +31,7 @@ trait ts_ccuiWebView extends ts_ccuiWidget {
 
 @js.native
 @JSGlobal("ccui.WebView")
-class ccuiWebView extends t_ccuiWebView {
+class ccuiWebView() extends t_ccuiWebView {
   var onFocusChanged: js.Dynamic = js.native
   var onNextFocusedWidget: js.Dynamic = js.native
 }

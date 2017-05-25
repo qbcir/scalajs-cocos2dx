@@ -11,7 +11,7 @@ import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 @js.native
 trait t_ccScheduler extends t_ccClass {
   def setTimeScale(timeScale:Float):Unit = js.native
-  def getTimeScale:Float = js.native
+  def getTimeScale():Float = js.native
   def update(dt:Float):Unit = js.native
   def pauseAllTargets():Unit = js.native
   def pauseAllTargetsWithMinPriority(minPriority:Float):Unit = js.native
@@ -27,7 +27,7 @@ trait ts_ccScheduler extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.Scheduler")
-class ccScheduler extends t_ccScheduler {
+class ccScheduler() extends t_ccScheduler {
 }
 
 @js.native

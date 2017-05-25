@@ -19,7 +19,7 @@ trait ts_ccanimationCache extends js.Object {
 
 @js.native
 @JSGlobal("cc.animationCache")
-class ccanimationCache extends t_ccanimationCache {
+class ccanimationCache() extends t_ccanimationCache {
 }
 
 @js.native

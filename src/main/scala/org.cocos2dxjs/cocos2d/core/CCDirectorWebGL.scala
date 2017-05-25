@@ -18,7 +18,7 @@ trait ts_ccDirectorDelegate extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.DirectorDelegate")
-class ccDirectorDelegate extends t_ccDirectorDelegate {
+class ccDirectorDelegate() extends t_ccDirectorDelegate {
 }
 
 @js.native

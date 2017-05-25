@@ -16,7 +16,7 @@ trait ts_ccPageTurn3D extends ts_ccGrid3DAction {
 
 @js.native
 @JSGlobal("cc.PageTurn3D")
-class ccPageTurn3D extends t_ccPageTurn3D {
+class ccPageTurn3D() extends t_ccPageTurn3D {
 }
 
 @js.native

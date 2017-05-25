@@ -56,6 +56,7 @@ import org.cocos2dxjs.extensions.gui.scrollview._
 import org.cocos2dxjs.extensions.spine._
 
 object types {
+  type Number = Int | Float
   type DynFunction = js.Function with js.Dynamic
   type DynObject = js.Object with js.Dynamic
   type dt_ccAsyncPool = t_ccAsyncPool with js.Dynamic

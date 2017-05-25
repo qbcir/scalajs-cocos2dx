@@ -9,17 +9,17 @@ import org.cocos2dxjs.cocos2d.core.platform.ts_ccClass
 
 @js.native
 trait t_ccComponent extends t_ccClass {
-  def init:Boolean = js.native
+  def init():Boolean = js.native
   def onEnter():Unit = js.native
   def onExit():Unit = js.native
   def update(delta:js.Dynamic):Unit = js.native
   def serialize(reader:js.Dynamic):Unit = js.native
-  def isEnabled:Boolean = js.native
+  def isEnabled():Boolean = js.native
   def setEnabled(enable:js.Dynamic):Unit = js.native
-  def getName:String = js.native
+  def getName():String = js.native
   def setName(name:String):Unit = js.native
   def setOwner(owner:js.Dynamic):Unit = js.native
-  def getOwner:js.Dynamic = js.native
+  def getOwner():js.Dynamic = js.native
 }
 
 @js.native
@@ -28,7 +28,7 @@ trait ts_ccComponent extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.Component")
-class ccComponent extends t_ccComponent {
+class ccComponent() extends t_ccComponent {
 }
 
 @js.native

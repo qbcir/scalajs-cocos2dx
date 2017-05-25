@@ -21,17 +21,17 @@ trait ts_ccstriggerManager extends js.Object {
   def removeAll():Unit = js.native
   def remove(event:js.Dynamic, Obj:js.Dynamic):Boolean = js.native
   def removeTriggerObj(id:Float):Boolean = js.native
-  def isEmpty:Boolean = js.native
+  def isEmpty():Boolean = js.native
   def addArmatureMovementCallBack(armature:t_ccsArmature, callFunc:js.Function, target:types.DynObject):Unit = js.native
   def removeArmatureMovementCallBack(armature:t_ccsArmature, target:types.DynObject, callFunc:js.Function):Unit = js.native
   def removeArmatureAllMovementCallBack(armature:t_ccsArmature):Unit = js.native
   def removeAllArmatureMovementCallBack():Unit = js.native
-  def version:String = js.native
+  def version():String = js.native
 }
 
 @js.native
 @JSGlobal("ccs.triggerManager")
-class ccstriggerManager extends t_ccstriggerManager {
+class ccstriggerManager() extends t_ccstriggerManager {
 }
 
 @js.native
@@ -52,7 +52,7 @@ trait ts_ccsArmatureMovementDispatcher extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.ArmatureMovementDispatcher")
-class ccsArmatureMovementDispatcher extends t_ccsArmatureMovementDispatcher {
+class ccsArmatureMovementDispatcher() extends t_ccsArmatureMovementDispatcher {
 }
 
 @js.native

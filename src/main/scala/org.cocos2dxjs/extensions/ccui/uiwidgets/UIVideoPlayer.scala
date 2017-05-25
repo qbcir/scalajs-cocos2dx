@@ -11,13 +11,13 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.ts_ccuiWidget
 trait t_ccuiVideoPlayer extends t_ccuiWidget {
   var path: String = js.native
   def setURL(address:String):Unit = js.native
-  def getURL:String = js.native
+  def getURL():String = js.native
   def play():Unit = js.native
   def pause():Unit = js.native
   def resume():Unit = js.native
   def stop():Unit = js.native
   def seekTo(sec:Float):Unit = js.native
-  def isPlaying:Boolean = js.native
+  def isPlaying():Boolean = js.native
   def setKeepAspectRatioEnabled():Unit = js.native
   def setFullScreenEnabled(enable:Boolean):Unit = js.native
   def isFullScreenEnabled():Unit = js.native
@@ -32,7 +32,7 @@ trait ts_ccuiVideoPlayer extends ts_ccuiWidget {
 
 @js.native
 @JSGlobal("ccui.VideoPlayer")
-class ccuiVideoPlayer extends t_ccuiVideoPlayer {
+class ccuiVideoPlayer() extends t_ccuiVideoPlayer {
   var onFocusChanged: js.Dynamic = js.native
   var onNextFocusedWidget: js.Dynamic = js.native
 }

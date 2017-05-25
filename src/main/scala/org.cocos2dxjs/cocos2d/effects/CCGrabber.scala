@@ -17,7 +17,7 @@ trait ts_ccGrabber extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.Grabber")
-class ccGrabber extends t_ccGrabber {
+class ccGrabber() extends t_ccGrabber {
 }
 
 @js.native

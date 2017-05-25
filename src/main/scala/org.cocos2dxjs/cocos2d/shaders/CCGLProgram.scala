@@ -15,12 +15,12 @@ trait t_ccGLProgram extends t_ccClass {
   def initWithVertexShaderFilename(vShaderFilename:String, fShaderFileName:String):Boolean = js.native
   def init(vShaderFilename:String, fShaderFileName:String):Boolean = js.native
   def addAttribute(attributeName:String, index:Float):Unit = js.native
-  def link:Boolean = js.native
+  def link():Boolean = js.native
   def use():Unit = js.native
   def updateUniforms():Unit = js.native
   def getUniformLocationForName(name:String):Float = js.native
-  def getUniformMVPMatrix:js.Dynamic = js.native
-  def getUniformSampler:js.Dynamic = js.native
+  def getUniformMVPMatrix():js.Dynamic = js.native
+  def getUniformSampler():js.Dynamic = js.native
   def setUniformLocationWith1i(location:String|js.Dynamic, i1:Float):Unit = js.native
   def setUniformLocationWith2i(location:String|js.Dynamic, i1:Float, i2:Float):Unit = js.native
   def setUniformLocationWith3i(location:String|js.Dynamic, i1:Float, i2:Float, i3:Float):Unit = js.native
@@ -40,14 +40,14 @@ trait t_ccGLProgram extends t_ccClass {
   def setUniformLocationWithMatrix4fv(location:String|js.Dynamic, matrixArray:js.Dynamic):Unit = js.native
   def setUniformsForBuiltins():Unit = js.native
   def setUniformForModelViewProjectionMatrix():Unit = js.native
-  def vertexShaderLog:String = js.native
-  def getVertexShaderLog:String = js.native
-  def getFragmentShaderLog:String = js.native
-  def fragmentShaderLog:String = js.native
-  def programLog:String = js.native
-  def getProgramLog:String = js.native
+  def vertexShaderLog():String = js.native
+  def getVertexShaderLog():String = js.native
+  def getFragmentShaderLog():String = js.native
+  def fragmentShaderLog():String = js.native
+  def programLog():String = js.native
+  def getProgramLog():String = js.native
   def reset():Unit = js.native
-  def getProgram:js.Dynamic = js.native
+  def getProgram():js.Dynamic = js.native
   def retain():Unit = js.native
 }
 

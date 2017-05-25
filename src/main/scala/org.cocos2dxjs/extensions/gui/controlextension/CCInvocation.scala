@@ -17,7 +17,7 @@ trait ts_ccInvocation extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.Invocation")
-class ccInvocation extends t_ccInvocation {
+class ccInvocation() extends t_ccInvocation {
 }
 
 @js.native

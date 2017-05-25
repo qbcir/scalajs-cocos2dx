@@ -22,7 +22,7 @@ trait ts_ccsTransformHelp extends js.Object {
 
 @js.native
 @JSGlobal("ccs.TransformHelp")
-class ccsTransformHelp extends t_ccsTransformHelp {
+class ccsTransformHelp() extends t_ccsTransformHelp {
 }
 
 @js.native

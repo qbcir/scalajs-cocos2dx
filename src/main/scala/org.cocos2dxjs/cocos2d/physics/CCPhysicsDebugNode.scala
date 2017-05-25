@@ -18,7 +18,7 @@ trait ts_ccPhysicsDebugNode extends ts_ccDrawNode {
 
 @js.native
 @JSGlobal("cc.PhysicsDebugNode")
-class ccPhysicsDebugNode extends t_ccPhysicsDebugNode {
+class ccPhysicsDebugNode() extends t_ccPhysicsDebugNode {
 }
 
 @js.native

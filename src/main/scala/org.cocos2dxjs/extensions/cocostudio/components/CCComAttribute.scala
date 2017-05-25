@@ -9,7 +9,7 @@ import org.cocos2dxjs.extensions.cocostudio.ts_ccsComponent
 
 @js.native
 trait t_ccsComAttribute extends t_ccsComponent {
-  def init:Boolean = js.native
+  def init():Boolean = js.native
   def setInt(key:String, value:Float):Unit = js.native
   def setDouble(key:String, value:Float):Unit = js.native
   def setFloat(key:String, value:Float):Unit = js.native
@@ -31,7 +31,7 @@ trait ts_ccsComAttribute extends ts_ccsComponent {
 
 @js.native
 @JSGlobal("ccs.ComAttribute")
-class ccsComAttribute extends t_ccsComAttribute {
+class ccsComAttribute() extends t_ccsComAttribute {
 }
 
 @js.native

@@ -20,24 +20,24 @@ trait t_ccuiPageView extends t_ccuiListView {
   def scrollToPage(idx:Float):Unit = js.native
   override def setDirection(direction:Float):Unit = js.native
   def setCurrentPageIndex(index:Float):Unit = js.native
-  def getCurrentPageIndex:Float = js.native
-  def getPages:js.Array[js.Any] = js.native
+  def getCurrentPageIndex():Float = js.native
+  def getPages():js.Array[js.Any] = js.native
   def getPage(index:Float):ccuiLayout = js.native
-  override def getDescription:String = js.native
+  override def getDescription():String = js.native
   def setIndicatorEnabled(enabled:Boolean):Unit = js.native
-  def getIndicatorEnabled:Boolean = js.native
+  def getIndicatorEnabled():Boolean = js.native
   def setIndicatorPositionAsAnchorPoint(positionAsAnchorPoint:t_ccPoint):Unit = js.native
-  def getIndicatorPositionAsAnchorPoint:ccPoint = js.native
+  def getIndicatorPositionAsAnchorPoint():ccPoint = js.native
   def setIndicatorPosition(position:t_ccPoint):Unit = js.native
-  def getIndicatorPosition:ccPoint = js.native
+  def getIndicatorPosition():ccPoint = js.native
   def setIndicatorSpaceBetweenIndexNodes(spaceBetweenIndexNodes:Float):Unit = js.native
-  def getIndicatorSpaceBetweenIndexNodes:Float = js.native
+  def getIndicatorSpaceBetweenIndexNodes():Float = js.native
   def setIndicatorSelectedIndexColor(color:t_ccColor):Unit = js.native
-  def getIndicatorSelectedIndexColor:ccColor = js.native
+  def getIndicatorSelectedIndexColor():ccColor = js.native
   def setIndicatorIndexNodesColor(color:t_ccColor):Unit = js.native
-  def getIndicatorIndexNodesColor:ccColor = js.native
+  def getIndicatorIndexNodesColor():ccColor = js.native
   def setIndicatorIndexNodesScale(scale:Float):Unit = js.native
-  def getIndicatorIndexNodesScale:Float = js.native
+  def getIndicatorIndexNodesScale():Float = js.native
   def setIndicatorIndexNodesTexture(texName:String, texType:Float):Unit = js.native
 }
 
@@ -47,7 +47,7 @@ trait ts_ccuiPageView extends ts_ccuiListView {
 
 @js.native
 @JSGlobal("ccui.PageView")
-class ccuiPageView extends t_ccuiPageView {
+class ccuiPageView() extends t_ccuiPageView {
   var onFocusChanged: js.Dynamic = js.native
   var onNextFocusedWidget: js.Dynamic = js.native
 }

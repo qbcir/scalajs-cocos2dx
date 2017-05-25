@@ -19,7 +19,7 @@ trait ts_ccHashElement extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.HashElement")
-class ccHashElement extends t_ccHashElement {
+class ccHashElement() extends t_ccHashElement {
 }
 
 @js.native
@@ -38,7 +38,7 @@ trait t_ccActionManager extends t_ccClass {
   def numberOfRunningActionsInTarget(target:types.DynObject):Float = js.native
   def pauseTarget(target:types.DynObject):Unit = js.native
   def resumeTarget(target:types.DynObject):Unit = js.native
-  def pauseAllRunningActions:js.Array[js.Any] = js.native
+  def pauseAllRunningActions():js.Array[js.Any] = js.native
   def resumeTargets(targetsToResume:js.Array[js.Any]):Unit = js.native
   def purgeSharedManager():Unit = js.native
   def update(dt:Float):Unit = js.native
@@ -50,7 +50,7 @@ trait ts_ccActionManager extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.ActionManager")
-class ccActionManager extends t_ccActionManager {
+class ccActionManager() extends t_ccActionManager {
 }
 
 @js.native

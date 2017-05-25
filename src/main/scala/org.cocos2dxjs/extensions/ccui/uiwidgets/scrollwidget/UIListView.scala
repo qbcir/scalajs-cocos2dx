@@ -23,30 +23,30 @@ trait t_ccuiListView extends t_ccuiScrollView {
   def removeLastItem():Unit = js.native
   def removeAllItems():Unit = js.native
   def getItem(index:Float):ccuiWidget = js.native
-  def getItems:js.Array[js.Any] = js.native
+  def getItems():js.Array[js.Any] = js.native
   def getIndex(item:t_ccuiWidget):Float = js.native
   def setGravity(gravity:Float):Unit = js.native
   def setMagneticType(magneticType:Float):Unit = js.native
-  def getMagneticType:Float = js.native
+  def getMagneticType():Float = js.native
   def setMagneticAllowedOutOfBoundary(magneticAllowedOutOfBoundary:Boolean):Unit = js.native
-  def getMagneticAllowedOutOfBoundary:Boolean = js.native
+  def getMagneticAllowedOutOfBoundary():Boolean = js.native
   def setItemsMargin(margin:Float):Unit = js.native
-  def getItemsMargin:Float = js.native
+  def getItemsMargin():Float = js.native
   override def setDirection(dir:Float):Unit = js.native
   def getClosestItemToPosition(targetPosition:t_ccPoint, itemAnchorPoint:t_ccPoint):ccuiWidget = js.native
   def getClosestItemToPositionInCurrentView(positionRatioInView:t_ccPoint, itemAnchorPoint:t_ccPoint):ccuiWidget = js.native
-  def getCenterItemInCurrentView:ccuiWidget = js.native
-  def getLeftmostItemInCurrentView:ccuiWidget = js.native
-  def getRightmostItemInCurrentView:ccuiWidget = js.native
-  def getTopmostItemInCurrentView:ccuiWidget = js.native
-  def getBottommostItemInCurrentView:ccuiWidget = js.native
+  def getCenterItemInCurrentView():ccuiWidget = js.native
+  def getLeftmostItemInCurrentView():ccuiWidget = js.native
+  def getRightmostItemInCurrentView():ccuiWidget = js.native
+  def getTopmostItemInCurrentView():ccuiWidget = js.native
+  def getBottommostItemInCurrentView():ccuiWidget = js.native
   def jumpToItem(itemIndex:Float, positionRatioInView:t_ccPoint, itemAnchorPoint:t_ccPoint):Unit = js.native
   def scrollToItem(itemIndex:Float, positionRatioInView:t_ccPoint, itemAnchorPoint:t_ccPoint, timeInSec:Float):Unit = js.native
   def doLayout():Unit = js.native
   override def addEventListener(selector:js.Function):Unit = js.native
   override def interceptTouchEvent(eventType:Float, sender:t_ccuiWidget, touch:t_ccTouch):Unit = js.native
-  def getCurSelectedIndex:Float = js.native
-  override def getDescription:String = js.native
+  def getCurSelectedIndex():Float = js.native
+  override def getDescription():String = js.native
 }
 
 @js.native
@@ -55,7 +55,7 @@ trait ts_ccuiListView extends ts_ccuiScrollView {
 
 @js.native
 @JSGlobal("ccui.ListView")
-class ccuiListView extends t_ccuiListView {
+class ccuiListView() extends t_ccuiListView {
   var onFocusChanged: js.Dynamic = js.native
   var onNextFocusedWidget: js.Dynamic = js.native
 }

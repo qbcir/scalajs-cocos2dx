@@ -18,11 +18,11 @@ trait t_ccSpriteBatchNode extends t_ccNode {
   def init(fileImage:String, capacity:Float):Boolean = js.native
   def removeChildAtIndex(index:Float, doCleanup:Boolean):Unit = js.native
   def setBlendFunc(src:Float|t_ccBlendFunc, dst:Float):Unit = js.native
-  def getBlendFunc:ccBlendFunc = js.native
+  def getBlendFunc():ccBlendFunc = js.native
   def updateQuadFromSprite(sprite:t_ccSprite, index:Float):Unit = js.native
   def appendChild(sprite:t_ccSprite):Unit = js.native
   def initWithTexture(tex:t_ccTexture2D):Boolean = js.native
-  def getTexture:ccTexture2D = js.native
+  def getTexture():ccTexture2D = js.native
   def setTexture(texture:t_ccTexture2D):Unit = js.native
   def addChild(child:t_ccSprite, zOrder:Float, tag:Float):Unit = js.native
 }

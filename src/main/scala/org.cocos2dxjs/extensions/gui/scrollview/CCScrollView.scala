@@ -26,8 +26,8 @@ trait t_ccScrollView extends t_ccLayer {
   def setContentOffsetInDuration(offset:t_ccPoint, dt:Float):Unit = js.native
   def setZoomScale(scale:Float, animated:Boolean):Unit = js.native
   def setZoomScaleInDuration(s:Float, dt:Float):Unit = js.native
-  def minContainerOffset:ccPoint = js.native
-  def maxContainerOffset:ccPoint = js.native
+  def minContainerOffset():ccPoint = js.native
+  def maxContainerOffset():ccPoint = js.native
   def isNodeVisible(node:t_ccNode):Boolean = js.native
   override def pause():Unit = js.native
   override def resume():Unit = js.native

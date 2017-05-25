@@ -16,7 +16,7 @@ trait ts_ccLoaderScene extends ts_ccScene {
 
 @js.native
 @JSGlobal("cc.LoaderScene")
-class ccLoaderScene extends t_ccLoaderScene {
+class ccLoaderScene() extends t_ccLoaderScene {
   var _className: js.Dynamic = js.native
 }
 

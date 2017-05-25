@@ -21,7 +21,7 @@ trait t_ccRenderTexture extends t_ccNode {
   var clearStencilVal: Float = js.native
   var clearColorVal: ccColor = js.native
   override def cleanup():Unit = js.native
-  def getSprite:ccSprite = js.native
+  def getSprite():ccSprite = js.native
   def setSprite(sprite:t_ccSprite):Unit = js.native
   def setVirtualViewport(rtBegin:t_ccPoint, fullRect:t_ccRect, fullViewport:t_ccRect):Unit = js.native
   def initWithWidthAndHeight(width:Float, height:Float, format:Float, depthStencilFormat:Float):Boolean = js.native
@@ -32,18 +32,18 @@ trait t_ccRenderTexture extends t_ccNode {
   def clearRect(x:Float, y:Float, width:Float, height:Float):Unit = js.native
   def clearDepth(depthValue:Float):Unit = js.native
   def clearStencil(stencilValue:Float):Unit = js.native
-  def getClearFlags:Float = js.native
+  def getClearFlags():Float = js.native
   def setClearFlags(clearFlags:Float):Unit = js.native
-  def getClearColor:ccColor = js.native
+  def getClearColor():ccColor = js.native
   def setClearColor(clearColor:t_ccColor):Unit = js.native
-  def getClearDepth:Float = js.native
+  def getClearDepth():Float = js.native
   def setClearDepth(clearDepth:Float):Unit = js.native
-  def getClearStencil:Float = js.native
-  def setClearStencil:Float = js.native
-  def isAutoDraw:Boolean = js.native
-  def setAutoDraw:Boolean = js.native
+  def getClearStencil():Float = js.native
+  def setClearStencil():Float = js.native
+  def isAutoDraw():Boolean = js.native
+  def setAutoDraw():Boolean = js.native
   def saveToFile(filePath:Float, format:Float):Unit = js.native
-  def newCCImage:js.Dynamic = js.native
+  def newCCImage():js.Dynamic = js.native
   def listenToBackground(obj:t_ccClass):Unit = js.native
   def listenToForeground(obj:t_ccClass):Unit = js.native
 }

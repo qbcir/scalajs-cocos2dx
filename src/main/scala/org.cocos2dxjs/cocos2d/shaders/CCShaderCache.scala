@@ -20,7 +20,7 @@ trait ts_ccshaderCache extends js.Object {
 
 @js.native
 @JSGlobal("cc.shaderCache")
-class ccshaderCache extends t_ccshaderCache {
+class ccshaderCache() extends t_ccshaderCache {
 }
 
 @js.native

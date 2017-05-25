@@ -15,7 +15,7 @@ trait ts_ccsFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.Frame")
-class ccsFrame extends t_ccsFrame {
+class ccsFrame() extends t_ccsFrame {
 }
 
 @js.native
@@ -33,7 +33,7 @@ trait ts_ccsVisibleFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.VisibleFrame")
-class ccsVisibleFrame extends t_ccsVisibleFrame {
+class ccsVisibleFrame() extends t_ccsVisibleFrame {
 }
 
 @js.native
@@ -51,7 +51,7 @@ trait ts_ccsTextureFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.TextureFrame")
-class ccsTextureFrame extends t_ccsTextureFrame {
+class ccsTextureFrame() extends t_ccsTextureFrame {
 }
 
 @js.native
@@ -69,7 +69,7 @@ trait ts_ccsRotationFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.RotationFrame")
-class ccsRotationFrame extends t_ccsRotationFrame {
+class ccsRotationFrame() extends t_ccsRotationFrame {
 }
 
 @js.native
@@ -87,7 +87,7 @@ trait ts_ccsSkewFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.SkewFrame")
-class ccsSkewFrame extends t_ccsSkewFrame {
+class ccsSkewFrame() extends t_ccsSkewFrame {
 }
 
 @js.native
@@ -105,7 +105,7 @@ trait ts_ccsRotationSkewFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.RotationSkewFrame")
-class ccsRotationSkewFrame extends t_ccsRotationSkewFrame {
+class ccsRotationSkewFrame() extends t_ccsRotationSkewFrame {
 }
 
 @js.native
@@ -123,7 +123,7 @@ trait ts_ccsPositionFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.PositionFrame")
-class ccsPositionFrame extends t_ccsPositionFrame {
+class ccsPositionFrame() extends t_ccsPositionFrame {
 }
 
 @js.native
@@ -141,7 +141,7 @@ trait ts_ccsScaleFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.ScaleFrame")
-class ccsScaleFrame extends t_ccsScaleFrame {
+class ccsScaleFrame() extends t_ccsScaleFrame {
 }
 
 @js.native
@@ -159,7 +159,7 @@ trait ts_ccsAnchorPointFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.AnchorPointFrame")
-class ccsAnchorPointFrame extends t_ccsAnchorPointFrame {
+class ccsAnchorPointFrame() extends t_ccsAnchorPointFrame {
 }
 
 @js.native
@@ -177,7 +177,7 @@ trait ts_ccsInnerActionFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.InnerActionFrame")
-class ccsInnerActionFrame extends t_ccsInnerActionFrame {
+class ccsInnerActionFrame() extends t_ccsInnerActionFrame {
 }
 
 @js.native
@@ -195,7 +195,7 @@ trait ts_ccsColorFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.ColorFrame")
-class ccsColorFrame extends t_ccsColorFrame {
+class ccsColorFrame() extends t_ccsColorFrame {
 }
 
 @js.native
@@ -213,7 +213,7 @@ trait ts_ccsAlphaFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.AlphaFrame")
-class ccsAlphaFrame extends t_ccsAlphaFrame {
+class ccsAlphaFrame() extends t_ccsAlphaFrame {
 }
 
 @js.native
@@ -231,7 +231,7 @@ trait ts_ccsEventFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.EventFrame")
-class ccsEventFrame extends t_ccsEventFrame {
+class ccsEventFrame() extends t_ccsEventFrame {
 }
 
 @js.native
@@ -249,7 +249,7 @@ trait ts_ccsZOrderFrame extends js.Object {
 
 @js.native
 @JSGlobal("ccs.ZOrderFrame")
-class ccsZOrderFrame extends t_ccsZOrderFrame {
+class ccsZOrderFrame() extends t_ccsZOrderFrame {
 }
 
 @js.native

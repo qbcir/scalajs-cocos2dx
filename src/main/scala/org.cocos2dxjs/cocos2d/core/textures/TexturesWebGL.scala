@@ -25,29 +25,29 @@ trait t_ccTexture2D extends t_ccClass {
   var maxS: Float = js.native
   var maxT: Float = js.native
   def releaseTexture():Unit = js.native
-  def getPixelFormat:Float = js.native
-  def getPixelsWide:Float = js.native
-  def getPixelsHigh:Float = js.native
-  def getName:js.Dynamic = js.native
-  def getContentSize:ccSize = js.native
-  def getContentSizeInPixels:ccSize = js.native
-  def getMaxS:Float = js.native
+  def getPixelFormat():Float = js.native
+  def getPixelsWide():Float = js.native
+  def getPixelsHigh():Float = js.native
+  def getName():js.Dynamic = js.native
+  def getContentSize():ccSize = js.native
+  def getContentSizeInPixels():ccSize = js.native
+  def getMaxS():Float = js.native
   def setMaxS(maxS:Float):Unit = js.native
-  def getMaxT:Float = js.native
+  def getMaxT():Float = js.native
   def setMaxT(maxT:Float):Unit = js.native
-  def getShaderProgram:ccGLProgram = js.native
+  def getShaderProgram():ccGLProgram = js.native
   def setShaderProgram(shaderProgram:t_ccGLProgram):Unit = js.native
-  def hasPremultipliedAlpha:Boolean = js.native
-  def hasMipmaps:Boolean = js.native
-  def description:String = js.native
+  def hasPremultipliedAlpha():Boolean = js.native
+  def hasMipmaps():Boolean = js.native
+  def description():String = js.native
   def releaseData(data:js.Array[js.Any]):Unit = js.native
   def initWithData(data:js.Array[js.Any], pixelFormat:Float, pixelsWide:Float, pixelsHigh:Float, contentSize:t_ccSize):Boolean = js.native
   def drawAtPoint(point:t_ccPoint):Unit = js.native
   def drawInRect(rect:t_ccRect):Unit = js.native
   def initWithImage(uiImage:js.Dynamic):Boolean = js.native
   def initWithElement(element:js.Dynamic):Unit = js.native
-  def getHtmlElementObj:js.Dynamic = js.native
-  def isLoaded:Boolean = js.native
+  def getHtmlElementObj():js.Dynamic = js.native
+  def isLoaded():Boolean = js.native
   def handleLoadedTexture(premultiplied:Boolean):Unit = js.native
   def initWithString(text:String, fontName:String|t_ccFontDefinition, fontSize:Float, dimensions:t_ccSize, hAlignment:Float, vAlignment:Float):Boolean = js.native
   def initWithETCFile(file:String):Boolean = js.native
@@ -57,8 +57,8 @@ trait t_ccTexture2D extends t_ccClass {
   def setAntiAliasTexParameters():Unit = js.native
   def setAliasTexParameters():Unit = js.native
   def generateMipmap():Unit = js.native
-  def stringForFormat:String = js.native
-  def bitsPerPixelForFormat:Float = js.native
+  def stringForFormat():String = js.native
+  def bitsPerPixelForFormat():Float = js.native
   def removeLoadedEventListener(target:t_ccNode):Unit = js.native
 }
 
@@ -68,7 +68,7 @@ trait ts_ccTexture2D extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.Texture2D")
-class ccTexture2D extends t_ccTexture2D {
+class ccTexture2D() extends t_ccTexture2D {
 }
 
 @js.native

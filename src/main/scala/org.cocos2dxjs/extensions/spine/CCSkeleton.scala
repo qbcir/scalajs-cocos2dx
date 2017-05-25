@@ -12,16 +12,16 @@ import org.cocos2dxjs.cocos2d.core.basenodes.ts_ccNode
 
 @js.native
 trait t_spSkeleton extends t_ccNode {
-  override def init:Boolean = js.native
+  override def init():Boolean = js.native
   def setDebugSolots(enable:Boolean):Unit = js.native
   def setDebugBones(enable:Boolean):Unit = js.native
   def setDebugSlotsEnabled(enabled:Boolean):Unit = js.native
-  def getDebugSlotsEnabled:Boolean = js.native
+  def getDebugSlotsEnabled():Boolean = js.native
   def setDebugBonesEnabled(enabled:Boolean):Unit = js.native
-  def getDebugBonesEnabled:Boolean = js.native
+  def getDebugBonesEnabled():Boolean = js.native
   def setTimeScale(scale:Float):Unit = js.native
   def initWithArgs(skeletonDataFile:String|js.Dynamic, atlasFile:String|js.Dynamic, scale:Float):Unit = js.native
-  override def getBoundingBox:ccRect = js.native
+  override def getBoundingBox():ccRect = js.native
   def updateWorldTransform():Unit = js.native
   def setToSetupPose():Unit = js.native
   def setBonesToSetupPose():Unit = js.native
@@ -32,10 +32,10 @@ trait t_spSkeleton extends t_ccNode {
   def getAttachment(slotName:String, attachmentName:String):js.Dynamic = js.native
   def setAttachment(slotName:String, attachmentName:String):Unit = js.native
   def setPremultipliedAlpha(alpha:Float):Unit = js.native
-  def isPremultipliedAlpha:Boolean = js.native
+  def isPremultipliedAlpha():Boolean = js.native
   def setSkeletonData(skeletonData:js.Dynamic, ownsSkeletonData:js.Dynamic):Unit = js.native
   def getTextureAtlas(regionAttachment:js.Dynamic):ccNode = js.native
-  def getBlendFunc:ccBlendFunc = js.native
+  def getBlendFunc():ccBlendFunc = js.native
   def setBlendFunc(src:Float|t_ccBlendFunc, dst:Float):Unit = js.native
   override def update(dt:Float):Unit = js.native
 }
@@ -46,7 +46,7 @@ trait ts_spSkeleton extends ts_ccNode {
 
 @js.native
 @JSGlobal("sp.Skeleton")
-class spSkeleton extends t_spSkeleton {
+class spSkeleton() extends t_spSkeleton {
 }
 
 @js.native

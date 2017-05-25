@@ -15,7 +15,7 @@ trait ts_ccEventAcceleration extends ts_ccEvent {
 
 @js.native
 @JSGlobal("cc.EventAcceleration")
-class ccEventAcceleration extends t_ccEventAcceleration {
+class ccEventAcceleration() extends t_ccEventAcceleration {
 }
 
 @js.native
@@ -33,7 +33,7 @@ trait ts_ccEventKeyboard extends ts_ccEvent {
 
 @js.native
 @JSGlobal("cc.EventKeyboard")
-class ccEventKeyboard extends t_ccEventKeyboard {
+class ccEventKeyboard() extends t_ccEventKeyboard {
 }
 
 @js.native

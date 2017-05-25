@@ -19,11 +19,11 @@ import org.cocos2dxjs.cocos2d.actions.ts_ccActionInstant
 
 @js.native
 trait t_ccGridAction extends t_ccActionInterval {
-  override def clone:ccAction = js.native
+  override def clone():ccAction = js.native
   override def startWithTarget(target:t_ccNode):Unit = js.native
-  override def reverse:ccAction = js.native
+  override def reverse():ccAction = js.native
   def initWithDuration(duration:Float, gridSize:t_ccSize):Boolean = js.native
-  def getGrid:ccGridBase = js.native
+  def getGrid():ccGridBase = js.native
 }
 
 @js.native
@@ -42,8 +42,8 @@ object ccGridAction extends ts_ccGridAction {
 
 @js.native
 trait t_ccGrid3DAction extends t_ccGridAction {
-  override def getGrid:ccGridBase = js.native
-  def getGridRect:ccRect = js.native
+  override def getGrid():ccGridBase = js.native
+  def getGridRect():ccRect = js.native
   def vertex(position:t_ccPoint):ccVertex3F = js.native
   def getVertex(position:t_ccPoint):ccVertex3F = js.native
   def originalVertex(position:t_ccPoint):ccVertex3F = js.native
@@ -57,7 +57,7 @@ trait ts_ccGrid3DAction extends ts_ccGridAction {
 
 @js.native
 @JSGlobal("cc.Grid3DAction")
-class ccGrid3DAction extends t_ccGrid3DAction {
+class ccGrid3DAction() extends t_ccGrid3DAction {
 }
 
 @js.native
@@ -72,7 +72,7 @@ trait t_ccTiledGrid3DAction extends t_ccGridAction {
   def originalTile(position:t_ccPoint):ccQuad3 = js.native
   def getOriginalTile(position:t_ccPoint):ccQuad3 = js.native
   def setTile(position:t_ccPoint, coords:t_ccQuad3):Unit = js.native
-  override def getGrid:ccGridBase = js.native
+  override def getGrid():ccGridBase = js.native
 }
 
 @js.native
@@ -81,7 +81,7 @@ trait ts_ccTiledGrid3DAction extends ts_ccGridAction {
 
 @js.native
 @JSGlobal("cc.TiledGrid3DAction")
-class ccTiledGrid3DAction extends t_ccTiledGrid3DAction {
+class ccTiledGrid3DAction() extends t_ccTiledGrid3DAction {
 }
 
 @js.native
@@ -100,7 +100,7 @@ trait ts_ccStopGrid extends ts_ccActionInstant {
 
 @js.native
 @JSGlobal("cc.StopGrid")
-class ccStopGrid extends t_ccStopGrid {
+class ccStopGrid() extends t_ccStopGrid {
 }
 
 @js.native

@@ -30,7 +30,7 @@ trait ts_ccsActionFrame extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.ActionFrame")
-class ccsActionFrame extends t_ccsActionFrame {
+class ccsActionFrame() extends t_ccsActionFrame {
 }
 
 @js.native
@@ -41,7 +41,7 @@ object ccsActionFrame extends ts_ccsActionFrame {
 @js.native
 trait t_ccsActionMoveFrame extends t_ccsActionFrame {
   def setPosition(pos:Float|t_ccPoint, y:Float):Unit = js.native
-  def getPosition:ccPoint = js.native
+  def getPosition():ccPoint = js.native
   def getAction(duration:Float):ccMoveTo = js.native
 }
 
@@ -51,7 +51,7 @@ trait ts_ccsActionMoveFrame extends ts_ccsActionFrame {
 
 @js.native
 @JSGlobal("ccs.ActionMoveFrame")
-class ccsActionMoveFrame extends t_ccsActionMoveFrame {
+class ccsActionMoveFrame() extends t_ccsActionMoveFrame {
 }
 
 @js.native
@@ -62,9 +62,9 @@ object ccsActionMoveFrame extends ts_ccsActionMoveFrame {
 @js.native
 trait t_ccsActionScaleFrame extends t_ccsActionFrame {
   def setScaleX(scaleX:Float):Unit = js.native
-  def getScaleX:Float = js.native
+  def getScaleX():Float = js.native
   def setScaleY(scaleY:Float):Unit = js.native
-  def getScaleY:Float = js.native
+  def getScaleY():Float = js.native
   def getAction(duration:Float):ccScaleTo = js.native
 }
 
@@ -74,7 +74,7 @@ trait ts_ccsActionScaleFrame extends ts_ccsActionFrame {
 
 @js.native
 @JSGlobal("ccs.ActionScaleFrame")
-class ccsActionScaleFrame extends t_ccsActionScaleFrame {
+class ccsActionScaleFrame() extends t_ccsActionScaleFrame {
 }
 
 @js.native
@@ -85,7 +85,7 @@ object ccsActionScaleFrame extends ts_ccsActionScaleFrame {
 @js.native
 trait t_ccsActionRotationFrame extends t_ccsActionFrame {
   def setRotation(rotation:Float):Unit = js.native
-  def getRotation:Float = js.native
+  def getRotation():Float = js.native
   override def getAction(duration:Float, srcFrame:t_ccsActionFrame):Null = js.native
 }
 
@@ -95,7 +95,7 @@ trait ts_ccsActionRotationFrame extends ts_ccsActionFrame {
 
 @js.native
 @JSGlobal("ccs.ActionRotationFrame")
-class ccsActionRotationFrame extends t_ccsActionRotationFrame {
+class ccsActionRotationFrame() extends t_ccsActionRotationFrame {
 }
 
 @js.native
@@ -106,7 +106,7 @@ object ccsActionRotationFrame extends ts_ccsActionRotationFrame {
 @js.native
 trait t_ccsActionFadeFrame extends t_ccsActionFrame {
   def setOpacity(opacity:Float):Unit = js.native
-  def getOpacity:Float = js.native
+  def getOpacity():Float = js.native
   def getAction(duration:Float):ccFadeTo = js.native
 }
 
@@ -116,7 +116,7 @@ trait ts_ccsActionFadeFrame extends ts_ccsActionFrame {
 
 @js.native
 @JSGlobal("ccs.ActionFadeFrame")
-class ccsActionFadeFrame extends t_ccsActionFadeFrame {
+class ccsActionFadeFrame() extends t_ccsActionFadeFrame {
 }
 
 @js.native
@@ -127,7 +127,7 @@ object ccsActionFadeFrame extends ts_ccsActionFadeFrame {
 @js.native
 trait t_ccsActionTintFrame extends t_ccsActionFrame {
   def setColor(color:t_ccColor):Unit = js.native
-  def getColor:ccColor = js.native
+  def getColor():ccColor = js.native
   def getAction(duration:js.Dynamic):ccTintTo = js.native
 }
 
@@ -137,7 +137,7 @@ trait ts_ccsActionTintFrame extends ts_ccsActionFrame {
 
 @js.native
 @JSGlobal("ccs.ActionTintFrame")
-class ccsActionTintFrame extends t_ccsActionTintFrame {
+class ccsActionTintFrame() extends t_ccsActionTintFrame {
 }
 
 @js.native

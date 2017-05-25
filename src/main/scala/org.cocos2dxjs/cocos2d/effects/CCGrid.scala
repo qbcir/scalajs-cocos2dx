@@ -15,17 +15,17 @@ import org.cocos2dxjs.cocos2d.core.platform.{ccQuad3, t_ccQuad3}
 
 @js.native
 trait t_ccGridBase extends t_ccClass {
-  def isActive:Boolean = js.native
+  def isActive():Boolean = js.native
   def setActive(active:Float):Unit = js.native
-  def getReuseGrid:Float = js.native
+  def getReuseGrid():Float = js.native
   def setReuseGrid(reuseGrid:js.Dynamic):Unit = js.native
-  def getGridSize:ccSize = js.native
+  def getGridSize():ccSize = js.native
   def setGridSize(gridSize:t_ccSize):Unit = js.native
   def setGridRect(rect:t_ccRect):Unit = js.native
-  def getGridRect:ccRect = js.native
-  def getStep:ccPoint = js.native
+  def getGridRect():ccRect = js.native
+  def getStep():ccPoint = js.native
   def setStep(step:t_ccPoint):Unit = js.native
-  def isTextureFlipped:Boolean = js.native
+  def isTextureFlipped():Boolean = js.native
   def setTextureFlipped(flipped:Boolean):Unit = js.native
   def initWithSize(gridSize:t_ccSize, texture:t_ccTexture2D, flipped:Boolean, rect:t_ccRect):Boolean = js.native
 }

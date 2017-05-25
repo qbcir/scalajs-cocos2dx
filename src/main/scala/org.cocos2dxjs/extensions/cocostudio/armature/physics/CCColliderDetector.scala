@@ -19,7 +19,7 @@ trait ts_ccsColliderFilter extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.ColliderFilter")
-class ccsColliderFilter extends t_ccsColliderFilter {
+class ccsColliderFilter() extends t_ccsColliderFilter {
 }
 
 @js.native
@@ -32,13 +32,13 @@ trait t_ccsColliderBody extends t_ccsClass {
   var contourData: ccsContourData = js.native
   var shape: js.Any/*ccsShape*/ = js.native
   var colliderFilter: ccsColliderFilter = js.native
-  def getContourData:ccsContourData = js.native
+  def getContourData():ccsContourData = js.native
   def setColliderFilter(colliderFilter:t_ccsColliderFilter):Unit = js.native
-  def getCalculatedVertexList:js.Array[js.Any] = js.native
+  def getCalculatedVertexList():js.Array[js.Any] = js.native
   def setShape(shape:js.Any/*ccsShape*/):Unit = js.native
-  def getShape:js.Any/*ccsShape*/ = js.native
+  def getShape():js.Any/*ccsShape*/ = js.native
   def setContourData(contourData:t_ccsContourData):Unit = js.native
-  def getColliderFilter:ccsColliderFilter = js.native
+  def getColliderFilter():ccsColliderFilter = js.native
 }
 
 @js.native
@@ -47,7 +47,7 @@ trait ts_ccsColliderBody extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.ColliderBody")
-class ccsColliderBody extends t_ccsColliderBody {
+class ccsColliderBody() extends t_ccsColliderBody {
 }
 
 @js.native
@@ -65,7 +65,7 @@ trait t_ccsColliderDetector extends t_ccsClass {
   def removeContourData(contourData:js.Dynamic):Unit = js.native
   def removeAll():Unit = js.native
   def setColliderFilter(filter:t_ccsColliderFilter):Unit = js.native
-  def getColliderFilter:ccsColliderFilter = js.native
+  def getColliderFilter():ccsColliderFilter = js.native
 }
 
 @js.native

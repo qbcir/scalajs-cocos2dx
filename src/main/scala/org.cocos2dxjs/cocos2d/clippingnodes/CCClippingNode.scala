@@ -17,11 +17,11 @@ trait t_ccClippingNode extends t_ccNode {
   override def onEnterTransitionDidFinish():Unit = js.native
   override def onExitTransitionDidStart():Unit = js.native
   override def onExit():Unit = js.native
-  def getAlphaThreshold:Float = js.native
+  def getAlphaThreshold():Float = js.native
   def setAlphaThreshold(alphaThreshold:Float):Unit = js.native
-  def isInverted:Boolean = js.native
+  def isInverted():Boolean = js.native
   def setInverted(inverted:Boolean):Unit = js.native
-  def getStencil:ccNode = js.native
+  def getStencil():ccNode = js.native
   def setStencil(stencil:t_ccNode):Unit = js.native
 }
 

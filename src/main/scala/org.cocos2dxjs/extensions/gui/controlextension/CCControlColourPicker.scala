@@ -17,7 +17,7 @@ trait ts_ccControlColourPicker extends ts_ccControl {
 
 @js.native
 @JSGlobal("cc.ControlColourPicker")
-class ccControlColourPicker extends t_ccControlColourPicker {
+class ccControlColourPicker() extends t_ccControlColourPicker {
   var _state: js.Dynamic = js.native
 }
 

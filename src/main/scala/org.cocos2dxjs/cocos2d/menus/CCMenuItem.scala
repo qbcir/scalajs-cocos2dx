@@ -14,13 +14,13 @@ import org.cocos2dxjs.cocos2d.core.sprites.{ccSpriteFrame, t_ccSpriteFrame}
 
 @js.native
 trait t_ccMenuItem extends t_ccNode {
-  def isSelected:Boolean = js.native
+  def isSelected():Boolean = js.native
   def setOpacityModifyRGB(value:js.Dynamic):Unit = js.native
-  override def isOpacityModifyRGB:Boolean = js.native
-  def isEnabled:Boolean = js.native
+  override def isOpacityModifyRGB():Boolean = js.native
+  def isEnabled():Boolean = js.native
   def setEnabled(enable:Boolean):Unit = js.native
   def initWithCallback(callback:String|js.Function, target:t_ccNode):Boolean = js.native
-  def rect:ccRect = js.native
+  def rect():ccRect = js.native
   def selected():Unit = js.native
   def unselected():Unit = js.native
   def setCallback(callback:String|js.Function, target:t_ccNode):Unit = js.native
@@ -46,14 +46,14 @@ trait t_ccMenuItemLabel extends t_ccMenuItem {
   var string: String = js.native
   var label: ccNode = js.native
   var disabledColor: ccColor = js.native
-  def getDisabledColor:ccColor = js.native
+  def getDisabledColor():ccColor = js.native
   def setDisabledColor(color:t_ccColor):Unit = js.native
-  def getLabel:ccNode = js.native
+  def getLabel():ccNode = js.native
   def setLabel(label:t_ccNode):Unit = js.native
   override def setEnabled(enabled:Boolean):Unit = js.native
   def initWithLabel(label:t_ccNode, selector:String|js.Function, target:t_ccNode):Boolean = js.native
   def setString(label:String):Unit = js.native
-  def getString:String = js.native
+  def getString():String = js.native
   override def activate():Unit = js.native
   override def selected():Unit = js.native
   override def unselected():Unit = js.native
@@ -96,17 +96,17 @@ object ccMenuItemAtlasFont extends ts_ccMenuItemAtlasFont {
 trait t_ccMenuItemFont extends t_ccMenuItemLabel {
   def initWithString(value:String, callback:String|js.Function, target:t_ccNode):Boolean = js.native
   def setFontSize(s:Float):Unit = js.native
-  def getFontSize:Float = js.native
+  def getFontSize():Float = js.native
   def setFontName(name:String):Unit = js.native
-  def getFontName:String = js.native
+  def getFontName():String = js.native
 }
 
 @js.native
 trait ts_ccMenuItemFont extends ts_ccMenuItemLabel {
   def setFontSize(fontSize:Float):Unit = js.native
-  def fontSize:Float = js.native
+  def fontSize():Float = js.native
   def setFontName(name:js.Dynamic):Unit = js.native
-  def fontName:String = js.native
+  def fontName():String = js.native
 }
 
 @js.native
@@ -124,11 +124,11 @@ trait t_ccMenuItemSprite extends t_ccMenuItem {
   var normalImage: ccSprite = js.native
   var selectedImage: ccSprite = js.native
   var disabledImage: ccSprite = js.native
-  def getNormalImage:ccSprite = js.native
+  def getNormalImage():ccSprite = js.native
   def setNormalImage(normalImage:t_ccSprite):Unit = js.native
-  def getSelectedImage:ccSprite = js.native
+  def getSelectedImage():ccSprite = js.native
   def setSelectedImage(selectedImage:t_ccSprite):Unit = js.native
-  def getDisabledImage:ccSprite = js.native
+  def getDisabledImage():ccSprite = js.native
   def setDisabledImage(disabledImage:t_ccSprite):Unit = js.native
   def initWithNormalSprite(normalSprite:t_ccNode, selectedSprite:t_ccNode, disabledSprite:t_ccNode, callback:String|js.Function, target:t_ccNode):Boolean = js.native
   override def selected():Unit = js.native
@@ -176,13 +176,13 @@ object ccMenuItemImage extends ts_ccMenuItemImage {
 trait t_ccMenuItemToggle extends t_ccMenuItem {
   var subItems: js.Array[js.Any] = js.native
   var selectedIndex: Float = js.native
-  override def getOpacity:Float = js.native
+  override def getOpacity():Float = js.native
   override def setOpacity(opacity:Float):Unit = js.native
-  override def getColor:ccColor = js.native
+  override def getColor():ccColor = js.native
   override def setColor(Color:t_ccColor):Unit = js.native
-  def getSelectedIndex:Float = js.native
+  def getSelectedIndex():Float = js.native
   def setSelectedIndex(SelectedIndex:Float):Unit = js.native
-  def getSubItems:js.Array[js.Any] = js.native
+  def getSubItems():js.Array[js.Any] = js.native
   def setSubItems(subItems:t_ccMenuItem):Unit = js.native
   def initWithItems(array:t_ccMenuItem, secondTolast:String|js.Function, last:t_ccNode):Boolean = js.native
   def addSubItem(item:t_ccMenuItem):Unit = js.native
@@ -190,8 +190,8 @@ trait t_ccMenuItemToggle extends t_ccMenuItem {
   override def selected():Unit = js.native
   override def unselected():Unit = js.native
   override def setEnabled(enabled:Boolean):Unit = js.native
-  def selectedItem:ccMenuItem = js.native
-  def getSelectedItem:ccMenuItem = js.native
+  def selectedItem():ccMenuItem = js.native
+  def getSelectedItem():ccMenuItem = js.native
   override def onEnter():Unit = js.native
 }
 
@@ -201,7 +201,7 @@ trait ts_ccMenuItemToggle extends ts_ccMenuItem {
 
 @js.native
 @JSGlobal("cc.MenuItemToggle")
-class ccMenuItemToggle extends t_ccMenuItemToggle {
+class ccMenuItemToggle() extends t_ccMenuItemToggle {
 }
 
 @js.native

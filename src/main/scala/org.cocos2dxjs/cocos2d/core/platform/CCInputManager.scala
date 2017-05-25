@@ -32,7 +32,7 @@ trait ts_ccinputManager extends js.Object {
 
 @js.native
 @JSGlobal("cc.inputManager")
-class ccinputManager extends t_ccinputManager {
+class ccinputManager() extends t_ccinputManager {
 }
 
 @js.native

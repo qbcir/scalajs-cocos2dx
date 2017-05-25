@@ -24,7 +24,7 @@ trait ts_ccuiRichElement extends ts_ccuiClass {
 
 @js.native
 @JSGlobal("ccui.RichElement")
-class ccuiRichElement extends t_ccuiRichElement {
+class ccuiRichElement() extends t_ccuiRichElement {
 }
 
 @js.native
@@ -100,10 +100,10 @@ trait t_ccuiRichText extends t_ccuiWidget {
   def formatRenderers():Unit = js.native
   def setVerticalSpace(space:Float):Unit = js.native
   def setAnchorPoint(pt:t_ccPoint):Unit = js.native
-  override def getVirtualRendererSize:ccSize = js.native
+  override def getVirtualRendererSize():ccSize = js.native
   override def ignoreContentAdaptWithSize(ignore:Boolean):Unit = js.native
-  def getContentSize:ccSize = js.native
-  override def getDescription:String = js.native
+  def getContentSize():ccSize = js.native
+  override def getDescription():String = js.native
   def setCascadeOpacityEnabled(value:Boolean):Unit = js.native
   def setLineBreakOnSpace(value:js.Dynamic):Unit = js.native
   def setTextHorizontalAlignment(value:Float):Unit = js.native
@@ -116,7 +116,7 @@ trait ts_ccuiRichText extends ts_ccuiWidget {
 
 @js.native
 @JSGlobal("ccui.RichText")
-class ccuiRichText extends t_ccuiRichText {
+class ccuiRichText() extends t_ccuiRichText {
   var onFocusChanged: js.Dynamic = js.native
   var onNextFocusedWidget: js.Dynamic = js.native
 }

@@ -28,17 +28,17 @@ trait t_ccuiScrollView extends t_ccuiLayout {
   def setInnerContainerSize(size:t_ccSize):Unit = js.native
   def setInnerContainerPosition(position:t_ccPoint):Unit = js.native
   def getInnerContainerPosition():Unit = js.native
-  def getInnerContainerSize:ccSize = js.native
+  def getInnerContainerSize():ccSize = js.native
   def addChild(widget:t_ccNode, zOrder:Float, tag:Float|String):Boolean = js.native
   def removeAllChildren():Unit = js.native
   override def removeAllChildrenWithCleanup(cleanup:Boolean):Unit = js.native
   override def removeChild(child:t_ccuiWidget, cleanup:Boolean):Unit = js.native
-  def getChildren:js.Array[js.Any] = js.native
-  def getChildrenCount:Float = js.native
+  def getChildren():js.Array[js.Any] = js.native
+  def getChildrenCount():Float = js.native
   def getChildByTag(tag:Float):ccuiWidget = js.native
   def getChildByName(name:String):ccuiWidget = js.native
   def setTouchTotalTimeThreshold(touchTotalTimeThreshold:Float):Unit = js.native
-  def getTouchTotalTimeThreshold:Float = js.native
+  def getTouchTotalTimeThreshold():Float = js.native
   def stopAutoScroll():Unit = js.native
   def scrollToBottom(time:Float, attenuated:Boolean):Unit = js.native
   def scrollToTop(time:Float, attenuated:Boolean):Unit = js.native
@@ -70,32 +70,32 @@ trait t_ccuiScrollView extends t_ccuiLayout {
   override def interceptTouchEvent(event:Float, sender:t_ccuiWidget, touch:t_ccTouch):Unit = js.native
   def addEventListener(selector:js.Function):Unit = js.native
   def setDirection(dir:Float):Unit = js.native
-  def getDirection:Float = js.native
+  def getDirection():Float = js.native
   def setBounceEnabled(enabled:Boolean):Unit = js.native
-  def isBounceEnabled:Boolean = js.native
+  def isBounceEnabled():Boolean = js.native
   def setInertiaScrollEnabled(enabled:Boolean):Unit = js.native
-  def isInertiaScrollEnabled:Boolean = js.native
+  def isInertiaScrollEnabled():Boolean = js.native
   def setScrollBarEnabled(enabled:Boolean):Unit = js.native
-  def isScrollBarEnabled:Boolean = js.native
+  def isScrollBarEnabled():Boolean = js.native
   def setScrollBarPositionFromCorner(positionFromCorner:t_ccPoint):Unit = js.native
   def setScrollBarPositionFromCornerForVertical(positionFromCorner:t_ccPoint):Unit = js.native
-  def getScrollBarPositionFromCornerForVertical:ccPoint = js.native
+  def getScrollBarPositionFromCornerForVertical():ccPoint = js.native
   def setScrollBarPositionFromCornerForHorizontal(positionFromCorner:t_ccPoint):Unit = js.native
-  def getScrollBarPositionFromCornerForHorizontal:ccPoint = js.native
+  def getScrollBarPositionFromCornerForHorizontal():ccPoint = js.native
   def setScrollBarWidth(width:Float):Unit = js.native
-  def getScrollBarWidth:Float = js.native
+  def getScrollBarWidth():Float = js.native
   def setScrollBarColor(color:t_ccColor):Unit = js.native
-  def getScrollBarColor:ccColor = js.native
+  def getScrollBarColor():ccColor = js.native
   def setScrollBarOpacity(opacity:Float):Unit = js.native
-  def getScrollBarOpacity:Float = js.native
+  def getScrollBarOpacity():Float = js.native
   def setScrollBarAutoHideEnabled(autoHideEnabled:Boolean):Unit = js.native
-  def isScrollBarAutoHideEnabled:Boolean = js.native
+  def isScrollBarAutoHideEnabled():Boolean = js.native
   def setScrollBarAutoHideTime(autoHideTime:Float):Unit = js.native
-  def getScrollBarAutoHideTime:Float = js.native
-  def getInnerContainer:ccuiLayout = js.native
+  def getScrollBarAutoHideTime():Float = js.native
+  def getInnerContainer():ccuiLayout = js.native
   override def setLayoutType(_type:Float):Unit = js.native
-  override def getLayoutType:Null = js.native
-  override def getDescription:String = js.native
+  override def getLayoutType():Null = js.native
+  override def getDescription():String = js.native
 }
 
 @js.native
@@ -104,7 +104,7 @@ trait ts_ccuiScrollView extends ts_ccuiLayout {
 
 @js.native
 @JSGlobal("ccui.ScrollView")
-class ccuiScrollView extends t_ccuiScrollView {
+class ccuiScrollView() extends t_ccuiScrollView {
   var onFocusChanged: js.Dynamic = js.native
   var onNextFocusedWidget: js.Dynamic = js.native
 }

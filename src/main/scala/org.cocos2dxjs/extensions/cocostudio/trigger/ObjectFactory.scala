@@ -19,7 +19,7 @@ trait ts_ccsobjectFactory extends js.Object {
 
 @js.native
 @JSGlobal("ccs.objectFactory")
-class ccsobjectFactory extends t_ccsobjectFactory {
+class ccsobjectFactory() extends t_ccsobjectFactory {
 }
 
 @js.native
@@ -37,7 +37,7 @@ trait ts_ccsTInfo extends js.Object {
 
 @js.native
 @JSGlobal("ccs.TInfo")
-class ccsTInfo extends t_ccsTInfo {
+class ccsTInfo() extends t_ccsTInfo {
 }
 
 @js.native

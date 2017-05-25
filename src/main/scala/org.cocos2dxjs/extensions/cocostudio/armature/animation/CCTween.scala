@@ -22,7 +22,7 @@ trait t_ccsTween extends t_ccsProcessBase {
   def tweenColorTo(percent:Float, node:t_ccsFrameData):Unit = js.native
   def updateFrameData(currentPercent:Float):Float = js.native
   def setAnimation(animation:t_ccsArmatureAnimation):Unit = js.native
-  def getAnimation:ccsArmatureAnimation = js.native
+  def getAnimation():ccsArmatureAnimation = js.native
   def setMovementBoneData(data:js.Dynamic):Unit = js.native
 }
 

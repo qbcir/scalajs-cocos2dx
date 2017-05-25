@@ -22,7 +22,7 @@ trait ts_ccControlSwitch extends ts_ccControl {
 
 @js.native
 @JSGlobal("cc.ControlSwitch")
-class ccControlSwitch extends t_ccControlSwitch {
+class ccControlSwitch() extends t_ccControlSwitch {
   var _switchSprite: js.Dynamic = js.native
   var _on: js.Dynamic = js.native
   var _state: js.Dynamic = js.native
@@ -56,7 +56,7 @@ trait ts_ccControlSwitchSprite extends ts_ccSprite {
 
 @js.native
 @JSGlobal("cc.ControlSwitchSprite")
-class ccControlSwitchSprite extends t_ccControlSwitchSprite {
+class ccControlSwitchSprite() extends t_ccControlSwitchSprite {
 }
 
 @js.native

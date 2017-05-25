@@ -14,11 +14,11 @@ trait t_ccuiTextAtlas extends t_ccuiWidget {
   var string: String = js.native
   def setProperty(stringValue:String, charMapFile:String, itemWidth:Float, itemHeight:Float, startCharMap:String):Unit = js.native
   def setString(value:String):Unit = js.native
-  def getString:String = js.native
-  def getStringLength:Float|js.Dynamic = js.native
-  override def getVirtualRendererSize:ccSize = js.native
-  override def getVirtualRenderer:ccuiWidget = js.native
-  override def getDescription:String = js.native
+  def getString():String = js.native
+  def getStringLength():Float|js.Dynamic = js.native
+  override def getVirtualRendererSize():ccSize = js.native
+  override def getVirtualRenderer():ccuiWidget = js.native
+  override def getDescription():String = js.native
 }
 
 @js.native

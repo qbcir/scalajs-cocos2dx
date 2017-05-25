@@ -12,10 +12,10 @@ import org.cocos2dxjs.extensions.ccui.baseclasses.{ccuiWidget, t_ccuiWidget}
 
 @js.native
 trait t_ccEvent extends t_ccClass {
-  def getType:Float = js.native
+  def getType():Float = js.native
   def stopPropagation():Unit = js.native
-  def isStopped:Boolean = js.native
-  def getCurrentTarget:ccNode = js.native
+  def isStopped():Boolean = js.native
+  def getCurrentTarget():ccNode = js.native
 }
 
 @js.native
@@ -24,7 +24,7 @@ trait ts_ccEvent extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.Event")
-class ccEvent extends t_ccEvent {
+class ccEvent() extends t_ccEvent {
 }
 
 @js.native
@@ -41,8 +41,8 @@ object ccEvent extends ts_ccEvent {
 @js.native
 trait t_ccEventCustom extends t_ccEvent {
   def setUserData(data:js.Dynamic):Unit = js.native
-  def getUserData:js.Dynamic = js.native
-  def getEventName:String = js.native
+  def getUserData():js.Dynamic = js.native
+  def getEventName():String = js.native
 }
 
 @js.native
@@ -51,7 +51,7 @@ trait ts_ccEventCustom extends ts_ccEvent {
 
 @js.native
 @JSGlobal("cc.EventCustom")
-class ccEventCustom extends t_ccEventCustom {
+class ccEventCustom() extends t_ccEventCustom {
 }
 
 @js.native
@@ -62,18 +62,18 @@ object ccEventCustom extends ts_ccEventCustom {
 @js.native
 trait t_ccEventMouse extends t_ccEvent {
   def setScrollData(scrollX:Float, scrollY:Float):Unit = js.native
-  def getScrollX:Float = js.native
-  def getScrollY:Float = js.native
+  def getScrollX():Float = js.native
+  def getScrollY():Float = js.native
   def setLocation(x:Float, y:Float):Unit = js.native
-  def getLocation:ccPoint = js.native
-  def getLocationInView:ccPoint = js.native
-  def getDelta:ccPoint = js.native
-  def getDeltaX:Float = js.native
-  def getDeltaY:Float = js.native
+  def getLocation():ccPoint = js.native
+  def getLocationInView():ccPoint = js.native
+  def getDelta():ccPoint = js.native
+  def getDeltaX():Float = js.native
+  def getDeltaY():Float = js.native
   def setButton(button:Float):Unit = js.native
-  def getButton:Float = js.native
-  def getLocationX:Float = js.native
-  def getLocationY:Float = js.native
+  def getButton():Float = js.native
+  def getLocationX():Float = js.native
+  def getLocationY():Float = js.native
 }
 
 @js.native
@@ -82,7 +82,7 @@ trait ts_ccEventMouse extends ts_ccEvent {
 
 @js.native
 @JSGlobal("cc.EventMouse")
-class ccEventMouse extends t_ccEventMouse {
+class ccEventMouse() extends t_ccEventMouse {
 }
 
 @js.native
@@ -105,8 +105,8 @@ object ccEventMouse extends ts_ccEventMouse {
 
 @js.native
 trait t_ccEventTouch extends t_ccEvent {
-  def getEventCode:Float = js.native
-  def getTouches:js.Array[js.Any] = js.native
+  def getEventCode():Float = js.native
+  def getTouches():js.Array[js.Any] = js.native
 }
 
 @js.native
@@ -134,7 +134,7 @@ trait ts_ccEventFocus extends ts_ccEvent {
 
 @js.native
 @JSGlobal("cc.EventFocus")
-class ccEventFocus extends t_ccEventFocus {
+class ccEventFocus() extends t_ccEventFocus {
 }
 
 @js.native

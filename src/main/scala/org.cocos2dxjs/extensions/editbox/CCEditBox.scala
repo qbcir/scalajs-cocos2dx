@@ -20,7 +20,7 @@ trait ts_ccEditBoxDelegate extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.EditBoxDelegate")
-class ccEditBoxDelegate extends t_ccEditBoxDelegate {
+class ccEditBoxDelegate() extends t_ccEditBoxDelegate {
 }
 
 @js.native
@@ -53,7 +53,7 @@ trait ts_ccEditBox extends ts_ccNode {
 
 @js.native
 @JSGlobal("cc.EditBox")
-class ccEditBox extends t_ccEditBox {
+class ccEditBox() extends t_ccEditBox {
 }
 
 @js.native

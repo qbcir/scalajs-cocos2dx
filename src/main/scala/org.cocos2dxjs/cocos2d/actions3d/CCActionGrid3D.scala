@@ -9,9 +9,9 @@ import org.cocos2dxjs.cocos2d.core.cocoa.{ccPoint, t_ccPoint}
 
 @js.native
 trait t_ccWaves3D extends t_ccGrid3DAction {
-  def getAmplitude:Float = js.native
+  def getAmplitude():Float = js.native
   def setAmplitude(amplitude:Float):Unit = js.native
-  override def getAmplitudeRate:Float = js.native
+  override def getAmplitudeRate():Float = js.native
   override def setAmplitudeRate(amplitudeRate:Float):Unit = js.native
   def initWithDuration(duration:Float, gridSize:t_ccSize, waves:Float, amplitude:Float):Boolean = js.native
   override def update(dt:Float):Unit = js.native
@@ -73,10 +73,10 @@ object ccFlipY3D extends ts_ccFlipY3D {
 
 @js.native
 trait t_ccLens3D extends t_ccGrid3DAction {
-  def getLensEffect:Float = js.native
+  def getLensEffect():Float = js.native
   def setLensEffect(lensEffect:Float):Unit = js.native
   def setConcave(concave:Boolean):Unit = js.native
-  def getPosition:ccPoint = js.native
+  def getPosition():ccPoint = js.native
   def setPosition(position:t_ccPoint):Unit = js.native
   def initWithDuration(duration:Float, gridSize:t_ccSize, position:t_ccPoint, radius:Float):Boolean = js.native
   override def update(dt:Float):Unit = js.native
@@ -98,11 +98,11 @@ object ccLens3D extends ts_ccLens3D {
 
 @js.native
 trait t_ccRipple3D extends t_ccGrid3DAction {
-  def getPosition:ccPoint = js.native
+  def getPosition():ccPoint = js.native
   def setPosition(position:t_ccPoint):Unit = js.native
-  def getAmplitude:Float = js.native
+  def getAmplitude():Float = js.native
   def setAmplitude(amplitude:Float):Unit = js.native
-  override def getAmplitudeRate:Float = js.native
+  override def getAmplitudeRate():Float = js.native
   override def setAmplitudeRate(amplitudeRate:Float):Unit = js.native
   def initWithDuration(duration:Float, gridSize:t_ccSize, position:t_ccPoint, radius:Float, waves:Float, amplitude:Float):Boolean = js.native
   override def update(dt:Float):Unit = js.native
@@ -144,9 +144,9 @@ object ccShaky3D extends ts_ccShaky3D {
 
 @js.native
 trait t_ccLiquid extends t_ccGrid3DAction {
-  def getAmplitude:Float = js.native
+  def getAmplitude():Float = js.native
   def setAmplitude(amplitude:Float):Unit = js.native
-  override def getAmplitudeRate:Float = js.native
+  override def getAmplitudeRate():Float = js.native
   override def setAmplitudeRate(amplitudeRate:Float):Unit = js.native
   def initWithDuration(duration:Float, gridSize:t_ccSize, waves:Float, amplitude:Float):Boolean = js.native
   override def update(dt:Float):Unit = js.native
@@ -168,9 +168,9 @@ object ccLiquid extends ts_ccLiquid {
 
 @js.native
 trait t_ccWaves extends t_ccGrid3DAction {
-  def getAmplitude:Float = js.native
+  def getAmplitude():Float = js.native
   def setAmplitude(amplitude:Float):Unit = js.native
-  override def getAmplitudeRate:Float = js.native
+  override def getAmplitudeRate():Float = js.native
   override def setAmplitudeRate(amplitudeRate:Float):Unit = js.native
   def initWithDuration(duration:Float, gridSize:t_ccSize, waves:Float, amplitude:Float, horizontal:Boolean, vertical:Boolean):Boolean = js.native
   override def update(dt:Float):Unit = js.native
@@ -192,11 +192,11 @@ object ccWaves extends ts_ccWaves {
 
 @js.native
 trait t_ccTwirl extends t_ccGrid3DAction {
-  def getPosition:ccPoint = js.native
+  def getPosition():ccPoint = js.native
   def setPosition(position:t_ccPoint):Unit = js.native
-  def getAmplitude:Float = js.native
+  def getAmplitude():Float = js.native
   def setAmplitude(amplitude:Float):Unit = js.native
-  override def getAmplitudeRate:Float = js.native
+  override def getAmplitudeRate():Float = js.native
   override def setAmplitudeRate(amplitudeRate:Float):Unit = js.native
   def initWithDuration():Unit = js.native
   override def update(dt:Float):Unit = js.native

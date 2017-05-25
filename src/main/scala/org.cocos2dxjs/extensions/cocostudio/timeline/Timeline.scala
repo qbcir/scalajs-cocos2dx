@@ -15,7 +15,7 @@ trait ts_ccsTimeline extends js.Object {
 
 @js.native
 @JSGlobal("ccs.Timeline")
-class ccsTimeline extends t_ccsTimeline {
+class ccsTimeline() extends t_ccsTimeline {
 }
 
 @js.native

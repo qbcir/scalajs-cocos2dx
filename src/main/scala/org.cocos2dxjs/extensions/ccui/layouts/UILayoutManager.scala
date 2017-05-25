@@ -15,7 +15,7 @@ trait ts_ccuilinearVerticalLayoutManager extends js.Object {
 
 @js.native
 @JSGlobal("ccui.linearVerticalLayoutManager")
-class ccuilinearVerticalLayoutManager extends t_ccuilinearVerticalLayoutManager {
+class ccuilinearVerticalLayoutManager() extends t_ccuilinearVerticalLayoutManager {
 }
 
 @js.native
@@ -33,7 +33,7 @@ trait ts_ccuilinearHorizontalLayoutManager extends js.Object {
 
 @js.native
 @JSGlobal("ccui.linearHorizontalLayoutManager")
-class ccuilinearHorizontalLayoutManager extends t_ccuilinearHorizontalLayoutManager {
+class ccuilinearHorizontalLayoutManager() extends t_ccuilinearHorizontalLayoutManager {
 }
 
 @js.native
@@ -51,7 +51,7 @@ trait ts_ccuirelativeLayoutManager extends js.Object {
 
 @js.native
 @JSGlobal("ccui.relativeLayoutManager")
-class ccuirelativeLayoutManager extends t_ccuirelativeLayoutManager {
+class ccuirelativeLayoutManager() extends t_ccuirelativeLayoutManager {
 }
 
 @js.native

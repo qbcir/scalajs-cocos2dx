@@ -14,7 +14,7 @@ trait t_ccComponentContainer extends t_ccClass {
   def remove(name:String|t_ccComponent):Boolean = js.native
   def removeAll():Unit = js.native
   def visit(delta:Float):Unit = js.native
-  def isEmpty:Boolean = js.native
+  def isEmpty():Boolean = js.native
 }
 
 @js.native

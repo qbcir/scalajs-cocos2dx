@@ -7,7 +7,7 @@ import scala.scalajs.js.|
 
 @js.native
 trait t_spSkeletonAnimation extends t_spSkeleton {
-  override def init:Boolean = js.native
+  override def init():Boolean = js.native
   def setAnimationStateData(stateData:js.Dynamic):Unit = js.native
   def setMix(fromAnimation:String, toAnimation:String, duration:Float):Unit = js.native
   def setAnimationListener(target:types.DynObject, callback:js.Function):Unit = js.native
@@ -29,7 +29,7 @@ trait ts_spSkeletonAnimation extends ts_spSkeleton {
 
 @js.native
 @JSGlobal("sp.SkeletonAnimation")
-class spSkeletonAnimation extends t_spSkeletonAnimation {
+class spSkeletonAnimation() extends t_spSkeletonAnimation {
 }
 
 @js.native

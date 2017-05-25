@@ -25,19 +25,19 @@ trait t_ccsProcessBase extends t_ccsClass {
   def play(durationTo:Float, durationTween:Float, loop:Float, tweenEasing:Float):Unit = js.native
   def update(dt:Float):Unit = js.native
   def gotoFrame(frameIndex:Float):Unit = js.native
-  def getCurrentFrameIndex:Float = js.native
+  def getCurrentFrameIndex():Float = js.native
   def updateHandler():Unit = js.native
-  def isPause:Boolean = js.native
-  def isComplete:Boolean = js.native
-  def getCurrentPercent:Float = js.native
-  def getRawDuration:Float = js.native
-  def getLoop:Float = js.native
-  def getTweenEasing:Float = js.native
-  def getAnimationInternal:Float = js.native
+  def isPause():Boolean = js.native
+  def isComplete():Boolean = js.native
+  def getCurrentPercent():Float = js.native
+  def getRawDuration():Float = js.native
+  def getLoop():Float = js.native
+  def getTweenEasing():Float = js.native
+  def getAnimationInternal():Float = js.native
   def setAnimationInternal(animationInternal:js.Dynamic):Unit = js.native
-  def getProcessScale:Float = js.native
+  def getProcessScale():Float = js.native
   def setProcessScale(processScale:js.Dynamic):Unit = js.native
-  def isPlaying:Boolean = js.native
+  def isPlaying():Boolean = js.native
 }
 
 @js.native
@@ -46,7 +46,7 @@ trait ts_ccsProcessBase extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.ProcessBase")
-class ccsProcessBase extends t_ccsProcessBase {
+class ccsProcessBase() extends t_ccsProcessBase {
 }
 
 @js.native

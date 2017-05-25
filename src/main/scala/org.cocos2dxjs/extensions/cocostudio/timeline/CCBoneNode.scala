@@ -15,7 +15,7 @@ trait ts_ccsBoneNode extends js.Object {
 
 @js.native
 @JSGlobal("ccs.BoneNode")
-class ccsBoneNode extends t_ccsBoneNode {
+class ccsBoneNode() extends t_ccsBoneNode {
 }
 
 @js.native

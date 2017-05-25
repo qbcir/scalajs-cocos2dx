@@ -105,7 +105,7 @@ trait ts_ccFadeOutTRTiles extends ts_ccTiledGrid3DAction {
 
 @js.native
 @JSGlobal("cc.FadeOutTRTiles")
-class ccFadeOutTRTiles extends t_ccFadeOutTRTiles {
+class ccFadeOutTRTiles() extends t_ccFadeOutTRTiles {
 }
 
 @js.native
@@ -124,7 +124,7 @@ trait ts_ccFadeOutBLTiles extends ts_ccFadeOutTRTiles {
 
 @js.native
 @JSGlobal("cc.FadeOutBLTiles")
-class ccFadeOutBLTiles extends t_ccFadeOutBLTiles {
+class ccFadeOutBLTiles() extends t_ccFadeOutBLTiles {
 }
 
 @js.native
@@ -143,7 +143,7 @@ trait ts_ccFadeOutUpTiles extends ts_ccFadeOutTRTiles {
 
 @js.native
 @JSGlobal("cc.FadeOutUpTiles")
-class ccFadeOutUpTiles extends t_ccFadeOutUpTiles {
+class ccFadeOutUpTiles() extends t_ccFadeOutUpTiles {
 }
 
 @js.native
@@ -162,7 +162,7 @@ trait ts_ccFadeOutDownTiles extends ts_ccFadeOutUpTiles {
 
 @js.native
 @JSGlobal("cc.FadeOutDownTiles")
-class ccFadeOutDownTiles extends t_ccFadeOutDownTiles {
+class ccFadeOutDownTiles() extends t_ccFadeOutDownTiles {
 }
 
 @js.native
@@ -196,9 +196,9 @@ object ccTurnOffTiles extends ts_ccTurnOffTiles {
 
 @js.native
 trait t_ccWavesTiles3D extends t_ccTiledGrid3DAction {
-  def getAmplitude:Float = js.native
+  def getAmplitude():Float = js.native
   def setAmplitude(amplitude:Float):Unit = js.native
-  override def getAmplitudeRate:Float = js.native
+  override def getAmplitudeRate():Float = js.native
   override def setAmplitudeRate(amplitudeRate:Float):Unit = js.native
   def initWithDuration(duration:Float, gridSize:t_ccSize, waves:Float, amplitude:Float):Boolean = js.native
   override def update(dt:Float):Unit = js.native
@@ -220,9 +220,9 @@ object ccWavesTiles3D extends ts_ccWavesTiles3D {
 
 @js.native
 trait t_ccJumpTiles3D extends t_ccTiledGrid3DAction {
-  def getAmplitude:Float = js.native
+  def getAmplitude():Float = js.native
   def setAmplitude(amplitude:Float):Unit = js.native
-  override def getAmplitudeRate:Float = js.native
+  override def getAmplitudeRate():Float = js.native
   def setAmplitudeRate(amplitudeRate:js.Dynamic):Unit = js.native
   def initWithDuration(duration:Float, gridSize:t_ccSize, numberOfJumps:Float, amplitude:Float):Unit = js.native
   override def update(dt:Float):Unit = js.native

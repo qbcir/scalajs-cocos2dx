@@ -10,7 +10,7 @@ import org.cocos2dxjs.extensions.cocostudio.ts_ccsComponent
 @js.native
 trait t_ccsComController extends t_ccsComponent {
   def onEnter():Unit = js.native
-  def isEnabled:Boolean = js.native
+  def isEnabled():Boolean = js.native
   def setEnabled(bool:Boolean):Unit = js.native
 }
 
@@ -20,7 +20,7 @@ trait ts_ccsComController extends ts_ccsComponent {
 
 @js.native
 @JSGlobal("ccs.ComController")
-class ccsComController extends t_ccsComController {
+class ccsComController() extends t_ccsComController {
 }
 
 @js.native

@@ -12,7 +12,7 @@ import org.cocos2dxjs.extensions.cocostudio.ts_ccsComponent
 trait t_ccsComRender extends t_ccsComponent {
   def onEnter():Unit = js.native
   def onExit():Unit = js.native
-  def getNode:ccNode = js.native
+  def getNode():ccNode = js.native
   def setNode(node:t_ccNode):Unit = js.native
 }
 

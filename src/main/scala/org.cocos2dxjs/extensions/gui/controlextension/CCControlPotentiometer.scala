@@ -27,7 +27,7 @@ trait ts_ccControlPotentiometer extends ts_ccControl {
 
 @js.native
 @JSGlobal("cc.ControlPotentiometer")
-class ccControlPotentiometer extends t_ccControlPotentiometer {
+class ccControlPotentiometer() extends t_ccControlPotentiometer {
   var _value: js.Dynamic = js.native
   var _minimumValue: js.Dynamic = js.native
   var _maximumValue: js.Dynamic = js.native

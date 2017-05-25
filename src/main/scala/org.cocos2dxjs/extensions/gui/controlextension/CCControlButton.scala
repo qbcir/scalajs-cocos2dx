@@ -14,10 +14,10 @@ trait t_ccControlButton extends t_ccControl {
   var zoomOnTouchDown: Boolean = js.native
   var preferredSize: ccSize = js.native
   var labelAnchor: Boolean = js.native
-  def doesAdjustBackgroundImage:Boolean = js.native
+  def doesAdjustBackgroundImage():Boolean = js.native
   def getZoomOnTouchDown():Unit = js.native
   def getPreferredSize():Unit = js.native
-  def _getCurrentTitle:String = js.native
+  def _getCurrentTitle():String = js.native
   def _getCurrentTitleColor():Unit = js.native
   def isPushed():Unit = js.native
   def setMargins(marginH:Float, marginV:Float):Unit = js.native
@@ -43,7 +43,7 @@ trait ts_ccControlButton extends ts_ccControl {
 
 @js.native
 @JSGlobal("cc.ControlButton")
-class ccControlButton extends t_ccControlButton {
+class ccControlButton() extends t_ccControlButton {
   var _state: js.Dynamic = js.native
 }
 

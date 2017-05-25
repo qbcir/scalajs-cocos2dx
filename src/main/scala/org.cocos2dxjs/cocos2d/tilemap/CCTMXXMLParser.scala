@@ -14,7 +14,7 @@ import org.cocos2dxjs.cocos2d.core.platform.ts_ccSAXParser
 @js.native
 trait t_ccTMXLayerInfo extends t_ccClass {
   var properties: js.Array[js.Any] = js.native
-  def getProperties:js.Array[js.Any] = js.native
+  def getProperties():js.Array[js.Any] = js.native
   def setProperties(value:types.DynObject):Unit = js.native
 }
 
@@ -24,7 +24,7 @@ trait ts_ccTMXLayerInfo extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.TMXLayerInfo")
-class ccTMXLayerInfo extends t_ccTMXLayerInfo {
+class ccTMXLayerInfo() extends t_ccTMXLayerInfo {
 }
 
 @js.native
@@ -53,7 +53,7 @@ trait ts_ccTMXTilesetInfo extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.TMXTilesetInfo")
-class ccTMXTilesetInfo extends t_ccTMXTilesetInfo {
+class ccTMXTilesetInfo() extends t_ccTMXTilesetInfo {
 }
 
 @js.native
@@ -75,37 +75,37 @@ trait t_ccTMXMapInfo extends t_ccSAXParser {
   var mapHeight: Float = js.native
   var tileWidth: Float = js.native
   var tileHeight: Float = js.native
-  def getOrientation:Float = js.native
+  def getOrientation():Float = js.native
   def setOrientation(value:Float):Unit = js.native
-  def getMapSize:ccSize = js.native
+  def getMapSize():ccSize = js.native
   def setMapSize(value:t_ccSize):Unit = js.native
-  def getTileSize:ccSize = js.native
+  def getTileSize():ccSize = js.native
   def setTileSize(value:t_ccSize):Unit = js.native
-  def getLayers:js.Array[js.Any] = js.native
+  def getLayers():js.Array[js.Any] = js.native
   def setLayers(value:t_ccTMXLayerInfo):Unit = js.native
-  def getTilesets:js.Array[js.Any] = js.native
+  def getTilesets():js.Array[js.Any] = js.native
   def setTilesets(value:t_ccTMXTilesetInfo):Unit = js.native
-  def getObjectGroups:js.Array[js.Any] = js.native
+  def getObjectGroups():js.Array[js.Any] = js.native
   def setObjectGroups(value:t_ccTMXObjectGroup):Unit = js.native
-  def getParentElement:types.DynObject = js.native
+  def getParentElement():types.DynObject = js.native
   def setParentElement(value:types.DynObject):Unit = js.native
-  def getParentGID:Float = js.native
+  def getParentGID():Float = js.native
   def setParentGID(value:Float):Unit = js.native
-  def getLayerAttribs:types.DynObject = js.native
+  def getLayerAttribs():types.DynObject = js.native
   def setLayerAttribs(value:types.DynObject):Unit = js.native
-  def getStoringCharacters:Boolean = js.native
+  def getStoringCharacters():Boolean = js.native
   def setStoringCharacters(value:Boolean):Unit = js.native
-  def getProperties:js.Array[js.Any] = js.native
+  def getProperties():js.Array[js.Any] = js.native
   def setProperties(value:types.DynObject):Unit = js.native
   def initWithTMXFile(tmxFile:String):js.Dynamic = js.native
   def initWithXML(tmxString:String, resourcePath:String):Boolean = js.native
   def parseXMLFile(tmxFile:String, isXmlString:Boolean):js.Dynamic = js.native
   def parseXMLString(xmlString:String):Boolean = js.native
-  def getTileProperties:types.DynObject = js.native
+  def getTileProperties():types.DynObject = js.native
   def setTileProperties(tileProperties:types.DynObject):Unit = js.native
-  def getCurrentString:String = js.native
+  def getCurrentString():String = js.native
   def setCurrentString(currentString:String):Unit = js.native
-  def getTMXFileName:String = js.native
+  def getTMXFileName():String = js.native
   def setTMXFileName(fileName:String):Unit = js.native
 }
 

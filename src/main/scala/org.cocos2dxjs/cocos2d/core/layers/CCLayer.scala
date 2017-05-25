@@ -15,7 +15,7 @@ import org.cocos2dxjs.cocos2d.core.cocoa.{ccSize, t_ccSize}
 trait t_ccLayer extends t_ccNode {
   def bake():Unit = js.native
   def unbake():Unit = js.native
-  def isBaked:Boolean = js.native
+  def isBaked():Boolean = js.native
 }
 
 @js.native
@@ -24,7 +24,7 @@ trait ts_ccLayer extends ts_ccNode {
 
 @js.native
 @JSGlobal("cc.Layer")
-class ccLayer extends t_ccLayer {
+class ccLayer() extends t_ccLayer {
 }
 
 @js.native
@@ -34,7 +34,7 @@ object ccLayer extends ts_ccLayer {
 
 @js.native
 trait t_ccLayerColor extends t_ccLayer {
-  def getBlendFunc:ccBlendFunc = js.native
+  def getBlendFunc():ccBlendFunc = js.native
   def init(color:t_ccColor, width:Float, height:Float):Boolean = js.native
   def setBlendFunc(src:Float|t_ccBlendFunc, dst:Float):Unit = js.native
 }
@@ -62,19 +62,19 @@ trait t_ccLayerGradient extends t_ccLayerColor {
   var vector: Float = js.native
   var compressedInterpolation: Float = js.native
   def init(start:t_ccColor, end:t_ccColor, v:js.Dynamic|t_ccPoint, stops:js.Array[js.Any]|js.Dynamic):Boolean = js.native
-  def getStartColor:ccColor = js.native
+  def getStartColor():ccColor = js.native
   def setStartColor(color:t_ccColor):Unit = js.native
   def setEndColor(color:t_ccColor):Unit = js.native
-  def getEndColor:ccColor = js.native
+  def getEndColor():ccColor = js.native
   def setStartOpacity(o:Float):Unit = js.native
-  def getStartOpacity:Float = js.native
+  def getStartOpacity():Float = js.native
   def setEndOpacity(o:Float):Unit = js.native
-  def getEndOpacity:Float = js.native
+  def getEndOpacity():Float = js.native
   def setVector(Var:t_ccPoint):Unit = js.native
-  def getVector:ccPoint = js.native
-  def isCompressedInterpolation:Boolean = js.native
+  def getVector():ccPoint = js.native
+  def isCompressedInterpolation():Boolean = js.native
   def setCompressedInterpolation(compress:Boolean):Unit = js.native
-  def getColorStops:js.Array[js.Any] = js.native
+  def getColorStops():js.Array[js.Any] = js.native
   def setColorStops(colorStops:js.Dynamic):Unit = js.native
 }
 

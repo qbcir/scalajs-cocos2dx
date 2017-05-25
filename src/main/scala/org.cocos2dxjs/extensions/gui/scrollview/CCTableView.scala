@@ -23,7 +23,7 @@ trait ts_ccTableViewCell extends ts_ccNode {
 
 @js.native
 @JSGlobal("cc.TableViewCell")
-class ccTableViewCell extends t_ccTableViewCell {
+class ccTableViewCell() extends t_ccTableViewCell {
 }
 
 @js.native
@@ -45,7 +45,7 @@ trait ts_ccTableViewDelegate extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.TableViewDelegate")
-class ccTableViewDelegate extends t_ccTableViewDelegate {
+class ccTableViewDelegate() extends t_ccTableViewDelegate {
 }
 
 @js.native
@@ -67,7 +67,7 @@ trait ts_ccTableViewDataSource extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.TableViewDataSource")
-class ccTableViewDataSource extends t_ccTableViewDataSource {
+class ccTableViewDataSource() extends t_ccTableViewDataSource {
 }
 
 @js.native
@@ -86,7 +86,7 @@ trait t_ccTableView extends t_ccScrollView {
   def insertCellAtIndex(idx:js.Dynamic):Unit = js.native
   def removeCellAtIndex(idx:js.Dynamic):Unit = js.native
   def reloadData():Unit = js.native
-  def dequeueCell:js.Dynamic = js.native
+  def dequeueCell():js.Dynamic = js.native
   def cellAtIndex(idx:js.Dynamic):ccTableViewCell = js.native
 }
 

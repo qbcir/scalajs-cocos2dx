@@ -16,7 +16,7 @@ trait ts_ccSAXParser extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.SAXParser")
-class ccSAXParser extends t_ccSAXParser {
+class ccSAXParser() extends t_ccSAXParser {
 }
 
 @js.native
@@ -35,7 +35,7 @@ trait ts_ccPlistParser extends ts_ccSAXParser {
 
 @js.native
 @JSGlobal("cc.PlistParser")
-class ccPlistParser extends t_ccPlistParser {
+class ccPlistParser() extends t_ccPlistParser {
 }
 
 @js.native

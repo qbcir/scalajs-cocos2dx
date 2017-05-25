@@ -15,7 +15,7 @@ trait ts_ccsActionTimelineData extends js.Object {
 
 @js.native
 @JSGlobal("ccs.ActionTimelineData")
-class ccsActionTimelineData extends t_ccsActionTimelineData {
+class ccsActionTimelineData() extends t_ccsActionTimelineData {
 }
 
 @js.native
@@ -35,7 +35,7 @@ trait ts_ccsActionTimeline extends js.Object {
 
 @js.native
 @JSGlobal("ccs.ActionTimeline")
-class ccsActionTimeline extends t_ccsActionTimeline {
+class ccsActionTimeline() extends t_ccsActionTimeline {
 }
 
 @js.native

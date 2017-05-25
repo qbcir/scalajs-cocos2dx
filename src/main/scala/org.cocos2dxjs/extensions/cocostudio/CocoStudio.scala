@@ -15,7 +15,7 @@ trait ts_ccsClass extends js.Object {
 
 @js.native
 @JSGlobal("ccs.Class")
-class ccsClass extends t_ccsClass {
+class ccsClass() extends t_ccsClass {
 }
 
 @js.native
@@ -33,7 +33,7 @@ trait ts_ccsNode extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.Node")
-class ccsNode extends t_ccsNode {
+class ccsNode() extends t_ccsNode {
 }
 
 @js.native
@@ -51,7 +51,7 @@ trait ts_ccsSprite extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.Sprite")
-class ccsSprite extends t_ccsSprite {
+class ccsSprite() extends t_ccsSprite {
 }
 
 @js.native
@@ -69,7 +69,7 @@ trait ts_ccsComponent extends ts_ccsClass {
 
 @js.native
 @JSGlobal("ccs.Component")
-class ccsComponent extends t_ccsComponent {
+class ccsComponent() extends t_ccsComponent {
 }
 
 @js.native
@@ -120,7 +120,7 @@ object ccs extends js.Object {
   var VERSION_COMBINED: js.Dynamic = js.native
   var CONST_VERSION: js.Dynamic = js.native
   var TweenType: types.DynObject = js.native
-  def armatureVersion:String = js.native
+  def armatureVersion():String = js.native
   def load(file:String, path:String):types.DynObject = js.native
   def loadWithVisibleSize(file:String, path:String):types.DynObject = js.native
   def sendEvent(event:Float):Unit = js.native

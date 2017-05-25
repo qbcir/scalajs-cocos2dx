@@ -15,13 +15,13 @@ trait t_ccuiPageViewIndicator extends t_ccuiProtectedNode {
   def reset(numberOfTotalPages:Float):Unit = js.native
   def indicate(index:Float):Unit = js.native
   def setSpaceBetweenIndexNodes(spaceBetweenIndexNodes:Float):Unit = js.native
-  def getSpaceBetweenIndexNodes:Float = js.native
+  def getSpaceBetweenIndexNodes():Float = js.native
   def setSelectedIndexColor(color:t_ccColor):Unit = js.native
-  def getSelectedIndexColor:ccColor = js.native
+  def getSelectedIndexColor():ccColor = js.native
   def setIndexNodesColor(indexNodesColor:t_ccColor):Unit = js.native
-  def getIndexNodesColor:ccColor = js.native
+  def getIndexNodesColor():ccColor = js.native
   def setIndexNodesScale(indexNodesScale:Float):Unit = js.native
-  def getIndexNodesScale:Float = js.native
+  def getIndexNodesScale():Float = js.native
   def setIndexNodesTexture(texName:String, texType:Float):Unit = js.native
   def clear():Unit = js.native
 }
@@ -32,7 +32,7 @@ trait ts_ccuiPageViewIndicator extends ts_ccuiProtectedNode {
 
 @js.native
 @JSGlobal("ccui.PageViewIndicator")
-class ccuiPageViewIndicator extends t_ccuiPageViewIndicator {
+class ccuiPageViewIndicator() extends t_ccuiPageViewIndicator {
 }
 
 @js.native

@@ -29,15 +29,15 @@ object ccIMEKeyboardNotificationInfo extends ts_ccIMEKeyboardNotificationInfo {
 @js.native
 trait t_ccIMEDelegate extends t_ccClass {
   def removeDelegate():Unit = js.native
-  def attachWithIME:Boolean = js.native
-  def detachWithIME:Boolean = js.native
-  def canAttachWithIME:Boolean = js.native
+  def attachWithIME():Boolean = js.native
+  def detachWithIME():Boolean = js.native
+  def canAttachWithIME():Boolean = js.native
   def didAttachWithIME():Unit = js.native
-  def canDetachWithIME:Boolean = js.native
+  def canDetachWithIME():Boolean = js.native
   def didDetachWithIME():Unit = js.native
   def insertText():Unit = js.native
   def deleteBackward():Unit = js.native
-  def getContentText:String = js.native
+  def getContentText():String = js.native
 }
 
 @js.native
@@ -46,7 +46,7 @@ trait ts_ccIMEDelegate extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.IMEDelegate")
-class ccIMEDelegate extends t_ccIMEDelegate {
+class ccIMEDelegate() extends t_ccIMEDelegate {
 }
 
 @js.native
@@ -58,7 +58,7 @@ object ccIMEDelegate extends ts_ccIMEDelegate {
 trait t_ccimeDispatcher extends js.Object {
   def dispatchInsertText(text:String, len:Float):Unit = js.native
   def dispatchDeleteBackward():Unit = js.native
-  def getContentText:String = js.native
+  def getContentText():String = js.native
   def dispatchKeyboardWillShow(info:t_ccIMEKeyboardNotificationInfo):Unit = js.native
   def dispatchKeyboardDidShow(info:t_ccIMEKeyboardNotificationInfo):Unit = js.native
   def dispatchKeyboardWillHide(info:t_ccIMEKeyboardNotificationInfo):Unit = js.native
@@ -76,7 +76,7 @@ trait ts_ccimeDispatcher extends js.Object {
 
 @js.native
 @JSGlobal("cc.imeDispatcher")
-class ccimeDispatcher extends t_ccimeDispatcher {
+class ccimeDispatcher() extends t_ccimeDispatcher {
 }
 
 @js.native
@@ -95,7 +95,7 @@ trait ts_ccIMEDispatcherImpl extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.IMEDispatcher.Impl")
-class ccIMEDispatcherImpl extends t_ccIMEDispatcherImpl {
+class ccIMEDispatcherImpl() extends t_ccIMEDispatcherImpl {
 }
 
 @js.native

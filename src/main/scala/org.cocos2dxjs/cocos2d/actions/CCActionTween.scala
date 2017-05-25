@@ -18,7 +18,7 @@ trait ts_ccActionTweenDelegate extends ts_ccClass {
 
 @js.native
 @JSGlobal("cc.ActionTweenDelegate")
-class ccActionTweenDelegate extends t_ccActionTweenDelegate {
+class ccActionTweenDelegate() extends t_ccActionTweenDelegate {
 }
 
 @js.native
@@ -31,8 +31,8 @@ trait t_ccActionTween extends t_ccActionInterval {
   def initWithDuration(duration:Float, key:String, from:Float, to:Float):Boolean = js.native
   def startWithTarget(target:t_ccActionTweenDelegate):Unit = js.native
   override def update(dt:Float):Unit = js.native
-  override def reverse:ccAction = js.native
-  override def clone:ccAction = js.native
+  override def reverse():ccAction = js.native
+  override def clone():ccAction = js.native
 }
 
 @js.native

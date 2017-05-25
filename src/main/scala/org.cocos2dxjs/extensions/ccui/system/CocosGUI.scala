@@ -19,7 +19,7 @@ trait ts_ccuiClass extends js.Object {
 
 @js.native
 @JSGlobal("ccui.Class")
-class ccuiClass extends t_ccuiClass {
+class ccuiClass() extends t_ccuiClass {
 }
 
 @js.native
@@ -37,7 +37,7 @@ trait ts_ccuiNode extends ts_ccuiClass {
 
 @js.native
 @JSGlobal("ccui.Node")
-class ccuiNode extends t_ccuiNode {
+class ccuiNode() extends t_ccuiNode {
 }
 
 @js.native
@@ -55,7 +55,7 @@ trait ts_ccuiProtectedNode extends ts_ccuiNode {
 
 @js.native
 @JSGlobal("ccui.ProtectedNode")
-class ccuiProtectedNode extends t_ccuiProtectedNode {
+class ccuiProtectedNode() extends t_ccuiProtectedNode {
 }
 
 @js.native
@@ -72,6 +72,6 @@ object ccui extends js.Object {
   var cocosGUIVersion: String = js.native
   var _TextFieldRenderer: js.Dynamic = js.native
   def getLayoutManager(_type:Float):Null|ccuilinearHorizontalLayoutManager|ccuilinearVerticalLayoutManager|ccuirelativeLayoutManager = js.native
-  def MarginZero:ccuiMargin = js.native
+  def MarginZero():ccuiMargin = js.native
 }
 

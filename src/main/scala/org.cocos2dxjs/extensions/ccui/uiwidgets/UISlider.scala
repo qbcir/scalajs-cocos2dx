@@ -17,13 +17,13 @@ trait t_ccuiSlider extends t_ccuiWidget {
   def loadBarTexture(fileName:String, texType:Float):Unit = js.native
   def loadProgressBarTexture(fileName:String, texType:Float):Unit = js.native
   def setScale9Enabled(able:Boolean):Unit = js.native
-  def isScale9Enabled:Boolean = js.native
+  def isScale9Enabled():Boolean = js.native
   override def ignoreContentAdaptWithSize(ignore:Boolean):Unit = js.native
   def setCapInsets(capInsets:t_ccRect):Unit = js.native
   def setCapInsetsBarRenderer(capInsets:t_ccRect):Unit = js.native
-  def getCapInsetsBarRenderer:ccRect = js.native
+  def getCapInsetsBarRenderer():ccRect = js.native
   def setCapInsetProgressBarRenderer(capInsets:t_ccRect):Unit = js.native
-  def getCapInsetsProgressBarRenderer:ccRect = js.native
+  def getCapInsetsProgressBarRenderer():ccRect = js.native
   def loadSlidBallTextures(normal:String, pressed:String, disabled:String, texType:Float):Unit = js.native
   def loadSlidBallTextureNormal(normal:String, texType:Float):Unit = js.native
   def loadSlidBallTexturePressed(pressed:String, texType:Float):Unit = js.native
@@ -32,10 +32,10 @@ trait t_ccuiSlider extends t_ccuiWidget {
   override def hitTest(pt:t_ccPoint):Boolean = js.native
   def _getPercentWithBallPos(px:t_ccPoint):Float = js.native
   def addEventListener(selector:js.Function, target:types.DynObject):Unit = js.native
-  def getPercent:Float = js.native
-  override def getVirtualRendererSize:ccSize = js.native
-  override def getVirtualRenderer:ccuiWidget = js.native
-  override def getDescription:String = js.native
+  def getPercent():Float = js.native
+  override def getVirtualRendererSize():ccSize = js.native
+  override def getVirtualRenderer():ccuiWidget = js.native
+  override def getDescription():String = js.native
 }
 
 @js.native
@@ -44,7 +44,7 @@ trait ts_ccuiSlider extends ts_ccuiWidget {
 
 @js.native
 @JSGlobal("ccui.Slider")
-class ccuiSlider extends t_ccuiSlider {
+class ccuiSlider() extends t_ccuiSlider {
   var onFocusChanged: js.Dynamic = js.native
   var onNextFocusedWidget: js.Dynamic = js.native
 }

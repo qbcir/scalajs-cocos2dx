@@ -28,37 +28,37 @@ trait t_ccuiWidget extends t_ccuiProtectedNode {
   var bright: Boolean = js.native
   var name: String = js.native
   var actionTag: Float = js.native
-  def init:Boolean = js.native
+  def init():Boolean = js.native
   def onEnter():Unit = js.native
   def onExit():Unit = js.native
-  def getWidgetParent:Null|ccuiWidget = js.native
+  def getWidgetParent():Null|ccuiWidget = js.native
   def setPropagateTouchEvents(isPropagate:Boolean):Unit = js.native
-  def isPropagateTouchEvents:Boolean = js.native
+  def isPropagateTouchEvents():Boolean = js.native
   def setSwallowTouches(swallow:Boolean):Unit = js.native
-  def isSwallowTouches:Boolean = js.native
+  def isSwallowTouches():Boolean = js.native
   def setEnabled(enabled:Boolean):Unit = js.native
   def _initRenderer():Unit = js.native
   def setContentSize(contentSize:Float|t_ccSize, height:Float):Unit = js.native
   def setSizePercent(percent:t_ccPoint):Unit = js.native
   def updateSizeAndPosition(parentSize:t_ccSize):Unit = js.native
   def setSizeType(_type:Float):Unit = js.native
-  def getSizeType:Float = js.native
+  def getSizeType():Float = js.native
   def ignoreContentAdaptWithSize(ignore:Boolean):Unit = js.native
-  def isIgnoreContentAdaptWithSize:Boolean = js.native
-  def getCustomSize:ccSize = js.native
-  def getLayoutSize:ccSize = js.native
-  def getSizePercent:ccPoint = js.native
-  def getWorldPosition:ccPoint = js.native
-  def getVirtualRenderer:ccuiWidget = js.native
-  def getVirtualRendererSize:ccSize = js.native
+  def isIgnoreContentAdaptWithSize():Boolean = js.native
+  def getCustomSize():ccSize = js.native
+  def getLayoutSize():ccSize = js.native
+  def getSizePercent():ccPoint = js.native
+  def getWorldPosition():ccPoint = js.native
+  def getVirtualRenderer():ccuiWidget = js.native
+  def getVirtualRendererSize():ccSize = js.native
   def _onSizeChanged():Unit = js.native
   def setTouchEnabled(enable:Boolean):Unit = js.native
-  def isTouchEnabled:Boolean = js.native
-  def isHighlighted:Boolean = js.native
+  def isTouchEnabled():Boolean = js.native
+  def isHighlighted():Boolean = js.native
   def setHighlighted(highlight:js.Dynamic):Unit = js.native
-  def isFocused:Boolean = js.native
+  def isFocused():Boolean = js.native
   def setFocused(focus:Boolean):Unit = js.native
-  def isFocusEnabled:Boolean = js.native
+  def isFocusEnabled():Boolean = js.native
   def setFocusEnabled(enable:Boolean):Unit = js.native
   def findNextFocusedWidget(direction:js.Dynamic, current:js.Dynamic):Unit = js.native
   def requestFocus():Unit = js.native
@@ -80,36 +80,36 @@ trait t_ccuiWidget extends t_ccuiProtectedNode {
   def checkChildInfo(handleState:Float, sender:t_ccuiWidget, touchPoint:t_ccPoint):Unit = js.native
   def setPosition(pos:Float|t_ccPoint, posY:Float):Unit = js.native
   def setPositionPercent(percent:t_ccPoint):Unit = js.native
-  def getPositionPercent:ccPoint = js.native
+  def getPositionPercent():ccPoint = js.native
   def setPositionType(_type:Float):Unit = js.native
-  def getPositionType:Float = js.native
+  def getPositionType():Float = js.native
   def setFlippedX(flipX:Boolean):Unit = js.native
-  def isFlippedX:Boolean = js.native
+  def isFlippedX():Boolean = js.native
   def setFlippedY(flipY:Boolean):Unit = js.native
-  def isFlippedY:Boolean = js.native
-  def isBright:Boolean = js.native
-  def isEnabled:Boolean = js.native
-  def getLeftBoundary:Float = js.native
-  def getBottomBoundary:Float = js.native
-  def getRightBoundary:Float = js.native
-  def getTopBoundary:Float = js.native
-  def getTouchBeganPosition:ccPoint = js.native
-  def getTouchMovePosition:ccPoint = js.native
-  def getTouchEndPosition:ccPoint = js.native
-  def getWidgetType:Float = js.native
+  def isFlippedY():Boolean = js.native
+  def isBright():Boolean = js.native
+  def isEnabled():Boolean = js.native
+  def getLeftBoundary():Float = js.native
+  def getBottomBoundary():Float = js.native
+  def getRightBoundary():Float = js.native
+  def getTopBoundary():Float = js.native
+  def getTouchBeganPosition():ccPoint = js.native
+  def getTouchMovePosition():ccPoint = js.native
+  def getTouchEndPosition():ccPoint = js.native
+  def getWidgetType():Float = js.native
   def setLayoutParameter(parameter:t_ccuiLayoutParameter):Unit = js.native
   def getLayoutParameter(_type:Float):ccuiLayoutParameter = js.native
-  def getDescription:String = js.native
-  override def clone:ccuiWidget = js.native
-  def isUnifySizeEnabled:Boolean = js.native
+  def getDescription():String = js.native
+  override def clone():ccuiWidget = js.native
+  def isUnifySizeEnabled():Boolean = js.native
   def setUnifySizeEnabled(enable:Boolean):Unit = js.native
   def addCCSEventListener(callback:js.Function):Unit = js.native
   def setCallbackName(callbackName:String):Unit = js.native
-  def getCallbackName:String|js.Dynamic = js.native
+  def getCallbackName():String|js.Dynamic = js.native
   def setCallbackType(callbackType:String):Unit = js.native
-  def getCallbackType:Null|String = js.native
+  def getCallbackType():Null|String = js.native
   def setLayoutComponentEnabled(enable:Boolean):Unit = js.native
-  def isLayoutComponentEnabled:Boolean = js.native
+  def isLayoutComponentEnabled():Boolean = js.native
 }
 
 @js.native
@@ -120,7 +120,7 @@ trait ts_ccuiWidget extends ts_ccuiProtectedNode {
 
 @js.native
 @JSGlobal("ccui.Widget")
-class ccuiWidget extends t_ccuiWidget {
+class ccuiWidget() extends t_ccuiWidget {
   var onFocusChanged: js.Dynamic = js.native
   var onNextFocusedWidget: js.Dynamic = js.native
 }

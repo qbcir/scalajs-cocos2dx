@@ -18,7 +18,7 @@ trait ts_ccSpacer extends ts_ccLayer {
 
 @js.native
 @JSGlobal("cc.Spacer")
-class ccSpacer extends t_ccSpacer {
+class ccSpacer() extends t_ccSpacer {
 }
 
 @js.native
@@ -28,8 +28,8 @@ object ccSpacer extends ts_ccSpacer {
 
 @js.native
 trait t_ccMenuPassive extends t_ccLayer {
-  override def getColor:ccColor = js.native
-  override def getOpacity:Float = js.native
+  override def getColor():ccColor = js.native
+  override def getOpacity():Float = js.native
   def initWithItems():Unit = js.native
   def alignItemsVertically():Unit = js.native
   def alignItemsVerticallyWithPadding():Unit = js.native
@@ -47,7 +47,7 @@ trait ts_ccMenuPassive extends ts_ccLayer {
 
 @js.native
 @JSGlobal("cc.MenuPassive")
-class ccMenuPassive extends t_ccMenuPassive {
+class ccMenuPassive() extends t_ccMenuPassive {
 }
 
 @js.native

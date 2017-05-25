@@ -19,11 +19,11 @@ trait t_ccuiCheckBox extends t_ccuiWidget {
   def loadTextureBackGroundDisabled(backGroundDisabled:String, texType:Float):Unit = js.native
   def loadTextureFrontCrossDisabled(frontCrossDisabled:String, texType:Float):Unit = js.native
   def setSelected(selected:Boolean):Unit = js.native
-  def isSelected:Boolean = js.native
+  def isSelected():Boolean = js.native
   def addEventListener(selector:js.Function, target:types.DynObject):Unit = js.native
-  override def getVirtualRendererSize:ccSize = js.native
-  override def getVirtualRenderer:ccuiWidget = js.native
-  override def getDescription:String = js.native
+  override def getVirtualRendererSize():ccSize = js.native
+  override def getVirtualRenderer():ccuiWidget = js.native
+  override def getDescription():String = js.native
 }
 
 @js.native

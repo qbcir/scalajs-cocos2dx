@@ -25,7 +25,7 @@ trait ts_ccuihelper extends js.Object {
 
 @js.native
 @JSGlobal("ccui.helper")
-class ccuihelper extends t_ccuihelper {
+class ccuihelper() extends t_ccuihelper {
 }
 
 @js.native

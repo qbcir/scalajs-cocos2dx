@@ -19,12 +19,12 @@ trait t_ccsSkin extends t_ccsSprite {
   def initWithSpriteFrameName(spriteFrameName:String):Boolean = js.native
   def initWithFile(fileName:String, rect:t_ccRect):Boolean = js.native
   def setSkinData(skinData:t_ccsBaseData):Unit = js.native
-  def getSkinData:ccsBaseData = js.native
+  def getSkinData():ccsBaseData = js.native
   def updateArmatureTransform():Unit = js.native
-  def getNodeToWorldTransform:ccAffineTransform = js.native
+  def getNodeToWorldTransform():ccAffineTransform = js.native
   def setBone(bone:js.Dynamic):Unit = js.native
-  def getBone:Null = js.native
-  def getDisplayName:String = js.native
+  def getBone():Null = js.native
+  def getDisplayName():String = js.native
 }
 
 @js.native

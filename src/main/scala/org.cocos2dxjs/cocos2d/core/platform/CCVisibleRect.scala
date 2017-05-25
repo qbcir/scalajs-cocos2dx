@@ -29,7 +29,7 @@ trait ts_ccvisibleRect extends js.Object {
 
 @js.native
 @JSGlobal("cc.visibleRect")
-class ccvisibleRect extends t_ccvisibleRect {
+class ccvisibleRect() extends t_ccvisibleRect {
 }
 
 @js.native
