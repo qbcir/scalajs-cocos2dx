@@ -14,7 +14,7 @@ object Settings {
   }
 
   val jsDependencies = Def.setting(Seq(
-    "org.webjars.bower" % "github-com-cocos2d-cocos2d-html5" % versions.cocos2dhtml5 / "CCBoot.js"
+    //"org.webjars.bower" % "github-com-cocos2d-cocos2d-html5" % versions.cocos2dhtml5 / "CCBoot.js"
   ))
 
   val scalaJsDependencies = Def.setting(Seq())
